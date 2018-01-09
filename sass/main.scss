@@ -1,0 +1,33 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/popup";
+
+@import "layout/head";
+@import "layout/footer";
+@import "layout/grid";
+
+
+@import "pages/home";
+
+.header {
+  height: 95vh;
+
+  &__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+}

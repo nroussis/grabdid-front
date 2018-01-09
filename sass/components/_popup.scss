@@ -1,0 +1,38 @@
+.popup{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($black, .8);
+  z-index: 9999;
+    &__content{
+      @include absCenter;
+      width: 75%;
+      //height:50rem;
+      background-color: $white;
+      box-shadow: 0 2rem 4rem rgba($black, .2);
+      border-radius: 3px;
+  }
+  &__left{
+    width: 33.33333333%;
+    float: left;
+  }
+  &__right{
+    width: 66.66666667%;
+    float: left;
+  }
+  &_img {
+    display: block;
+    width: 100%;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom:4rem;
+
+    column-count:2;
+  }
+
+
+
+}
