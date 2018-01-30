@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
-},
-"author": "N. Roussis",
-"license": "ISC",
-"devDependencies": {
-"node-sass": "^4.7.2"
-},
-"dependencies": {
-"jquery": "^3.2.1"
-}
+    "compile:sass": "node-sass sass/main.scss css/style.css -w --source-map true --source-map-embed true "
+  },
+  "author": "N. Roussis",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
 }

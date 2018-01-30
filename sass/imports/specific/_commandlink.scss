@@ -1,0 +1,10 @@
+
+///*------------------------------------*\
+//    #COMMANDLINK any link that will have a higher command (link, that will open something, not just redirect)
+//\*------------------------------------*/
+
+.ui-separator .ui-commandlink {
+  font-size: 19px;
+  float: right;
+  color: $commandLink_gray;
+}
