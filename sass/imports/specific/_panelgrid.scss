@@ -67,8 +67,9 @@
   }
 }
 
+//panelgrid with three columns
 .ui-panelgrid {
-  &--third {
+  &--col-3 {
     td {
       width: 33.33%;
       padding: 0 20px;
@@ -91,13 +92,43 @@
     }
   }
 }
+
+//panelgrid with four columns and borders
 .ui-panelgrid {
-  &--borders td{
-    border: 1px solid $panelgrid_borders_color;
-    margin: 4%;
+  &--col-4 td{
+    width: 25%;
   }
-  &--background {
+  &--borders td{
+    padding: 0 15px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    > div {
+      border: 1px solid $panelgrid_borders_color;
+    }
+  }
+  &__background {
     height:190px;
+    > div {
+      display: block;
+      margin: 0 auto;
+      width: 63.4%;
+    }
+    &--pink {
+      background: $panelgrid_cell_pink;
+    }
+    &--green {
+      background: $panelgrid_cell_green;
+    }
+    &--blue {
+      background: $panelgrid_cell_blue;
+    }
+    &--purple {
+      background: $panelgrid_cell_purple;
+    }
   }
 }
 
