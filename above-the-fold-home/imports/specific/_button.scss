@@ -57,16 +57,4 @@
       background: $button_banner_border;
     }
   }
-  &--orange-light {
-    background: $button_orange_light_bg;
-    border: 1px solid $button_orange_light_border;
-    color: $button_orange_light_color;
-    height: 32px;
-    &:hover, &:focus {
-      background: lighten($button_orange_light_bg, 15%);
-    }
-    &:active {
-      background: darken($button_orange_light_bg, 15%);
-    }
-  }
 }

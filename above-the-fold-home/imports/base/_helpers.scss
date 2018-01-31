@@ -9,24 +9,17 @@
 
 //set element border-radius to 5 and output class is .ui-border-radius--5
 @include width_base_class(border-radius,5);
-@include width_base_class(border-radius,4);
 
 //set element font-size to 24 example .ui-font-size--24
-@include width_base_class(font-size,12);
 @include width_base_class(font-size,15);
 @include width_base_class(font-size,18);
 @include width_base_class(font-size,20);
-@include width_base_class(font-size,22);
-@include width_base_class(font-size,24);
-@include width_base_class(font-size,25);
-@include width_base_class(font-size,27);
+//@include width_base_class(font-size,24);
 @include width_base_class(font-size,29);
 @include width_base_class(font-size,36);
 @include width_base_class(font-size,39);
-@include width_base_class(font-size,85);
 
 //set element padding left to 30 example .ui-padding-left--30
-@include width_base_class(padding-left,13);
 @include width_base_class(padding-left,30);
 
 //set element margin top to 10 example .ui-margin-top--10
@@ -37,15 +30,11 @@
   width: 100%;
 }
 
-//used for setting any element width to 50%
+//used for setting any element widht to 50%
 .ui-width--half {
   width: 50%;
 }
 
-//set line-height 100%
-.ui-line-height--full {
-  line-height: 100%;
-}
 //class used for clearing floats use it on <p> tags only
 .clear {
   clear: both;
@@ -63,10 +52,6 @@
 .ui-float--right {
   float: right;
 }
-//class for floating element to right
-.ui-float--left {
-  float: left;
-}
 
 // set element text align to center
 .ui-text-align--center {
@@ -76,16 +61,6 @@
 //set font to robotolight
 .ui-font--light {
   font-family: $font_2;
-}
-
-//set font to robotomedium
-.ui-font--medium {
-  font-family: $font_3;
-}
-
-// set font color to white
-.ui-color--white {
-  color: $white;
 }
 
 //set margin left-right to auto, placing element in middle

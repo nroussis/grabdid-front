@@ -5,12 +5,13 @@
 
 //subheader in panelgrid (larger darker text)
 .ui-panelgrid {
-  border-spacing: 0;
   &__subheader {
     font-family: $font_3;
+    font-size: 24px;
     color: $separator_color;
-    padding: 15px 13px 8px 13px;
+    padding: 15px 0 8px 0;
     font-weight: bold;
+    
   }
   &__output {
     font-size: 16px;
@@ -19,8 +20,5 @@
   &__image {
     height: 100px;
     background: center center / auto no-repeat;
-  }
-  &__footer {
-    padding: 23px 0 13px 13px;
   }
 }
