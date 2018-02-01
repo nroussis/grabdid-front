@@ -132,7 +132,21 @@
     &--purple {
       background: $panelgrid_cell_purple;
     }
+    &--logo {
+      background: center center / auto no-repeat;
+    }
+    &--market {
+      background-image: $url_market_l;
+    }
+    &--bonton {
+      background-image: $url_bonton_l;
+    }
+    &--robot {
+      background-image: $url_robot_l;
+    }
+    &--nike {
+      background-image: $url_nike_l;
+    }
   }
-
 }
 
