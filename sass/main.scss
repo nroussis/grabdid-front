@@ -1,33 +1,105 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+//
+/**
+ * @author Tolja
+ *
+ * CONTENTS
+ *
+ * TOOLS
+ * Mixins.................All mixins and functions on our website.
+ *
+ * SETTINGS
+ * Colos..................Manage our color palette in isolation.
+ * //Fonts..................All fonts and font-sizes.
+ * //Images.................All images in our app.
+ *
+ * BASE
+ * Body...................root styles.
+ * Links..................Hyperlink styles.
+ * Base helpers........... Simple helper classes.
+ * //Animation..............All our animations.
+ *
+ * COMPONENTS (components are kinda like BASE just for every component, here should be classes that can be reused, and that won't be overridden)
+ * Layout.................ui-layout, elements inside and their modifiers.
+ * Inputfield.............ui-inputfield, elements inside and their modifiers.
+ * Panelgrid..............ui-panelgrid, elements inside and their modifiers.
+ * Button.................ui-button, elements inside and their modifiers.
+ * //Dialog.................ui-dialog and elements inside of it.
+ * //Datatable..............ui-datatable and elements inside of it.
+ *
+ * PLACEHOLDERS
+ * placeholders...........All code that is repeating a lot should go here.
+ *
+ * SPECIFIC
+ * //Accordion..............Specific accordionPanels.
+ * Layout.................Specific layoutUnits.
+ * //Datatable..............Specific datatables.
+ * //Dialog.................Specific dialogs.
+ * InputField.............Specific inputfields.
+ * Panelgrid..............Specific panelgrids.
+ * Button.................Specific buttons.
+ * //Radio..................Specific radio buttons.
+ * Panel..................Specific panels.
+ * //MenuButton.............Specific menu buttons.
+ * //InputSwitch............Specific inputSwitchs.
+ * //SelectOneMenu..........Specific selectOneMenus.
+ * //Datagrid...............Specific datagrids.
+ * CommandLink............Specific commandLinks.
+ * Links..................Specific links.
+ * Helpers................Specific, more complex, unique classes.
+ *
+ * ICONS
+ * Icons..................All the icons in our app.
+ *
+ * NOTE: Whoever continues editing this, NEVER OVERRIDE only if you must and only with specific styles and @media!! no style should override another style,
+ * it is always better to create another class then overriding.
+ *
+ */
 
 
+/**
+ * #TOOLS
+ */
+@import "imports/tools/mixins";
 
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
+/**
+ * #SETTINGS
+ */
+@import "imports/settings/settings.all";
 
-@import "components/button";
-@import "components/popup";
+/**
+ * #BASE
+ */
+@import "imports/base/body";
+@import "imports/base/links";
+@import "imports/base/helpers";
 
-@import "layout/head";
-@import "layout/footer";
-@import "layout/grid";
+/**
+ * #COMPONENTS
+ */
+@import "imports/components/layout";
+@import "imports/components/inputfield";
+@import "imports/components/panelgrid";
+@import "imports/components/button";
 
+/**
+ * #PLACEHOLDERS
+ */
+@import "imports/placeholders/placeholders";
 
-@import "pages/home";
+/**
+ * #SPECIFIC
+ */
+@import "imports/specific/layout";
+@import "imports/specific/inputfield";
+@import "imports/specific/panelgrid";
+@import "imports/specific/button";
+@import "imports/specific/panel";
+@import "imports/specific/separator";
+@import "imports/specific/commandlink.scss";
+@import "imports/specific/links";
+@import "imports/specific/helpers";
 
-.header {
-  height: 95vh;
-
-  &__logo-box{
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
-  &__logo {
-    height: 3.5rem;
-  }
-}
+/**
+ * #ICONS
+ */
+@import "imports/icons/icons";

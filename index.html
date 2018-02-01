@@ -6,90 +6,288 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<header class="header">
-    <div class="header__logo-box">
-        <img src="images/logo.png" alt="" class="header__logo">
+
+  <!-- put header content here -->
+  <div class="ui-layout-west">
+    <div class="ui-layout-west__content">
+
+      <table class="ui-panelgrid ui-width--full" >
+        <tbody>
+          <tr>
+            <!-- logo column -->
+            <td class="ui-width--190">
+              <img src="images/logo-t.png" >
+            </td>
+            <!-- search column -->
+            <td class="ui-search-column">
+              <div class="ui-inputfield ui-inputfield--search">
+                <input placeholder="Search"></input>
+                <button class="ui-button ui-position--relative ui-button--green ui-button--search">
+                  <span class="ui-icon ui-icon--search"></span>
+                </button>
+              </div>
+            </td>
+              <!-- sign in column -->
+            <td class="ui-width--230">
+              <button class="ui-button ui-border-radius--5 ui-font-size--15 ui-button--orange ui-button--left" >Login</button>
+              <button class="ui-button ui-border-radius--5 ui-font-size--15 ui-button--orange ui-button--right" >Register</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+      <!-- end of panelgrid -->
     </div>
-    <div class="header__text-box">
+    <!-- footer inside of west layout -->
+    <div class="ui-layout-west__footer">
+      <div class="ui-footer__content">
+        <table class="ui-panelgrid ui-width--full">
+          <tbody>
+            <tr>
+              <td>
+                <a href="/all-stores">All Stores</a>
+              </td>
+              <td>
+                <a href="/coupons">Coupons</a>
+              </td>
+              <td>
+                <a href="/categories">Categories</a>
+              </td>
+              <td>
+                <a href="/hot-deal">Hot Deals</a>
+              </td>
+              <td>
+                <a href="/favorites">Favorites</a>
+              </td>
+              <td>
+                <a href="/how-it-works">How it works</a>
+              </td>
+              <td>
+                <a href="/help">Help</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end of panelgrid -->
+      </div>
+    </div>
+    <!-- end of layout-west__footer -->
+  </div>
+  <!-- end of layout-west -->
+  <!-- put main content here -->
+  <div class="ui-layout-center">
+    <div class="ui-layout-center__content">
+      <!-- panel component and also a banner panel -->
+      <div class="ui-panel ui-panel__banner">
+        <div class="ui-panel__content">
+          <div class="ui-width--half ui-float--right ui-text-align--center">
+              <span class="ui-text--orange ui-padding-left--30 ui-font-size--39 ui-font--light" >
+                Shop Online Cheaper
+              </span>
+              <p class="clear" ></p>
+              <span class="ui-font-size--20 ui-padding-left--30 ui-margin-top--10 ui-text ui-text--dark" >
+                The No.1 Money Back Site
+              </span>
+              <p class="clear" ></p>
+              <div class="ui-padding-left--30">
+              <table class="ui-panelgrid ui-margin--center ui-panelgrid--banner-price">
+                <tbody>
+                  <tr>
+                    <td class="ui-panelgrid__cell ui-first ui-position--relative">
+                      <span class="ui-font-size--36 ui-font--light" >1000+</span>
+                      <p class="clear"></p>
+                      <label class="ui-separator--vertical "></label>
+                      <a href="/stores" class="ui-font-size--18">Stores</a>
+                    </td>
+                    <!-- end of first panelgrid__cell -->
+                    <td class="ui-panelgrid__cell ui-last">
+                      <span class="ui-font-size--36 ui-font--light" >50,000+</span>
+                      <p class="clear"></p>
+                      <a href="/stores" class="ui-font-size--18">Members</a>
+                    </td>
+                    <!-- end of last panelgrid__cell -->
+                  </tr>
+                </tbody>
+              </table>
+              <!-- end of panelgrid -->
+              <button class="ui-button ui-button--banner ui-border-radius--5 ui-font-size--20">Free Registration - Join Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of panel (banner) -->
+      <table class="ui-panelgrid--logos ui-panelgrid ui-width--full" >
+        <tbody>
+          <tr>
+            <td class="ui-panelgrid__cell--melinamay">
+            </td>
+            <td class="ui-panelgrid__cell--ebay">
+            </td>
+            <td class="ui-panelgrid__cell--aliexpress">
+            </td>
+            <td class="ui-panelgrid__cell--aegean">
+            </td>
+            <td class="ui-panelgrid__cell--shopgr">
+            </td>
+            <td class="ui-panelgrid__cell--deliverasgr">
+            </td>
+            <td class="ui-panelgrid__cell--zackret">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- end of logos panelgrid -->
+      <div class="ui-separator ui-font-size--29 ui-separator--margin ui-text-align--center">
+        How
+        <span class="ui-state--highlight">izocard</span>
+        works
+      </div>
+      <!-- end of separator -->
+      <table class="ui-panelgrid ui-panelgrid--col-3 ui-panelgrid--basic">
+        <tbody>
+          <tr>
+            <td>
+              <div class="ui-panelgrid__image ui-panelgrid__image--compass" >
+
+              </div>
+              <div class="ui-panelgrid__subheader ui-font-size--24 ui-text-align--center">
+                Browse a store
+              </div>
+              <div class="ui-panelgrid__output ui-text-align--center" >
+                Find the store you are interested in and just go to the store by clicking on link Go to Store
+              </div>
+            </td>
+            <td>
+              <div class="ui-panelgrid__image ui-panelgrid__image--cart">
+
+              </div>
+              <div class="ui-panelgrid__subheader ui-font-size--24 ui-text-align--center">
+                Shop normally
+              </div>
+              <div class="ui-panelgrid__output ui-text-align--center">
+                Now you can Make your online purchases as usual everytime
+              </div>
+            </td>
+            <td>
+              <div class="ui-panelgrid__image ui-panelgrid__image--refund">
+
+              </div>
+              <div class="ui-panelgrid__subheader ui-font-size--24 ui-text-align--center">
+                Refund
+              </div>
+              <div class="ui-panelgrid__output ui-text-align--center">
+                The store will pay us a commission because we sent him a customer. In return we will refund your part of the commission we earn
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--end of panelgrid-->
+      <div class="ui-separator ui-font-size--29 ui-separator--margin">
+        Featured
+        <span class="ui-state--highlight">Deals</span>
+        <a href="#" class="ui-commandlink">View all</a>
+      </div>
+      <!--end of separator-->
+      <table class="ui-panelgrid ui-width--full ui-panelgrid--col-4 ui-panelgrid--borders ui-panelgrid--basic">
+        <tbody>
+          <tr>
+            <td class="ui-panelgrid__cell">
+              <div>
+                <div class="ui-panelgrid__background ui-panelgrid__background--pink">
+                  <div class="ui-text-align--center">
+                    <span class="ui-font-size--25 ui-font--light ui-color--white ui-float--left">upto</span>
+                    <p class="clear"/>
+                    <span class="ui-font-size--85 ui-line-height--full ui-font--medium ui-color--white">50%</span>
+                    <span class="ui-font-size--36 ui-font--medium ui-color--white">Discount</span>
+                  </div>
+                </div>
+                  <div class="ui-panelgrid__subheader ui-font-size--22">
+                      Anthoshop
+                  </div>
+                  <div class="ui-panelgrid__output ui-padding-left--13" >
+                      Up to 50% discount on selected products
+                  </div>
+                  <div class="ui-panelgrid__footer" >
+                      <button class="ui-button ui-border-radius--4 ui-font-size--12 ui-button--orange-light">More Details</button>
+                  </div>
+              </div>
+            </td>
+            <td class="ui-panelgrid__cell">
+              <div>
+                <div class="ui-panelgrid__background ui-panelgrid__background--green">
+                    <div class="ui-text-align--center">
+                        <span class="ui-font-size--25 ui-font--light ui-color--white ui-float--left">upto</span>
+                        <p class="clear"/>
+                        <span class="ui-font-size--85 ui-line-height--full ui-font--medium ui-color--white">30%</span>
+                        <span class="ui-font-size--36 ui-font--medium ui-color--white">Discount</span>
+                    </div>
+                </div>
+                  <div class="ui-panelgrid__subheader ui-font-size--22">
+                      SuperGroceries
+                  </div>
+                  <div class="ui-panelgrid__output ui-padding-left--13" >
+                      Up to 30% discount on selected products
+                  </div>
+                  <div class="ui-panelgrid__footer" >
+                      <button class="ui-button ui-border-radius--4 ui-font-size--12 ui-button--orange-light">More Details</button>
+                  </div>
+              </div>
+            </td>
+            <td class="ui-panelgrid__cell">
+              <div>
+                <div class="ui-panelgrid__background ui-panelgrid__background--blue">
+                    <div class="ui-text-align--center">
+                        <span class="ui-font-size--25 ui-font--light ui-color--white ui-float--left">upto</span>
+                        <p class="clear"/>
+                        <span class="ui-font-size--85 ui-line-height--full ui-font--medium ui-color--white">15%</span>
+                        <span class="ui-font-size--36 ui-font--medium ui-color--white">Discount</span>
+                    </div>
+                </div>
+                  <div class="ui-panelgrid__subheader ui-font-size--22">
+                      USPA Store
+                  </div>
+                  <div class="ui-panelgrid__output ui-padding-left--13" >
+                      Up to 15% discount on selected products
+                  </div>
+                  <div class="ui-panelgrid__footer" >
+                      <button class="ui-button ui-border-radius--4 ui-font-size--12 ui-button--orange-light">More Details</button>
+                  </div>
+              </div>
+            </td>
+            <td class="ui-panelgrid__cell">
+              <div>
+                <div class="ui-panelgrid__background ui-panelgrid__background--purple">
+                    <div class="ui-text-align--center">
+                        <span class="ui-font-size--25 ui-font--light ui-color--white ui-float--left">upto</span>
+                        <p class="clear"></p>
+                        <span class="ui-font-size--85 ui-line-height--full ui-font--medium ui-color--white">60%</span>
+                        <span class="ui-font-size--36 ui-font--medium ui-color--white">Discount</span>
+                    </div>
+                </div>
+                  <div class="ui-panelgrid__subheader ui-font-size--22">
+                    Wholesale Shop
+                  </div>
+                  <div class="ui-panelgrid__output ui-padding-left--13" >
+                      Up to 60% discount on selected products
+                  </div>
+                  <div class="ui-panelgrid__footer" >
+                      <button class="ui-button ui-border-radius--4 ui-font-size--12 ui-button--orange-light">More Details</button>
+                  </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- end of layout-center -->
+  <!-- put footer  content here -->
+  <div class="ui-footer">
+    <div class="ui-footer__content">
 
     </div>
-</header>
-
-<main>
-
-</main>
-
-<footer class="footer">
-    <div class="footer__logo-box">
-        <img src="images/logo.png" alt="Full logo" class="footer__logo">
-    </div>
-    <div class="row">
-        <div class="col-1-of-4">
-            <h3 class="footer_header">Quick Links</h3>
-            <ul class="footer__list">
-                <li class="footer_item"><a href="#" class="footer__link">About</a></li>
-                <li class="footer_item"><a href="#" class="footer__link">Careers</a></li>
-                <li class="footer_item"><a href="#" class="footer__link">FAQs</a></li>
-                <li class="footer_item"><a href="#" class="footer__link">Terms & Conditions</a></li>
-            </ul>
-        </div>
-        <div class="col-1-of-4">
-            <h3 class="footer__header">Quick Links</h3>
-            <ul class="footer__list">
-                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">FAQs</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
-            </ul>
-        </div>
-        <div class="col-1-of-4">
-            <h3 class="footer__header">Quick Links</h3>
-            <ul class="footer__list">
-                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">FAQs</a></li>
-                <li class="footer__tem"><a href="#" class="footer__link">Terms & Conditions</a></li>
-            </ul>
-        </div>
-        <div class="col-1-of-4">
-            <h3 class="footer__header">Quick Links</h3>
-            <ul class="footer__list">
-                <li class="footer__item"><a href="#" class="footer__link">
-                    <figure class="footer__figure">
-                        <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
-                        <figcaption class="footer__figcaption">Fig.1 - A view of the pulpit rock in Norway.</figcaption>
-                    </figure>
-                </a></li>
-                <li class="footer__item"><a href="#" class="footer__link">
-                    <figure class="footer__figure">
-                        <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
-                        <figcaption class="footer__figcaption">Fig.1 - A view of the pulpit rock in Norway.</figcaption>
-                    </figure>
-                </a></li>
-           </ul>
-        </div>
-    </div>
-</footer>
-
-<div class="popup">
-
-    <div class="popup__content">
-        <div class="popup__left">
-            <img src="images/nat-8.jpg" alt="Photo" class="popup__img">
-            <img src="images/nat-9.jpg" alt="Photo" class="popup__img">
-        </div>
-        <div class="popup_right">
-            <h2 class="heading-secondary">Strat booking now</h2>
-            <h3 class="heading-tertiary">Important &ndash; </h3>
-            <p class="popup__text">
-                fgsdgdfgsdgds sdgsdfg sdf dsg dg sd sd
-                sdgdsg sdg sd
-                g dsg dsfgdsfgdgs
-                <a href="#" class="btn btn--green">Book now</a>
-            </p>
-
-        </div>
-    </div>
-</div>
+  </div>
+  <!-- end of page footer -->
 </body>
 </html>

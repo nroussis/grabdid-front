@@ -1,0 +1,17 @@
+
+///*------------------------------------*\
+//    #ICONS all icon classes.
+//\*------------------------------------*/
+
+.ui-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+  &--search {
+    background-image: $url_icon_search;
+  }
+}

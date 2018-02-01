@@ -1,0 +1,60 @@
+
+///*------------------------------------*\
+//    #BUTTON
+//\*------------------------------------*/
+
+.ui-button {
+  //orange button used in main header
+  &.ui-button--orange {
+    background: $button_orange_bg;
+    color: $white;
+    &:hover, &:focus {
+      background: lighten($button_orange_bg, 15%);
+    }
+    &:active {
+      background: darken($button_orange_bg, 15%);
+    }
+  }
+  //green button used in main search
+  &.ui-button--green {
+    background: $button_green_bg;
+    &:hover, &:focus {
+      background: lighten($button_green_bg, 15%);
+    }
+    &:active {
+      background: darken($button_green_bg, 15%);
+    }
+  }
+  // main search button
+  &--search {
+    position: absolute;
+    right:0;
+    top: -1px;
+    width: 80px;
+    @include border-radius-top-right(5px);
+    @include border-radius-bottom-right(5px);
+  }
+  //left button just adding right margin 15 to button
+  &--left {
+    margin-right: 15px;
+  }
+  //right button just adding left margin 15 to button
+  &--right {
+    margin-left: 15px;
+  }
+  //big green button in banner
+  &--banner {
+    width: 100%;
+    background: $button_banner_green;
+    color: $white;
+    border: 2px solid $button_banner_border;
+    height: 50px;
+    max-width: 400px;
+    &:hover, &:focus {
+      background: lighten($button_banner_border, 15%);
+    }
+    &:active {
+      background: $button_banner_border;
+    }
+  }
+}

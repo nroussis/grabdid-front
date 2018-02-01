@@ -1,0 +1,26 @@
+
+///*------------------------------------*\
+//    #SEPARATOR
+//\*------------------------------------*/
+
+//vertical separator used in banner to saparate stores and members
+.ui-separator {
+  color: $separator_color;
+  font-family: $font_3;
+  &--vertical {
+    width: 0;
+    border-right: 1px solid $searchbar_border_c;
+    position: absolute;
+    height: 44px;
+    top: 50%;
+    right: -1px;
+    margin-top: -22px;
+  }
+  .ui-state--highlight {
+    color: $separator_highlight;
+  }
+  &--margin {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}
