@@ -13,3 +13,9 @@
     padding: 11px 0;
   }
 }
+.ui-footer__header {
+  padding-top: 55px;
+  &--green {
+    background: $footer_header_green;
+  }
+}

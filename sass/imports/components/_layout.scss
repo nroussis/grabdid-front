@@ -27,8 +27,10 @@
  * webpage footer ******************************************************************************************************************
  */
 .ui-footer {
+  margin-top: 50px;
   background: $footer_bg;
   &__content {
+
     @extend %main-layout;
   }
 }
