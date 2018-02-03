@@ -4,6 +4,7 @@
 //\*------------------------------------*/
 
 //used mixin to create any type of width-class
+@include width_base_class(width,100);
 @include width_base_class(width,190);
 @include width_base_class(width,230);
 
@@ -13,8 +14,12 @@
 
 //set element font-size to 24 example .ui-font-size--24
 @include width_base_class(font-size,12);
+@include width_base_class(font-size,13);
+@include width_base_class(font-size,14);
 @include width_base_class(font-size,15);
+@include width_base_class(font-size,16);
 @include width_base_class(font-size,18);
+@include width_base_class(font-size,19);
 @include width_base_class(font-size,20);
 @include width_base_class(font-size,22);
 @include width_base_class(font-size,24);
@@ -27,11 +32,16 @@
 
 //set element padding left to 30 example .ui-padding-left--30
 @include width_base_class(padding-left,13);
+@include width_base_class(padding-left,23);
 @include width_base_class(padding-left,30);
 
 //set element margin top to 10 example .ui-margin-top--10
 @include width_base_class(margin-top,10);
 
+//border radius 100%
+.ui-border-radius--full {
+  @include vendor(border-radius,100%);
+}
 //used for setting any element width to 100%
 .ui-width--full {
   width: 100%;
@@ -87,7 +97,9 @@
 .ui-color--white {
   color: $white;
 }
-
+.ui-color--gray {
+  color: $panelgrid_output_color;
+}
 //set margin left-right to auto, placing element in middle
 .ui-margin--center {
   margin: 0 auto;

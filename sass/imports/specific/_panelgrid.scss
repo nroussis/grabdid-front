@@ -148,5 +148,18 @@
       background-image: $url_nike_l;
     }
   }
+  &--testemonials {
+    table td {
+      vertical-align: middle;
+      padding: 0;
+      > div {
+        border: 0;
+      }
+    }
+    .ui-panelgrid__subheader, .ui-panelgrid__output {
+      padding-left: 23px;
+    }
+  }
+
 }
 

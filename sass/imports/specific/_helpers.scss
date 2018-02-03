@@ -18,3 +18,30 @@
   padding-top: 50px;
 }
 
+//layout grid inside of testemonials panelgrid
+.ui-testemonials-grid {
+  .ui-first {
+    @include calc(width, "100% - 130px");
+  }
+  .ui-last {
+    width: 90px;
+    padding: 20px;
+  }
+  &__subheader {
+    font-family: $font_3;
+    color: $separator_color;
+    padding: 29px 13px 8px 23px;
+    font-weight: bold;
+  }
+  &__output {
+    color: $panelgrid_output_color;
+  }
+  &__footer {
+    padding: 14px 18px;
+    background: $search_bg;
+  }
+}
+//highlighted text is orange
+span.ui-state--highlight {
+  color: $separator_highlight;
+}
