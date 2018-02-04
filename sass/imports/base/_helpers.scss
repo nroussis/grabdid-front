@@ -18,6 +18,7 @@
 @include width_base_class(font-size,14);
 @include width_base_class(font-size,15);
 @include width_base_class(font-size,16);
+@include width_base_class(font-size,17);
 @include width_base_class(font-size,18);
 @include width_base_class(font-size,19);
 @include width_base_class(font-size,20);
@@ -41,6 +42,8 @@
 
 //set element height to 5 exmple .ui-height--5
 @include width_base_class(height,5);
+@include width_base_class(height,8);
+@include width_base_class(height,20);
 
 //border radius 100%
 .ui-border-radius--full {
@@ -101,8 +104,15 @@
 .ui-color--white {
   color: $white;
 }
+
+//set color to gray, used mostly as standard output text
 .ui-color--gray {
   color: $panelgrid_output_color;
+}
+
+//set color to green, used mostly on buttons
+.ui-color--green {
+  color: $color_green;
 }
 //set margin left-right to auto, placing element in middle
 .ui-margin--center {

@@ -45,3 +45,15 @@
 span.ui-state--highlight {
   color: $separator_highlight;
 }
+
+.ui-clamp {
+  width: 197px;
+  //letter-spacing: -0.3px;
+  a {
+    margin-top: 4px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

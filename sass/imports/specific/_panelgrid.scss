@@ -161,6 +161,22 @@
       padding-left: 23px;
     }
   }
+  &--sitemap {
+    margin-top: 30px;
+    td {
+      vertical-align: top;
+    }
+  }
+  &--footer-article {
+    margin-top: 25px;
+    td:first-child {
+      width: 70px;
+    }
+    td:last-child {
+      //width: auto;
+      padding-left: 20px;
+    }
+  }
 
 }
 
