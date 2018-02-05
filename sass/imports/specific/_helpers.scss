@@ -57,3 +57,38 @@ span.ui-state--highlight {
     }
   }
 }
+
+.ui-footer--social-media {
+  margin-top: 40px;
+  div {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    padding: 0 5px;
+  }
+  svg {
+    height: 25px;
+    margin-top: 12px;
+    path {
+      fill: #cfcfcf;
+      @include vendor-o(transition,fill 0.3s);
+    }
+  }
+}
+
+.ui-footer--copyright {
+  padding: 20px 0;
+}
+
+.ui-commandlink--social-media {
+  display: block;
+  height: 50px;
+  background: $social_media_circle_bg;
+  @include vendor-o(transition,background 0.3s);
+  &:hover {
+    background: $white;
+    path {
+      fill: #000;
+    }
+  }
+}
