@@ -18,3 +18,77 @@
   padding-top: 50px;
 }
 
+//layout grid inside of testemonials panelgrid
+.ui-testemonials-grid {
+  .ui-first {
+    @include calc(width, "100% - 130px");
+  }
+  .ui-last {
+    width: 90px;
+    padding: 20px;
+  }
+  &__subheader {
+    font-family: $font_3;
+    color: $separator_color;
+    padding: 29px 13px 8px 23px;
+    font-weight: bold;
+  }
+  &__output {
+    color: $panelgrid_output_color;
+  }
+  &__footer {
+    padding: 14px 18px;
+    background: $search_bg;
+  }
+}
+//highlighted text is orange
+span.ui-state--highlight {
+  color: $separator_highlight;
+}
+
+.ui-clamp {
+  width: 197px;
+  //letter-spacing: -0.3px;
+  a {
+    margin-top: 4px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.ui-footer--social-media {
+  margin-top: 40px;
+  div {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    padding: 0 5px;
+  }
+  svg {
+    height: 25px;
+    margin-top: 12px;
+    path {
+      fill: #cfcfcf;
+      @include vendor-o(transition,fill 0.3s);
+    }
+  }
+}
+
+.ui-footer--copyright {
+  padding: 20px 0;
+}
+
+.ui-commandlink--social-media {
+  display: block;
+  height: 50px;
+  background: $social_media_circle_bg;
+  @include vendor-o(transition,background 0.3s);
+  &:hover {
+    background: $white;
+    path {
+      fill: #000;
+    }
+  }
+}

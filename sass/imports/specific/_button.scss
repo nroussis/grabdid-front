@@ -69,4 +69,32 @@
       background: darken($button_orange_light_bg, 15%);
     }
   }
+  &--green-light {
+    background: $button_green_light_bg;
+    border: 1px solid $button_green_light_border;
+    color: $button_green_light_color;
+    height: 32px;
+    &:hover, &:focus {
+      background: lighten($button_green_light_bg, 15%);
+    }
+    &:active {
+      background: darken($button_green_light_bg, 15%);
+    }
+  }
+  &--white {
+    background: $white;
+    border: 1px solid $footer_button_green_border;
+    &:hover, &:focus {
+      background: darken($white, 15%);
+    }
+    &:active {
+      background: $footer_button_green_border;
+    }
+  }
+  &--footer-header {
+    width: 170px;
+    height: 50px;
+    margin-top: 45px;
+
+  }
 }

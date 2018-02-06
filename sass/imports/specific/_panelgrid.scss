@@ -109,6 +109,7 @@
     }
     > div {
       border: 1px solid $panelgrid_borders_color;
+      //@include vendor(box-shadow,0 1px 1px 0 rgba(0,0,0,.08));
     }
   }
   &__background {
@@ -131,6 +132,49 @@
     }
     &--purple {
       background: $panelgrid_cell_purple;
+    }
+    &--logo {
+      background: center center / auto no-repeat;
+    }
+    &--market {
+      background-image: $url_market_l;
+    }
+    &--bonton {
+      background-image: $url_bonton_l;
+    }
+    &--robot {
+      background-image: $url_robot_l;
+    }
+    &--nike {
+      background-image: $url_nike_l;
+    }
+  }
+  &--testemonials {
+    table td {
+      vertical-align: middle;
+      padding: 0;
+      > div {
+        border: 0;
+      }
+    }
+    .ui-panelgrid__subheader, .ui-panelgrid__output {
+      padding-left: 23px;
+    }
+  }
+  &--sitemap {
+    margin-top: 30px;
+    td {
+      vertical-align: top;
+    }
+  }
+  &--footer-article {
+    margin-top: 25px;
+    td:first-child {
+      width: 70px;
+    }
+    td:last-child {
+      //width: auto;
+      padding-left: 20px;
     }
   }
 

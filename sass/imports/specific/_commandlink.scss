@@ -7,4 +7,20 @@
   font-size: 19px;
   float: right;
   color: $commandLink_gray;
+  line-height: 39px;
+}
+
+.ui-commandlink {
+  &--gray {
+    color: $commandLink_gray;
+  }
+}
+.ui-panelgrid--sitemap .ui-commandlink {
+  display: block;
+  line-height: 30px;
+  font-size: 15px;
+  @include vendor-o(transition,color .5s);
+  &:hover {
+    color: $white;
+  }
 }

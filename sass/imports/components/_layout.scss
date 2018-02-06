@@ -27,8 +27,11 @@
  * webpage footer ******************************************************************************************************************
  */
 .ui-footer {
+  margin-top: 50px;
   background: $footer_bg;
   &__content {
-    @extend %main-layout;
+    padding-top: 30px;
+    max-width: 1170px;
+    margin: 0 auto;
   }
 }
