@@ -6,6 +6,7 @@
 //default button properties
 .ui-button {
   @include vendor-o(transition,background-color .4s ease,box-shadow .4s ease);
+  position: relative;
   padding: 0 18px;
   //border: 0;
   height: 40px;

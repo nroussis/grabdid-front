@@ -9,7 +9,7 @@
 .ui-layout-west {
   &__content {
     max-width: 1170px;
-    padding: 24px 0;
+    padding: 24px 15px;
     margin: 0 auto;
   }
 }
@@ -20,6 +20,7 @@
 .ui-layout-center {
   &__content {
     @extend %main-layout;
+    padding: 0 15px;
   }
 }
 
@@ -33,5 +34,7 @@
     padding-top: 30px;
     max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

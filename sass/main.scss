@@ -30,7 +30,7 @@
  * placeholders...........All code that is repeating a lot should go here.
  *
  * SPECIFIC
- * //Accordion..............Specific accordionPanels.
+ * Accordion..............Specific accordionPanels.
  * Layout.................Specific layoutUnits.
  * //Datatable..............Specific datatables.
  * //Dialog.................Specific dialogs.
@@ -39,6 +39,7 @@
  * Button.................Specific buttons.
  * //Radio..................Specific radio buttons.
  * Panel..................Specific panels.
+ * Separator..............Specific separators.
  * //MenuButton.............Specific menu buttons.
  * //InputSwitch............Specific inputSwitchs.
  * //SelectOneMenu..........Specific selectOneMenus.
@@ -89,13 +90,14 @@
 /**
  * #SPECIFIC
  */
+@import "imports/specific/accordion";
 @import "imports/specific/layout";
 @import "imports/specific/inputfield";
 @import "imports/specific/panelgrid";
 @import "imports/specific/button";
 @import "imports/specific/panel";
 @import "imports/specific/separator";
-@import "imports/specific/commandlink.scss";
+@import "imports/specific/commandlink";
 @import "imports/specific/links";
 @import "imports/specific/helpers";
 
@@ -103,3 +105,8 @@
  * #ICONS
  */
 @import "imports/icons/icons";
+
+/**
+ * #MEDIA
+ */
+@import "imports/media/media";

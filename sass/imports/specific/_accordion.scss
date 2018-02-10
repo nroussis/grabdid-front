@@ -1,0 +1,42 @@
+///*------------------------------------*\
+//    #ACCORDION
+//\*------------------------------------*/
+.ui-accordion {
+  color: $w_f_link_color;
+  &__content {
+    display: none;
+
+  }
+  &__header {
+    padding: 15px;
+    &:hover {
+      background: rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    span {
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: -19px;
+        top: 4px;
+        background: $url_icon_angle_d center no-repeat;
+        @include vendor-o(transform,rotate(-90deg));
+      }
+    }
+    &.ui-state--active {
+      background: rgba(0,0,0,0.1);
+      span {
+        &:after {
+          @include vendor-o(transform,none);
+        }
+      }
+      + .ui-accordion__content {
+        display: block;
+      }
+    }
+  }
+}
