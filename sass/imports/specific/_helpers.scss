@@ -139,3 +139,26 @@ span.ui-state--highlight {
   }
 }
 
+#backToTheTop {
+  position: fixed;
+  text-align: center;
+  bottom: 42px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  opacity: .5;
+  background: black;
+  @include vendor(border-radius,5px);
+  display: none;
+  z-index: 100;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.topIcon {
+  display: inline-block;
+  margin-top: 7px;
+  width: 16px;
+  height: 16px;
+  background: $url_icon_angle_d center no-repeat;
+}

@@ -23,7 +23,7 @@
                 <!-- search column -->
                 <td class="ui-search-column">
                     <div class="ui-inputfield ui-inputfield--search">
-                        <input placeholder="Search"></input>
+                        <input placeholder="Search"/>
                         <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
                             <span class="ui-icon ui-icon--search"></span>
                         </button>
@@ -31,8 +31,8 @@
                 </td>
                 <!-- sign in column -->
                 <td class="ui-width--230">
-                    <button class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left" >Login</button>
-                    <button class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right" >Register</button>
+                    <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left" >Login</button>
+                    <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right" >Register</button>
                 </td>
 
             </tr>
@@ -552,6 +552,7 @@
             </tr>
             </tbody>
         </table>
+        <!--end of panelgrid sitemap-->
         <div class="ui-footer--social-media ui-text-align--center">
             <div>
                 <a href="#" class="ui-text-align--center ui-commandlink--social-media ui-border-radius--full">
@@ -584,10 +585,13 @@
         </div>
     </div>
 </div>
+<!--end of page footer-->
+
+<!--modal sidebar navigation (used on mobile devices)-->
 <div   class="ui-modal ui-sidebar--navigation">
 
     <div class="ui-sidebar__content">
-        <button class="ui-button ui-border--none ui-float--right ui-background--none ui-sidebar__close">
+        <button id="closeSidebarBtn" class="ui-button ui-border--none ui-float--right ui-background--none ui-sidebar__close">
             <span class="ui-icon ui-icon--close"></span>
         </button>
         <p class="clear"></p>
@@ -627,62 +631,24 @@
     </div>
 
 </div>
-<script>
-    $(window).resize(function () {
-        var forEach = Array.prototype.forEach;
-        var els = document.getElementsByClassName('ui-wrap');
-        forEach.call(els, function(el) {
-            clamp(el, 2);
-        });
 
-    });
-    $(window).on("load",function () {
-        var forEach = Array.prototype.forEach;
-        var els = document.getElementsByClassName('ui-wrap');
-        forEach.call(els, function (el) {
-            clamp(el, 2);
-        });
-    });
-    $(window).bind('scroll', function () {
-        if ($(window).scrollTop() > 94) {
-            $('body').addClass('ui-fixed');
-        } else {
-            $('body').removeClass('ui-fixed');
-        }
-    });
-    // Get the modal
-    var modal = document.getElementsByClassName("ui-sidebar--navigation")[0];
+<!--modal login-->
+<div class="ui-modal ui-dialog ui-dialog--login">
 
-    var forEachAccordion = Array.prototype.forEach;
-    var accordionHeaders = document.getElementsByClassName("ui-accordion__header");
-    forEachAccordion.call(accordionHeaders,function(accordion) {
-        accordion.onclick = function(){
-            $(this).toggleClass("ui-state--active");
-        }
-    });
-    // Get the button that opens the modal
-    var btn = document.getElementsByClassName("ui-button--navigation")[0];
+    <div class="ui-dialog__content">
+        <button id="closeLoginBtn" class="ui-button ui-border--none ui-float--right ui-background--none ui-sidebar__close">
+            <span class="ui-icon ui-icon--close"></span>
+        </button>
+        <a href="#" class="ui-commandlink ui-commandlink--facebook-login"></a>
+        <div class="g-recaptcha ui-margin--center ui-width--300" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
+    </div>
+</div>
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("ui-sidebar__close")[0];
 
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
+<!--top button-->
+<div id="backToTheTop"> <span class="topIcon" /> </div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="js/main.js"></script>
 <!-- end of page footer -->
 </body>
 </html>

@@ -7,6 +7,7 @@
 @include width_base_class(width,100);
 @include width_base_class(width,190);
 @include width_base_class(width,230);
+@include width_base_class(width,300);
 
 //set element border-radius to 5 and output class is .ui-border-radius--5
 @include width_base_class(border-radius,5);
