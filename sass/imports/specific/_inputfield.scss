@@ -6,20 +6,43 @@
 .ui-inputfield--search {
   position: relative;
   background: $search_bg;
+  display: block;
+  @include vendor(border-radius,6px);
+  @include vendor(box-sizing,border-box);
+  border: 1px solid $searchbar_border_c;
+  padding: 8px 8px;
   ::-webkit-input-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
-	:-moz-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
-	::-moz-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
-	:-ms-input-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+  :-moz-placeholder {
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+  ::-moz-placeholder {
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+  :-ms-input-placeholder {
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+}
+.ui-inputfield--dialog {
+  moz-transition: border-color .3s ease,box-shadow .3s ease;
+  -o-transition: border-color .3s ease,box-shadow .3s ease;
+  -webkit-transition: border-color .3s ease,box-shadow .3s ease;
+  transition: border-color .3s ease,box-shadow .3s ease;
+  border: 1px solid #919191;
+  line-height: 22px;
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 10px;
+  outline: medium none;
+  &:focus {
+    border: 1px solid #6CA5D3;
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.18);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.18);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.18);
+  }
 }

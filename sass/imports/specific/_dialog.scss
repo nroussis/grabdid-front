@@ -10,4 +10,8 @@
     max-width: 370px;
     margin: 0 auto;
   }
+  &__header {
+    background: $search_bg;
+    padding: 6px 0;
+  }
 }

@@ -5,11 +5,7 @@
 
 //wrapper around input element
 .ui-inputfield {
-  display: block;
-  @include vendor(border-radius,6px);
-  @include vendor(box-sizing,border-box);
-  border: 1px solid $searchbar_border_c;
-  padding: 8px 8px;
+
   //removing some browser predefined properties for input element
   input {
     border: 0;
