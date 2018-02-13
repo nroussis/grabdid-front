@@ -41,13 +41,25 @@
         <!-- end of panelgrid -->
     </div>
     <!-- footer inside of west layout -->
-    <div class="ui-layout-west__footer">
+    <div class="ui-layout-west__footer menu">
         <div class="ui-footer__content">
             <table class="ui-panelgrid ui-width--full">
                 <tbody>
                 <tr>
                     <td>
-                        <a href="/all-stores">All Stores</a>
+                        <div class="ui-dropdown">
+                        <a>All stores</a>
+                            <div class="ui-dropdown__content">
+                                <a href="/melinamay">Melinamay</a>
+                                <a href="/ebay">Ebay</a>
+                                <a href="/aliexpress">AliExpress</a>
+                                <a href="/aegean">Aegean</a>
+                                <a href="/shop-gr">E-shop GR</a>
+                                <a href="/deliveras-gr">Deliveras GR</a>
+                                <a href="/zackret">Zackret Sports</a>
+                            </div>
+                        </div>
+
                     </td>
                     <td>
                         <a href="/coupons">Coupons</a>
@@ -59,7 +71,18 @@
                         <a href="/hot-deal">Hot Deals</a>
                     </td>
                     <td>
-                        <a href="/favorites">Favorites</a>
+                        <div class="ui-dropdown">
+                            <a>All stores</a>
+                            <div class="ui-dropdown__content">
+                                <a href="/melinamay">Melinamay</a>
+                                <a href="/ebay">Ebay</a>
+                                <a href="/aliexpress">AliExpress</a>
+                                <a href="/aegean">Aegean</a>
+                                <a href="/shop-gr">E-shop GR</a>
+                                <a href="/deliveras-gr">Deliveras GR</a>
+                                <a href="/zackret">Zackret Sports</a>
+                            </div>
+                        </div>
                     </td>
                     <td>
                         <a href="/how-it-works">How it works</a>
@@ -70,6 +93,12 @@
                 </tr>
                 </tbody>
             </table>
+            <button class="ui-button ui-background--none ui-button--navigation ui-float--right ui-border--none" >
+                <span class="ui-icon ui-icon--bars">
+
+                </span>
+            </button>
+            <p class="clear"></p>
             <!-- end of panelgrid -->
         </div>
     </div>
@@ -115,6 +144,7 @@
                         <button class="ui-button ui-button--banner ui-border-radius--5 ui-font-size--20">Free Registration - Join Now</button>
                     </div>
                 </div>
+                <p class="clear"></p>
             </div>
         </div>
         <!-- end of panel (banner) -->
@@ -453,7 +483,7 @@
         <button class="ui-button ui-border--none ui-button--white ui-button--footer-header ui-color--green ui-border-radius--5 ui-font-size--17 ui-font--medium">Join Now</button>
     </div>
     <div class="ui-footer__content">
-        <div class="ui-text-align--center">
+        <div class="ui-text-align--center ui-footer__logo-wrapper">
             <img src="images/logo-dark.png" />
             <p class="clear"></p>
             <span class="ui-color--white ui-font-size--17 ui-font--medium">Money back and discount coupons</span>
@@ -554,6 +584,49 @@
         </div>
     </div>
 </div>
+<div   class="ui-modal ui-sidebar--navigation">
+
+    <div class="ui-sidebar__content">
+        <button class="ui-button ui-border--none ui-float--right ui-background--none ui-sidebar__close">
+            <span class="ui-icon ui-icon--close"></span>
+        </button>
+        <p class="clear"></p>
+        <div class="ui-accordion">
+            <div class="ui-accordion__header">
+                <span>All Stores</span>
+            </div>
+            <div class="ui-accordion__content">
+                <a href="/melinamay">Melinamay</a>
+                <a href="/ebay">Ebay</a>
+                <a href="/aliexpress">AliExpress</a>
+                <a href="/aegean">Aegean</a>
+                <a href="/shop-gr">E-shop GR</a>
+                <a href="/deliveras-gr">Deliveras GR</a>
+                <a href="/zackret">Zackret Sports</a>
+            </div>
+        </div>
+        <a href="/coupons">Coupons</a>
+        <a href="/categories">Categories</a>
+        <a href="/hot-deal">Hot Deals</a>
+        <div class="ui-accordion">
+            <div class="ui-accordion__header">
+                <span>All Stores</span>
+            </div>
+            <div class="ui-accordion__content">
+                <a href="/melinamay">Melinamay</a>
+                <a href="/ebay">Ebay</a>
+                <a href="/aliexpress">AliExpress</a>
+                <a href="/aegean">Aegean</a>
+                <a href="/shop-gr">E-shop GR</a>
+                <a href="/deliveras-gr">Deliveras GR</a>
+                <a href="/zackret">Zackret Sports</a>
+            </div>
+        </div>
+        <a href="/how-it-works">How it works</a>
+        <a href="/help">Help</a>
+    </div>
+
+</div>
 <script>
     $(window).resize(function () {
         var forEach = Array.prototype.forEach;
@@ -570,6 +643,45 @@
             clamp(el, 2);
         });
     });
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > 94) {
+            $('body').addClass('ui-fixed');
+        } else {
+            $('body').removeClass('ui-fixed');
+        }
+    });
+    // Get the modal
+    var modal = document.getElementsByClassName("ui-sidebar--navigation")[0];
+
+    var forEachAccordion = Array.prototype.forEach;
+    var accordionHeaders = document.getElementsByClassName("ui-accordion__header");
+    forEachAccordion.call(accordionHeaders,function(accordion) {
+        accordion.onclick = function(){
+            $(this).toggleClass("ui-state--active");
+        }
+    });
+    // Get the button that opens the modal
+    var btn = document.getElementsByClassName("ui-button--navigation")[0];
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("ui-sidebar__close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
 <!-- end of page footer -->
 </body>

@@ -8,6 +8,7 @@
   &__footer {
     background: $search_bg;
     @include vendor(box-shadow, 2px 2px 1px 0 rgba(0,0,0,0.1));
+    z-index: 1;
   }
   .ui-footer__content {
     padding: 11px 0;
