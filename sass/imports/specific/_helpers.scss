@@ -162,3 +162,13 @@ span.ui-state--highlight {
   height: 16px;
   background: $url_icon_angle_u center no-repeat;
 }
+
+label.error {
+  color: red;
+  font-size: 13px;
+}
+.ui-inputfield--dialog.ui-margin-bottom--11 + label.error {
+  margin-top: -9px;
+  display: block;
+  margin-bottom: 11px;
+}

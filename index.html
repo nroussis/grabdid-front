@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/ftellipsis.js"></script>
+    <script src="js/validate.js"></script>
 </head>
 <body>
 
@@ -645,7 +646,7 @@
                                 <span class="ui-icon ui-icon--close"></span>
                             </button>
                         </div>
-
+<form id="loginForm">
                         <p class="clear"></p>
                         <div class="ui-text-align--center ui-margin-top--10 ui-margin-bottom--7 ui-font-size--17 ui-color--gray">
                             Have a Facebook Account?
@@ -658,14 +659,15 @@
                             — OR —
                         </div>
                         <div class="ui-width--300 ui-margin--center">
-                            <input placeholder="*Email" class="ui-inputfield ui-width--284 ui-inputfield--dialog ui-margin-top--10" />
-                            <input placeholder="*Password" class="ui-inputfield ui-width--284 ui-inputfield--dialog ui-margin-top--10 ui-margin-bottom--11" />
+                            <input name="email" placeholder="*Email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required class="ui-inputfield ui-width--284 ui-inputfield--dialog ui-margin-top--10" />
+                            <input name="password" placeholder="*Password" minlength="6" required type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"  class="ui-inputfield ui-width--284 ui-inputfield--dialog ui-margin-top--10 ui-margin-bottom--11" />
                         </div>
                         <div class="g-recaptcha ui-margin--center ui-width--300" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
                         <div class="ui-width--300 ui-margin--center ui-text-align--center">
                             <button class="ui-width--full ui-button ui-border--none ui-border-radius--none ui-margin-top--10 ui-margin-bottom--11">LOGIN</button>
                             <a href="#" class="ui-commandlink ui-commandlink--gray" >Forgot Password?</a>
                         </div>
+</form>
                         <p class="clear ui-height--20"></p>
                     </div>
                 </td>
@@ -680,6 +682,9 @@
 <div id="backToTheTop"> <span class="topIcon" /> </div>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
+<script>
+    $("#loginForm").validate();
+</script>
 <!-- end of page footer -->
 </body>
 </html>
