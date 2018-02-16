@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/ftellipsis.js"></script>
     <script src="js/validate.js"></script>
+    <script src="js/easing.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/search.min.css" />
+    <script src="js/search.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
+    <script src="js/transition.min.js" ></script>
 </head>
 <body>
+
 
 <!-- put header content here -->
 <div class="ui-layout-west">
@@ -23,11 +29,12 @@
                 </td>
                 <!-- search column -->
                 <td class="ui-search-column">
-                    <div class="ui-inputfield ui-inputfield--search">
-                        <input placeholder="Search"/>
+                    <div class="ui search ui-inputfield ui-inputfield--search">
+                        <input class="prompt" type="text" placeholder="Search"/>
                         <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
                             <span class="ui-icon ui-icon--search"></span>
                         </button>
+                        <div class="results"></div>
                     </div>
                 </td>
                 <!-- sign in column -->
@@ -676,7 +683,49 @@
     </table>
 
 </div>
+<!--end of login dialog-->
+<div class="ui-modal ui-dialog ui-dialog--register">
+    <table class="ui-width--full ui-height--full ">
+        <tbody>
+        <tr>
+            <td class="ui-vertical-align--middle">
+                <div class="ui-dialog__content">
+                    <div class="ui-dialog__header ui-font--medium ui-font-size--18 ui-text-align--center">
+                        <span>Register</span>
+                        <button id="closeRegisterBtn" class="ui-button ui-border--none ui-float--right ui-background--none ui-sidebar__close">
+                            <span class="ui-icon ui-icon--close"></span>
+                        </button>
+                    </div>
+                    <form id="registerForm">
+                        <p class="clear"></p>
+                        <div class="ui-text-align--center ui-margin-top--10 ui-margin-bottom--7 ui-font-size--17 ui-color--gray">
+                            Have a Facebook Account?
+                        </div>
+                        <a href="#" class="ui-commandlink  ui-commandlink--facebook-login"></a>
+                        <div class="ui-text-align--center ui-margin-top--5 ui-font-size--12 ui-color--gray">
+                            We'll never post anything without your permission.
+                        </div>
+                        <div class="ui-text-align--center ui-font-size--14 ui-margin-top--10">
+                            — OR —
+                        </div>
+                        <div class="ui-width--300 ui-margin--center">
+                            <input name="registerEmail" placeholder="*Email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required class="ui-inputfield ui-width--284 ui-inputfield--dialog ui-margin-top--10" />
+                            <input name="registerPassword" placeholder="*Password" minlength="6" required type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"  class="ui-inputfield ui-width--284 ui-inputfield--dialog ui-margin-top--10 ui-margin-bottom--11" />
+                        </div>
+                        <div class="g-recaptcha ui-margin--center ui-width--300" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
+                        <div class="ui-width--300 ui-margin--center ui-text-align--center">
+                            <button class="ui-width--full ui-button ui-border--none ui-border-radius--none ui-margin-top--10 ui-margin-bottom--11">LOGIN</button>
+                            <a href="#" class="ui-commandlink ui-commandlink--gray" >Forgot Password?</a>
+                        </div>
+                    </form>
+                    <p class="clear ui-height--20"></p>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
+</div>
 
 <!--top button-->
 <div id="backToTheTop"> <span class="topIcon" /> </div>
@@ -684,6 +733,39 @@
 <script src="js/main.js"></script>
 <script>
     $("#loginForm").validate();
+    $("#registerForm").validate();
+    var content = [
+        { title: 'Andorra' },
+        { title: 'United Arab Emirates' },
+        { title: 'Afghanistan' },
+        { title: 'Antigua' },
+        { title: 'Anguilla' },
+        { title: 'Albania' },
+        { title: 'Armenia' },
+        { title: 'Netherlands Antilles' },
+        { title: 'Angola' },
+        { title: 'Argentina' },
+        { title: 'American Samoa' },
+        { title: 'Austria' },
+        { title: 'Australia' },
+        { title: 'Aruba' },
+        { title: 'Aland Islands' },
+        { title: 'Azerbaijan' },
+        { title: 'Bosnia' },
+        { title: 'Barbados' },
+        { title: 'Bangladesh' },
+        { title: 'Belgium' },
+        { title: 'Burkina Faso' },
+        { title: 'Bulgaria' },
+        { title: 'Bahrain' },
+        { title: 'Burundi' }
+        // etc
+    ];
+    $('.ui.search')
+        .search({
+            source: content
+        })
+    ;
 </script>
 <!-- end of page footer -->
 </body>

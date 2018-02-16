@@ -11,6 +11,15 @@
   @include vendor(box-sizing,border-box);
   border: 1px solid $searchbar_border_c;
   padding: 8px 8px;
+  &.ui.search input {
+    @include vendor(border-radius,0);
+    border: 0;
+    background: none;
+    padding: 0;
+    &:focus {
+      background: none;
+    }
+  }
   ::-webkit-input-placeholder {
       font-size: 16px;
       color: $search_placeholder_color;

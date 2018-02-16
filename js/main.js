@@ -59,9 +59,13 @@ var btn = document.getElementsByClassName("ui-button--navigation")[0];
 // Get the <span> element that closes the modal
 var span = document.getElementById("closeSidebarBtn");
 var closeLogin = document.getElementById("closeLoginBtn");
+var closeRegister = document.getElementById("closeRegisterBtn");
 
 //get login dialog
 var modalLogin = document.getElementsByClassName("ui-dialog--login")[0];
+
+//get register dialog
+var modalRegister = document.getElementsByClassName("ui-dialog--register")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -74,6 +78,9 @@ span.onclick = function() {
 closeLogin.onclick = function() {
     modalLogin.style.display = "none";
 }
+closeRegister.onclick = function () {
+    modalRegister.style.display = "none";
+}
 
 
 
@@ -82,13 +89,15 @@ var loginBtn = document.getElementById("login-btn");
 loginBtn.onclick = function () {
     modalLogin.style.display = "block";
 }
+var registerBtn = document.getElementById("register-btn");
+registerBtn.onclick = function () {
+    modalRegister.style.display = "block";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-    if(event.target == modalLogin) {
-        modalLogin.style.display = "none";
-    }
 }
+
