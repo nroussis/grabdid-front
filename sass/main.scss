@@ -33,7 +33,7 @@
  * Accordion..............Specific accordionPanels.
  * Layout.................Specific layoutUnits.
  * //Datatable..............Specific datatables.
- * //Dialog.................Specific dialogs.
+ * Dialog.................Specific dialogs.
  * InputField.............Specific inputfields.
  * Panelgrid..............Specific panelgrids.
  * Button.................Specific buttons.
@@ -92,6 +92,7 @@
  */
 @import "imports/specific/accordion";
 @import "imports/specific/layout";
+@import "imports/specific/dialog";
 @import "imports/specific/inputfield";
 @import "imports/specific/panelgrid";
 @import "imports/specific/button";

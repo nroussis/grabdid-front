@@ -7,6 +7,8 @@
 @include width_base_class(width,100);
 @include width_base_class(width,190);
 @include width_base_class(width,230);
+@include width_base_class(width,284);
+@include width_base_class(width,300);
 
 //set element border-radius to 5 and output class is .ui-border-radius--5
 @include width_base_class(border-radius,5);
@@ -39,6 +41,11 @@
 
 //set element margin top to 10 example .ui-margin-top--10
 @include width_base_class(margin-top,10);
+@include width_base_class(margin-top,5);
+
+//set element margin bottom to 7 example .ui-margin-bottom--7
+@include width_base_class(margin-bottom,7);
+@include width_base_class(margin-bottom,11);
 
 //set element height to 5 exmple .ui-height--5
 @include width_base_class(height,5);
@@ -49,9 +56,20 @@
 .ui-border-radius--full {
   @include vendor(border-radius,100%);
 }
+
+// remove border radius from element
+.ui-border-radius--none {
+  @include vendor(border-radius,0);
+}
+
 //used for setting any element width to 100%
 .ui-width--full {
   width: 100%;
+}
+
+//used for setting any element height to 100%
+.ui-height--full {
+  height: 100%;
 }
 
 //used for setting any element width to 50%
@@ -127,4 +145,9 @@
 //remove background from any element
 .ui-background--none {
   background: none;
+}
+
+//set vertical-align to middle
+.ui-vertical-align--middle {
+  vertical-align: middle;
 }

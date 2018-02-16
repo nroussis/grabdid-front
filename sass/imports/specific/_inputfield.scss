@@ -6,20 +6,48 @@
 .ui-inputfield--search {
   position: relative;
   background: $search_bg;
+  display: block;
+  @include vendor(border-radius,6px);
+  @include vendor(box-sizing,border-box);
+  border: 1px solid $searchbar_border_c;
+  padding: 8px 8px;
+  &.ui.search input {
+    @include vendor(border-radius,0);
+    border: 0;
+    background: none;
+    padding: 0;
+    &:focus {
+      background: none;
+    }
+  }
   ::-webkit-input-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
-	:-moz-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
-	::-moz-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
-	:-ms-input-placeholder {
-		font-size: 16px;
-		color: $search_placeholder_color;
-	}
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+  :-moz-placeholder {
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+  ::-moz-placeholder {
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+  :-ms-input-placeholder {
+      font-size: 16px;
+      color: $search_placeholder_color;
+  }
+}
+.ui-inputfield--dialog {
+  @include vendor-o(transition,border-color .3s ease,box-shadow .3s ease);
+  border: 1px solid #919191;
+  line-height: 22px;
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 10px;
+  outline: medium none;
+  height: 22px;
+  &:focus {
+    border: 1px solid #6CA5D3;
+    @include vendor(box-shadow,0 1px 1px 0 rgba(0,0,0,0.18))
+  }
 }
