@@ -93,13 +93,17 @@ span.ui-state--highlight {
   }
 }
 .ui-fixed {
-  .ui-layout-west__content {
-    margin-bottom: 46px;
+  .ui-layout-west {
+    height: 197px;
+    //margin-bottom: 46px;
   }
-  .ui-layout-west__footer {
+  .ui-layout-west__content {
     position: fixed;
     top: 0;
     width: 100%;
+    background: $white;
+    z-index: 1;
+    @include vendor(box-shadow,2px 2px 1px 0 rgba(0, 0, 0, 0.1));
   }
 }
 
@@ -171,4 +175,29 @@ label.error {
   margin-top: -9px;
   display: block;
   margin-bottom: 11px;
+}
+
+.ui-dialog--register {
+  .dropdown {
+    padding-top: 0.6em !important;
+    padding-bottom: 0.6em !important;
+    .search {
+      padding-top: 0.55em !important;
+      padding-bottom: 0.6em !important;
+    }
+  }
+  .ui.selection.dropdown {
+    @include vendor(box-sizing, border-box);
+    @include vendor(border-radius, 0);
+    font-size: 14px;
+    border: 1px solid #919191;
+    min-height: 32px;
+    height: 32px;
+    .menu {
+      @include vendor(box-sizing, border-box);
+    }
+    .item {
+      font-size: 14px;
+    }
+  }
 }
