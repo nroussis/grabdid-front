@@ -101,6 +101,7 @@ span.ui-state--highlight {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 100%;
     background: $white;
     z-index: 1;
     @include vendor(box-shadow,2px 2px 1px 0 rgba(0, 0, 0, 0.1));
@@ -193,11 +194,19 @@ label.error {
     border: 1px solid #919191;
     min-height: 32px;
     height: 32px;
+    width: 100%;
     .menu {
       @include vendor(box-sizing, border-box);
     }
     .item {
       font-size: 14px;
     }
+  }
+}
+
+.ui-search-column {
+  .ui.search .results {
+    width: 100%;
+    @include calc(width,"100% - 80px");
   }
 }
