@@ -51,6 +51,14 @@
  * ICONS
  * Icons..................All the icons in our app.
  *
+ * MEDIA
+ * Media..................All @media for responsiveness.
+ *
+ * SEMANTIC-UI (check https://semantic-ui.com for more details and documentation)
+ * Drowdown...............Customize semantic dropdown.
+ * Item...................Customize semantic items.
+ * Search.................Customize semantic search.
+ *
  * NOTE: Whoever continues editing this, NEVER OVERRIDE only if you must and only with specific styles and @media!! no style should override another style,
  * it is always better to create another class then overriding.
  *
@@ -111,3 +119,10 @@
  * #MEDIA
  */
 @import "imports/media/media";
+
+/**
+ * #SEMANTIC-UI
+ */
+@import "imports/semantic-ui/dropdow";
+@import "imports/semantic-ui/item";
+@import "imports/semantic-ui/search";

@@ -1,0 +1,18 @@
+
+
+
+
+.ui-panelgrid__cell--content .ui.items.divided  {
+  .item {
+    background: $search_bg;
+    padding: 0;
+    border: 1px solid $searchbar_border_c;
+    margin-bottom: 10px;
+    .image {
+      border-right: 1px solid $searchbar_border_c;
+    }
+    .content {
+      padding: 1em;
+    }
+  }
+}
