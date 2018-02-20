@@ -23,6 +23,27 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: $font_1;
+	src: $url_63;
+	src: $url_64 format('embedded-opentype'), $url_65 format('woff2'), $url_66 format('woff'), $url_67 format('truetype'), $url_68 format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_2;
+	src: $url_63;
+	src: $url_64 format('embedded-opentype'), $url_65 format('woff2'), $url_66 format('woff'), $url_67 format('truetype'), $url_68 format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_3;
+	src: $url_63;
+	src: $url_64 format('embedded-opentype'), $url_65 format('woff2'), $url_66 format('woff'), $url_67 format('truetype'), $url_68 format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
 
 body {
   margin: 0;

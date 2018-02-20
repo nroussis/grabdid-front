@@ -1,0 +1,25 @@
+.ui-dialog--register {
+  .dropdown {
+    padding-top: 0.6em !important;
+    padding-bottom: 0.6em !important;
+    .search {
+      padding-top: 0.55em !important;
+      padding-bottom: 0.6em !important;
+    }
+  }
+  .ui.selection.dropdown {
+    @include vendor(box-sizing, border-box);
+    @include vendor(border-radius, 0);
+    font-size: 14px;
+    border: 1px solid #919191;
+    min-height: 32px;
+    height: 32px;
+    width: 100%;
+    .menu {
+      @include vendor(box-sizing, border-box);
+    }
+    .item {
+      font-size: 14px;
+    }
+  }
+}
