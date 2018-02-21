@@ -6,7 +6,8 @@
   .item {
     background: $search_bg;
     padding: 0;
-    border: 1px solid $searchbar_border_c;
+    border: 1px solid $searchbar_border_c !important;
+    @include vendor(box-shadow,0 1px 1px 0 $transparent_black_8);
     margin-bottom: 10px;
     .image {
       border-right: 1px solid $searchbar_border_c;
@@ -15,4 +16,24 @@
       padding: 1em;
     }
   }
+}
+
+.ui.items {
+  margin: 0.8em 0;
+}
+
+.ui.items>.item .meta {
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.ui.items>.item>.content p {
+  font-size: 14px;
+}
+
+.ui.items>.item .extra {
+  font-size: 13px;
+}
+.ui.items>.item>.image:not(.ui) {
+  width: 115px;
 }

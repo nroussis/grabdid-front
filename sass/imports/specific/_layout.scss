@@ -7,7 +7,7 @@
 .ui-layout-west{
   &__footer {
     background: $search_bg;
-    @include vendor(box-shadow, 2px 2px 1px 0 rgba(0,0,0,0.1));
+    @include vendor(box-shadow, 2px 2px 1px 0 $transparent_black_10);
     z-index: 1;
   }
   .ui-footer__content {

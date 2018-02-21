@@ -70,7 +70,7 @@ span.ui-state--highlight {
     height: 25px;
     margin-top: 12px;
     path {
-      fill: #cfcfcf;
+      fill: $gray_svg_bg;
       @include vendor-o(transition,fill 0.3s);
     }
   }
@@ -88,7 +88,7 @@ span.ui-state--highlight {
   &:hover {
     background: $white;
     path {
-      fill: #000;
+      fill: $black;
     }
   }
 }
@@ -104,7 +104,7 @@ span.ui-state--highlight {
     max-width: 100%;
     background: $white;
     z-index: 1;
-    @include vendor(box-shadow,2px 2px 1px 0 rgba(0, 0, 0, 0.1));
+    @include vendor(box-shadow,2px 2px 1px 0 $transparent_black_10);
   }
 }
 
@@ -118,8 +118,8 @@ span.ui-state--highlight {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: $black; /* Fallback color */
+  background-color: $transparent_black_40; /* Black w/ opacity */
 }
 
 //sidebar used on mobile for navigation
@@ -176,5 +176,14 @@ label.error {
   margin-top: -9px;
   display: block;
   margin-bottom: 11px;
+}
+
+
+.ui-item--promo {
+  .ui-state--highlight {
+    background: $highlight_pink_bg;
+    padding: 0 2px;
+    color: $white;
+  }
 }
 

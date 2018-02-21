@@ -29,6 +29,7 @@
 @include width_base_class(font-size,25);
 @include width_base_class(font-size,27);
 @include width_base_class(font-size,29);
+@include width_base_class(font-size,35);
 @include width_base_class(font-size,36);
 @include width_base_class(font-size,38);
 @include width_base_class(font-size,39);
@@ -40,7 +41,9 @@
 @include width_base_class(padding-left,30);
 
 //set element margin top to 10 example .ui-margin-top--10
+@include width_base_class(margin-top,12);
 @include width_base_class(margin-top,10);
+@include width_base_class(margin-top,8);
 @include width_base_class(margin-top,5);
 
 //set element margin bottom to 7 example .ui-margin-bottom--7
@@ -150,4 +153,26 @@
 //set vertical-align to middle
 .ui-vertical-align--middle {
   vertical-align: middle;
+}
+
+//set element display to block
+.ui-display--block {
+  display: block;
+}
+
+//set element color to dark-gray
+.ui-color--dark-gray {
+  color: $color_dark_gray;
+}
+
+//set table layout to fixed, so that column widths can be manipulated
+.ui-table-layout--fixed {
+  table-layout: fixed;
+}
+
+//
+.ui-text--wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }

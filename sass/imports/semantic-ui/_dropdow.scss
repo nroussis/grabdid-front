@@ -11,7 +11,7 @@
     @include vendor(box-sizing, border-box);
     @include vendor(border-radius, 0);
     font-size: 14px;
-    border: 1px solid #919191;
+    border: 1px solid $dark_input_border;
     min-height: 32px;
     height: 32px;
     width: 100%;
