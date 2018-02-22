@@ -182,8 +182,17 @@ label.error {
 .ui-item--promo {
   .ui-state--highlight {
     background: $highlight_pink_bg;
+
+  }
+}
+.item {
+  .ui-state--highlight {
     padding: 0 2px;
     color: $white;
   }
 }
-
+.ui-item--sale {
+  .ui-state--highlight {
+    background: $highlight_blue_bg;
+  }
+}

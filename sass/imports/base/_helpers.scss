@@ -176,3 +176,8 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+//custom calc class width
+.ui-width--full-187 {
+  @include calc(width,"100% - 187px");
+}

@@ -104,4 +104,9 @@
     padding: 0;
     margin-right: 15px;
   }
+  &--item {
+    position: absolute;
+    right: 17px;
+    @include calc(top,"50% - 20px");
+  }
 }
