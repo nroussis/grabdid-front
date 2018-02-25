@@ -73,8 +73,9 @@ span.ui-state--highlight {
     top: 0;
     width: 100%;
     max-width: 100%;
+    @include vendor(box-sizing, border-box);
     background: $white;
-    z-index: 1;
+    z-index: 9999999999;
     @include vendor(box-shadow,2px 2px 1px 0 $transparent_black_10);
   }
 }
@@ -143,12 +144,12 @@ label.error {
   color: red;
   font-size: 13px;
 }
+
 .ui-inputfield--dialog.ui-margin-bottom--11 + label.error {
   margin-top: -9px;
   display: block;
   margin-bottom: 11px;
 }
-
 
 .ui-item--promo {
   .ui-state--highlight {
@@ -156,15 +157,23 @@ label.error {
 
   }
 }
+
 .item {
   .ui-state--highlight {
     padding: 0 2px;
     color: $white;
   }
 }
+
 .ui-item--sale {
   .ui-state--highlight {
     background: $highlight_blue_bg;
+  }
+}
+
+.ui-item--free {
+  .ui-state--highlight {
+    background: $highlight_orange_bg;
   }
 }
 
@@ -182,6 +191,22 @@ label.error {
 .ui-read-more {
   position: absolute;
   z-index: 999;
-  bottom: 0;
-  right: 0;
+  bottom: 3px;
+  color: $highlight_blue_bg;
+  right: 21px;
+  &:after {
+    content: '';
+    display: block;
+    left: -60px;
+    top: 0;
+    width: 60px;
+    height: 18px;
+    position: absolute;
+    background: $url_gradient_white repeat-y 0 0;
+  }
+}
+
+.ui-read-less {
+  color: $highlight_blue_bg;
+  display: block;
 }

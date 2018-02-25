@@ -114,6 +114,18 @@
     max-width: 570px;
     margin: 0 auto;
   }
+  .ui-panelgrid__cell--content {
+    .ui-font-size--35 {
+      font-size: 26px;
+    }
+    .ui-width--full-175 {
+      width: 100%;
+    }
+    .ui-button--item {
+      position: initial;
+      float: right;
+    }
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -148,6 +160,10 @@
   }
   .ui-button--navigation {
     display: block;
+  }
+  .ui-width--quad {
+    width: 50%;
+    margin: 10px 0;
   }
 }
 @media screen and (min-width: 768px) {

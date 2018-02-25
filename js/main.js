@@ -137,7 +137,7 @@ $(".ui-panel .ui-overflow--hidden .ui-read-more").click(function() {
 });
 $(".ui-panel .ui-overflow--hidden .ui-read-less").click(function() {
     $parent = $(this).parent();
-    $parent.animate({"height":150});
+    $parent.animate({"height":100});
     $parent.find(".ui-read-more").fadeIn();
     $(this).fadeOut();
 });
