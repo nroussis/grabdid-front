@@ -25,6 +25,16 @@
       background: darken($button_green_bg, 15%);
     }
   }
+  //red button
+  &.ui-button--red {
+    background: $color_red;
+    &:hover, &:focus {
+      background: lighten($color_red, 15%);
+    }
+    &:active {
+      background: darken($color_red, 15%);
+    }
+  }
   // main search button
   &--search {
     position: absolute;
@@ -109,4 +119,9 @@
     right: 17px;
     @include calc(top,"50% - 20px");
   }
+}
+
+
+.content .ui-button {
+  height: 34px;
 }

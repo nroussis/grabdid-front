@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
     <link rel="stylesheet" type="text/css" href="js/dropdown.min.css" />
     <link rel="stylesheet" type="text/css" href="js/item.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/rating.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/ftellipsis.js"></script>
@@ -15,6 +16,7 @@
     <script src="js/transition.min.js" ></script>
     <script src="js/dropdown.min.js"></script>
     <script src="js/search.min.js" ></script>
+    <script src="js/rating.min.js" ></script>
     <script src="js/validate.js"></script>
 
 </head>
@@ -126,7 +128,84 @@
               <tbody>
                 <tr>
                     <td class="ui-panelgrid__cell--ad">
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__header">
+                            <label title="Add to My Favorites" class="ui-favorite ui-float--left ui-display--block ui-height--25 ui-width--25 ui-border-radius--full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path    d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"/></svg></label>
+                            <span class="ui-float--left ui-font-size--14 ui-font--light ui-padding-left--13">Add to My Favorites</span>
+                            <p class="clear" ></p>
+                            </div>
+                            <div class="ui-panel__content ui-text-align--center">
+                                <img class="ui-width--full" src="images/old_navy_280x60.gif" />
+                                <p class="clear"></p>
+                                <span class="ui-commandlink--gray ui-font-size--13">was 2.0%</span>
+                                <p class="clear"></p>
+                                <span class="ui-color--red ui-font-size--22 ui-font--bold">6.0% Cash Back</span>
+                                <p class="clear"></p>
+                                <button class="ui-border--none ui-button--red ui-button ui-font-size--17 ui-color--white ui-width--230 ui-margin-top--8">Shop Now</button>
+                            </div>
 
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__header ui-text-align--center">
+                                <div class="ui massive star rating" data-max-rating="5"></div>
+                                <p class="clear"></p>
+                                <span class="ui-commandlink--gray ui-font-size--17 ui-font--light rating-feedback">Rate us</span>
+                            </div>
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__content ui-text-align--center">
+                                <span class=" ui-font-size--85 ui-color--gray">99</span>
+                                <p class="clear"></p>
+                                <span class="ui-font-size--14 ui-commandlink--gray ui-font--light">COUPONS AVAILABLE</span>
+                                <p class="clear ui-height--5"></p>
+                                <span class="ui-font-size--17 ui-color--gray">Share these coupons</span>
+                                <p class="clear ui-height--5"></p>
+                                <div class="ui-separator--top-gray ui-width--190 ui-margin--center ui-padding-top--8">
+                                    <a href="#" class="ui-text-align--center ui-width--33 ui-height--33 ui-commandlink--social-media-dark ui-border-radius--full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg>
+                                    </a>
+                                    <a href="#" class="ui-text-align--center ui-width--33 ui-height--33 ui-commandlink--social-media-dark ui-border-radius--full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"/></svg>
+                                    </a>
+                                    <a href="#" class="ui-text-align--center ui-width--33 ui-height--33 ui-commandlink--social-media-dark ui-border-radius--full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    </a>
+                                    <a href="#" class="ui-text-align--center ui-width--33 ui-height--33 ui-commandlink--social-media-dark ui-border-radius--full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                                    </a>
+                                    <a href="#" class="ui-text-align--center ui-width--33 ui-height--33 ui-commandlink--social-media-dark ui-border-radius--full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__header">
+                                <span class="ui-font-size--22 ui-font--medium ui-color--green">Cash Back Terms</span>
+                            </div>
+                            <div class="ui-panel__content">
+                                <span class="ui-color--gray ui-font-size--13">Cash Back will be automatically added to your Izocard account today.</span>
+                                <p class="clear ui-height--20"></p>
+                                <span class="ui-color--gray ui-font-size--13"><b>Exclusions: </b>Cash Back is not available on Gap Outlet/Factory, Banana Republic Factory items, gift cards including e-gift cards.</span>
+
+                            </div>
+
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__header">
+                                <span class="ui-font-size--20 ui-font--medium">About Old Navy Coupons, Deals and Cash Back</span>
+                            </div>
+                            <div class="ui-panel__content ui-position--relative ui-overflow--hidden ui-height--100">
+                                    <span class="ui-font-size--13">Find the latest and hottest fashion trends, as well as your favorite simple and stylish basics, all at incredible prices at Old Navy. This store has something for everyone in your family, from Dad to baby to your picky and fashion-conscious teenager. Save on stylish women's clothes like cardigan sweaters, sexy sun dresses and skinny ankle pants. Get everything from business casual looks for the office to fun casual or party wear for the weekends. The men’s section is full of practical fashion, from quality men's jeans to classic button-downs and hooded sweatshirts. There’s also a wide variety of adorable and durable kids’ clothes, and fun styles for your hip teenager. Save on everyone’s clothes with Old Navy coupons, promo codes and fantastic year-round sales. Outfit your entire crew for even less when you take advantage of the Cash Back perks found at Ebates, as well as free shipping offers on apparel for the entire family. Babies and kids go through clothes so fast with their constant growth spurts and hours of playing outside.</span>
+                                    <p class="clear ui-height--5"></p>
+                                    <span class="ui-font-size--13">When you shop through Ebates, you’ll receive a percentage of your purchase price back, so you end up saving even more money. Don’t feel bad anymore about your little ones tearing through clothes when you shop Old Navy for discount kids’ and baby clothes, and save even more with Old Navy promo and coupon codes. Keep your teens and juniors feeling cool and trendy when you shop here for their back-to-school and summer break clothes. You can enjoy everyday apparel sales that help you stock everyone’s closets without breaking your budget or your bank account. Get this season’s hottest styles and fashion looks and still save money on these and your other favorite styles with clothing coupons and OldNavy.com coupon codes found on Ebates. Old Navy has an outstanding clearance and sale clothing section where you can discover the best clearance clothing deals and make a serious fashion statement while saving. You’ll find affordable clothing in the clearance section, including discount dresses, leggings, sleepwear, sweaters and fashion-forward jeans for everybody. Slip into something comfortable with stylish shoes for men, women and kids at prices you’ll love. With affordable accessories always on sale at Old Navy, you can fill your wardrobe with the hottest hats, scarves, sunglasses and jewelry — and always be ready to add a unique, personalized touch to every outfit. From earrings to necklaces and trendy bracelets, accessories can really take an ordinary outfit from simple to stunning, and you’ll always get the best prices on fun fashion </span>
+                                    <p class="clear ui-height--5"></p>
+
+                                    <span class="ui-font-size--13">At Old Navy, there are endless ways to spruce up your style and do it affordably. On top of already low prices, you’ll score big savings when you use your Old Navy Credit Card for in-store or online purchases. Combine these card perks with Ebates Cash Back and unbeatable clothing coupon and promo codes to make every dollar count. Find the latest and greatest deals on discount school uniforms, sleepwear, activewear and swimwear while saving even more on everything with Cash Back at Ebates. Special clearance pricing paired with money-saving rewards makes Old Navy the perfect destination for every family looking for modern clothes for everyone at a price that everyone can afford and that everyone will love.</span>
+                                    <label class="ui-read-more ui-background--white ui-font-size--13">Read More +</label>
+                                    <label class="ui-read-less ui-background--white ui-font-size--13 ui-display--none">Read Less -</label>
+                            </div>
+                        </div>
                     </td>
                     <td class="ui-panelgrid__cell--content">
                         <label class="ui-font-size--35 ui-color--dark-gray ui-margin-top--12 ui-display--block">Hotels.com Coupon Code Discounts & Coupons</label>
@@ -147,7 +226,7 @@
                                     </table>
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                     <div class="meta">
                                         <span class="cinema"><label class="ui-state--highlight">PROMO CODE</label> 858 used today</span>
                                     </div>
@@ -161,7 +240,7 @@
 
                                     </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
@@ -179,7 +258,7 @@
                                     </table>
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">SALE</label> 156 used today</span>
                                         </div>
@@ -193,7 +272,7 @@
 
                                         </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
@@ -201,7 +280,7 @@
 
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">SALE</label> 380 used today</span>
                                         </div>
@@ -212,7 +291,7 @@
                                         </div>
 
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--promo">
@@ -220,7 +299,7 @@
 
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">PROMO CODE</label> 365 used today</span>
                                         </div>
@@ -230,7 +309,7 @@
                                             <p class="ui-text--wrap">Click through to find all Hotels.com promo codes in one convenient qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe </p>
                                         </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
@@ -238,7 +317,7 @@
 
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">SALE</label> 380 used today</span>
                                         </div>
@@ -248,7 +327,7 @@
                                             <p class="ui-text--wrap">Join Welcome Rewards from Hotels.com for spectactular savings! F qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe </p>
                                         </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
@@ -256,7 +335,7 @@
 
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">SALE</label> 380 used today</span>
                                         </div>
@@ -266,7 +345,7 @@
                                             <p class="ui-text--wrap">Join Welcome Rewards from Hotels.com for spectactular savings! F qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe </p>
                                         </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
@@ -274,7 +353,7 @@
 
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">SALE</label> 380 used today</span>
                                         </div>
@@ -284,7 +363,7 @@
                                             <p class="ui-text--wrap">Join Welcome Rewards from Hotels.com for spectactular savings! F qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe </p>
                                         </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
@@ -292,7 +371,7 @@
 
                                 </div>
                                 <div class="content ui-position--relative">
-                                    <div class="ui-width--full-187 ui-float--left">
+                                    <div class="ui-width--full-175 ui-float--left">
                                         <div class="meta">
                                             <span class="cinema"><label class="ui-state--highlight">SALE</label> 380 used today</span>
                                         </div>
@@ -302,7 +381,7 @@
                                             <p class="ui-text--wrap">Join Welcome Rewards from Hotels.com for spectactular savings! F qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe </p>
                                         </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--17 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
                                 </div>
                             </div>
                         </div>
@@ -397,27 +476,27 @@
         <!--end of panelgrid sitemap-->
         <div class="ui-footer--social-media ui-text-align--center">
             <div>
-                <a href="#" class="ui-text-align--center ui-commandlink--social-media ui-border-radius--full">
+                <a href="#" class="ui-text-align--center ui-height--50 ui-commandlink--social-media ui-border-radius--full">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg>
                 </a>
             </div>
             <div>
-                <a href="#" class="ui-text-align--center ui-commandlink--social-media ui-border-radius--full">
+                <a href="#" class="ui-text-align--center ui-height--50 ui-commandlink--social-media ui-border-radius--full">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"/></svg>
                 </a>
             </div>
             <div>
-                <a href="#" class="ui-text-align--center ui-commandlink--social-media ui-border-radius--full">
+                <a href="#" class="ui-text-align--center ui-height--50 ui-commandlink--social-media ui-border-radius--full">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
                 </a>
             </div>
             <div>
-                <a href="#" class="ui-text-align--center ui-commandlink--social-media ui-border-radius--full">
+                <a href="#" class="ui-text-align--center ui-height--50 ui-commandlink--social-media ui-border-radius--full">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                 </a>
             </div>
             <div>
-                <a href="#" class="ui-text-align--center ui-commandlink--social-media ui-border-radius--full">
+                <a href="#" class="ui-text-align--center ui-height--50 ui-commandlink--social-media ui-border-radius--full">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/></svg>
                 </a>
             </div>
@@ -631,6 +710,9 @@
             allowAdditions: true,
             minSelections: 1
         })
+    ;
+    $('.ui.rating')
+        .rating()
     ;
 </script>
 <!-- end of page footer -->

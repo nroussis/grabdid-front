@@ -8,3 +8,20 @@
   min-height: 400px;
   margin-top: -2px;
 }
+
+.ui-panel {
+  &--favorite {
+    border: 1px solid $searchbar_border_c;
+    margin-right: 1em;
+    margin-top: 1em;
+    @include vendor(box-shadow, 0 1px 1px 0 $transparent_black_8);
+    .ui-panel__header {
+      padding: 1em;
+    }
+    .ui-panel__content {
+      padding: 1em;
+      padding-top: 0;
+    }
+
+  }
+}

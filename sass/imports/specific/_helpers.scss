@@ -58,40 +58,11 @@ span.ui-state--highlight {
   }
 }
 
-.ui-footer--social-media {
-  margin-top: 40px;
-  div {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    padding: 0 5px;
-  }
-  svg {
-    height: 25px;
-    margin-top: 12px;
-    path {
-      fill: $gray_svg_bg;
-      @include vendor-o(transition,fill 0.3s);
-    }
-  }
-}
 
-.ui-footer--copyright {
-  padding: 20px 0;
-}
 
-.ui-commandlink--social-media {
-  display: block;
-  height: 50px;
-  background: $social_media_circle_bg;
-  @include vendor-o(transition,background 0.3s);
-  &:hover {
-    background: $white;
-    path {
-      fill: $black;
-    }
-  }
-}
+
+
+
 .ui-fixed {
   .ui-layout-west {
     height: 197px;
@@ -195,4 +166,22 @@ label.error {
   .ui-state--highlight {
     background: $highlight_blue_bg;
   }
+}
+
+.ui-favorite {
+  svg{
+    cursor: pointer;
+    fill: $searchbar_border_c;
+    @include vendor-o(transition,1s all ease);
+  }
+  &:hover svg {
+    fill: $hearth_bg;
+  }
+}
+
+.ui-read-more {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
 }

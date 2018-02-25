@@ -4,6 +4,8 @@
 //\*------------------------------------*/
 
 //used mixin to create any type of width-class
+@include width_base_class(width,25);
+@include width_base_class(width,33);
 @include width_base_class(width,100);
 @include width_base_class(width,190);
 @include width_base_class(width,230);
@@ -40,6 +42,8 @@
 @include width_base_class(padding-left,23);
 @include width_base_class(padding-left,30);
 
+@include width_base_class(padding-top,8);
+
 //set element margin top to 10 example .ui-margin-top--10
 @include width_base_class(margin-top,12);
 @include width_base_class(margin-top,10);
@@ -54,6 +58,11 @@
 @include width_base_class(height,5);
 @include width_base_class(height,8);
 @include width_base_class(height,20);
+@include width_base_class(height,25);
+@include width_base_class(height,33);
+@include width_base_class(height,50);
+@include width_base_class(height,100);
+@include width_base_class(height,150);
 
 //border radius 100%
 .ui-border-radius--full {
@@ -121,6 +130,11 @@
   font-family: $font_3;
 }
 
+//set font to robotobold
+.ui-font--bold {
+  font-weight: bold;
+}
+
 // set font color to white
 .ui-color--white {
   color: $white;
@@ -170,7 +184,7 @@
   table-layout: fixed;
 }
 
-//
+// class used to wrap text in one line and add three dots... (works on blocks that has specified width)
 .ui-text--wrap {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -178,6 +192,26 @@
 }
 
 //custom calc class width
-.ui-width--full-187 {
-  @include calc(width,"100% - 187px");
+.ui-width--full-175 {
+  @include calc(width,"100% - 175px");
+}
+
+//set element background to gray
+.ui-background--gray {
+  background: $search_bg;
+}
+
+//set color to red
+.ui-color--red {
+  color: $color_red;
+}
+
+//set a separator gray border to element, good for clears and divs
+.ui-separator--top-gray {
+  border-top: 1px solid $searchbar_border_c;
+}
+
+//set element overflow to hidden
+.ui-overflow--hidden {
+  overflow: hidden;
 }

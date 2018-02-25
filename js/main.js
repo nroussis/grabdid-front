@@ -101,3 +101,43 @@ window.onclick = function(event) {
     }
 }
 
+//read more
+var $el, $ps, $up, totalHeight;
+
+$(".ui-panel .ui-overflow--hidden .ui-read-more").click(function() {
+
+    totalHeight = 0
+
+    $el = $(this);
+    $p  = $el.parent();
+    $ps = $p.find("span");
+    $rl = $p.find(".ui-read-less");
+
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $ps.each(function() {
+        totalHeight += $(this).outerHeight();
+    });
+
+    $p
+        .css({
+            // Set height to prevent instant jumpdown when max height is removed
+            "height": $p.height(),
+            "max-height": 9999
+        })
+        .animate({
+            "height": totalHeight + 20
+        });
+
+    // fade out read-more
+    $el.fadeOut();
+    $rl.fadeIn();
+    // prevent jump-down
+    return false;
+
+});
+$(".ui-panel .ui-overflow--hidden .ui-read-less").click(function() {
+    $parent = $(this).parent();
+    $parent.animate({"height":150});
+    $parent.find(".ui-read-more").fadeIn();
+    $(this).fadeOut();
+});

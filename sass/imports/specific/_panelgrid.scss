@@ -178,8 +178,12 @@
     }
   }
   &--layout {
+    td {
+      vertical-align: top;
+    }
     .ui-panelgrid__cell--ad {
       width: 300px;
+
     }
   }
 }
