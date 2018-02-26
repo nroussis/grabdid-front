@@ -32,3 +32,35 @@
     color: $white;
   }
 }
+
+.ui-commandlink--social-media {
+  display: block;
+  background: $social_media_circle_bg;
+  @include vendor-o(transition,background 0.3s);
+  &:hover {
+    background: $white;
+    path {
+      fill: $black;
+    }
+  }
+}
+
+.ui-commandlink--social-media-dark {
+  display: inline-block;
+  background: $black;
+  @include vendor-o(transition,background 0.3s);
+  path {
+    @include vendor-o(transition,fill 0.3s);
+    fill: $white;
+  }
+  &:hover {
+    background: $social_media_circle_bg;
+    path {
+      fill: $black;
+    }
+  }
+  svg {
+    height: 17px;
+    margin-top: 8px;
+  }
+}

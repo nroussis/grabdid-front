@@ -4,17 +4,21 @@
 //\*------------------------------------*/
 
 //used mixin to create any type of width-class
+@include width_base_class(width,25);
+@include width_base_class(width,33);
 @include width_base_class(width,100);
 @include width_base_class(width,190);
+@include width_base_class(width,200);
 @include width_base_class(width,230);
 @include width_base_class(width,284);
 @include width_base_class(width,300);
 
 //set element border-radius to 5 and output class is .ui-border-radius--5
-@include width_base_class(border-radius,5);
 @include width_base_class(border-radius,4);
+@include width_base_class(border-radius,5);
 
 //set element font-size to 24 example .ui-font-size--24
+@include width_base_class(font-size,11);
 @include width_base_class(font-size,12);
 @include width_base_class(font-size,13);
 @include width_base_class(font-size,14);
@@ -29,19 +33,29 @@
 @include width_base_class(font-size,25);
 @include width_base_class(font-size,27);
 @include width_base_class(font-size,29);
+@include width_base_class(font-size,35);
 @include width_base_class(font-size,36);
 @include width_base_class(font-size,38);
 @include width_base_class(font-size,39);
 @include width_base_class(font-size,85);
+
+//set element line-height to 30 example .ui-line-height--30
+@include width_base_class(line-height,27);
+@include width_base_class(line-height,30);
 
 //set element padding left to 30 example .ui-padding-left--30
 @include width_base_class(padding-left,13);
 @include width_base_class(padding-left,23);
 @include width_base_class(padding-left,30);
 
+@include width_base_class(padding-top,8);
+
 //set element margin top to 10 example .ui-margin-top--10
-@include width_base_class(margin-top,10);
 @include width_base_class(margin-top,5);
+@include width_base_class(margin-top,8);
+@include width_base_class(margin-top,10);
+@include width_base_class(margin-top,12);
+@include width_base_class(margin-top,25);
 
 //set element margin bottom to 7 example .ui-margin-bottom--7
 @include width_base_class(margin-bottom,7);
@@ -51,6 +65,12 @@
 @include width_base_class(height,5);
 @include width_base_class(height,8);
 @include width_base_class(height,20);
+@include width_base_class(height,25);
+@include width_base_class(height,33);
+@include width_base_class(height,45);
+@include width_base_class(height,50);
+@include width_base_class(height,100);
+@include width_base_class(height,150);
 
 //border radius 100%
 .ui-border-radius--full {
@@ -60,6 +80,11 @@
 // remove border radius from element
 .ui-border-radius--none {
   @include vendor(border-radius,0);
+}
+
+//used for setting any element max-width to 100%
+.ui-max-width--full {
+  max-width: 100%;
 }
 
 //used for setting any element width to 100%
@@ -75,6 +100,11 @@
 //used for setting any element width to 50%
 .ui-width--half {
   width: 50%;
+}
+
+//used for setting any element width to 25%
+.ui-width--quad {
+  width: 25%;
 }
 
 //set line-height 100%
@@ -108,6 +138,11 @@
     text-align: center;
 }
 
+// set element text align to right
+.ui-text-align--right {
+  text-align: right;
+}
+
 //set font to robotolight
 .ui-font--light {
   font-family: $font_2;
@@ -116,6 +151,11 @@
 //set font to robotomedium
 .ui-font--medium {
   font-family: $font_3;
+}
+
+//set font to robotobold
+.ui-font--bold {
+  font-weight: bold;
 }
 
 // set font color to white
@@ -132,6 +172,7 @@
 .ui-color--green {
   color: $color_green;
 }
+
 //set margin left-right to auto, placing element in middle
 .ui-margin--center {
   margin: 0 auto;
@@ -150,4 +191,71 @@
 //set vertical-align to middle
 .ui-vertical-align--middle {
   vertical-align: middle;
+}
+
+//set element display to block
+.ui-display--block {
+  display: block;
+}
+
+//set element color to dark-gray
+.ui-color--dark-gray {
+  color: $color_dark_gray;
+}
+
+//set table layout to fixed, so that column widths can be manipulated
+.ui-table-layout--fixed {
+  table-layout: fixed;
+}
+
+// class used to wrap text in one line and add three dots... (works on blocks that has specified width)
+.ui-text--wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//custom calc class width
+.ui-width--full-175 {
+  @include calc(width,"100% - 175px");
+}
+
+//set element background to gray
+.ui-background--gray {
+  background: $search_bg;
+}
+
+//set element background to white
+.ui-background--white {
+  background: $white;
+}
+
+//set color to red
+.ui-color--red {
+  color: $color_red;
+}
+
+//set a separator gray border to element, good for clears and divs
+.ui-separator--top-gray {
+  border-top: 1px solid $searchbar_border_c;
+}
+
+//set element overflow to hidden
+.ui-overflow--hidden {
+  overflow: hidden;
+}
+
+//set element cursor to pointer
+.ui-cursor--pointer {
+  cursor: pointer;
+}
+
+//set text color to blue, useful for links
+.ui-color--blue {
+  color: $highlight_blue_bg;
+}
+
+//set text color to orange
+.ui-color--orange {
+  color: $highlight_orange_bg;
 }

@@ -10,7 +10,7 @@
   &__header {
     padding: 15px;
     &:hover {
-      background: rgba(0,0,0,0.1);
+      background: $transparent_black_10;
       cursor: pointer;
     }
     span {
@@ -28,7 +28,7 @@
       }
     }
     &.ui-state--active {
-      background: rgba(0,0,0,0.1);
+      background: $transparent_black_10;
       span {
         &:after {
           @include vendor-o(transform,none);
