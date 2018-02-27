@@ -165,6 +165,12 @@
     width: 50%;
     margin: 10px 0;
   }
+  .item > div {
+    display: block !important;
+  }
+  .item .image {
+    border-bottom: 1px solid $searchbar_border_c;
+  }
 }
 @media screen and (min-width: 768px) {
   .ui-sidebar--navigation {
@@ -184,6 +190,13 @@
     }
   }
   .ui-clamp {
+    width: 100%;
+  }
+  .ui-panelgrid--layout td {
+    display: block;
+
+  }
+  .ui-panelgrid--layout .ui-panelgrid__cell--ad {
     width: 100%;
   }
 }
