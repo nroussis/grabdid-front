@@ -129,7 +129,7 @@ $(".ui-panel .ui-overflow--hidden .ui-read-more").click(function() {
             "max-height": 9999
         })
         .animate({
-            "height": totalHeight + 20
+            "height": totalHeight + 30
         });
 
     // fade out read-more
@@ -139,9 +139,15 @@ $(".ui-panel .ui-overflow--hidden .ui-read-more").click(function() {
     return false;
 
 });
-$(".ui-panel .ui-overflow--hidden .ui-read-less").click(function() {
+$(".ui-panel .ui-overflow--hidden.ui-height--100 .ui-read-less").click(function() {
     $parent = $(this).parent();
     $parent.animate({"height":100});
+    $parent.find(".ui-read-more").fadeIn();
+    $(this).fadeOut();
+});
+$(".ui-panel .ui-overflow--hidden.ui-height--85 .ui-read-less").click(function() {
+    $parent = $(this).parent();
+    $parent.animate({"height":85});
     $parent.find(".ui-read-more").fadeIn();
     $(this).fadeOut();
 });
