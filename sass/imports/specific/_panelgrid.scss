@@ -186,5 +186,19 @@
 
     }
   }
+  &--borders-10 td{
+    padding: 0 5px;
+    box-sizing: border-box;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    > div {
+      border: 1px solid $panelgrid_borders_color;
+      @include vendor(box-shadow,0 1px 1px 0 $transparent_black_8);
+    }
+  }
 }
 

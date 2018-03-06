@@ -23,6 +23,10 @@ btnTop.hover(function(){
 });
 
 btnTop.on('click', function(){
+    $('body').animate({
+            scrollTop: 0 ,
+        }, 700
+    );
     $('html').animate({
             scrollTop: 0 ,
         }, 700
@@ -125,7 +129,7 @@ $(".ui-panel .ui-overflow--hidden .ui-read-more").click(function() {
             "max-height": 9999
         })
         .animate({
-            "height": totalHeight + 20
+            "height": totalHeight + 30
         });
 
     // fade out read-more
@@ -135,9 +139,37 @@ $(".ui-panel .ui-overflow--hidden .ui-read-more").click(function() {
     return false;
 
 });
-$(".ui-panel .ui-overflow--hidden .ui-read-less").click(function() {
+$(".ui-panel .ui-overflow--hidden.ui-height--100 .ui-read-less").click(function() {
     $parent = $(this).parent();
     $parent.animate({"height":100});
     $parent.find(".ui-read-more").fadeIn();
     $(this).fadeOut();
+});
+$(".ui-panel .ui-overflow--hidden.ui-height--85 .ui-read-less").click(function() {
+    $parent = $(this).parent();
+    $parent.animate({"height":85});
+    $parent.find(".ui-read-more").fadeIn();
+    $(this).fadeOut();
+});
+
+
+$(function () {
+    var _alphabets = $('.alphabet > a');
+    var _contentRows = $('#countries-table tbody tr');
+
+    _alphabets.click(function () {
+        var _letter = $(this), _text = $(this).text(), _count = 0;
+
+        _alphabets.removeClass("active");
+        _letter.addClass("active");
+
+        _contentRows.hide();
+        _contentRows.each(function (i) {
+            var _cellText = $(this).children('td').eq(0).text();
+            if (RegExp('^' + _text).test(_cellText)) {
+                _count += 1;
+                $(this).fadeIn(400);
+            }
+        });
+    });
 });
