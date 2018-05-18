@@ -49,7 +49,7 @@ gulp.task('style:build', function() {
 		.pipe(plumber())
 		.pipe(sass())  //Sass compiling
 		.pipe(sass().on('error', sass.logError)) //handling sass errors
-		.pipe(preFixer()) //Autoprefix
+		.pipe(preFixer({browsers: ['ie >= 9']})) //Autoprefix
 		.pipe(cssMin({compatibility: 'ie9'}))   //Minify code
 		.pipe(sourceMaps.write()) // Make sourcemaps
 		.pipe(rename('style.css')) //
@@ -100,11 +100,11 @@ gulp.task('watch', function(){
 	});
 
 	watch([path.watch.js], function(ev, callback){
-		gulp.start('style:build');
+		gulp.start('js:build');
 	});
 
 	watch([path.watch.html], function(ev, callback){
-		gulp.start('style:build');
+		gulp.start('html:build');
 	});
 });
 
@@ -112,6 +112,7 @@ gulp.task('watch', function(){
 gulp.task('build', [
     'html:build',
     'js:build',
+    'jscss:build',
     'style:build',
     'fonts:build',
     'image:build'
