@@ -1,0 +1,283 @@
+
+///*------------------------------------*\
+//    #HELPERS used for layouting and styling the page, but they are not html element or component.
+//\*------------------------------------*/
+
+//ui-text is used for <span>
+.ui-text {
+  display: inline-block;
+  &--orange {
+    color: $font_orange_color;
+  }
+  &--dark {
+    color: $font_darkgray_color;
+  }
+}
+
+.ui-panel__banner .ui-width--half {
+  padding-top: 50px;
+}
+
+//layout grid inside of testemonials panelgrid
+.ui-testemonials-grid {
+  .ui-first {
+    @include calc(width, "100% - 130px");
+  }
+  .ui-last {
+    width: 90px;
+    padding: 20px;
+  }
+  &__subheader {
+    font-family: $font_3;
+    color: $separator_color;
+    padding: 29px 13px 8px 23px;
+    font-weight: bold;
+  }
+  &__output {
+    color: $panelgrid_output_color;
+  }
+  &__footer {
+    padding: 14px 18px;
+    background: $search_bg;
+  }
+}
+//highlighted text is orange
+span.ui-state--highlight {
+  color: $separator_highlight;
+}
+
+.ui-clamp {
+  width: 197px;
+  //letter-spacing: -0.3px;
+  a {
+    margin-top: 4px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+
+
+.ui-fixed {
+  .ui-layout-west {
+    height: 197px;
+    //margin-bottom: 46px;
+  }
+  .ui-layout-west__content {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    @include vendor(box-sizing, border-box);
+    background: $white;
+    z-index: 1;
+    @include vendor(box-shadow,2px 2px 1px 0 $transparent_black_10);
+  }
+}
+
+
+.ui-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: $black; /* Fallback color */
+  background-color: $transparent_black_40; /* Black w/ opacity */
+}
+
+//sidebar used on mobile for navigation
+.ui-sidebar {
+  &__content {
+    width: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-height: 100%;
+    background: $white;
+    a {
+      color: $w_f_link_color;
+      display: block;
+      padding: 15px;
+    }
+  }
+  &__close {
+    height: 24px;
+    width: 24px;
+    padding: 0;
+  }
+}
+
+#backToTheTop {
+  position: fixed;
+  text-align: center;
+  bottom: 42px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  opacity: .5;
+  background: black;
+  @include vendor(border-radius,5px);
+  display: none;
+  z-index: 100;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.topIcon {
+  display: inline-block;
+  margin-top: 7px;
+  width: 16px;
+  height: 16px;
+  background: $url_icon_angle_u center no-repeat;
+}
+
+label.error {
+  color: red;
+  font-size: 13px;
+}
+
+.ui-inputfield--dialog.ui-margin-bottom--11 + label.error {
+  margin-top: -9px;
+  display: block;
+  margin-bottom: 11px;
+}
+
+.ui-item--promo {
+  .ui-state--highlight {
+    background: $highlight_pink_bg;
+
+  }
+}
+
+.item {
+  .ui-state--highlight {
+    padding: 0 2px;
+    color: $white;
+  }
+}
+
+.ui-item--sale {
+  .ui-state--highlight {
+    background: $highlight_blue_bg;
+  }
+}
+
+.ui-item--free {
+  .ui-state--highlight {
+    background: $highlight_orange_bg;
+  }
+}
+
+.ui-favorite {
+  svg{
+    cursor: pointer;
+    fill: $searchbar_border_c;
+    @include vendor-o(transition,1s all ease);
+  }
+  &:hover svg {
+    fill: $hearth_bg;
+  }
+}
+
+.ui-read-more {
+  position: absolute;
+  bottom: 3px;
+  color: $highlight_blue_bg;
+  right: 21px;
+  z-index: 0;
+  &:after {
+    content: '';
+    display: block;
+    left: -60px;
+    top: 0;
+    width: 60px;
+    height: 18px;
+    position: absolute;
+    background: $url_gradient_white repeat-y 0 0;
+  }
+}
+
+.ui-read-less {
+  color: $highlight_blue_bg;
+  display: block;
+  z-index: 0;
+}
+
+.wrapper
+{
+  width: 680px;
+  margin: 0 auto;
+}
+
+.wrapper h1
+{
+  color: #555;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1px;
+  letter-spacing: 2px;
+}
+
+#conutries
+{
+  width: 650px;
+  background: white;
+}
+
+.alphabet
+{
+  margin: 0 0 10px;
+  overflow: hidden;
+}
+
+.alphabet a, #countries-table tr
+{
+  transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+}
+
+.alphabet a
+{
+  width: 20px;
+  float: left;
+  color: #333;
+  cursor: pointer;
+  height: 20px;
+  border: 1px solid #CCC;
+  display: block;
+  padding: 2px 2px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  border-right: none;
+  text-decoration: none;
+  background-color: #F1F1F1;
+}
+
+.alphabet a.first
+{
+  border-radius: 3px 0 0 3px;
+}
+
+.alphabet a.last
+{
+  border-right: 1px solid silver;
+  border-radius: 0 3px 3px 0;
+}
+
+.alphabet a:hover,
+.alphabet a.active
+{
+  background: #FBF8E9;
+  font-weight: bold;
+}

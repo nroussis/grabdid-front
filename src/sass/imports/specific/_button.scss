@@ -1,0 +1,127 @@
+
+///*------------------------------------*\
+//    #BUTTON
+//\*------------------------------------*/
+
+.ui-button {
+  //orange button used in main header
+  &.ui-button--orange {
+    background: $button_orange_bg;
+    color: $white;
+    &:hover, &:focus {
+      background: lighten($button_orange_bg, 15%);
+    }
+    &:active {
+      background: darken($button_orange_bg, 15%);
+    }
+  }
+  //green button used in main search
+  &.ui-button--green {
+    background: $button_green_bg;
+    &:hover, &:focus {
+      background: lighten($button_green_bg, 15%);
+    }
+    &:active {
+      background: darken($button_green_bg, 15%);
+    }
+  }
+  //red button
+  &.ui-button--red {
+    background: $color_red;
+    &:hover, &:focus {
+      background: lighten($color_red, 15%);
+    }
+    &:active {
+      background: darken($color_red, 15%);
+    }
+  }
+  // main search button
+  &--search {
+    position: absolute;
+    right:0;
+    top: -1px;
+    width: 80px;
+    @include border-radius-top-right(5px);
+    @include border-radius-bottom-right(5px);
+  }
+  //left button just adding right margin 15 to button
+  &--left {
+    margin-right: 15px;
+  }
+  //right button just adding left margin 15 to button
+  &--right {
+    margin-left: 15px;
+  }
+  //big green button in banner
+  &--banner {
+    width: 100%;
+    background: $button_banner_green;
+    color: $white;
+    border: 2px solid $button_banner_border;
+    height: 50px;
+    max-width: 400px;
+    &:hover, &:focus {
+      background: lighten($button_banner_border, 15%);
+    }
+    &:active {
+      background: $button_banner_border;
+    }
+  }
+  &--orange-light {
+    background: $button_orange_light_bg;
+    border: 1px solid $button_orange_light_border;
+    color: $button_orange_light_color;
+    height: 32px;
+    &:hover, &:focus {
+      background: lighten($button_orange_light_bg, 15%);
+    }
+    &:active {
+      background: darken($button_orange_light_bg, 15%);
+    }
+  }
+  &--green-light {
+    background: $button_green_light_bg;
+    border: 1px solid $button_green_light_border;
+    color: $button_green_light_color;
+    height: 32px;
+    &:hover, &:focus {
+      background: lighten($button_green_light_bg, 15%);
+    }
+    &:active {
+      background: darken($button_green_light_bg, 15%);
+    }
+  }
+  &--white {
+    background: $white;
+    border: 1px solid $footer_button_green_border;
+    &:hover, &:focus {
+      background: darken($white, 15%);
+    }
+    &:active {
+      background: $footer_button_green_border;
+    }
+  }
+  &--footer-header {
+    width: 170px;
+    height: 50px;
+    margin-top: 45px;
+
+  }
+  &--navigation {
+    display: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-right: 15px;
+  }
+  &--item {
+    position: absolute;
+    right: 17px;
+    @include calc(top,"50% - 20px");
+  }
+}
+
+
+.content .ui-button {
+  height: 34px;
+}

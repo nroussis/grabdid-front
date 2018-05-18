@@ -1,0 +1,16 @@
+
+///*------------------------------------*\
+//    #PLACEHOLDERS holding all repeated code, use this placeholders only when you need exactly that code inside the placeholder for your selector,
+// 					or if you have three times biger code that your selector, otherwise do not use it.
+//\*------------------------------------*/
+
+//used in ui-layout components
+%main-layout {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+//sets max-width to 880
+%max-width-880 {
+  max-width: 880px;
+}

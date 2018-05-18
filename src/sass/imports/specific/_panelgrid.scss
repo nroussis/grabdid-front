@@ -1,0 +1,204 @@
+
+///*------------------------------------*\
+//    #PANELGRID is a low data table.
+//\*------------------------------------*/
+
+//column with a main searchbar
+.ui-search-column {
+  padding: 0 85px;
+}
+
+//aligning all links to center of the panelgrid cell in layout west footer
+.ui-layout-west__footer td {
+  text-align: center;
+}
+
+//panelgrid in homepage banner, separating Stores and Members
+.ui-panelgrid--banner-price {
+  a {
+    color: $green_link_color;
+  }
+  .ui-first {
+    padding-right: 35px;
+  }
+  .ui-last {
+    padding-left: 35px;
+  }
+  .ui-panelgrid__cell {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
+
+//panelgrid holding 7 logos(homepage)
+.ui-panelgrid--logos {
+  height: 67px;
+  margin-top: 20px;
+}
+.ui-panelgrid__cell {
+  //panelgrid cells containing only shops logos
+  &--melinamay {
+    background: $url_melinamay_l left no-repeat;
+    background-size: auto 100%;
+  }
+  &--ebay {
+    background: $url_ebay_l left no-repeat;
+    background-size: auto 100%;
+  }
+  &--aliexpress {
+    background: $url_aliexpress_l left no-repeat;
+    background-size: auto 100%;
+  }
+  &--aegean {
+    background: $url_aegean_l left no-repeat;
+    background-size: auto 100%;
+  }
+  &--shopgr {
+    background: $url_shopgr_l left no-repeat;
+    background-size: auto 100%;
+  }
+  &--deliverasgr {
+    background: $url_deliverasgr_l left no-repeat;
+    background-size: auto 100%;
+  }
+  &--zackret {
+    background: $url_zackret_l left no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+//panelgrid with three columns
+.ui-panelgrid {
+  &--col-3 {
+    td {
+      width: 33.33%;
+      padding: 0 20px;
+      vertical-align: top;
+    }
+  }
+  &--basic {
+    //padding: 0 15px;
+    vertical-align: top;
+  }
+  &__image {
+    &--compass {
+      background-image: $url_compass_img;
+    }
+    &--cart {
+      background-image: $url_cart_img;
+    }
+    &--refund {
+      background-image: $url_refund_img;
+    }
+  }
+}
+
+//panelgrid with four columns and borders
+.ui-panelgrid {
+  &--col-4 td{
+    width: 25%;
+  }
+  &--borders td{
+    padding: 0 15px;
+    box-sizing: border-box;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    > div {
+      border: 1px solid $panelgrid_borders_color;
+      //@include vendor(box-shadow,0 1px 1px 0 rgba(0,0,0,.08));
+    }
+  }
+  &__background {
+    height:190px;
+    width: 268px;
+    > div {
+      display: block;
+      margin: 0 auto;
+      width: 160px;
+      padding-top: 10px;
+    }
+    &--pink {
+      background: $panelgrid_cell_pink;
+    }
+    &--green {
+      background: $panelgrid_cell_green;
+    }
+    &--blue {
+      background: $panelgrid_cell_blue;
+    }
+    &--purple {
+      background: $panelgrid_cell_purple;
+    }
+    &--logo {
+      background: center center / auto no-repeat;
+    }
+    &--market {
+      background-image: $url_market_l;
+    }
+    &--bonton {
+      background-image: $url_bonton_l;
+    }
+    &--robot {
+      background-image: $url_robot_l;
+    }
+    &--nike {
+      background-image: $url_nike_l;
+    }
+  }
+  &--testemonials {
+    table td {
+      vertical-align: middle;
+      padding: 0;
+      > div {
+        border: 0;
+      }
+    }
+    .ui-panelgrid__subheader, .ui-panelgrid__output {
+      padding-left: 23px;
+    }
+  }
+  &--sitemap {
+    margin-top: 30px;
+    td {
+      vertical-align: top;
+    }
+  }
+  &--footer-article {
+    margin-top: 25px;
+    td:first-child {
+      width: 70px;
+    }
+    td:last-child {
+      //width: auto;
+      padding-left: 20px;
+    }
+  }
+  &--layout {
+    td {
+      vertical-align: top;
+    }
+    .ui-panelgrid__cell--ad {
+      width: 300px;
+
+    }
+  }
+  &--borders-10 td{
+    padding: 0 5px;
+    box-sizing: border-box;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    > div {
+      border: 1px solid $panelgrid_borders_color;
+      @include vendor(box-shadow,0 1px 1px 0 $transparent_black_8);
+    }
+  }
+}
+

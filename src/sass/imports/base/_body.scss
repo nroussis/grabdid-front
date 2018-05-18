@@ -1,0 +1,51 @@
+
+///*------------------------------------*\
+//    #BODY all <body> tag styles
+//\*------------------------------------*/
+@font-face {
+	font-family: $font_1;
+	src: $url_49;
+	src: $url_50 format('embedded-opentype'), $url_51 format('woff2'), $url_52 format('woff'), $url_53 format('truetype'), $url_54 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_2;
+	src: $url_43;
+	src: $url_44 format('embedded-opentype'), $url_45 format('woff2'), $url_46 format('woff'), $url_47 format('truetype'), $url_48 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_3;
+	src: $url_55;
+	src: $url_56 format('embedded-opentype'), $url_57 format('woff2'), $url_58 format('woff'), $url_59 format('truetype'), $url_60 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_1;
+	src: $url_63;
+	src: $url_64 format('embedded-opentype'), $url_65 format('woff2'), $url_66 format('woff'), $url_67 format('truetype'), $url_68 format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_2;
+	src: $url_63;
+	src: $url_64 format('embedded-opentype'), $url_65 format('woff2'), $url_66 format('woff'), $url_67 format('truetype'), $url_68 format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_3;
+	src: $url_63;
+	src: $url_64 format('embedded-opentype'), $url_65 format('woff2'), $url_66 format('woff'), $url_67 format('truetype'), $url_68 format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: $font_1, $font_2, $font_3;
+}
