@@ -259,3 +259,26 @@
 .ui-color--orange {
   color: $highlight_orange_bg;
 }
+
+.ui-text--uppercase {
+  text-transform: uppercase;
+}
+
+.ui-padding-15-0 {
+  padding: 15px 0;
+}
+
+.ui-padding-10-0 {
+  padding: 10px 0;
+}
+
+//Styles for sticky block in all-stores page
+.sticky {
+  position: fixed;
+  z-index: 101;
+  margin-top: 110px;
+}
+.stop {
+  position: relative;
+  z-index: 101;
+}
