@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link rel="stylesheet" href="js/owl.carousel.css" />
+    <link rel="stylesheet" href="js/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="js/search.min.css" />
     <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
     <link rel="stylesheet" type="text/css" href="js/dropdown.min.css" />
@@ -15,7 +16,6 @@
     <script src="js/dropdown.min.js"></script>
     <script src="js/search.min.js" ></script>
     <script src="js/validate.js"></script>
-
 </head>
 <body>
 
@@ -43,8 +43,8 @@
                 </td>
                 <!-- sign in column -->
                 <td class="ui-width--230">
-                    <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left" >Login</button>
-                    <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right" >Register</button>
+                    <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
+                    <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
                 </td>
 
             </tr>
@@ -135,6 +135,8 @@
         <div class="ui-margin-top--12 ui-margin-bottom--11">
             <span class="ui-font-size--20 ui-font--light">Today’s Recommended Stores</span>
         </div>
+<!--        Here is the recommended shops block -->
+<!--
         <table class="ui-panelgrid ui-panelgrid--col-6">
             <tbody>
                 <tr>
@@ -159,6 +161,62 @@
                 </tr>
             </tbody>
         </table>
+-->
+       <div class="grid-6-col stores-recommended">
+           <div class="grid-6-col__1-of-6">
+            <a href="#" class="stores-recommended__rec">
+               <img src="images/macys_100x27.gif" alt="store_logo" class="stores-recommended__logo">
+               <p class="stores-recommended__old-cashback">was 3.0%</p>
+               <p class="stores-recommended__cashback">6.0% Cash Back</p>
+               <p class="stores-recommended__see-all">See all Macy's Coupons</p>
+           </a>
+         </div>
+
+         <div class="grid-6-col__1-of-6">
+            <a href="#" class="stores-recommended__rec">
+               <img src="images/holidayinn_icon_100x27.gif" alt="store_logo" class="stores-recommended__logo">
+               <p class="stores-recommended__old-cashback">&nbsp;</p>
+               <p class="stores-recommended__cashback">6.0% Cash Back</p>
+               <p class="stores-recommended__see-all">See all Macy's Coupons</p>
+           </a>
+         </div>
+
+         <div class="grid-6-col__1-of-6">
+            <a href="#" class="stores-recommended__rec">
+               <img src="images/small_icon_raise_100x27.gif" alt="store_logo" class="stores-recommended__logo">
+               <p class="stores-recommended__old-cashback">&nbsp;</p>
+               <p class="stores-recommended__cashback">6.0% Cash Back</p>
+               <p class="stores-recommended__see-all">See all Macy's Coupons</p>
+           </a>
+         </div>
+
+         <div class="grid-6-col__1-of-6">
+            <a href="#" class="stores-recommended__rec">
+               <img src="images/shutterfly_icon_100x27.gif" alt="store_logo" class="stores-recommended__logo">
+               <p class="stores-recommended__old-cashback">&nbsp;</p>
+               <p class="stores-recommended__cashback">6.0% Cash Back</p>
+               <p class="stores-recommended__see-all">See all Macy's Coupons</p>
+           </a>
+         </div>
+
+         <div class="grid-6-col__1-of-6">
+            <a href="#" class="stores-recommended__rec">
+               <img src="images/icon-kohls_100x27.gif" alt="store_logo" class="stores-recommended__logo">
+               <p class="stores-recommended__old-cashback">&nbsp;</p>
+               <p class="stores-recommended__cashback">6.0% Cash Back</p>
+               <p class="stores-recommended__see-all">See all Macy's Coupons</p>
+           </a>
+         </div>
+
+         <div class="grid-6-col__1-of-6">
+            <a href="#" class="stores-recommended__rec">
+               <img src="images/ebateshotels_icon_100x27.gif" alt="store_logo" class="stores-recommended__logo">
+               <p class="stores-recommended__old-cashback">was 5.0%</p>
+               <p class="stores-recommended__cashback">6.0% Cash Back</p>
+               <p class="stores-recommended__see-all">See all Macy's Coupons</p>
+           </a>
+         </div>
+       </div>
         <div class="wrapper">
             <div class="alphabet">
                 <a class="first" href="#">A</a>
@@ -217,7 +275,6 @@
                 </table>
             </div>
         </div>
-        <pre>
     </div>
 </div>
 <!-- end of layout-center -->
@@ -498,50 +555,53 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
 <script>
-    $("#loginForm").validate();
-    $("#registerForm").validate();
-    var content = [
-        { title: 'Andorra', description: '10% discount' },
-        { title: 'United Arab Emirates', description: '10% discount' },
-        { title: 'Afghanistan', description: '10% discount' },
-        { title: 'Antigua', description: '10% discount' },
-        { title: 'Anguilla', description: '10% discount' },
-        { title: 'Albania', description: '10% discount' },
-        { title: 'Armenia', description: '10% discount' },
-        { title: 'Netherlands Antilles', description: '10% discount' },
-        { title: 'Angola', description: '10% discount' },
-        { title: 'Argentina', description: '10% discount' },
-        { title: 'American Samoa', description: '10% discount' },
-        { title: 'Austria', description: '10% discount' },
-        { title: 'Australia', description: '10% discount' },
-        { title: 'Aruba', description: '10% discount' },
-        { title: 'Aland Islands', description: '10% discount' },
-        { title: 'Azerbaijan', description: '10% discount' },
-        { title: 'Bosnia', description: '10% discount' },
-        { title: 'Barbados', description: '10% discount' },
-        { title: 'Bangladesh', description: '10% discount' },
-        { title: 'Belgium', description: '10% discount' },
-        { title: 'Burkina Faso', description: '10% discount' },
-        { title: 'Bulgaria', description: '10% discount' },
-        { title: 'Bahrain', description: '10% discount' },
-        { title: 'Burundi', description: '10% discount' }
-        // etc
-    ];
-    $('.ui.search')
-        .search({
-            source: content
-        })
-    ;
-    $('.tag.example .ui.dropdown')
-        .dropdown({
-            allowAdditions: true,
-            minSelections: 1
-        })
-    ;
-    $('.ui.rating')
-        .rating()
-    ;
+    $(document).ready(function(){
+      $("#loginForm").validate();
+      $("#registerForm").validate();
+      var content = [
+          { title: 'Andorra', description: '10% discount' },
+          { title: 'United Arab Emirates', description: '10% discount' },
+          { title: 'Afghanistan', description: '10% discount' },
+          { title: 'Antigua', description: '10% discount' },
+          { title: 'Anguilla', description: '10% discount' },
+          { title: 'Albania', description: '10% discount' },
+          { title: 'Armenia', description: '10% discount' },
+          { title: 'Netherlands Antilles', description: '10% discount' },
+          { title: 'Angola', description: '10% discount' },
+          { title: 'Argentina', description: '10% discount' },
+          { title: 'American Samoa', description: '10% discount' },
+          { title: 'Austria', description: '10% discount' },
+          { title: 'Australia', description: '10% discount' },
+          { title: 'Aruba', description: '10% discount' },
+          { title: 'Aland Islands', description: '10% discount' },
+          { title: 'Azerbaijan', description: '10% discount' },
+          { title: 'Bosnia', description: '10% discount' },
+          { title: 'Barbados', description: '10% discount' },
+          { title: 'Bangladesh', description: '10% discount' },
+          { title: 'Belgium', description: '10% discount' },
+          { title: 'Burkina Faso', description: '10% discount' },
+          { title: 'Bulgaria', description: '10% discount' },
+          { title: 'Bahrain', description: '10% discount' },
+          { title: 'Burundi', description: '10% discount' }
+          // etc
+      ];
+      $('.ui.search')
+          .search({
+              source: content
+          })
+      ;
+      $('.tag.example .ui.dropdown')
+          .dropdown({
+              allowAdditions: true,
+              minSelections: 1
+          })
+      ;
+      //$('.ui.rating')
+      //    .rating()
+      //;
+    });
 </script>
+<script src="js/owl.carousel.min.js"></script>
 <!-- end of page footer -->
 </body>
 </html>

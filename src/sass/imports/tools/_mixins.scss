@@ -80,6 +80,15 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
+//Clearfix for float positioned blocks
+@mixin clearfix {
+
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
 
 //functions  ******************************************************************************************************************************************
 

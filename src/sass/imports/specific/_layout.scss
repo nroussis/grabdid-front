@@ -43,3 +43,41 @@
 .ui-footer--copyright {
   padding: 20px 0;
 }
+
+.stores-recommended {
+
+  display: block;
+
+  &__rec {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 35px 5px;
+    margin-bottom: 10px;
+
+    &:hover {
+      box-shadow:0 8px 14px -6px rgba(153,153,153,.65);
+    }
+  }
+
+  &__old-cashback {
+    font-size: 12px;
+    color: #888;
+  }
+
+  &__cashback {
+    font-weight: bold;
+    color: $color_red;
+    font-size: 16px;
+  }
+
+  &__see-all {
+    font-size: 12px;
+    color: #888;
+  }
+
+  &__logo {
+    border: none;
+  }
+}

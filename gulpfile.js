@@ -106,6 +106,10 @@ gulp.task('watch', function(){
 	watch([path.watch.html], function(ev, callback){
 		gulp.start('html:build');
 	});
+
+    watch([path.watch.img], function(ev, callback){
+		gulp.start('image:build');
+	});
 });
 
 

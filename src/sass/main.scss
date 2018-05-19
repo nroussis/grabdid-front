@@ -23,6 +23,7 @@
  * Inputfield.............ui-inputfield, elements inside and their modifiers.
  * Panelgrid..............ui-panelgrid, elements inside and their modifiers.
  * Button.................ui-button, elements inside and their modifiers.
+ * Grid.................grid blueprints.
  * //Dialog.................ui-dialog and elements inside of it.
  * //Datatable..............ui-datatable and elements inside of it.
  *
@@ -89,6 +90,7 @@
 @import "imports/components/inputfield";
 @import "imports/components/panelgrid";
 @import "imports/components/button";
+@import "imports/components/grid";
 
 /**
  * #PLACEHOLDERS
