@@ -18,6 +18,7 @@ var path = {
 	build: {
 		html: 'build/',
 		js: 'build/js/',
+		jscss: 'build/js/',
 		css: 'build/css/',
 		img: 'build/images/',
         fonts: 'build/fonts/'
@@ -35,6 +36,7 @@ var path = {
 	watch: {
 		html: 'src/**/*.html',
 		js: 'src/js/**/*.js',
+		jscss: 'src/js/**/*.css',
 		style: 'src/sass/**/*.scss',
         img: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -79,7 +81,7 @@ gulp.task('jscss:build', function(){
 	    .pipe(rigger())
 	    .pipe(sourceMaps.init())
 	    .pipe(sourceMaps.write())
-	    .pipe(gulp.dest(path.build.js));
+	    .pipe(gulp.dest(path.build.jscss));
 
 });
 
@@ -101,6 +103,10 @@ gulp.task('watch', function(){
 
 	watch([path.watch.js], function(ev, callback){
 		gulp.start('js:build');
+	});
+
+    watch([path.watch.jscss], function(ev, callback){
+		gulp.start('jscss:build');
 	});
 
 	watch([path.watch.html], function(ev, callback){

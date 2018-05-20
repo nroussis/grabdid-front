@@ -1,5 +1,5 @@
 (function(){
-var a = document.querySelector('.stores-sidebar__sticky'), b = null, P = 0;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+var a = document.querySelector('.promo-sticky'), b = null, P = 0;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
 window.addEventListener('scroll', Ascroll, false);
 document.body.addEventListener('scroll', Ascroll, false);
 function Ascroll() {
