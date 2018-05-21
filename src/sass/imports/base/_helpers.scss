@@ -56,6 +56,13 @@
 @include width_base_class(margin-top,12);
 @include width_base_class(margin-top,25);
 
+//set element margin right to 10 example .ui-margin-right--10
+@include width_base_class(margin-right,5);
+@include width_base_class(margin-right,8);
+@include width_base_class(margin-right,10);
+@include width_base_class(margin-right,12);
+@include width_base_class(margin-right,25);
+
 //set element margin bottom to 7 example .ui-margin-bottom--7
 @include width_base_class(margin-bottom,7);
 @include width_base_class(margin-bottom,11);
@@ -258,6 +265,14 @@
 //set text color to orange
 .ui-color--orange {
   color: $highlight_orange_bg;
+}
+
+.ui-color--greece {
+  color: $color_greek_blue;
+}
+
+.ui-color--cyprus {
+  color: $color_cyprus_orange;
 }
 
 .ui-text--uppercase {

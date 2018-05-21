@@ -17,11 +17,13 @@
   @include clearfix;
   
   &__1-of-3-5 {
+    display: block;
     width: calc(100% / 3.5);
     float: left;
   }
   
   &__2x1-of-3-5 {
+    display: block;
     float: left;
     width: calc((100% - (100% / 3.5)) - 10px);
     margin-left: 10px;
@@ -32,7 +34,30 @@
   @include clearfix;
   
   &__1-of-3 {
+    display: block;
     float: left;
     width: calc(100% / 3);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.grid-4-col {
+  @include clearfix;
+
+  &__1-of-4 {
+    display: block;
+    float: left;
+    width: calc(100% / 4);
+    padding: 0;
+    margin: 0;
+  }
+
+  &__3-of-4 {
+    display:block;
+    float: left;
+    width: calc(100% - (100% / 4));
+    padding: 0;
+    margin: 0;
   }
 }

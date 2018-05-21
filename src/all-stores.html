@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="js/owl.theme.default.min.css" />
     <link rel="stylesheet" href="js/owl.carousel.css" />
     <link rel="stylesheet" type="text/css" href="js/search.min.css" />
     <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
     <link rel="stylesheet" type="text/css" href="js/dropdown.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/classlist.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/ftellipsis.js"></script>
     <script src="js/easing.min.js"></script>
@@ -157,66 +160,155 @@
            </div>
          </div>
        </div>
+       <!-- End of sidebar -->
          <div class="grid-3-5-col__2x1-of-3-5 allstores">
+           <!-- Header, category name -->
            <div class="allstores__heading">
-             <p class="ui-font-size--24">All Stores</p>
+             <p class="allstores__heading-paragraph ui-font-size--20">All Stores</p>
+              <!-- Sorting selects here  -->
+              <!-- Sorting by shipping -->
+              <div class="allstores__sorting sorting-shipping">
+                <ul class="allstores__sorting-wrapper">
+                  <li class="sorting-shipping__value sorting-shipping__value--ww">Shipping</li>
+                  <span class="allstores__arrowdown"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                  <ul class="allstores__inner-list" id="shipping-filter">
+                    <li class="allstores__inner-item-wrapper allstores__inner-item-wrapper--checked"><span class="allstores__inner-item">Worldwide</span></li>
+                    <li class="allstores__inner-item-wrapper"><span class="allstores__inner-item ui-color--greece">Greece</span></li>
+                    <li class="allstores__inner-item-wrapper"><span class="allstores__inner-item ui-color--cyprus">Cyprus</span></li>
+                  </ul>
+                </ul>
+              </div>
+              <!-- Sorting by alphabet, popularity and cash-back -->
+              <div class="allstores__sorting sorting-general">
+                <ul class="allstores__sorting-wrapper">
+                  <li>Sort by</li>
+                  <span class="allstores__arrowdown"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                  <ul class="allstores__inner-list">
+                    <li class="allstores__inner-item-wrapper allstores__inner-item-wrapper--checked"><a class="allstores__inner-item" href="#">Alphabetical</a></li>
+                    <li class="allstores__inner-item-wrapper"><a class="allstores__inner-item" href="#">Popularity</a></li>
+                    <li class="allstores__inner-item-wrapper"><a class="allstores__inner-item" href="#">Cash back</a></li>
+                  </ul>
+                </ul>
+              </div>
            </div>
-            <div class="alphabet">
-                <a class="first" href="#">A</a>
-                <a href="#">B</a>
-                <a href="#">C</a>
-                <a href="#">D</a>
-                <a href="#">E</a>
-                <a href="#">F</a>
-                <a href="#">G</a>
-                <a href="#">H</a>
-                <a href="#">I</a>
-                <a href="#">J</a>
-                <a href="#">K</a>
-                <a href="#">L</a>
-                <a href="#">M</a>
-                <a href="#">N</a>
-                <a href="#">O</a>
-                <a href="#">P</a>
-                <a href="#">Q</a>
-                <a href="#">R</a>
-                <a href="#">S</a>
-                <a href="#">T</a>
-                <a href="#">U</a>
-                <a href="#">V</a>
-                <a href="#">W</a>
-                <a href="#">X</a>
-                <a href="#">Y</a>
-                <a class="last" href="#">Z</a></div>
-            <div id="conutries">
-                <table id="countries-table">
-                    <thead>
-                    <tr>
-                        <th>
-                            Country Name</th>
-                        <th>
-                            Country Code</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Afghanistan</td>
-                    </tr>
-                    <tr>
-                        <td>Aland Islands</td>
-                    </tr>
-                    <tr>
-                        <td>Albania</td>
-                    </tr>
-                    <tr>
-                        <td>Algeria</td>
-                    </tr>
-                    <tr>
-                        <td>Blgeria</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+           <!-- End of allstores header -->
+           <!-- Literal sorting -->
+           <div class="allstores__alpha alpha alpha--ww" id="alpha">
+             <span class="alpha__filter alpha__ALL ui-margin-right--25 alpha__filter--checked">ALL</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__A ui-margin-right--10">A</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__B ui-margin-right--10">B</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__C ui-margin-right--10">C</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__D ui-margin-right--10">D</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__E ui-margin-right--10">E</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__F ui-margin-right--10">F</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__G ui-margin-right--10">G</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__H ui-margin-right--10">H</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__I ui-margin-right--10">I</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__J ui-margin-right--10">J</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__K ui-margin-right--10">K</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__L ui-margin-right--10">L</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__M ui-margin-right--10">M</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__N ui-margin-right--10">N</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__O ui-margin-right--10">O</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__P ui-margin-right--10">P</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__Q ui-margin-right--10">Q</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__R ui-margin-right--10">R</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__S ui-margin-right--10">S</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__T ui-margin-right--10">T</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__U ui-margin-right--10">U</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__V ui-margin-right--10">V</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__W ui-margin-right--10">W</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__X ui-margin-right--10">X</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__Y ui-margin-right--10">Y</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__Z ui-margin-right--10">Z</span>
+             <span class="alpha__break"><br></span>
+             <span class="alpha__filter alpha__0 ui-float--right">0-9</span>
+           </div>
+           <!-- List of stores starts here -->
+              <div id="stores" class="stores">
+                <ul id = "stores-list" class="stores__items">
+                  <!-- One store item begin -->
+                  <li class="stores__item liter_a" data-store-id="1">
+                    <div class="grid-4-col stores__item-block">
+                      <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
+                        <span class="stores__fav-but"></span>
+                        <p class="grid-3-col__1-of-3 stores__item-name">A Pea in the Pod</p>
+                        <p class="grid-3-col__1-of-3 stores__coupons">1 coupon</p>
+                        <p class="grid-3-col__1-of-3 stores__cashback">1.0% Cash Back</p>
+                      </a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                    </div>
+                  </li>
+                  <!-- One store item end -->
+                  <!-- One store item begin -->
+                  <li class="stores__item liter_b" data-store-id="1">
+                    <div class="grid-4-col stores__item-block">
+                      <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
+                        <span class="stores__fav-but"></span>
+                        <p class="grid-3-col__1-of-3 stores__item-name">Big Bad Bong</p>
+                        <p class="grid-3-col__1-of-3 stores__coupons">No coupons available</p>
+                        <p class="grid-3-col__1-of-3 stores__cashback">1.0% Cash Back</p>
+                      </a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                    </div>
+                  </li>
+                  <!-- One store item end -->
+                  <!-- One store item begin -->
+                  <li class="stores__item liter_c" data-store-id="1">
+                    <div class="grid-4-col stores__item-block">
+                      <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
+                        <span class="stores__fav-but"></span>
+                        <p class="grid-3-col__1-of-3 stores__item-name">Clever city cat</p>
+                        <p class="grid-3-col__1-of-3 stores__coupons">2 coupons</p>
+                        <p class="grid-3-col__1-of-3 stores__cashback">4.6% Cash Back</p>
+                      </a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                    </div>
+                  </li>
+                  <!-- One store item end -->
+                  <!-- One store item begin -->
+                  <li class="stores__item liter_0" data-store-id="1">
+                    <div class="grid-4-col stores__item-block">
+                      <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
+                        <span class="stores__fav-but"></span>
+                        <p class="grid-3-col__1-of-3 stores__item-name">1337 Store</p>
+                        <p class="grid-3-col__1-of-3 stores__coupons">2 coupons</p>
+                        <p class="grid-3-col__1-of-3 stores__cashback">4.6% Cash Back</p>
+                      </a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                    </div>
+                  </li>
+                  <!-- One store item end -->
+                </ul>
+              </div>
+            <!-- End of list of stores -->
+          </div>
         </div>
     </div>
 </div>
@@ -548,6 +640,7 @@
     });
 </script>
 <script src="js/sticky_all_stores.js"></script>
+<script src="js/all-items-sort.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/carousel.js"></script>
 <!-- end of page footer -->
