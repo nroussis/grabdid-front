@@ -12,7 +12,7 @@
 			margin: 0; 
 			display: inline-block;
 			width: 48%;
-			}
+		}
 	
 	}
 	
@@ -129,4 +129,22 @@
 		}
 	}
 
+}
+
+@media (max-width: 800px) {
+	.allstores {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.allstores {
+
+		&__sorting {
+
+			width: 100%;
+			margin: 10px 0;
+		}
+	}
 }

@@ -61,3 +61,21 @@
 		}
 	}
 }
+
+@media (max-width: 800px) {
+	.stores {
+
+		&__item-name {
+			width: 50%;
+		}
+
+		&__coupons {
+			display: none;
+		}
+
+		&__cashback {
+			display: none;
+		}
+	}
+}
+

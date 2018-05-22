@@ -80,3 +80,19 @@
 	}
 	
 }
+
+
+@media (max-width: 800px) {
+	.stores-sidebar {
+		width: 100%;
+
+		&__promo {
+			display: none;
+		}
+
+		&__categories {
+			text-align: center;
+		}
+	}
+
+}
