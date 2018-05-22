@@ -1,0 +1,37 @@
+.alpha {
+	box-sizing: border-box;
+	padding: 10px 30px;
+	
+	&--ww {
+			background: #CCC;
+	}
+
+	&--greece {
+		background: $color_greek_blue;
+	}
+
+	&--cyprus {
+		background: $color_cyprus_orange;
+	}
+	
+
+	&__filter {
+		color: $button_green_light_color;
+		cursor: pointer;
+		font-size: 15px;
+		letter-spacing: 2px;
+		
+		&--greece {
+			color: white;
+		}
+
+		&--checked {
+			color: black;
+		}
+
+	}
+
+	&__break {
+		display: none;
+	}
+}

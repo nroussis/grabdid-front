@@ -1,0 +1,132 @@
+.allstores {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-bottom: none;
+
+	//Heading of the list
+	&__heading {
+		margin: 15px 25px;
+		@include clearfix;
+	
+		&-paragraph {
+			margin: 0; 
+			display: inline-block;
+			width: 48%;
+			}
+	
+	}
+	
+	&__arrowdown {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&__sorting {
+		position: relative;
+		display: inline-block;
+		font-size: 14px;
+		width: 25%;
+		box-sizing: border-box;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		cursor: pointer;
+
+		&-wrapper {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: relative;
+		}
+
+
+		&:hover .allstores__inner-list {
+			display: block;
+		}
+	}
+
+	&__inner-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: none;
+		position: absolute;
+		width: calc(100% + 20px);
+		left: -10px;
+		padding-top: 20px;
+		z-index: 1;
+	
+		&::before {
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-width: 10px;
+			border-color: transparent transparent #fff transparent;
+			display: block;
+			width: 0;
+			z-index: 1;
+			top: 1px;
+			right: 15px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-width: 11px;
+			border-color: transparent transparent #CCC transparent;
+			display: block;
+			width: 0;
+			z-index: 0;
+			top: -1px;
+			right: 14px;
+		}
+	}
+	
+	&__inner-item {
+		display: block;
+		box-sizing: border-box;
+		padding: 10px;
+		transition: transform .3s;
+		position: relative;
+		
+		&:link {
+			color: black;
+		}
+
+		&:hover {
+			transform: translateX(10px);
+		}
+
+	}
+
+	&__inner-item-wrapper {
+		border: 1px solid #ccc;
+		border-top: none;
+		background: white;
+		position: relative;
+
+		&:first-child {
+			border-radius: 5px 5px 0 0;
+			border-top: 1px solid #ccc;
+		}
+
+		&:last-child {
+			border-radius: 0 0 5px 5px;
+		}
+		
+		&--checked {
+			&::after {
+				content: "\f00c";
+				font-family: fontawesome !important;
+				color: green;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+}
