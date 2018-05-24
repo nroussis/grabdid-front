@@ -32,10 +32,12 @@
 @include width_base_class(font-size,25);
 @include width_base_class(font-size,27);
 @include width_base_class(font-size,29);
+@include width_base_class(font-size,30);
 @include width_base_class(font-size,35);
 @include width_base_class(font-size,36);
 @include width_base_class(font-size,38);
 @include width_base_class(font-size,39);
+@include width_base_class(font-size,40);
 @include width_base_class(font-size,85);
 
 //set element line-height to 30 example .ui-line-height--30
@@ -46,8 +48,15 @@
 @include width_base_class(padding-left,13);
 @include width_base_class(padding-left,23);
 @include width_base_class(padding-left,30);
+@include width_base_class(padding-left,60);
 
+//set element padding left to 30 example .ui-padding-top--8
 @include width_base_class(padding-top,8);
+
+//set element padding left to 30 example .ui-padding-bottom--10
+@include width_base_class(padding-bottom,10);
+@include width_base_class(padding-bottom,15);
+@include width_base_class(padding-bottom,25);
 
 //set element margin top to 10 example .ui-margin-top--10
 @include width_base_class(margin-top,5);
@@ -267,13 +276,23 @@
   color: $highlight_orange_bg;
 }
 
+//set text color to greek blue
 .ui-color--greece {
   color: $color_greek_blue;
 }
 
+//set text color to cyprus orange
 .ui-color--cyprus {
   color: $color_cyprus_orange;
 }
+
+.ui-color--sm-grey {
+  color: $small_grey;
+}
+
+// .ui-color--green {
+//   color: $green_link_color;
+// }
 
 .ui-text--uppercase {
   text-transform: uppercase;
@@ -285,6 +304,36 @@
 
 .ui-padding-10-0 {
   padding: 10px 0;
+}
+
+.ui-padding-25-0 {
+  padding: 25px 0;
+}
+
+.ui-margin--n {
+  margin: 0;
+}
+
+.ui-margin-5-0 {
+  margin: 5px 0;
+}
+
+.u-word-wrap--brw {
+  word-wrap: break-word;
+}
+
+//Borders
+
+.ui-border--grey {
+    border: 1px solid #ccc;
+}
+
+.ui-border-r--grey {
+  border-right: 1px solid #ccc;
+}
+
+.ui-border-b--grey {
+  border-bottom: 1px solid #ccc;
 }
 
 //Styles for sticky block in all-stores page

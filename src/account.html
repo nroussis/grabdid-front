@@ -21,19 +21,48 @@
     <!-- put header content here -->
     //= template/header.html
     <!-- put main content here -->
-    <div class="grid-col-3-5">
-        <div class="grid-col-3-5__1-of-3-5"></div>
-        <div class="grid-col-3-5__2x1-of-3-5 dashboard">
-            <div class="block-heading">My Cash Back Account</div>
-            <div class="grid-col-3">
-                <div class="grid-col-3-5__1-of-3 dashboard__balance">
-                    <p>Cash Back Balance</p>
-                    <a href="#">$53.04</a>
+    <div class="ui-layout-center__content">
+    <div class="grid-3-5-col">
+        <div class="grid-3-5-col__1-of-3-5 member">
+            <div class="member__welcome">
+                <p class="member__name ui-margin--n">Welcome,</p>
+                <p class="member__name ui-font-size--30 ui-margin--n u-word-wrap--brw .ui-margin-5-0">Nicolas</p>
+                <p class="ui-font-size--14 ui-color--sm-grey ui-margin--n">Member since 5/22/18</p>
+            </div>
+            <div class="member__lt-cb">
+                <p class="ui-font-size--14 ui-margin--n">Lifetime Cash Back</p>
+                <p class="ui-margin--n">$13.00</p>
+                <a href="#" class="ui-button ui-button--green ui-button--ref-btn ui-margin-top--10">Refer &amp; Earn $25+</a>
+            </div>
+            <div class="member__menu">
+                <ul class="member__menu-list">
+                    <li class="member__menu-item member__menu-item--active"><a href="#" class="member__menu-link">My account</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Favorite stores</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Shopping Trips</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Cash Back Balance</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Big Fat Check History</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Account Settings</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">My Wallets</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">My Reservations</a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Email Subscriptions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-3-5-col__2x1-of-3-5 dashboard">
+            <div class="grid-3-col ui-border--grey">
+                <div class="block-heading ui-border-b--grey">My Cash Back Account</div>
+                <div class="grid-3-col__1-of-3 dashboard__balance-wrapper">
+                    <div class="dashboard__balance ui-border-r--grey ui-padding-25-0">
+                        <p class="ui-font-size--16 ui-font--bold ui-padding-bottom--15">Cash Back Balance</p>
+                        <a href="#" class="ui-font-size--40 ui-color--green ui-font--bold ui-padding-bottom--25">$53.04</a>
+                    </div>
                 </div>
-                <div class="grid-col-3-5__2-of-3">
-                    <p>Where's my Cash Back?</p>
-                    <p>Cash Back will be added when a store notifies us of your order. For more details, visit the store page and look under Cash Back Facts. </p>
-                    <a href="#">See All Stores</a>
+                <div class="grid-3-col__2-of-3">
+                    <div class="dashboard__wh-cb ui-padding-25-0 ui-padding-left--60">
+                        <p class="ui-font-size--18 ui-font--bold ui-padding-bottom--10">Where's my Cash Back?</p>
+                        <p class="ui-font-size--14">Cash Back will be added when a store notifies us of your order. For more details, visit the store page and look under Cash Back Facts. </p>
+                        <a href="#" class="ui-font-size--14 ui-color--green ui-margin-top--10">See All Stores</a>
+                    </div>
                 </div>
             </div>
             <div class="dashboard__bonus">
@@ -43,11 +72,11 @@
                 </div>
             </div>
             <div class="dashboard__fav">
-                <div class="grid-col-2 block-heading">
-                    <div class="grid-col-2__1-of-2">
+                <div class="grid-2-col block-heading ui-border--grey">
+                    <div class="grid-2-col__1-of-2">
                         <span>Favorite Stores</span>
                     </div>
-                    <div class="grid-col-2__1-of-2">
+                    <div class="grid-2-col__1-of-2">
                         <form action="#" method="get">
                             <span>
                                 <input type="text" name="addFavorites" id="addFavorites" placeholder="Add all your favorite stores">
@@ -111,6 +140,7 @@
             </div>
         </div>
     </div>
+</div>
     <!-- End of the main content -->
     <!-- Footer starts here -->
     <div class="ui-footer">
