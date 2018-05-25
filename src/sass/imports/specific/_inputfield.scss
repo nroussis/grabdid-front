@@ -18,3 +18,10 @@
     @include vendor(box-shadow,0 1px 1px 0 $transparent_black_18);
   }
 }
+
+.input-text {
+  border: 1px solid #ccc;
+  padding: 5px;
+  padding-right: 30px;
+  background: $search_bg;
+}

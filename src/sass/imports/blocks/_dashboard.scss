@@ -17,4 +17,43 @@
         background: $bonus_bg;
         color: white;
     }
+
+    &__fav-item-wrapper {
+        position: relative;
+    }
+
+    &__fav-add {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        color: $commandLink_gray;
+        cursor: pointer;
+
+        &:hover {
+            color: gold;
+        }
+
+        &--added {
+            color: gold;
+        }
+    }
+    
+    &__fav-item {
+
+        
+
+        &:nth-child(odd) {
+            border-right: 1px solid #ccc;
+        }
+    }
+
+    &__fav-link {
+        display: block;
+        padding: 15px;
+    }
+
+    &__fav-logo {
+        margin-left: 30px;
+    }
+
 }
