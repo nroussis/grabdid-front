@@ -56,4 +56,44 @@
         margin-left: 30px;
     }
 
+
+    &__trips-table {
+        width: 100%;
+        
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px 10px;
+            font-weight: 400;
+        }
+    }
+
+    &__th {
+        &-date {
+            width: 20%;
+        }
+
+        &-store {
+            width: 40%;
+        }
+
+        &-cb {
+            width: 20%;
+        }
+
+        &-st {
+            width: 20%;
+        }
+    }
 }
