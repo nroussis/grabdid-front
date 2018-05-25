@@ -58,6 +58,11 @@
 @include width_base_class(padding-bottom,15);
 @include width_base_class(padding-bottom,25);
 
+//Set element's full padding
+.ui-padding--20 {
+  padding: 20px;
+}
+
 //set element margin top to 10 example .ui-margin-top--10
 @include width_base_class(margin-top,5);
 @include width_base_class(margin-top,8);
@@ -74,6 +79,7 @@
 
 //set element margin bottom to 7 example .ui-margin-bottom--7
 @include width_base_class(margin-bottom,7);
+@include width_base_class(margin-bottom,10);
 @include width_base_class(margin-bottom,11);
 
 //set element height to 5 exmple .ui-height--5
@@ -308,6 +314,10 @@
 
 .ui-padding-25-0 {
   padding: 25px 0;
+}
+
+.ui-padding-15-20 {
+  padding: 15px 20px;
 }
 
 .ui-margin--n {
