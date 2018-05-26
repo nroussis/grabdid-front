@@ -16,6 +16,7 @@
     &__heading-bonus {
         background: $bonus_bg;
         color: white;
+        cursor: pointer;
     }
 
     &__fav-item-wrapper {
@@ -68,6 +69,12 @@
             font-size: 14px;
         }
 
+        tr {
+            &:nth-child(2) td {
+                padding: 10px 10px 5px 10px;
+            }
+        }
+
         td {
             padding: 5px 10px;
         }
@@ -95,5 +102,38 @@
         &-st {
             width: 20%;
         }
+    }
+
+    &__coupon {
+        padding: 30px;
+    }
+
+    &__clogo-wrapper {
+        float: left;
+        width: 20%;
+    }
+
+    &__ccontent {
+        float: left;
+        width: 60%;
+    }
+
+    &__cdescription {
+        position: relative;
+    }
+
+    &__c-read-more {
+        position: relative;
+        right: -80%;
+        font-weight: bold;
+        background: url(../images/trans-white-grad-60x1.png) repeat-y 0 0;
+    }
+
+    &__shop-btn {
+        padding: 5px 25px;
+    }
+
+    &__code-expires {
+        position: relative;
     }
 }

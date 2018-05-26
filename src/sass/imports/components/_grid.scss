@@ -79,3 +79,7 @@
       width: 50%;
   }
 }
+
+.clr {
+  @include clearfix;
+}

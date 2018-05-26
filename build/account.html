@@ -16,6 +16,7 @@
     <script src="js/dropdown.min.js"></script>
     <script src="js/search.min.js" ></script>
     <script src="js/validate.js"></script>
+    <script src="js/clipboard.min.js"></script>
 </head>
 <body>
     <!-- put header content here -->
@@ -213,7 +214,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="dashboard__trips">
+            <div class="dashboard__trips ui-margin-bottom--10">
                 <div class="block-heading ui-border"><h3 class="ui-color--green">Shopping trips</h3></div>
                 <div class="dashboard__trips-table ui-border-l ui-border-r">
                     <table>
@@ -230,29 +231,42 @@
                                 <td></td>
                                 <td>1805261725</td>
                             </tr>
+                            <tr>
+                                <td>5/22/18 3:46 AM</td>
+                                <td><a href="#" class="ui-color--green">ebay</a></td>
+                                <td></td>
+                                <td>1805261725</td>
+                            </tr>
+                            <tr>
+                                <td>5/22/18 3:46 AM</td>
+                                <td><a href="#" class="ui-color--green">ebay</a></td>
+                                <td></td>
+                                <td>1805261725</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="dashboard-recommends">
-                <div class="block-heading"></div>
-                <div class="dashboard__coupon">
+            <div class="dashboard-recommends ui-border">
+                <div class="block-heading ui-border-b ui-color--green"><h3>Recommended Deals</h3></div>
+                <div class="dashboard__coupon clr">
                     <div class="dashboard__clogo-wrapper">
                         <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
                     </div>
-                    <ul class="dashboart__ccontent">
+                    <ul class="dashboard__ccontent">
                         <li class="dashboard__cdiscount">
-                            <span class="dashboard__ctitle">15% off select purchases of $50 or more.</span><br>
-                            <span class="dashboard__ctitle-discount">+ Up to 2.0% Cash Back</span>
+                            <span class="ui-font-size--20 dashboard__ctitle">15% off select purchases of $50 or more.</span><br>
+                            <span class="dashboard__ctitle-discount ui-color--red ui-font--bold">+ Up to 2.0% Cash Back</span>
                         </li>
-                        <li class="dashboard__cdescription">
-                            <p class="dashboard__cdescription-text">Coupon can be used up to two times per eBay account.  Limit one use per transaction (or cart) while supplies last. Valid only for purchases from ebay.com, cafr.ebay.ca and ebay.ca. Coupon is subject to U.S laws, void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, or when paying with PayPal Credit Easy Payments or Gift Cards. eBay may cancel, amend, or revoke the Coupon at any time. The discount will be applied to eligible item(s) only and will be capped at a value of $50.</p>
-                            <span>Read More +</span>
+                        <li class="dashboard__cdescription ui-font-size--14">
+                            <p class="dashboard__cdescription-text expandable-text">Coupon can be used up to two times per eBay account.  Limit one use per transaction (or cart) while supplies last. Valid only for purchases from ebay.com, cafr.ebay.ca and ebay.ca. Coupon is subject to U.S laws, void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, or when paying with PayPal Credit Easy Payments or Gift Cards. eBay may cancel, amend, or revoke the Coupon at any time. The discount will be applied to eligible item(s) only and will be capped at a value of $50.</p>
+                            <span class="more dashboard__c-read-more">Read More +</span>
                         </li>
-                        <li>
-                            <span>Code: <span>123XYZ456</span></span> <span><span class="fa fa-clock-o"></span>Expires 5/25/2018</span>
+                        <li class="dashboard__code-expires">
+                            <span class="ui-margin-right--25 ui-font-size--14 ui-position--relative">Code: <span class="ui-font--bold ui-color--green ui-cursor--pointer clicktocopy ui-font-size--16" data-clipboard-action="copy" data-clipboard-target="#coupon1" id="coupon1">123XYZ456</span> <div class="clicktocopy__hint clicktocopy__hint--green">Click to copy</div></span><span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
                         </li>
                     </ul>
+                    <a href="#" class="ui-button ui-button--red dashboard__shop-btn ui-border-radius--4">Shop Now</a>
                 </div>
             </div>
         </div>
@@ -372,5 +386,49 @@
             </div>
         </div>
         <!--end of page footer-->
+        <script src="js/expand-text.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".dashboard__heading-bonus").click(function(event){
+                    //Settings if design changes
+
+                    $targ = ($(this).next());
+                    $targetWidth = "100%";
+                    $tagetHeight = "100%";
+                    $targetFontSize = "14px";
+                    $targetPadding = "20px";
+                    if (!$targ.hasClass("dashboard__heading-bonus--expanded")){
+                        $targ.toggleClass("dashboard__heading-bonus--expanded").animate({
+                            width: "0",
+                            height: "0",
+                            fontSize: "0",
+                            padding: "0"
+                        },300).fadeOut(50);
+                    } else {
+                        $targ.toggleClass("dashboard__heading-bonus--expanded").fadeIn(50).animate({
+                            width: $targetWidth,
+                            height: $tagetHeight,
+                            fontSize: $targetFontSize,
+                            padding: $targetPadding
+                        },300);
+                    }
+                });
+
+                $(".clicktocopy").click(function(e){
+                    $targ = ($(this).next());
+                    $targ.css("width", "120%");
+                    $targ.html("<span class='fa fa-check' aria-hidden='true'></span> Copied to clipboard");
+                    console.log($targ);
+                });
+
+                $(".clicktocopy").mouseleave(function(e){
+                    $targ = ($(this).next());
+                    $targ.css("width", "100%");
+                    $targ.text('Click to copy');
+                });
+            });
+
+            new ClipboardJS('.clicktocopy');
+        </script>
 </body>
 </html>

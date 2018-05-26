@@ -28,6 +28,7 @@
   //red button
   &.ui-button--red {
     background: $color_red;
+    color: white;
     &:hover, &:focus {
       background: lighten($color_red, 15%);
     }

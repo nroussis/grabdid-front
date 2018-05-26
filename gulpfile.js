@@ -70,7 +70,8 @@ gulp.task('js:build', function(){
 	gulp.src(path.src.js)
 	    .pipe(rigger())
 	    .pipe(sourceMaps.init())
-	    .pipe(uglify())
+		.pipe(uglify())
+		.pipe(plumber())
 	    .pipe(sourceMaps.write())
 	    .pipe(gulp.dest(path.build.js));
 
