@@ -1,0 +1,24 @@
+//Here is styles for text with small trangle at the end 
+
+.traftext {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #f30;
+        position: relative;
+        right: -3px;
+    }
+
+    &--green {
+
+        &::after{
+            border-left: 4px solid $color_green;
+        }
+    }
+}

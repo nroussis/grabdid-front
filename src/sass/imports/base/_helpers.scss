@@ -41,6 +41,7 @@
 @include width_base_class(font-size,85);
 
 //set element line-height to 30 example .ui-line-height--30
+@include width_base_class(line-height,24);
 @include width_base_class(line-height,27);
 @include width_base_class(line-height,30);
 
@@ -50,8 +51,15 @@
 @include width_base_class(padding-left,30);
 @include width_base_class(padding-left,60);
 
-//set element padding left to 30 example .ui-padding-top--8
+//set element padding right to 30 example .ui-padding-right--30
+@include width_base_class(padding-right,10);
+@include width_base_class(padding-right,30);
+
+//set element padding top to 30 example .ui-padding-top--8
 @include width_base_class(padding-top,8);
+@include width_base_class(padding-top,15);
+@include width_base_class(padding-top,20);
+
 
 //set element padding left to 30 example .ui-padding-bottom--10
 @include width_base_class(padding-bottom,10);
@@ -61,6 +69,10 @@
 //Set element's full padding
 .ui-padding--20 {
   padding: 20px;
+}
+
+.ui-padding--10 {
+  padding: 10px;
 }
 
 //set element margin top to 10 example .ui-margin-top--10
@@ -76,6 +88,10 @@
 @include width_base_class(margin-right,10);
 @include width_base_class(margin-right,12);
 @include width_base_class(margin-right,25);
+
+//set element margin right to 10 example .ui-margin-left--10
+@include width_base_class(margin-left,40);
+
 
 //set element margin bottom to 7 example .ui-margin-bottom--7
 @include width_base_class(margin-bottom,7);
@@ -218,6 +234,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+.ui-border--green {
+  border-color: $button_green_bg;
+}
+
 //remove border from any element
 .ui-border-none {
   border: none;
@@ -259,6 +279,11 @@
 //set element display to block
 .ui-display--block {
   display: block;
+}
+
+//Do not show an item
+.ui-display--none {
+  display: none;
 }
 
 //set element color to dark-gray
@@ -351,6 +376,14 @@
 
 .ui-padding-10-0 {
   padding: 10px 0;
+}
+
+.ui-padding-10-20 {
+  padding: 10px 20px;
+}
+
+.ui-padding-0-10 {
+  padding: 0 10px;
 }
 
 .ui-padding-25-0 {

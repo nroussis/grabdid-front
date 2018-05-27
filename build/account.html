@@ -161,29 +161,85 @@
                     </div>
                 </div>
             </div>
-            <div class="dashboard__bonus ui-margin-bottom--10">
-                <h3 class="heading-tertiary ui-padding-15-20 dashboard__heading-bonus"> <span class="fa fa-bell"></span> You have a <span class="ui-font--bold">$10 Walmart Gift Card</span> waiting for you.</h3>
-                <div class="dashboard__bonus-desc ui-padding--20 ui-font-size--14 ui-border">
+            <div class="ui-margin-bottom--10">
+                <h3 class="heading-tertiary ui-padding-15-20 dashboard__notification dashboard__notification--bonus"> <span class="fa fa-bell"></span> You have a <span class="ui-font--bold">$10 Walmart Gift Card</span> waiting for you.</h3>
+                <div class="dashboard__notification-desc ui-padding--20 ui-font-size--14 ui-border">
                     <p>Get your $10 Walmart Gift Card when you make qualifying purchases totaling $25 or more by 8/20/18.</p>
                 </div>
             </div>
-            <div class="dashboard__fav ui-margin-bottom--10">
+            <div class="ui-margin-bottom--10">
+                <h3 class="heading-tertiary ui-padding-15-20 dashboard__notification dashboard__notification--double-cb"> <span class="fa fa-bell"></span> <span>2</span> Favorite Stores is Double Cash Back Today</h3>
+                <div class="dashboard__notification-desc ui-padding-top--8 ui-font-size--14 ui-border">
+                    <div class="clr ui-border-b">
+                        <a href="#" class="ui-display--block clr ui-padding-10-0 ui-float--left">
+                            <img src="images/booking-icon-100x27.gif" alt="Store Logo" class="ui-border-r ui-padding-10-20 ui-float--left">
+                            <span class="ui-float--left ui-margin-left--40">
+                                <span class="ui-font-size--18 ui-color--red ui-font--bold">Up to 5.0% Cash Back </span>
+                                <span class="ui-font-size--14 ui-color--sm-grey">was 0.0%</span> <br>
+                                <span class="ui-font-size--12 ui-color--green">See all Booking.com Coupons</span>
+                            </span>
+                        </a>
+                        <a href="#" class="ui-float--right ui-padding-top--20 ui-font-size--16 ui-color--red ui-padding-right--30 traftext">Shop Now</a>
+                    </div>
+                    <div class="clr ui-border-b">
+                        <a href="#" class="ui-display--block clr ui-padding-10-0 ui-float--left">
+                            <img src="images/booking-icon-100x27.gif" alt="Store Logo" class="ui-border-r ui-padding-10-20 ui-float--left">
+                            <span class="ui-float--left ui-margin-left--40">
+                                <span class="ui-font-size--18 ui-color--red ui-font--bold">Up to 5.0% Cash Back </span>
+                                <span class="ui-font-size--14 ui-color--sm-grey">was 0.0%</span> <br>
+                                <span class="ui-font-size--12 ui-color--green">See all Booking.com Coupons</span>
+                            </span>
+                        </a>
+                        <a href="#" class="ui-float--right ui-padding-top--20 ui-font-size--16 ui-color--red ui-padding-right--30 traftext">Shop Now</a>
+                    </div>
+                    <div class="ui-text-align--center ui-padding-15-0">
+                        <a href="#" class="ui-color--green traftext traftext--green">See All Favorite Stores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard__fav">
                 <div class="grid-2-col block-heading ui-border">
                     <div class="grid-2-col__1-of-2">
                         <span>Favorite Stores</span>
                     </div>
                     <div class="grid-2-col__1-of-2">
-                            <span class="input-t-b">
-                                <input type="text" name="addFavorites" id="addFavorites" placeholder="Add all your favorite stores" class="input-text ui-width--full">
-                                <button type="submit" class="ui-button ui-button--green ui-button--inputbtn">Add</button>
-                            </span>
-                        </form>
+                        <span class="input-t-b ui-position--relative ui-display--block">
+                            <input type="text" name="addFavorites" id="addFavorites" placeholder="Add all your favorite stores" class="input-text ui-width--full">
+                            <div class="dashboard__fav-found ui-line-height--24 clr ui-display--none">
+                                <ul class="dashboard__fav-found-items ui-width--full ui-border ui-border-t-none ui-border--green ui-padding-right--10 ui-padding-top--8">
+                                    <li class="dashboard__fav-found-item ui-cursor--pointer clr ui-border-radius--4 ui-padding-0-10">
+                                        <span class="ui-font-size--14 ui-float--left">Amazon</span>
+                                        <span class="ui-color--red ui-font--bold ui-font-size--16 ui-float--right">3.0%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="submit" class="ui-button ui-button--green ui-button--inputbtn">Add</button>
+                        </span>
                     </div>
                 </div>
-                <div class="dashboard__fav-hint ui-padding--20 ui-font-size--14 ui-border ui-border-t-none">
-                    <p>Add your favorites stores for easy shopping and personalized deals. When you see a <span class="fa fa-heart ui-color--gray"></span>, click it and the store will be added to your favorites here. Get started by searching above for the stores you already love.</p>
+                <div class="grid-2-col ui-border ui-border-t-none">
+                    <ul class="grid-2-col">
+                        <li class="grid-2-col__1-of-2 dashboard__fav-item ui-border-b">
+                            <div class="dashboard__fav-item-wrapper">
+                                <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
+                            </div>
+                        </li>
+                        <li class="grid-2-col__1-of-2 dashboard__fav-item ui-border-b">
+                                <div class="dashboard__fav-item-wrapper">
+                                    <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
+                                </div>
+                            </li>
+                            <li class="grid-2-col__1-of-2 dashboard__fav-item">
+                                    <div class="dashboard__fav-item-wrapper">
+                                        <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
+                                    </div>
+                                </li>
+                    </ul>
                 </div>
-                <div class="dashboard__fav-recommended">
+                <div class="dashboard__fav-hint ui-padding--20 ui-font-size--14 ui-border ui-border-t-none">
+                    <p>Add your favorites stores for easy shopping and personalized deals. When you see a <span class="fa fa-star ui-color--gray"></span>, click it and the store will be added to your favorites here. Get started by searching above for the stores you already love.</p>
+                </div>
+                <div class="dashboard__fav-recommended ui-margin-bottom--10">
                     <div class="ui-border ui-border-t-none"><h4 class="ui-padding-15-20 ui-color--gray ui-background--gray">Recommended Favorite Stores</h4></div>
                     <ul class="grid-2-col dashboard__fav-items ui-border ui-border-t-none">
                         <li class="grid-2-col__1-of-2 dashboard__fav-item ui-border-b">
@@ -249,25 +305,44 @@
             </div>
             <div class="dashboard-recommends ui-border">
                 <div class="block-heading ui-border-b ui-color--green"><h3>Recommended Deals</h3></div>
-                <div class="dashboard__coupon clr">
-                    <div class="dashboard__clogo-wrapper">
-                        <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
+                    <div class="dashboard__coupon clr ui-border-b">
+                        <div class="dashboard__clogo-wrapper">
+                            <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
+                        </div>
+                        <ul class="dashboard__ccontent">
+                            <li class="dashboard__cdiscount">
+                                <span class="ui-font-size--20 dashboard__ctitle">15% off select purchases of $50 or more.</span><br>
+                                <span class="dashboard__ctitle-discount ui-color--red ui-font--bold">+ Up to 2.0% Cash Back</span>
+                            </li>
+                            <li class="dashboard__cdescription ui-font-size--14">
+                                <p class="dashboard__cdescription-text expandable-text expandable-text--collapsed">Coupon can be used up to two times per eBay account.  Limit one use per transaction (or cart) while supplies last. Valid only for purchases from ebay.com, cafr.ebay.ca and ebay.ca. Coupon is subject to U.S laws, void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, or when paying with PayPal Credit Easy Payments or Gift Cards. eBay may cancel, amend, or revoke the Coupon at any time. The discount will be applied to eligible item(s) only and will be capped at a value of $50.</p>
+                                <span class="more dashboard__c-read-more">Read More +</span>
+                            </li>
+                            <li class="dashboard__code-expires">
+                                <span class="ui-margin-right--25 ui-font-size--14 ui-position--relative">Code: <span class="ui-font--bold ui-color--green ui-cursor--pointer clicktocopy ui-font-size--16" data-clipboard-action="copy" data-clipboard-target="#coupon1" id="coupon1">123XYZ456</span> <div class="clicktocopy__hint clicktocopy__hint--green">Click to copy</div></span><span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="ui-button ui-button--red dashboard__shop-btn ui-border-radius--4">Shop Now</a>
                     </div>
-                    <ul class="dashboard__ccontent">
-                        <li class="dashboard__cdiscount">
-                            <span class="ui-font-size--20 dashboard__ctitle">15% off select purchases of $50 or more.</span><br>
-                            <span class="dashboard__ctitle-discount ui-color--red ui-font--bold">+ Up to 2.0% Cash Back</span>
-                        </li>
-                        <li class="dashboard__cdescription ui-font-size--14">
-                            <p class="dashboard__cdescription-text expandable-text">Coupon can be used up to two times per eBay account.  Limit one use per transaction (or cart) while supplies last. Valid only for purchases from ebay.com, cafr.ebay.ca and ebay.ca. Coupon is subject to U.S laws, void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, or when paying with PayPal Credit Easy Payments or Gift Cards. eBay may cancel, amend, or revoke the Coupon at any time. The discount will be applied to eligible item(s) only and will be capped at a value of $50.</p>
-                            <span class="more dashboard__c-read-more">Read More +</span>
-                        </li>
-                        <li class="dashboard__code-expires">
-                            <span class="ui-margin-right--25 ui-font-size--14 ui-position--relative">Code: <span class="ui-font--bold ui-color--green ui-cursor--pointer clicktocopy ui-font-size--16" data-clipboard-action="copy" data-clipboard-target="#coupon1" id="coupon1">123XYZ456</span> <div class="clicktocopy__hint clicktocopy__hint--green">Click to copy</div></span><span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="ui-button ui-button--red dashboard__shop-btn ui-border-radius--4">Shop Now</a>
-                </div>
+                    <div class="dashboard__coupon clr">
+                        <div class="dashboard__clogo-wrapper">
+                            <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
+                        </div>
+                        <ul class="dashboard__ccontent">
+                            <li class="dashboard__cdiscount">
+                                <span class="ui-font-size--20 dashboard__ctitle">15% off select purchases of $1000000 or more.</span><br>
+                                <span class="dashboard__ctitle-discount ui-color--red ui-font--bold">+ Up to 45.0% Cash Back</span>
+                            </li>
+                            <li class="dashboard__cdescription ui-font-size--14">
+                                <p class="dashboard__cdescription-text expandable-text expandable-text--collapsed">Coupon can be used up to two times per eBay account.  Limit one use per transaction (or cart) while supplies last. Valid only for purchases from ebay.com, cafr.ebay.ca and ebay.ca. Coupon is subject to U.S laws, void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, or when paying with PayPal Credit Easy Payments or Gift Cards. eBay may cancel, amend, or revoke the Coupon at any time. The discount will be applied to eligible item(s) only and will be capped at a value of $50.</p>
+                                <span class="more dashboard__c-read-more">Read More +</span>
+                            </li>
+                            <li class="dashboard__code-expires">
+                                <span class="ui-margin-right--25 ui-font-size--14 ui-position--relative">Code: <span class="ui-font--bold ui-color--green ui-cursor--pointer clicktocopy ui-font-size--16" data-clipboard-action="copy" data-clipboard-target="#coupon1" id="coupon1">123XYZ456</span> <div class="clicktocopy__hint clicktocopy__hint--green">Click to copy</div></span><span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="ui-button ui-button--red dashboard__shop-btn ui-border-radius--4">Shop Now</a>
+                    </div>
             </div>
         </div>
     </div>
@@ -389,7 +464,8 @@
         <script src="js/expand-text.js"></script>
         <script>
             $(document).ready(function() {
-                $(".dashboard__heading-bonus").click(function(event){
+
+                $(".dashboard__notification").click(function(event){
                     //Settings if design changes
 
                     $targ = ($(this).next());
@@ -397,19 +473,19 @@
                     $tagetHeight = "100%";
                     $targetFontSize = "14px";
                     $targetPadding = "20px";
-                    if (!$targ.hasClass("dashboard__heading-bonus--expanded")){
-                        $targ.toggleClass("dashboard__heading-bonus--expanded").animate({
+                    if (!$targ.hasClass("dashboard__notification--expanded")){
+                        ($(this).next()).slideToggle();
+                        $targ.toggleClass("dashboard__notification--expanded").animate({
                             width: "0",
                             height: "0",
                             fontSize: "0",
-                            padding: "0"
                         },300).fadeOut(50);
                     } else {
-                        $targ.toggleClass("dashboard__heading-bonus--expanded").fadeIn(50).animate({
+                        ($(this).next()).slideToggle(10);
+                        $targ.toggleClass("dashboard__notification--expanded").fadeIn(100).animate({
                             width: $targetWidth,
                             height: $tagetHeight,
                             fontSize: $targetFontSize,
-                            padding: $targetPadding
                         },300);
                     }
                 });

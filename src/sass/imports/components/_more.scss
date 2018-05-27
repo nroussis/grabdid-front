@@ -5,9 +5,12 @@
 
 
 .expandable-text {
-    max-height: 40px;
     overflow: hidden;
     // transition:  max-height 1.2s;
+
+    &--collapsed {
+        max-height: 40px;
+    }
 
     &--expanded {
         // transition: max-height 10s;
