@@ -171,3 +171,44 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+    .dashboard {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    .dashboard {
+
+        &__balance-wrapper {
+            width: 100%;
+            border-right: none;
+        }
+
+        &__wh-cb-wrapper {
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+}
+
+@media (max-width: 800px) {
+    .dashboard {
+
+        &__ccontent {
+            width: 100%;
+        }
+
+        &__fav-item {
+            width: 100%;
+        }
+
+        &__shop-btn {
+            float: right;
+        }
+    }
+}
