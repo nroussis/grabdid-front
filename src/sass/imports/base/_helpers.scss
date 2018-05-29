@@ -181,6 +181,12 @@
   text-align: right;
 }
 
+// set element text align to left
+.ui-text-align--left {
+  text-align: left;
+}
+
+
 //set font to robotolight
 .ui-font--light {
   font-family: $font_2;

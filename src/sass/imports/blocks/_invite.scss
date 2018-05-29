@@ -1,0 +1,49 @@
+.invite {
+
+    &__heading {
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        width: 76.0683%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    &__email-wrapper {
+        position: relative;
+    }
+
+    &__input-text {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        
+        &--email {
+            width: 67.6404%;
+        }
+    }
+
+    &__email-btn {
+        width: calc(99% - 67.6504%);
+        color: white;
+        text-transform: capitalize;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        background: $button_green_bg;
+        padding: 11px;
+        position: relative;
+        left: -10px;
+        cursor: pointer;
+
+        &:disabled {
+            background: #ccc;
+            cursor: unset;
+        }
+    }
+
+    &__share {
+        margin-top: 40px;
+    }
+}

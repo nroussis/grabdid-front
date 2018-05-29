@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="js/search.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/dropdown.min.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ftellipsis.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/transition.min.js" ></script>
+    <script src="js/dropdown.min.js"></script>
+    <script src="js/search.min.js" ></script>
+    <script src="js/clipboard.min.js"></script>
+</head>
+<body>
+    <!-- put header content here -->
+    //= template/header.html
+    <!-- put main content here -->
+    <div class="ui-layout-center__content">
+        <div class="invite">
+            <div class="invite__promo">
+                <img src="images/raf_primary_0_q1.png" alt="Invite your friends!">
+            </div>
+            <div class="invite__form ui-text-align--center">
+                <h1 class="ui-font-size--20 invite__heading">Invite Your Friends by Email</h1>
+                <form id='invite_form' class="invite__email-wrapper ui-text-align--left">
+                    <input type="text" 
+                           name="" 
+                           id="inviteEmail" 
+                           class="invite__input-text invite__input-text--email" 
+                           placeholder="Enter Email Adress">
+
+                    <input type="button" 
+                           disabled 
+                           value="Send Email" 
+                           class="invite__email-btn ui-font-size--16">
+                </form>
+            </div>
+            <div class="invite__share">
+                <h1 class="invite__heading ui-font-size--20 ui-text-align--center">Share Your Invite Link</h1>
+                <div class="grid-3-col">
+                    <div class="grid-3-col__1-of-3">
+                        <div class="invite__reflink">
+                            <input type="text" 
+                                   value="https://www.ebates.com/r/UPLOAD17?eeid=28187" 
+                                   readonly 
+                                   class="invite__input-text">
+                        </div>
+                    </div>
+                    <div class="grid-3-col__1-of-3">Facebook</div>
+                    <div class="grid-3-col__1-of-3">Twitter</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
