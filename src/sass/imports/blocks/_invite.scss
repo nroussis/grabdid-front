@@ -108,4 +108,38 @@
         padding-left: 10px;
         float: left;
     }
+
+    &__tab {
+        cursor: pointer;
+        padding: 15px 0;
+        border: 1px solid #ccc;
+        font-size: 18px;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        &--active {
+            font-weight: bold;
+            border-top: 5px solid $button_green_bg;
+            border-bottom: none;
+        }
+    }
+
+    &__tabcontent {
+        display: none;
+
+        
+        &--active {
+            display: block;
+        }
+    }
+
+    &__tabcontent-table {
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 50px;
+    }
+
+
 }

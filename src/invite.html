@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>title</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="js/search.min.css" />
     <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
@@ -74,6 +74,46 @@
             </div>
             <div class="invite__referrals">
                 <h1 class="invite__heading  ui-font-size--20 ui-text-align--center">Your Referral Activity </h1>
+                <div class="invite__tabs ui-text-align--center">
+                    <div class="grid-3-col__1-of-3 invite__tab invite__tab--active" id="invited">Invited (1)</div>
+                    <div class="grid-3-col__1-of-3 invite__tab" id="signedup">Signed Up (1)</div>
+                    <div class="grid-3-col__1-of-3 invite__tab" id="qualified">Qualified</div>
+                </div>
+                <div class="invite__tabcontent-wrapper">
+                    <div class="invite__tabcontent invite__tabcontent--invited invite__tabcontent--active ui-border">
+                        <table class="invite__tabcontent-table">
+                            <tbody>
+                                <tr>
+                                    <td class="ui-width--75"><span class="ui-font-size--18">username</span> <br>
+                                                 <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Invited</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="invite__tabcontent invite__tabcontent--signedup ui-border">
+                        <table class="invite__tabcontent-table">
+                            <tbody>
+                                <tr>
+                                    <td class="ui-width--75"><span class="ui-font-size--18">usergone</span> <br>
+                                                 <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="invite__tabcontent invite__tabcontent--qualified ui-border">
+                        <table class="invite__tabcontent-table">
+                            <tbody>
+                                <tr>
+                                    <td class="ui-width--full ui-text-align--center ui-font-size--14">
+                                        You don't have any qualified referrals at the moment. If someone you invited already signed up, please tell them to make an order through Ebates. 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +131,22 @@
                     $(".invite__greentext-btn").val("Copy");
                     $(".invite__input-text--active").removeClass("invite__input-text--active");
                 },2000);
-            })
+            });
+
+            $(".invite__tab").on("click", function(){
+                var tabId = $(this).attr("id").toString();
+                var tabToDisplay = ".invite__tabcontent--" + tabId;
+
+                $(".invite__tab").each(function(){
+                    $(this).removeClass("invite__tab--active");
+                });
+                // $(".invite__tabcontent").each(function(){
+                //     $(this).removeClass("invite__tabcontent--active");
+                // });
+                $(".invite__tabcontent--active").removeClass("invite__tabcontent--active");
+                $(tabToDisplay).addClass("invite__tabcontent--active");
+                $(this).addClass("invite__tab--active");
+            });
         });
     </script>
 </body>
