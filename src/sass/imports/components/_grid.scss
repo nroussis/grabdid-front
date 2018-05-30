@@ -37,8 +37,14 @@
     display: block;
     float: left;
     width: calc(99.9% / 3);
-    padding: 0;
-    margin: 0;
+
+    &--inv-socials {
+      width: calc((99.9% / 3) - 10px);
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
   }
 
   &__2-of-3 {

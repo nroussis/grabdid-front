@@ -57,6 +57,7 @@
 
 //set element padding top to 30 example .ui-padding-top--8
 @include width_base_class(padding-top,8);
+@include width_base_class(padding-top,10);
 @include width_base_class(padding-top,15);
 @include width_base_class(padding-top,20);
 

@@ -135,23 +135,59 @@
                            value="Send Email" 
                            class="invite__email-btn ui-font-size--16">
                 </form>
+                <div class="ui-text-align--right ui-padding-15-0">
+                    <button>Preview Email</button>
+                </div>
             </div>
             <div class="invite__share">
                 <h1 class="invite__heading ui-font-size--20 ui-text-align--center">Share Your Invite Link</h1>
-                <div class="grid-3-col">
-                    <div class="grid-3-col__1-of-3">
-                        <div class="invite__reflink">
+                <div class="grid-3-col invite__socials">
+                    <div class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials">
+                        <div class="invite__copylink">
                             <input type="text" 
-                                   value="https://www.ebates.com/r/UPLOAD17?eeid=28187" 
+                                   value="ebates.com/r/UPLOAD17?eeid=28187" 
                                    readonly 
-                                   class="invite__input-text">
+                                   class="invite__input-text invite__input-text--reflink invite__reflink copy__reflink"
+                                   id="referalLink"
+                                   data-clipboard-target="#referalLink"
+                                   data-clipboard-action="copy">
+                            
+                                   <input type="button" 
+                                   value="Copy" 
+                                   class="invite__greentext-btn ui-padding-top--10 copy__reflink"
+                                   data-clipboard-target="#referalLink"
+                                   data-clipboard-action="copy">
                         </div>
                     </div>
-                    <div class="grid-3-col__1-of-3">Facebook</div>
-                    <div class="grid-3-col__1-of-3">Twitter</div>
+                    <a href="fb.com" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--fb">
+                        <span class="fa fa-facebook invite__soc-icon"></span> Share on Facebook
+                    </a>
+                    <a href="twitter.com" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--tw">
+                        <span class="fa fa-twitter invite__soc-icon"></span>Share on Twitter
+                    </a>
                 </div>
+            </div>
+            <div class="invite__referrals">
+                <h1 class="invite__heading  ui-font-size--20 ui-text-align--center">Your Referral Activity </h1>
             </div>
         </div>
     </div>
+
+    <script>
+        new ClipboardJS('.copy__reflink');
+
+        $(document).ready(function(){
+            $(".copy__reflink").on("click", function(){
+                $(".invite__greentext-btn").val("Copied!");
+                $('.invite__input-text--reflink').addClass("invite__input-text--active");
+                console.log("aaa");
+                
+                setTimeout(function(){
+                    $(".invite__greentext-btn").val("Copy");
+                    $(".invite__input-text--active").removeClass("invite__input-text--active");
+                },2000);
+            })
+        });
+    </script>
 </body>
 </html>

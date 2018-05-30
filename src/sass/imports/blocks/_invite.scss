@@ -19,9 +19,26 @@
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        
+
         &--email {
             width: 67.6404%;
+        }
+
+        &--reflink {
+            width: 100%;
+            padding-right: 80px;
+
+            &::selection {
+                background: transparent;
+            }
+ 
+            &::-moz-selection { /* Code for Firefox */
+                background: transparent;
+            }
+        }
+
+        &--active {
+            border-color: $color_green;
         }
     }
 
@@ -44,6 +61,51 @@
     }
 
     &__share {
-        margin-top: 40px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__socials {
+        width: 76.0683%;
+        margin: 0 auto;
+    }
+
+    &__copylink {
+        position: relative;
+
+    }
+
+    &__greentext-btn {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        font-size: 16px;
+        border: none;
+        background: none;
+        color: $button_green_light_color;
+        cursor: pointer;
+    }
+
+    &__placeholder {
+        padding: 8px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 18px;
+
+        &--fb {
+            background: #4267b2;
+            color: white;
+        }
+
+        &--tw {
+            background: #1da1f2;
+            color: white;
+        }
+    }
+
+    &__soc-icon {
+        padding-top: 3px;
+        padding-left: 10px;
+        float: left;
     }
 }
