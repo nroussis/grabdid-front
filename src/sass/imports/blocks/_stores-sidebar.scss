@@ -2,7 +2,7 @@
 	
 	//Style for separated blocks in sidebar such as categories or promos
 	&__promo {
-			border: 1px solid #ccc;
+			border: 1px solid $block_border_color;
 			box-sizing: border-box;
 			padding: 15px;
 			margin-bottom: 10px;
@@ -13,7 +13,7 @@
 			padding: 10px;
 			box-sizing: border-box;
 			margin-bottom: 10px;
-			border: 1px solid #ccc;
+			border: 1px solid $block_border_color;
 
 		//categories-list 
 		&-list {
@@ -38,7 +38,7 @@
 	
 	&__logo-wrapper {
 		height: 1px;
-		background: #ccc;
+		background: $gray_svg_bg;
 		margin: 10px 0;
 	}
 	

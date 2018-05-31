@@ -1,6 +1,6 @@
 .member {
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid $block_border_color;
     
     &__name {
         color: $cat_grey;
@@ -42,8 +42,20 @@
         display: block;
         padding: 13px 0 13px 0px;
         font-size: 15px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid $block_border_color;
         text-transform: capitalize;
+    }
+}
+
+@media (max-width: 800px) {
+    .member {
+
+        &__menu-item {
+
+            &--active {
+                border-left: none;
+            }
+        }
     }
 }
 

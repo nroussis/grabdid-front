@@ -57,7 +57,7 @@
         
 
         &:nth-child(odd) {
-            border-right: 1px solid #ccc;
+            border-right: 1px solid $block_border_color;
         }
     }
 
@@ -170,6 +170,10 @@
             background: rgba($search_color, .3);
         }
     }
+
+    &__m {
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -209,6 +213,14 @@
 
         &__shop-btn {
             float: right;
+        }
+
+        &__d {
+            display: none;
+        }
+
+        &__m {
+            display: block;
         }
     }
 }

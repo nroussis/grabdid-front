@@ -24,10 +24,13 @@
     <!-- put main content here -->
     <div class="ui-layout-center__content">
     <div class="grid-3-5-col">
+        <!-- Memeber left sidebar column -->
         <div class="grid-3-5-col__1-of-3-5 member">
             <div class="member__welcome">
                 <p class="member__name ui-margin--n">Welcome,</p>
+                <!-- Username down here -->
                 <p class="member__name ui-font-size--30 ui-margin--n u-word-wrap--brw .ui-margin-5-0">Nicolas</p>
+                <!-- Registration date down here -->
                 <p class="ui-font-size--14 ui-color--sm-grey ui-margin--n">Member since 5/22/18</p>
             </div>
             <div class="member__lt-cb">
@@ -35,21 +38,28 @@
                 <p class="ui-margin--n">$13.00</p>
                 <a href="#" class="ui-button ui-button--green ui-button--ref-btn ui-margin-top--10">Refer &amp; Earn $25+</a>
             </div>
+
+            <!-- Sidebar navigation start -->
             <div class="member__menu">
                 <ul class="member__menu-list">
-                    <li class="member__menu-item member__menu-item--active"><a href="#" class="member__menu-link">My account</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">Favorite stores</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">Shopping Trips</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">Cash Back Balance</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">Big Fat Check History</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">Account Settings</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">My Wallets</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">My Reservations</a></li>
-                    <li class="member__menu-item"><a href="#" class="member__menu-link">Email Subscriptions</a></li>
+                    <li class="member__menu-item member__menu-item--active"><a href="#" class="member__menu-link">My account <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Favorite stores <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Shopping Trips <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Cash Back Balance <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Big Fat Check History <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Account Settings <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">My Wallets <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">My Reservations <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
+                    <li class="member__menu-item"><a href="#" class="member__menu-link">Email Subscriptions <span class="fa  fa-angle-right  ui-float--right dashboard__m"></span></a></li>
                 </ul>
             </div>
+            <!-- Sidebar nav end -->
         </div>
+        <!-- End of the member block -->
+
+        <!-- Dashboard is main content block -->
         <div class="grid-3-5-col__2x1-of-3-5 dashboard">
+            <!-- Cashback balance block -->
             <div class="grid-3-col ui-border ui-margin-bottom--10">
                 <div class="block-heading ui-border-b">My Cash Back Account</div>
                 <div class="grid-3-col__1-of-3 dashboard__balance-wrapper">
@@ -58,6 +68,7 @@
                         <a href="#" class="ui-font-size--40 ui-color--green ui-font--bold ui-padding-bottom--25">$53.04</a>
                     </div>
                 </div>
+                <!-- This block is for "where is my cashback" but can be used for anything, takes 2/3 of entire block -->
                 <div class="grid-3-col__2-of-3 dashboard__wh-cb-wrapper">
                     <div class="dashboard__wh-cb ui-padding-25-0 ui-padding-left--60">
                         <p class="ui-font-size--18 ui-font--bold ui-padding-bottom--10">Where's my Cash Back?</p>
@@ -66,13 +77,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Expandable notification block for bonuses -->
             <div class="ui-margin-bottom--10">
                 <h3 class="heading-tertiary ui-padding-15-20 dashboard__notification dashboard__notification--bonus"> <span class="fa fa-bell"></span> You have a <span class="ui-font--bold">$10 Walmart Gift Card</span> waiting for you.</h3>
                 <div class="dashboard__notification-desc ui-padding--20 ui-font-size--14 ui-border">
                     <p>Get your $10 Walmart Gift Card when you make qualifying purchases totaling $25 or more by 8/20/18.</p>
                 </div>
             </div>
-            <div class="ui-margin-bottom--10">
+            <!-- Expandable notification block for double cashback notifications -->
+            <div class="ui-margin-bottom--10 dashboard__d">
                 <h3 class="heading-tertiary ui-padding-15-20 dashboard__notification dashboard__notification--double-cb"> <span class="fa fa-bell"></span> <span>2</span> Favorite Stores is Double Cash Back Today</h3>
                 <div class="dashboard__notification-desc ui-padding-top--8 ui-font-size--14 ui-border">
                     <div class="clr ui-border-b">
@@ -102,16 +115,21 @@
                     </div>
                 </div>
             </div>
-            <div class="dashboard__fav">
+
+            <!-- Favorites block -->
+            <div class="dashboard__fav dashboard__d">
                 <div class="grid-2-col block-heading ui-border">
                     <div class="grid-2-col__1-of-2">
                         <span>Favorite Stores</span>
                     </div>
                     <div class="grid-2-col__1-of-2">
+                        <!-- Search for favs block -->
                         <span class="input-t-b ui-position--relative ui-display--block">
                             <input type="text" name="addFavorites" id="addFavorites" placeholder="Add all your favorite stores" class="input-text ui-width--full">
+                            <!-- Found items dropdown, remove ui-display-none to look at example -->
                             <div class="dashboard__fav-found ui-line-height--24 clr ui-display--none">
                                 <ul class="dashboard__fav-found-items ui-width--full ui-border ui-border-t-none ui-border--green ui-padding-right--10 ui-padding-top--8">
+                                    <!-- Found item -->
                                     <li class="dashboard__fav-found-item ui-cursor--pointer clr ui-border-radius--4 ui-padding-0-10">
                                         <span class="ui-font-size--14 ui-float--left">Amazon</span>
                                         <span class="ui-color--red ui-font--bold ui-font-size--16 ui-float--right">3.0%</span>
@@ -122,23 +140,26 @@
                         </span>
                     </div>
                 </div>
+                <!-- Block for already added fav items -->
                 <div class="grid-2-col ui-border ui-border-t-none">
                     <ul class="grid-2-col">
+                        <!-- One found item -->
                         <li class="grid-2-col__1-of-2 dashboard__fav-item ui-border-b">
                             <div class="dashboard__fav-item-wrapper">
                                 <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
                             </div>
                         </li>
                         <li class="grid-2-col__1-of-2 dashboard__fav-item ui-border-b">
-                                <div class="dashboard__fav-item-wrapper">
-                                    <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
-                                </div>
-                            </li>
-                            <li class="grid-2-col__1-of-2 dashboard__fav-item">
-                                    <div class="dashboard__fav-item-wrapper">
-                                        <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
-                                    </div>
-                                </li>
+                            <div class="dashboard__fav-item-wrapper">
+                                <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
+                            </div>
+                        </li>
+                        <!-- Notice that items on the lowest row doesn't have a class ui-border-b -->
+                        <li class="grid-2-col__1-of-2 dashboard__fav-item">
+                            <div class="dashboard__fav-item-wrapper">
+                                <span class="fa fa-star dashboard__fav-add dashboard__fav-add--added"></span> <a href="#" class="dashboard__fav-link"><img src="images/booking-icon-100x27.gif" alt="#" class="dashboard__fav-logo"><span class="ui-float--right"><span class="ui-margin-right--10 ui-font-size--13 ui-color--gray">was 0.0%</span><span class="ui-color--red ui-font--bold">Up to 5.0%</span></span></a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="dashboard__fav-hint ui-padding--20 ui-font-size--14 ui-border ui-border-t-none">
@@ -175,7 +196,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="dashboard__trips ui-margin-bottom--10">
+            <div class="dashboard__trips ui-margin-bottom--10 dashboard__d">
                 <div class="block-heading ui-border"><h3 class="ui-color--green">Shopping trips</h3></div>
                 <div class="dashboard__trips-table ui-border-l ui-border-r">
                     <table>
@@ -208,7 +229,7 @@
                     </table>
                 </div>
             </div>
-            <div class="dashboard-recommends ui-border">
+            <div class="dashboard-recommends ui-border dashboard__d">
                 <div class="block-heading ui-border-b ui-color--green"><h3>Recommended Deals</h3></div>
                     <div class="dashboard__coupon clr ui-border-b">
                         <div class="dashboard__clogo-wrapper">

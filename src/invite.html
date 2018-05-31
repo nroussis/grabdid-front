@@ -23,9 +23,11 @@
     <!-- put main content here -->
     <div class="ui-layout-center__content">
         <div class="invite">
+            <!-- Promo image -->
             <div class="invite__promo">
                 <img src="images/raf_primary_0_q1.png" alt="Invite your friends!">
             </div>
+            <!-- Email sending form -->
             <div class="invite__form ui-text-align--center">
                 <h1 class="ui-font-size--20 invite__heading">Invite Your Friends by Email</h1>
                 <form id='invite_form' class="invite__email-wrapper ui-text-align--left">
@@ -38,14 +40,22 @@
                     <input type="button" 
                            disabled 
                            value="Send Email" 
-                           class="invite__email-btn ui-font-size--16">
+                           class="invite__email-btn ui-font-size--16"
+                           id="sendEmail">
                 </form>
+                <!-- Email preview button -->
                 <div class="ui-text-align--right ui-padding-15-0 ui-position--relative">
                     <button class="invite__greentext-btn ui-padding-top--10 modal-email-show">Preview Email</button>
                 </div>
             </div>
+            <!-- Social sharing block -->
             <div class="invite__share">
-                <h1 class="invite__heading ui-font-size--20 ui-text-align--center">Share Your Invite Link</h1>
+                <div class="invite__m ui-text-align--center ui-margin-bottom--10">
+                        <img src="images/raf_mw.png" class="ui-width--100 ui-text-align--center" alt="">
+                </div>
+                <h1 class="invite__heading invite__heading--socials-d ui-font-size--20 ui-text-align--center">Share Your Invite Link</h1>
+                <h1 class="invite__heading invite__heading--socials-m ui-font-size--20 ui-text-align--center">Every Referral. No Limit.</h1>
+                <span class="invite__heading--socials-m ui-text-align--center ui-color--sm-grey">When your friend joins and spends at least $25, you'll get $25.</span>
                 <div class="grid-3-col invite__socials">
                     <div class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials">
                         <div class="invite__copylink">
@@ -64,22 +74,46 @@
                                    data-clipboard-action="copy">
                         </div>
                     </div>
+                    <!-- Share via email link -->
+                    <a href="mailto link" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--email invite__m">
+                            <span class="fa fa-envelope  invite__soc-icon"></span> Share via Email
+                    </a>
+                    <!-- Share via SMS link -->
+                    <a href="sms:? Nya. Sms text here" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--sms invite__m">
+                        <span class="fa fa-comment invite__soc-icon"></span> Share via Text
+                    </a>
+                    <!-- Share via FB -->
                     <a href="fb.com" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--fb">
                         <span class="fa fa-facebook invite__soc-icon"></span> Share on Facebook
                     </a>
+                    <!-- Share via Twitter block -->
                     <a href="twitter.com" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--tw">
                         <span class="fa fa-twitter invite__soc-icon"></span>Share on Twitter
                     </a>
                 </div>
             </div>
+            <!-- *Mobile block* How it works -->
+            <div class="invite__how invite__m ui-text-align--center">
+                <h1 class="invite__heading ui-font-size--24">How It Works</h1>
+                <div class="invite__how-num">1</div>
+                <p>Share your invite link with friends.</p>
+                <div class="invite__how-num">2</div>
+                <p>Remind them to sign up and shop on Ebates.</p>
+                <div class="invite__how-num">3</div>
+                <p>You both get paid when they spend $25.</p>
+            </div>
+            <!-- Information table for referrals -->
             <div class="invite__referrals">
                 <h1 class="invite__heading  ui-font-size--20 ui-text-align--center">Your Referral Activity </h1>
+                <!-- Referral table tabs -->
                 <div class="invite__tabs ui-text-align--center clr">
                     <div class="grid-3-col__1-of-3 invite__tab invite__tab--active" id="invited">Invited (1)</div>
                     <div class="grid-3-col__1-of-3 invite__tab" id="signedup">Signed Up (1)</div>
                     <div class="grid-3-col__1-of-3 invite__tab" id="qualified">Qualified</div>
                 </div>
+                <!-- Referral table content starts -->
                 <div class="invite__tabcontent-wrapper">
+                    <!-- Table for invited referrals -->
                     <div class="invite__tabcontent invite__tabcontent--invited invite__tabcontent--active ui-border ui-border-t-none">
                         <table class="invite__tabcontent-table">
                             <tbody>
@@ -92,6 +126,7 @@
                         </table>
                     </div>
                     <div class="invite__tabcontent invite__tabcontent--signedup ui-border ui-border-t-none">
+                        <!-- Table for signed-up referrals -->
                         <table class="invite__tabcontent-table">
                             <tbody>
                                 <tr>
@@ -103,6 +138,7 @@
                         </table>
                     </div>
                     <div class="invite__tabcontent invite__tabcontent--qualified ui-border ui-border-t-none">
+                        <!-- Table for qualified referrals -->
                         <table class="invite__tabcontent-table">
                             <tbody>
                                 <tr>
@@ -332,6 +368,23 @@
                 $(".overlay").removeClass("overlay--shown");
                 $(".modal-email-prev").removeClass("modal-email-prev--shown");
             });
+
+            $("#inviteEmail").on("change",function(){
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if (regex.test($(this).val())){
+                    $("#sendEmail").attr("disabled",false);
+                } else {
+                    $("#sendEmail").attr("disabled",true);
+                }
+            });
+
+            $("#sendEmail").on("click", function(){
+                if ($(this).attr("disabled") === true) {
+                    true;
+                } else {
+                    $(this).val("Email Sent");       
+                }
+            })
 
         });
     </script>

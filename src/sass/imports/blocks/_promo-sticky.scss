@@ -5,7 +5,7 @@
 	z-index: 0;
 	
 	&__heading {
-		border: 1px solid #ccc;
+		border: 1px solid $block_border_color;
 		padding: 15px;
 	}
 	
@@ -15,14 +15,14 @@
 	
 	&__links {
 		box-sizing: border-box;
-		border: 1px solid #ccc;
+		border: 1px solid $block_border_color;
 		border-top: none;
 		border-bottom: none;
 	}
 	
 	&__link-wrapper {
 		box-sizing: border-box;
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid $block_border_color;
 		
 		&:not(:nth-child(3n-1)) {
 			border-right: 1px solid transparent;
@@ -30,8 +30,8 @@
 		}
 		
 		&:nth-child(3n-1) {
-			border-right: 1px solid #ccc;
-			border-left: 1px solid #ccc;
+			border-right: 1px solid $block_border_color;
+			border-left: 1px solid $block_border_color;
 		}
 	}
 	

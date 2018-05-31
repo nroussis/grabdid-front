@@ -17,7 +17,7 @@
     &__input-text {
         padding: 10px;
         font-size: 16px;
-        border: 1px solid #ccc;
+        border: 1px solid $block_border_color;
         border-radius: 5px;
 
         &--email {
@@ -101,6 +101,16 @@
             background: #1da1f2;
             color: white;
         }
+
+        &--email {
+            background: $button_green_bg;
+            color: white;
+        }
+
+        &--sms {
+            background: #333;
+            color: white;
+        }
     }
 
     &__soc-icon {
@@ -112,7 +122,7 @@
     &__tab {
         cursor: pointer;
         padding: 15px 0;
-        border: 1px solid #ccc;
+        border: 1px solid $block_border_color;
         font-size: 18px;
 
         &:not(:last-child) {
@@ -146,5 +156,53 @@
         padding: 10px 50px;
     }
 
+    &__heading--socials-m {
+        display: none;
+    }
 
+    &__m {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .invite {
+
+        &__promo {
+            display: none;
+        }
+
+        &__form {
+            display: none;
+        }
+
+        &__heading--socials-d {
+            display: none;
+        }
+
+        &__heading--socials-m {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &__referrals {
+            display: none;
+        }
+
+        &__m {
+            display: block;
+        }
+
+        &__how-num {
+            color: $panelgrid_cell_blue;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $panelgrid_cell_blue;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
 }
