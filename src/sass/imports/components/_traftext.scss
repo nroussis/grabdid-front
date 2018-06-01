@@ -10,7 +10,9 @@
         height: 0;
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
-        border-left: 4px solid #f30;
+        border-left-width: 4px;
+        border-left-style: solid;
+        border-left-color: #f30;
         position: relative;
         right: -3px;
     }
@@ -18,7 +20,19 @@
     &--green {
 
         &::after{
-            border-left: 4px solid $color_green;
+            border-left-color: $color_green;
+        }
+    }
+
+    &--white {
+        &::after {
+            border-left-color: $white;
+        }
+    }
+
+    &--px6 {
+        &::after {
+            border-left-width: 6px;
         }
     }
 }

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="js/search.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/transition.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/dropdown.min.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ftellipsis.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/transition.min.js" ></script>
+    <script src="js/dropdown.min.js"></script>
+    <script src="js/search.min.js" ></script>
+</head>
+<body>
+     <!-- put header content here -->
+     <div class="ui-layout-west">
+         <div class="ui-layout-west__content">
+     
+             <table class="ui-panelgrid ui-width--full" >
+                 <tbody>
+                 <tr>
+                     <!-- logo column -->
+                     <td class="ui-width--190">
+                         <img src="images/logo-t.png" >
+                     </td>
+                     <!-- search column -->
+                     <td class="ui-search-column">
+                         <div class="ui search ui-inputfield ui-inputfield--search">
+                             <input class="prompt" type="text" placeholder="Search"/>
+                             <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
+                                 <span class="ui-icon ui-icon--search"></span>
+                             </button>
+                             <div class="results"></div>
+                         </div>
+                     </td>
+                     <!-- sign in column -->
+                     <td class="ui-width--230">
+                         <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
+                         <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
+                     </td>
+     
+                 </tr>
+                 </tbody>
+             </table>
+             <!-- end of panelgrid -->
+         </div>
+         <!-- footer inside of west layout -->
+         <div class="ui-layout-west__footer menu">
+             <div class="ui-footer__content">
+                 <table class="ui-panelgrid ui-width--full">
+                     <tbody>
+                     <tr>
+                         <td>
+                             <div class="ui-dropdown">
+                             <a>All stores</a>
+                                 <div class="ui-dropdown__content">
+                                     <a href="/melinamay">Melinamay</a>
+                                     <a href="/ebay">Ebay</a>
+                                     <a href="/aliexpress">AliExpress</a>
+                                     <a href="/aegean">Aegean</a>
+                                     <a href="/shop-gr">E-shop GR</a>
+                                     <a href="/deliveras-gr">Deliveras GR</a>
+                                     <a href="/zackret">Zackret Sports</a>
+                                 </div>
+                             </div>
+     
+                         </td>
+                         <td>
+                             <a href="/coupons">Coupons</a>
+                         </td>
+                         <td>
+                             <a href="/categories">Categories</a>
+                         </td>
+                         <td>
+                             <a href="/hot-deal">Hot Deals</a>
+                         </td>
+                         <td>
+                             <div class="ui-dropdown">
+                                 <a>All stores</a>
+                                 <div class="ui-dropdown__content">
+                                     <a href="/melinamay">Melinamay</a>
+                                     <a href="/ebay">Ebay</a>
+                                     <a href="/aliexpress">AliExpress</a>
+                                     <a href="/aegean">Aegean</a>
+                                     <a href="/shop-gr">E-shop GR</a>
+                                     <a href="/deliveras-gr">Deliveras GR</a>
+                                     <a href="/zackret">Zackret Sports</a>
+                                 </div>
+                             </div>
+                         </td>
+                         <td>
+                             <a href="/how-it-works">How it works</a>
+                         </td>
+                         <td>
+                             <a href="/help">Help</a>
+                         </td>
+                     </tr>
+                     </tbody>
+                 </table>
+                 <button class="ui-button ui-background--none ui-button--navigation ui-float--right ui-border--none" >
+                     <span class="ui-icon ui-icon--bars">
+     
+                     </span>
+                 </button>
+                 <p class="clear"></p>
+                 <!-- end of panelgrid -->
+             </div>
+         </div>
+         <!-- end of layout-west__footer -->
+     </div>
+     <!-- end of layout-west -->
+     <!-- put main content here -->
+     <div class="ui-layout-center__content">
+         <div class="login">
+             <!-- *Mobile only* switching tabs for signup/login forms -->
+             <div class="login__tabs login__m">
+                 <div class="login__tab login__tab--active" id="login">Log In</div>
+                 <div class="login__tab" id="signup">Sign Up</div>
+             </div>
+         </div>
+         <h1 class="ui-font-size--24 ui-text-align--center ui-margin-30-0">Join Biggest Cash Back Shopping Site </h1>
+         <div class="login__forms">
+             <!-- Signup form -->
+             <div class="login__form-wrapper login__form-wrapper--signup ui-float--left">
+                <h2 class="login__form-heading">Sign Up for Free Now!</h2>
+                <form action="#" id="signUpForm" class="login__form">
+                    <div class="login__form-fields">
+                        <p class="ui-font-size--15 ui-margin-bottom--15 ui-padding-top--15">Have a Facebook Account?</p>
+                        <a href="#" class="login__fb"></a>
+                        <p class="ui-font-size--11 ui-margin-top--10 ui-margin-bottom--10 ui-color--light-grey">We'll never post anything without your permission.</p>
+                        <div class="login__or-box">
+                            <div class="login__or-text">OR</div>
+                        </div>
+                        <input type="email" 
+                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
+                            required 
+                            name="signupEmail" 
+                            id="signUpMail" 
+                            placeholder="* Email"
+                            class="login__input-t">
+                        <br>
+                        <input type="password" 
+                            name="signupPassword" 
+                            id="signupPassword" 
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" 
+                            placeholder="* Password"
+                            required
+                            class="login__input-t ui-margin-bottom--15">
+                        <div class="g-recaptcha ui-width--300 ui-margin--center" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
+                        <div class="login__check-agree">
+                            <input type="checkbox" name="news" id="news" class="login__news-checkbox">
+                            <label for="news" class="login__news-label ui-font-size--13">Please email me newsletters, coupons, and special offers from Ebates. </label>
+                        </div>
+                        <p class="ui-font-size--11 ui-color--light-grey"><span class="ui-color--red">*</span> Required Fields</p>
+                        <button type="submit" class="login__submit-btn"><span class="traftext traftext--px6 traftext--white">Sign Up Today</span> </button>
+                        <p class="ui-font-size--11 ui-color--light-grey">You may withdraw this consent at any time. </p>
+                    </div>
+                </form>
+                <p class="login__agreement">As a member, you agree to our <a href="#" class="ui-color--green">Terms</a> &amp; <a href="#" class="ui-color--green">Conditions and Privacy Policy.</a></p> 
+            </div>
+            <!-- Login form -->
+            <div class="login__form-wrapper login__form-wrapper--login login__form-wrapper--active ui-float--right">
+                <h2 class="login__form-heading">Sign Up for Free Now!</h2>
+                <form action="#" id="signUpForm" class="login__form">
+                    <div class="login__form-fields">
+                        <p class="ui-font-size--15 ui-margin-bottom--15 ui-padding-top--15">Have a Facebook Account?</p>
+                        <a href="#" class="login__fb"></a>
+                        <p class="ui-font-size--11 ui-margin-top--10 ui-margin-bottom--10 ui-color--light-grey">We'll never post anything without your permission.</p>
+                        <div class="login__or-box">
+                            <div class="login__or-text">OR</div>
+                        </div>
+                        <input type="email" 
+                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
+                            required 
+                            name="signupEmail" 
+                            id="signUpMail" 
+                            placeholder="* Email"
+                            class="login__input-t">
+                        <br>
+                        <input type="password" 
+                            name="signupPassword" 
+                            id="signupPassword" 
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" 
+                            placeholder="* Password"
+                            required
+                            class="login__input-t ui-margin-bottom--15">
+                        <div class="g-recaptcha ui-width--300 ui-margin--center" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
+                        <p class="ui-font-size--11 ui-color--light-grey ui-text-align--left ui-display--block clr ui-margin-top--15">
+                            <span class="ui-color--red">*</span> 
+                            Required Fields 
+                            <a href="#" class="ui-font-size--13 ui-float--right ui-color--green">Password Help?</a>
+                        </p>
+                        <button type="submit" class="login__submit-btn"><span class="traftext traftext--px6 traftext--white">Log In</span> </button>
+                    </div>
+                </form>
+                <p class="login__agreement">As a member, you agree to our <a href="#" class="ui-color--green">Terms</a> &amp; <a href="#" class="ui-color--green">Conditions and Privacy Policy.</a></p> 
+            </div> 
+         </div>
+     </div>
+     <script>
+         $(document).ready(function(){
+             $(".login__tab").on("click", function(){
+                 $(".login__tab--active").removeClass("login__tab--active");
+                 $(this).addClass("login__tab--active");
+                 var formSelector = ".login__form-wrapper--" + ($(this).attr("id").toString());
+                 $(".login__form-wrapper--active").removeClass("login__form-wrapper--active");
+                 $(formSelector).addClass("login__form-wrapper--active");
+             });
+         });
+     </script>
+     <script src='https://www.google.com/recaptcha/api.js'></script>    
+</body>
+</html>

@@ -1,0 +1,148 @@
+.login {
+    &__m {
+        display: none;
+    }
+
+    &__tabs {
+        @include clearfix;
+    }
+
+    &__tab {
+        width: 50%;
+        float: left;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        background: $button_green_bg;
+        padding: 10px 0;
+
+        &--active {
+            background: $gray_svg_bg;
+            color: $black;
+        }
+    }
+
+    &__forms {
+        @include clearfix;
+        padding: 0 140px;
+    }
+
+    &__form-wrapper {
+        // width: 45%; //not hardcoded
+        width: 400px; //hardcoded
+        min-height: 520px;
+        border: 2px solid $login_form_border_color;
+        border-top: none;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    &__form {
+        // padding: 15px 25px;
+        padding-bottom: 0;
+    }
+
+    &__form-heading {
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 10px 10px 0 0;
+        background: $login_form_border_color;
+        color: white;
+    }
+
+    &__form-fields {
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    &__fb {
+        display: block;
+        width: 250px;
+        height: 35px;
+        margin: 0 auto;
+        background: url(../images/continue-with-facebook.1.0.0.png) no-repeat;
+    }
+
+    &__or-box {
+        position: relative;
+        border-top: 1px solid black;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__or-text {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 0 10px;
+
+    }
+
+    &__input-t {
+        width: 100%;
+        margin-top: 15px;
+        padding: 5px 5px;
+        border: 1px solid #e0e0e0;
+        box-shadow: inset 2px 2px 5px #eaeaea;
+    }
+
+    &__check-agree {
+
+    }
+
+    &__submit-btn {
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 5px 10px;
+        color: $white;
+        background: $button_orange_bg;
+        cursor: pointer;
+        margin-top: 15px;
+        min-width: 135px;
+    }
+
+    &__agreement {
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+        font-size: 12px;
+        background: $gray_svg_bg;
+        padding: 5px 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .login {
+
+        &__m {
+            display: block;
+        }
+
+        &__forms {
+            padding: 0;
+        }
+
+        &__form-wrapper {
+            width: 100%;
+            display: none;
+
+            &--active {
+                display: block;
+            }
+        }
+
+        &__form-fields {
+            padding: 0;
+        }
+    }
+}
