@@ -1,0 +1,40 @@
+.clicktocopy {
+    position: relative;
+
+    &:hover + &__hint {
+        display: block;
+    }
+
+    &__hint {
+        display: none;
+        position: absolute;
+        left: 38px;
+        top: 32px;
+        padding: 6px;
+        width: 100px;
+        text-align: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-style: solid;
+			border-width: 10px;
+			border-color: transparent transparent #fff transparent;
+			display: block;
+            width: 0;
+            top: -19px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+
+        &--green {
+            background-color: $button_green_bg;
+            color: white;
+
+            &::before {
+                border-color: transparent transparent $button_green_bg transparent;
+            }
+        }
+    }
+}

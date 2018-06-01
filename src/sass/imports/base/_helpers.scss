@@ -1,0 +1,430 @@
+///*------------------------------------*\
+//    #HELPERS used for layouting and styling the page, but they are not html element or component.
+//\*------------------------------------*/
+
+//used mixin to create any type of width-class
+@include width_base_class(width,25);
+@include width_base_class(width,33);
+@include width_base_class(width,100);
+@include width_base_class(width,190);
+@include width_base_class(width,200);
+@include width_base_class(width,230);
+@include width_base_class(width,284);
+@include width_base_class(width,300);
+
+//set element border-radius to 5 and output class is .ui-border-radius--5
+@include width_base_class(border-radius,4);
+@include width_base_class(border-radius,5);
+
+//set element font-size to 24 example .ui-font-size--24
+@include width_base_class(font-size,11);
+@include width_base_class(font-size,12);
+@include width_base_class(font-size,13);
+@include width_base_class(font-size,14);
+@include width_base_class(font-size,15);
+@include width_base_class(font-size,16);
+@include width_base_class(font-size,17);
+@include width_base_class(font-size,18);
+@include width_base_class(font-size,19);
+@include width_base_class(font-size,20);
+@include width_base_class(font-size,22);
+@include width_base_class(font-size,24);
+@include width_base_class(font-size,25);
+@include width_base_class(font-size,27);
+@include width_base_class(font-size,29);
+@include width_base_class(font-size,30);
+@include width_base_class(font-size,35);
+@include width_base_class(font-size,36);
+@include width_base_class(font-size,38);
+@include width_base_class(font-size,39);
+@include width_base_class(font-size,40);
+@include width_base_class(font-size,85);
+
+//set element line-height to 30 example .ui-line-height--30
+@include width_base_class(line-height,24);
+@include width_base_class(line-height,27);
+@include width_base_class(line-height,30);
+
+//set element padding left to 30 example .ui-padding-left--30
+@include width_base_class(padding-left,13);
+@include width_base_class(padding-left,23);
+@include width_base_class(padding-left,30);
+@include width_base_class(padding-left,60);
+
+//set element padding right to 30 example .ui-padding-right--30
+@include width_base_class(padding-right,10);
+@include width_base_class(padding-right,30);
+
+//set element padding top to 30 example .ui-padding-top--8
+@include width_base_class(padding-top,8);
+@include width_base_class(padding-top,10);
+@include width_base_class(padding-top,15);
+@include width_base_class(padding-top,20);
+
+
+//set element padding left to 30 example .ui-padding-bottom--10
+@include width_base_class(padding-bottom,10);
+@include width_base_class(padding-bottom,15);
+@include width_base_class(padding-bottom,25);
+
+//Set element's full padding
+.ui-padding--20 {
+  padding: 20px;
+}
+
+.ui-padding--10 {
+  padding: 10px;
+}
+
+//set element margin top to 10 example .ui-margin-top--10
+@include width_base_class(margin-top,5);
+@include width_base_class(margin-top,8);
+@include width_base_class(margin-top,10);
+@include width_base_class(margin-top,12);
+@include width_base_class(margin-top,25);
+
+//set element margin right to 10 example .ui-margin-right--10
+@include width_base_class(margin-right,5);
+@include width_base_class(margin-right,8);
+@include width_base_class(margin-right,10);
+@include width_base_class(margin-right,12);
+@include width_base_class(margin-right,25);
+
+//set element margin right to 10 example .ui-margin-left--10
+@include width_base_class(margin-left,40);
+
+
+//set element margin bottom to 7 example .ui-margin-bottom--7
+@include width_base_class(margin-bottom,7);
+@include width_base_class(margin-bottom,10);
+@include width_base_class(margin-bottom,11);
+
+//set element height to 5 exmple .ui-height--5
+@include width_base_class(height,5);
+@include width_base_class(height,8);
+@include width_base_class(height,20);
+@include width_base_class(height,25);
+@include width_base_class(height,33);
+@include width_base_class(height,45);
+@include width_base_class(height,50);
+@include width_base_class(height,85);
+@include width_base_class(height,100);
+@include width_base_class(height,150);
+
+//border radius 100%
+.ui-border-radius--full {
+  @include vendor(border-radius,100%);
+}
+
+// remove border radius from element
+.ui-border-radius--none {
+  @include vendor(border-radius,0);
+}
+
+//used for setting any element max-width to 100%
+.ui-max-width--full {
+  max-width: 100%;
+}
+
+//used for setting any element width to 100%
+.ui-width--full {
+  width: 100%;
+}
+
+//used for setting any element height to 100%
+.ui-height--full {
+  height: 100%;
+}
+
+//used for setting any element width to 50%
+.ui-width--half {
+  width: 50%;
+}
+
+.ui-width--75 {
+  width: 75%;
+}
+
+//used for setting any element width to 25%
+.ui-width--quad {
+  width: 25%;
+}
+
+//set line-height 100%
+.ui-line-height--full {
+  line-height: 100%;
+}
+//class used for clearing floats use it on <p> tags only
+.clear {
+  clear: both;
+	//height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+//set elements position to relative
+.ui-position--relative {
+  position: relative;
+}
+
+//class for floating element to right
+.ui-float--right {
+  float: right;
+}
+//class for floating element to right
+.ui-float--left {
+  float: left;
+}
+
+// set element text align to center
+.ui-text-align--center {
+    text-align: center;
+}
+
+// set element text align to right
+.ui-text-align--right {
+  text-align: right;
+}
+
+// set element text align to left
+.ui-text-align--left {
+  text-align: left;
+}
+
+
+//set font to robotolight
+.ui-font--light {
+  font-family: $font_2;
+}
+
+//set font to robotomedium
+.ui-font--medium {
+  font-family: $font_3;
+}
+
+//set font to robotobold
+.ui-font--bold {
+  font-weight: bold;
+}
+
+// set font color to white
+.ui-color--white {
+  color: $white;
+}
+
+//set color to gray, used mostly as standard output text
+.ui-color--gray {
+  color: $panelgrid_output_color;
+}
+
+//set color to green, used mostly on buttons
+.ui-color--green {
+  color: $color_green;
+}
+
+//set margin left-right to auto, placing element in middle
+.ui-margin--center {
+  margin: 0 auto;
+}
+
+//Borders
+
+.ui-border {
+  border: 1px solid $block_border_color;
+}
+
+.ui-border-r {
+  border-right: 1px solid $block_border_color;
+}
+
+.ui-border-l {
+  border-left: 1px solid $block_border_color;
+}
+
+.ui-border-b {
+  border-bottom: 1px solid $block_border_color;
+}
+
+.ui-border--green {
+  border-color: $button_green_bg;
+}
+
+//remove border from any element
+.ui-border-none {
+  border: none;
+}
+
+//Removes top border
+.ui-border-t-none {
+  border-top: none;
+}
+
+
+//Removes bottom border
+.ui-border-b-none {
+  border-bottom: none;
+}
+
+
+//Removes left border
+.ui-border-l-none {
+  border-left: none;
+}
+
+
+// Removes right border
+.ui-border-r-none {
+  border-right: none;
+}
+
+//remove background from any element
+.ui-background--none {
+  background: none;
+}
+
+//set vertical-align to middle
+.ui-vertical-align--middle {
+  vertical-align: middle;
+}
+
+//set element display to block
+.ui-display--block {
+  display: block;
+}
+
+//Do not show an item
+.ui-display--none {
+  display: none;
+}
+
+//set element color to dark-gray
+.ui-color--dark-gray {
+  color: $color_dark_gray;
+}
+
+//set table layout to fixed, so that column widths can be manipulated
+.ui-table-layout--fixed {
+  table-layout: fixed;
+}
+
+// class used to wrap text in one line and add three dots... (works on blocks that has specified width)
+.ui-text--wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//custom calc class width
+.ui-width--full-175 {
+  @include calc(width,"100% - 175px");
+}
+
+//set element background to gray
+.ui-background--gray {
+  background: $search_bg;
+}
+
+//set element background to white
+.ui-background--white {
+  background: $white;
+}
+
+//set color to red
+.ui-color--red {
+  color: $color_red;
+}
+
+//set a separator gray border to element, good for clears and divs
+.ui-separator--top-gray {
+  border-top: 1px solid $searchbar_border_c;
+}
+
+//set element overflow to hidden
+.ui-overflow--hidden {
+  overflow: hidden;
+}
+
+//set element cursor to pointer
+.ui-cursor--pointer {
+  cursor: pointer;
+}
+
+//set text color to blue, useful for links
+.ui-color--blue {
+  color: $highlight_blue_bg;
+}
+
+//set text color to orange
+.ui-color--orange {
+  color: $highlight_orange_bg;
+}
+
+//set text color to greek blue
+.ui-color--greece {
+  color: $color_greek_blue;
+}
+
+//set text color to cyprus orange
+.ui-color--cyprus {
+  color: $color_cyprus_orange;
+}
+
+.ui-color--sm-grey {
+  color: $small_grey;
+}
+
+// .ui-color--green {
+//   color: $green_link_color;
+// }
+
+.ui-text--uppercase {
+  text-transform: uppercase;
+}
+
+.ui-padding-15-0 {
+  padding: 15px 0;
+}
+
+.ui-padding-10-0 {
+  padding: 10px 0;
+}
+
+.ui-padding-10-20 {
+  padding: 10px 20px;
+}
+
+.ui-padding-0-10 {
+  padding: 0 10px;
+}
+
+.ui-padding-25-0 {
+  padding: 25px 0;
+}
+
+.ui-padding-15-20 {
+  padding: 15px 20px;
+}
+
+.ui-margin--n {
+  margin: 0;
+}
+
+.ui-margin-5-0 {
+  margin: 5px 0;
+}
+
+.u-word-wrap--brw {
+  word-wrap: break-word;
+}
+
+
+//Styles for sticky block in all-stores page
+.sticky {
+  position: fixed;
+  z-index: 0;
+  margin-top: 110px;
+}
+.stop {
+  position: relative;
+  z-index: 0;
+}

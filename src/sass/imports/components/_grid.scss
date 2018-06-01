@@ -1,0 +1,109 @@
+// 6 column grid
+.grid-6-col {
+  @include clearfix;
+
+  &__1-of-6 {
+    display: block;
+    float: left;
+    width: 100%;
+
+    &:not(:last-child){
+      margin-right: 1.02%;
+    }
+  }
+}
+
+.grid-3-5-col {
+  @include clearfix;
+  
+  &__1-of-3-5 {
+    display: block;
+    width: calc(100% / 3.5);
+    float: left;
+  }
+  
+  &__2x1-of-3-5 {
+    display: block;
+    float: left;
+    width: calc((100% - (100% / 3.5)) - 10px);
+    margin-left: 10px;
+  }
+}
+
+.grid-3-col {
+  @include clearfix;
+  
+  &__1-of-3 {
+    display: block;
+    float: left;
+    width: calc(99.9% / 3);
+
+    &--inv-socials {
+      width: calc((99.9% / 3) - 10px);
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__2-of-3 {
+    display: block;
+    float: left;
+    width: calc(99% - (99.9% / 3));
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.grid-4-col {
+  @include clearfix;
+
+  &__1-of-4 {
+    display: block;
+    float: left;
+    width: calc(100% / 4);
+    padding: 0;
+    margin: 0;
+  }
+
+  &__3-of-4 {
+    display:block;
+    float: left;
+    width: calc(100% - (100% / 4));
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.grid-2-col {
+  @include clearfix;
+
+  &__1-of-2 {
+      display: block;
+      float: left;
+      width: 50%;
+  }
+}
+
+.clr {
+  @include clearfix;
+}
+
+@media (max-width: 800px) {
+  .grid-3-col {
+
+    &__1-of-3 {
+
+      &--inv-socials {
+        width: 100%;
+        margin: 0;
+
+        &:not(:first-child) {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

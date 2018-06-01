@@ -1,0 +1,19 @@
+//Here will be styles for expanded - collapses texts
+.more {
+    cursor: pointer;
+}
+
+
+.expandable-text {
+    overflow: hidden;
+    // transition:  max-height 1.2s;
+
+    &--collapsed {
+        max-height: 40px;
+    }
+
+    &--expanded {
+        // transition: max-height 10s;
+        // max-height: 9999px;
+    }
+}

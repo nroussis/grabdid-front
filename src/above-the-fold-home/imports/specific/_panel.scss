@@ -1,0 +1,10 @@
+
+///*------------------------------------*\
+//    #PANEL basic div component with ability to contain footer, header, and content
+//\*------------------------------------*/
+
+.ui-panel__banner {
+  background: $url_banner_img no-repeat;
+  min-height: 400px;
+  margin-top: -2px;
+}

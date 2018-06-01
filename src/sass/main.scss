@@ -1,0 +1,140 @@
+//
+/**
+ * @author Tolja
+ *
+ * CONTENTS
+ *
+ * TOOLS
+ * Mixins.................All mixins and functions on our website.
+ *
+ * SETTINGS
+ * Colos..................Manage our color palette in isolation.
+ * //Fonts..................All fonts and font-sizes.
+ * //Images.................All images in our app.
+ *
+ * BASE
+ * Body...................root styles.
+ * Links..................Hyperlink styles.
+ * Base helpers........... Simple helper classes.
+ * //Animation..............All our animations.
+ *
+ * COMPONENTS (components are kinda like BASE just for every component, here should be classes that can be reused, and that won't be overridden)
+ * Layout.................ui-layout, elements inside and their modifiers.
+ * Inputfield.............ui-inputfield, elements inside and their modifiers.
+ * Panelgrid..............ui-panelgrid, elements inside and their modifiers.
+ * Button.................ui-button, elements inside and their modifiers.
+ * Grid...................grid blueprints.
+ * //Dialog.................ui-dialog and elements inside of it.
+ * //Datatable..............ui-datatable and elements inside of it.
+ *
+ * PLACEHOLDERS
+ * placeholders...........All code that is repeating a lot should go here.
+ *
+ * SPECIFIC
+ * Accordion..............Specific accordionPanels.
+ * Layout.................Specific layoutUnits.
+ * //Datatable..............Specific datatables.
+ * Dialog.................Specific dialogs.
+ * InputField.............Specific inputfields.
+ * Panelgrid..............Specific panelgrids.
+ * Button.................Specific buttons.
+ * //Radio..................Specific radio buttons.
+ * Panel..................Specific panels.
+ * Separator..............Specific separators.
+ * //MenuButton.............Specific menu buttons.
+ * //InputSwitch............Specific inputSwitchs.
+ * //SelectOneMenu..........Specific selectOneMenus.
+ * //Datagrid...............Specific datagrids.
+ * CommandLink............Specific commandLinks.
+ * Links..................Specific links.
+ * Helpers................Specific, more complex, unique classes.
+ *
+ * ICONS
+ * Icons..................All the icons in our app.
+ *
+ * MEDIA
+ * Media..................All @media for responsiveness.
+ *
+ * SEMANTIC-UI (check https://semantic-ui.com for more details and documentation)
+ * Drowdown...............Customize semantic dropdown.
+ * Item...................Customize semantic items.
+ * Search.................Customize semantic search.
+ *
+ * NOTE: Whoever continues editing this, NEVER OVERRIDE only if you must and only with specific styles and @media!! no style should override another style,
+ * it is always better to create another class then overriding.
+ *
+ */
+
+
+/**
+ * #VENDORS
+ */
+@import "imports/vendors/normalize";
+
+/**
+ * #TOOLS
+ */
+@import "imports/tools/mixins";
+
+/**
+ * #SETTINGS
+ */
+@import "imports/settings/settings.all";
+
+/**
+ * #BASE
+ */
+@import "imports/base/body";
+@import "imports/base/links";
+@import "imports/base/helpers";
+@import "imports/base/lists";
+
+/**
+ * #COMPONENTS
+ */
+@import "imports/components/layout";
+@import "imports/components/inputfield";
+@import "imports/components/panelgrid";
+@import "imports/components/button";
+@import "imports/components/block-heading";
+@import "imports/components/grid";
+@import "imports/components/more";
+@import "imports/components/clicktocopy";
+@import "imports/components/traftext";
+
+/**
+ * #PLACEHOLDERS
+ */
+@import "imports/placeholders/placeholders";
+
+/**
+ * #SPECIFIC
+ */
+@import "imports/specific/accordion";
+@import "imports/specific/layout";
+@import "imports/specific/dialog";
+@import "imports/specific/inputfield";
+@import "imports/specific/panelgrid";
+@import "imports/specific/button";
+@import "imports/specific/panel";
+@import "imports/specific/separator";
+@import "imports/specific/commandlink";
+@import "imports/specific/links";
+@import "imports/specific/helpers";
+
+/**
+ * #ICONS
+ */
+@import "imports/icons/icons";
+
+/**
+ * #MEDIA
+ */
+@import "imports/media/media";
+
+/**
+ * #SEMANTIC-UI
+ */
+@import "imports/semantic-ui/dropdow";
+@import "imports/semantic-ui/item";
+@import "imports/semantic-ui/search";

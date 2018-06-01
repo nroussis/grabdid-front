@@ -1,0 +1,66 @@
+
+///*------------------------------------*\
+//    #COMMANDLINK any link that will have a higher command (link, that will open something, not just redirect)
+//\*------------------------------------*/
+
+.ui-separator .ui-commandlink {
+  font-size: 19px;
+  float: right;
+  color: $commandLink_gray;
+  line-height: 39px;
+}
+
+.ui-commandlink {
+  &--gray {
+    color: $commandLink_gray;
+  }
+  &--facebook-login {
+    width: 300px;
+    height: 36px;
+    background: $url_fb_login_img no-repeat;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+  }
+}
+.ui-panelgrid--sitemap .ui-commandlink {
+  display: block;
+  line-height: 30px;
+  font-size: 15px;
+  @include vendor-o(transition,color .5s);
+  &:hover {
+    color: $white;
+  }
+}
+
+.ui-commandlink--social-media {
+  display: block;
+  background: $social_media_circle_bg;
+  @include vendor-o(transition,background 0.3s);
+  &:hover {
+    background: $white;
+    path {
+      fill: $black;
+    }
+  }
+}
+
+.ui-commandlink--social-media-dark {
+  display: inline-block;
+  background: $black;
+  @include vendor-o(transition,background 0.3s);
+  path {
+    @include vendor-o(transition,fill 0.3s);
+    fill: $white;
+  }
+  &:hover {
+    background: $social_media_circle_bg;
+    path {
+      fill: $black;
+    }
+  }
+  svg {
+    height: 17px;
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,208 @@
+.invite {
+
+    &__heading {
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        width: 76.0683%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    &__email-wrapper {
+        position: relative;
+    }
+
+    &__input-text {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid $block_border_color;
+        border-radius: 5px;
+
+        &--email {
+            width: 67.6404%;
+        }
+
+        &--reflink {
+            width: 100%;
+            padding-right: 80px;
+
+            &::selection {
+                background: transparent;
+            }
+ 
+            &::-moz-selection { /* Code for Firefox */
+                background: transparent;
+            }
+        }
+
+        &--active {
+            border-color: $color_green;
+        }
+    }
+
+    &__email-btn {
+        width: calc(99% - 67.6504%);
+        color: white;
+        text-transform: capitalize;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        background: $button_green_bg;
+        padding: 11px;
+        position: relative;
+        left: -10px;
+        cursor: pointer;
+
+        &:disabled {
+            background: #ccc;
+            cursor: unset;
+        }
+    }
+
+    &__share {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__socials {
+        width: 76.0683%;
+        margin: 0 auto;
+    }
+
+    &__copylink {
+        position: relative;
+
+    }
+
+    &__greentext-btn {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        font-size: 16px;
+        border: none;
+        background: none;
+        color: $button_green_light_color;
+        cursor: pointer;
+    }
+
+    &__placeholder {
+        padding: 8px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 18px;
+
+        &--fb {
+            background: #4267b2;
+            color: white;
+        }
+
+        &--tw {
+            background: #1da1f2;
+            color: white;
+        }
+
+        &--email {
+            background: $button_green_bg;
+            color: white;
+        }
+
+        &--sms {
+            background: #333;
+            color: white;
+        }
+    }
+
+    &__soc-icon {
+        padding-top: 3px;
+        padding-left: 10px;
+        float: left;
+    }
+
+    &__tab {
+        cursor: pointer;
+        padding: 15px 0;
+        border: 1px solid $block_border_color;
+        font-size: 18px;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        &--active {
+            font-weight: bold;
+            border-top: 5px solid $button_green_bg;
+            border-bottom: none;
+            color: $button_green_bg;
+        }
+    }
+
+    &__tabcontent-wrapper {
+        width: 99.9%;
+    }
+
+    &__tabcontent {
+        display: none;
+
+        
+        &--active {
+            display: block;
+        }
+    }
+
+    &__tabcontent-table {
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 50px;
+    }
+
+    &__heading--socials-m {
+        display: none;
+    }
+
+    &__m {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .invite {
+
+        &__promo {
+            display: none;
+        }
+
+        &__form {
+            display: none;
+        }
+
+        &__heading--socials-d {
+            display: none;
+        }
+
+        &__heading--socials-m {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &__referrals {
+            display: none;
+        }
+
+        &__m {
+            display: block;
+        }
+
+        &__how-num {
+            color: $panelgrid_cell_blue;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $panelgrid_cell_blue;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}

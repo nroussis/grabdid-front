@@ -1,0 +1,226 @@
+.dashboard {
+
+    &__balance {
+        text-align: center;
+    }
+
+    &__balance-wrapper {
+        box-sizing: border-box;
+        margin:  20px 0;
+    }
+
+    &__wh-cb {
+        margin: 20px 40px;
+    }
+
+    &__heading-bonus {
+        background: $bonus_bg;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__notification {
+        color: white;
+        cursor: pointer;
+
+        &--bonus {
+            background: $bonus_bg;
+        }
+
+        &--double-cb {
+            background: $button_green_bg;
+        }
+    }
+
+    &__fav-item-wrapper {
+        position: relative;
+    }
+
+    &__fav-add {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        color: $commandLink_gray;
+        cursor: pointer;
+
+        &:hover {
+            color: gold;
+        }
+
+        &--added {
+            color: gold;
+        }
+    }
+    
+    &__fav-item {
+
+        
+
+        &:nth-child(odd) {
+            border-right: 1px solid $block_border_color;
+        }
+    }
+
+    &__fav-link {
+        display: block;
+        padding: 15px;
+    }
+
+    &__fav-logo {
+        margin-left: 30px;
+    }
+
+
+    &__trips-table {
+        width: 100%;
+        
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        tr {
+            &:nth-child(2) td {
+                padding: 10px 10px 5px 10px;
+            }
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px 10px;
+            font-weight: 400;
+        }
+    }
+
+    &__th {
+        &-date {
+            width: 20%;
+        }
+
+        &-store {
+            width: 40%;
+        }
+
+        &-cb {
+            width: 20%;
+        }
+
+        &-st {
+            width: 20%;
+        }
+    }
+
+    &__coupon {
+        padding: 30px;
+    }
+
+    &__clogo-wrapper {
+        float: left;
+        width: 20%;
+    }
+
+    &__ccontent {
+        float: left;
+        width: 60%;
+    }
+
+    &__cdescription {
+        position: relative;
+    }
+
+    &__c-read-more {
+        position: relative;
+        right: -80%;
+        font-weight: bold;
+        background: url(../images/trans-white-grad-60x1.png) repeat-y 0 0;
+    }
+
+    &__shop-btn {
+        padding: 5px 25px;
+    }
+
+    &__code-expires {
+        position: relative;
+    }
+
+    &__fav-found {
+        position: absolute;
+        bottom: 10px;
+        background: white;
+        width: calc(100% - 45px);
+    }
+
+    &__fav-found-items {
+        position: absolute;
+        background: white;
+        display: block;
+        width: 100%;
+    }
+
+    &__fav-found-item {
+        
+        &:hover {
+            background: rgba($search_color, .3);
+        }
+    }
+
+    &__m {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .dashboard {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    .dashboard {
+
+        &__balance-wrapper {
+            width: 100%;
+            border-right: none;
+        }
+
+        &__wh-cb-wrapper {
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+}
+
+@media (max-width: 800px) {
+    .dashboard {
+
+        &__ccontent {
+            width: 100%;
+        }
+
+        &__fav-item {
+            width: 100%;
+        }
+
+        &__shop-btn {
+            float: right;
+        }
+
+        &__d {
+            display: none;
+        }
+
+        &__m {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.ui-inputfield--search {
+  position: relative;
+  background: $search_bg;
+  display: block;
+  @include vendor(border-radius,6px);
+  @include vendor(box-sizing,border-box);
+  border: 1px solid $searchbar_border_c;
+  padding: 8px 8px;
+  line-height: 22px;
+  * {
+    font-family: $font_1,$font_2,$font_3 !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+  }
+  &.ui.search {
+    .results .result {
+      .title {
+        float: left;
+      }
+      .description {
+        color: #9f3a38;
+        float: right;
+      }
+    }
+    input {
+      @include vendor(border-radius, 0);
+      border: 0;
+      background: none;
+      padding: 0;
+      &:focus {
+        background: none;
+      }
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 16px;
+    color: $search_placeholder_color;
+  }
+  :-moz-placeholder {
+    font-size: 16px;
+    color: $search_placeholder_color;
+  }
+  ::-moz-placeholder {
+    font-size: 16px;
+    color: $search_placeholder_color;
+  }
+  :-ms-input-placeholder {
+    font-size: 16px;
+    color: $search_placeholder_color;
+  }
+}
+.ui-search-column {
+  .ui.search .results {
+    width: 100%;
+    @include calc(width,"100% - 80px");
+  }
+}

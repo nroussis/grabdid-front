@@ -1,0 +1,254 @@
+///*------------------------------------*\
+//    #MEDIA 1200,1000,930,767,640,600,500,450
+//\*------------------------------------*/
+
+//size of the screen, before any responsiveness
+@media screen and (max-width: 1200px) {
+  .ui-panelgrid__background {
+    width: auto;
+  }
+  .ui-search-column {
+    padding:0 10px;
+  }
+  .ui-layout-west__content {
+    .ui-button {
+      margin: 0;
+      &.ui-button--left {
+        margin-right: 8px;
+      }
+    }
+    .ui-width--230 {
+      width: 176px;
+//      width: 100%;
+    }
+
+  }
+
+}
+
+//size of the screen before intervention is needed to assist responsiveness
+@media screen and (max-width: 1000px) {
+
+  //Header buttons block needs to be wide
+  .ui-width--230 {
+        width: 100% !important;
+    }
+
+  .ui-panel__banner {
+    @include calc(width,"100% + 30px");
+    margin-left: -15px;
+    .ui-width--half {
+      width: 100%;
+      min-height: 350px;
+      background: $transparent_white_60;
+    }
+    .ui-padding-left--30 {
+      padding: 0;
+    }
+  }
+  .ui-layout-west__content {
+    padding-top: 7px;
+    .ui-search-column {
+      padding:0;
+    }
+    td {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      float: left;
+      &:last-child {
+        margin:0;
+      }
+    }
+  }
+  .ui-panelgrid--logos {
+    td {
+      display: block;
+      height: 67px;
+      width: 25%;
+      float:left;
+      padding: 0;
+      margin-bottom: 15px;
+      background-size: 130px 100%;
+    }
+
+  }
+  //test
+  .ui-testemonials-grid {
+    .ui-last {
+      width: 55px;
+      padding: 23px 15px;
+    }
+    img {
+      width: 55px;
+    }
+    &__output {
+      padding-bottom: 10px;
+    }
+    &__subheader {
+      padding: 9px 13px 8px 23px;
+    }
+    .ui-first {
+      @include calc(width,"100% - 85px");
+    }
+  }
+  //grids with 4 columns
+  .ui-panelgrid--col-4 {
+    td {
+      display: block;
+      width: 50%;
+      @include vendor(box-sizing, border-box);
+      float: left;
+      &:first-child {
+        margin-bottom: 15px;
+      }
+      &:nth-child(2) {
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+      &:nth-child(3) {
+        padding-left: 0;
+      }
+    }
+  }
+  .ui-panelgrid--sitemap {
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui-footer__logo-wrapper {
+    text-align: left;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  .ui-panelgrid__cell--content {
+    .ui-font-size--35 {
+      font-size: 26px;
+    }
+    .ui-width--full-175 {
+      width: 100%;
+    }
+    .ui-button--item {
+      position: initial;
+      float: right;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .ui-testemonials-grid__footer {
+    > span {
+      float: left;
+      clear: both;
+    }
+  }
+}
+
+//media for mobiles (landscape) and tablet (portrait)
+@media screen and (max-width: 767px) {
+  .ui-panelgrid--col-3 {
+    &.ui-panelgrid--basic {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    td {
+      display: block;
+      width: 100%;
+      padding: 0;
+      padding-bottom: 15px;
+      float: left;
+      @include vendor(box-sizing,border-box);
+    }
+  }
+  .ui-layout-west__footer {
+    .ui-panelgrid {
+      display: none;
+    }
+  }
+  .ui-button--navigation {
+    display: block;
+  }
+  .ui-width--quad {
+    width: 50%;
+    margin: 10px 0;
+  }
+  .item > div {
+    display: block !important;
+  }
+  .item .image {
+    border-bottom: 1px solid $searchbar_border_c;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ui-sidebar--navigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ui-panelgrid--sitemap {
+    td:nth-child(4) {
+      margin-top: 15px;
+      width: 100%;
+      td:last-child {
+        width: 50%;
+        @include calc(width,"100% - 70px");
+      }
+    }
+  }
+  .ui-clamp {
+    width: 100%;
+  }
+  .ui-panelgrid--layout td {
+    display: block;
+
+  }
+  .ui-panelgrid--layout .ui-panelgrid__cell--ad {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .ui-panelgrid--logos {
+    td {
+      width: 33%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .ui-panelgrid--col-4 td {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .ui-panelgrid--sitemap {
+    td {
+      text-align: center;
+      &:last-child {
+        text-align: left;
+      }
+    }
+    .ui-height--20 {
+      height: 3px;
+    }
+  }
+  .ui-footer__logo-wrapper {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 465px) {
+  .ui-panelgrid--logos {
+    td {
+      width: 50%;
+    }
+  }
+  .ui-button--search {
+    width: 55px;
+  }
+}

@@ -1,0 +1,17 @@
+.sorting-shipping {
+	
+	&__value {
+
+		&--ww {
+			color: black;
+		}
+
+		&--cyprus {
+			color: $color_cyprus_orange;
+		}
+
+		&--greece {
+			color: $color_greek_blue;
+		}
+	}
+}

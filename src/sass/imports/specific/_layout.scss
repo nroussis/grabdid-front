@@ -1,0 +1,155 @@
+
+///*------------------------------------*\
+//    #LAYOUT classes used to set page layout as needed.
+//\*------------------------------------*/
+
+//footer content in west-layout
+.ui-layout-west{
+	&__footer {
+		background: $search_bg;
+		@include vendor(box-shadow, 2px 2px 1px 0 $transparent_black_10);
+		z-index: 1;
+	}
+	.ui-footer__content {
+		padding: 11px 0;
+	}
+}
+.ui-footer__header {
+	padding-top: 55px;
+	padding-bottom: 45px;
+	&--green {
+		background: $footer_header_green;
+	}
+}
+
+.ui-footer--social-media {
+	margin-top: 40px;
+	div {
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		padding: 0 5px;
+	}
+	svg {
+		height: 25px;
+		margin-top: 12px;
+		path {
+			fill: $gray_svg_bg;
+			@include vendor-o(transition,fill 0.3s);
+		}
+	}
+}
+
+.ui-footer--copyright {
+	padding: 20px 0;
+}
+
+@import '../blocks/stores-recommended';
+
+.stores-recommended {
+
+	display: block;
+	margin-bottom: 20px;
+	&__rec {
+		display: block;
+		box-sizing: border-box;
+		text-align: center;
+		border: 1px solid #ccc;
+		padding: 35px 5px;
+
+
+		&:hover {
+			box-shadow:0 8px 14px -6px rgba(153,153,153,.65);
+		}
+	}
+
+	&__old-cashback {
+		font-size: 12px;
+		color: #888;
+	}
+
+	&__cashback {
+		font-weight: bold;
+		color: $color_red;
+		font-size: 16px;
+	}
+
+	&__see-all {
+		font-size: 12px;
+		color: #888;
+	}
+
+	&__logo {
+		border: none;
+		margin: 0 auto;
+	}
+}
+
+/**
+ *Stores sidebar layout***********************************************************************************
+*/
+
+@import '../blocks/stores-sidebar';
+
+/**
+ *Stores list layout***********************************************************************************
+*/
+
+@import '../blocks/allstores';
+
+
+
+/**
+ *Sticky promo block (allstores)***********************************************************************************
+*/
+
+@import '../blocks/promo-sticky';
+
+
+/**
+ *Stores block (allstores)***********************************************************************************
+*/
+
+@import '../blocks/stores';
+
+/**
+ *Alphabet for searching in all-stores.html***********************************************************************************
+*/
+
+@import '../blocks/alpha';
+
+/**
+ *Sorting by shipping (allstores)***********************************************************************************
+*/
+
+@import '../blocks/sorting-shipping';
+
+/**
+ *Member blocl (account)***********************************************************************************
+*/
+
+@import '../blocks/member';
+
+/**
+ *Dashboard block (allstores)***********************************************************************************
+*/
+
+@import '../blocks/dashboard';
+
+/**
+ *Input text with button (account)***********************************************************************************
+*/
+
+@import '../blocks/input-t-b';
+
+/**
+ *Invite page layout (invite)***********************************************************************************
+*/
+
+@import '../blocks/invite';
+
+/**
+ *Modal window blocks (all)***********************************************************************************
+*/
+
+@import '../blocks/modal';
