@@ -27,14 +27,6 @@
         &--reflink {
             width: 100%;
             padding-right: 80px;
-
-            &::selection {
-                background: transparent;
-            }
- 
-            &::-moz-selection { /* Code for Firefox */
-                background: transparent;
-            }
         }
 
         &--active {
@@ -91,25 +83,27 @@
         border-radius: 3px;
         text-align: center;
         font-size: 18px;
+        color: white;
 
         &--fb {
             background: #4267b2;
-            color: white;
+            
         }
 
         &--tw {
             background: #1da1f2;
-            color: white;
         }
 
         &--email {
             background: $button_green_bg;
-            color: white;
         }
 
         &--sms {
             background: #333;
-            color: white;
+        }
+
+        &--gp {
+            background: #db4437;
         }
     }
 
@@ -117,6 +111,7 @@
         padding-top: 3px;
         padding-left: 10px;
         float: left;
+        color: white;
     }
 
     &__tab {
@@ -191,6 +186,10 @@
 
         &__m {
             display: block;
+        }
+
+        &__d {
+            display: none;
         }
 
         &__how-num {

@@ -51,8 +51,20 @@
     display: block;
     float: left;
     width: calc(99% - (99.9% / 3));
-    padding: 0;
-    margin: 0;
+  }
+
+  &__3-of-3 {
+    display: block;
+    float: left;
+    width: 100%;
+
+    &--inv-socials {
+      width: calc(100% - 10px);
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
   }
 }
 
@@ -63,16 +75,12 @@
     display: block;
     float: left;
     width: calc(100% / 4);
-    padding: 0;
-    margin: 0;
   }
 
   &__3-of-4 {
     display:block;
     float: left;
     width: calc(100% - (100% / 4));
-    padding: 0;
-    margin: 0;
   }
 }
 

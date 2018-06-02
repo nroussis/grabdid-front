@@ -122,27 +122,6 @@
             <div class="invite__promo">
                 <img src="images/raf_primary_0_q1.png" alt="Invite your friends!">
             </div>
-            <!-- Email sending form -->
-            <div class="invite__form ui-text-align--center">
-                <h1 class="ui-font-size--20 invite__heading">Invite Your Friends by Email</h1>
-                <form id='invite_form' class="invite__email-wrapper ui-text-align--left">
-                    <input type="text" 
-                           name="" 
-                           id="inviteEmail" 
-                           class="invite__input-text invite__input-text--email" 
-                           placeholder="Enter Email Adress">
-
-                    <input type="button" 
-                           disabled 
-                           value="Send Email" 
-                           class="invite__email-btn ui-font-size--16"
-                           id="sendEmail">
-                </form>
-                <!-- Email preview button -->
-                <div class="ui-text-align--right ui-padding-15-0 ui-position--relative">
-                    <button class="invite__greentext-btn ui-padding-top--10 modal-email-show">Preview Email</button>
-                </div>
-            </div>
             <!-- Social sharing block -->
             <div class="invite__share">
                 <div class="invite__m ui-text-align--center ui-margin-bottom--10">
@@ -152,7 +131,8 @@
                 <h1 class="invite__heading invite__heading--socials-m ui-font-size--20 ui-text-align--center">Every Referral. No Limit.</h1>
                 <span class="invite__heading--socials-m ui-text-align--center ui-color--sm-grey">When your friend joins and spends at least $25, you'll get $25.</span>
                 <div class="grid-3-col invite__socials">
-                    <div class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials">
+                    <!-- Field with ref link *Mobile* -->
+                    <div class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__m">
                         <div class="invite__copylink">
                             <input type="text" 
                                    value="ebates.com/r/UPLOAD17?eeid=28187" 
@@ -185,6 +165,49 @@
                     <a href="twitter.com" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--tw">
                         <span class="fa fa-twitter invite__soc-icon"></span>Share on Twitter
                     </a>
+                    <!-- Share via Google Plus block  -->
+                    <a href="twitter.com" class="grid-3-col__1-of-3 grid-3-col__1-of-3--inv-socials invite__placeholder invite__placeholder--gp">
+                        <span class="fa fa-google-plus invite__soc-icon"></span>Share on Google Plus
+                    </a>
+                     <!-- Field with ref link *Desktop* -->
+                     <div class="grid-3-col__3-of-3 grid-3-col__3-of-3--inv-socials invite__d ui-margin-top--10">
+                            <div class="invite__copylink">
+                                <input type="text" 
+                                       value="ebates.com/r/UPLOAD17?eeid=28187" 
+                                       readonly 
+                                       class="invite__input-text invite__input-text--reflink invite__reflink copy__reflink"
+                                       id="referalLinkD"
+                                       data-clipboard-target="#referalLink"
+                                       data-clipboard-action="copy">
+                                
+                                       <input type="button" 
+                                       value="Copy Link" 
+                                       class="invite__greentext-btn ui-padding-top--10 copy__reflink"
+                                       data-clipboard-target="#referalLinkD"
+                                       data-clipboard-action="copy">
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!-- Email sending form -->
+            <div class="invite__form ui-text-align--center">
+                <h1 class="ui-font-size--20 invite__heading">Invite Your Friends by Email</h1>
+                <form id='invite_form' class="invite__email-wrapper ui-text-align--left">
+                    <input type="text" 
+                           name="" 
+                           id="inviteEmail" 
+                           class="invite__input-text invite__input-text--email" 
+                           placeholder="Enter Email Adress">
+
+                    <input type="button" 
+                           disabled 
+                           value="Send Email" 
+                           class="invite__email-btn ui-font-size--16"
+                           id="sendEmail">
+                </form>
+                <!-- Email preview button -->
+                <div class="ui-text-align--right ui-padding-15-0 ui-position--relative">
+                    <button class="invite__greentext-btn ui-padding-top--10 modal-email-show">Preview Email</button>
                 </div>
             </div>
             <!-- *Mobile block* How it works -->
@@ -431,7 +454,7 @@
                 console.log("aaa");
                 
                 setTimeout(function(){
-                    $(".invite__greentext-btn").val("Copy");
+                    $(".invite__greentext-btn").val("Copy Link");
                     $(".invite__input-text--active").removeClass("invite__input-text--active");
                 },2000);
             });
