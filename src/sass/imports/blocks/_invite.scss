@@ -158,6 +158,40 @@
     &__m {
         display: none;
     }
+
+    &__ref-stats {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    &__ref-stat {
+        display: inline-block;
+        margin-right: 15px;
+
+    }
+
+    &__ref-val {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: white;
+
+        &--clicks {
+            background: $ref_clicks_color;
+        }
+
+        &--referrals{
+            background: $ref_referrals_color;
+        }
+
+        &--pending {
+            background: $ref_pending_color;
+        }
+
+        &--earnings {
+            background: $ref_earning_color;
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -181,7 +215,13 @@
         }
 
         &__referrals {
-            display: none;
+            // display: none;
+            margin-top: 20px;
+        }
+
+        &__tabcontent-table {
+            width: 90%;
+            padding: 10px 0;
         }
 
         &__m {
