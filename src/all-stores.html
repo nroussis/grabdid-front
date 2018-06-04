@@ -104,19 +104,43 @@
          <ul class="stores-sidebar__categories-list">
            <li class="ui-text--uppercase ui-padding-15-0">Categories</li>
            <li class="ui-padding-15-0">All stores</li>
-           <li class="ui-padding-10-0"><a href="#">Women's clothing</a></li>
-           <li class="ui-padding-10-0"><a href="#">Men's clothing</a></li>
-           <li class="ui-padding-10-0"><a href="#">Travel &amp; Vacations</a></li>
-           <li class="ui-padding-10-0"><a href="#">Health &amp; Beauty</a></li>
-           <li class="ui-padding-10-0"><a href="#">Shoes &amp; Handbags</a></li>
-           <li class="ui-padding-10-0"><a href="#">Electronics &amp; Computer</a></li>
-           <li class="ui-padding-10-0"><a href="#">Home, Garden &amp; Tools</a></li>
-           <li class="ui-padding-10-0"><a href="#">Baby, Kids &amp; Toys</a></li>
-           <li class="ui-padding-10-0"><a href="#">Sports &amp; Outdoors</a></li>
-           <li class="ui-padding-10-0"><a href="#">Food &amp; Restaurants</a></li>
-           <li class="ui-padding-10-0"><a href="#">Books &amp; Digital Media</a></li>
-           <li class="ui-padding-10-0"><a href="#">Flowers &amp; Gifts</a></li>
-           <li class="ui-padding-10-0"><a href="#">Office supplies</a></li>
+           <li class="ui-padding-10-0">
+               <a href="#">Category</a>
+               <span class="fa fa-angle-right
+                            ui-float--right 
+                            ui-cursor--pointer
+                            stores-sidebar__cat-open"></span>
+               <ul class="stores-sidebar__subcategory">
+                   <li class="ui-padding-15-0"><a href="#">Subcategory 1</a></li>
+                   <li class="ui-padding-15-0">
+                       <a href="#">Subcategory 2</a>
+                       <span class="fa fa-angle-right 
+                                    ui-float--right 
+                                    ui-cursor--pointer
+                                    stores-sidebar__cat-open"></span>
+                       <ul class="stores-sidebar__subcategory">
+                           <li class="ui-padding-15-0"><a href="#">Sub-sub category 1</a></li>
+                           <li class="ui-padding-15-0"><a href="#">Sub-sub category 2</a></li>
+                           <li class="ui-padding-15-0 stores-sidebar__subcategory--current"><a href="#">Sub-sub category 3 (You are here)</a></li>
+                           <li class="ui-padding-15-0"><a href="#">Sub-sub category 4</a></li>
+                       </ul>
+                    </li>
+                   <li  class="ui-padding-15-0"><a href="#">Subcategory 3</a></li>
+               </ul>
+            </li>
+           <li class="ui-padding-10-0">
+               <a href="#">Category 2</a>
+               <span class="fa fa-angle-right 
+                            ui-float--right 
+                            ui-cursor--pointer
+                            stores-sidebar__cat-open"></span>
+                <ul class="stores-sidebar__subcategory">
+                    <li class="ui-padding-15-0"><a href="#">Sub-sub category 1</a></li>
+                    <li class="ui-padding-15-0"><a href="#">Sub-sub category 2</a></li>
+                    <li class="ui-padding-15-0"><a href="#">Sub-sub category 3 (You are here)</a></li>
+                    <li class="ui-padding-15-0"><a href="#">Sub-sub category 4</a></li>
+                </ul>
+            </li>
            <li class="ui-text--uppercase ui-padding-15-0">Featured Shops</li>
            <li class="ui-padding-10-0"><a href="#">Athleisure Collection</a></li>
            <li class="ui-padding-10-0"><a href="#">Handbag Collection</a></li>
@@ -634,9 +658,24 @@
               minSelections: 1
           })
       ;
-      //$('.ui.rating')
-      //    .rating()
-      //;
+
+      $(".stores-sidebar__subcategory--current").parentsUntil(".stores-sidebar__categories-list",
+                                                              [".stores-sidebar__subcategory"])
+                                                              .addClass("stores-sidebar__subcategory--expanded")
+      ;
+      
+      $(".stores-sidebar__subcategory--current").parentsUntil(".stores-sidebar__categories-list",
+                                                              [".stores-sidebar__subcategory"])
+                                                              .addClass("stores-sidebar__subcategory--checked")
+      ;
+
+      $(".stores-sidebar__subcategory--checked").children(".stores-sidebar__cat-open").toggleClass("stores-sidebar__cat-open--checked");
+
+      $(".stores-sidebar__cat-open").on("click", function(){
+          $(this).parent().children(".stores-sidebar__subcategory").slideToggle(200);
+        //   $(this).parent().toggleClass("stores-sidebar__subcategory--checked");
+          $(this).toggleClass("stores-sidebar__cat-open--checked");
+      })
     });
 </script>
 <script src="js/sticky_all_stores.js"></script>

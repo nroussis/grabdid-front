@@ -1,0 +1,11 @@
+  .sidebar {
+    display: block;
+    width: calc(100% / 3.5);
+    float: left;
+  }
+
+  @media (max-width: 800px) {
+      .sidebar {
+          width: 100%;
+      }
+  }
