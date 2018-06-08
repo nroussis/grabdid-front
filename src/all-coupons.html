@@ -808,29 +808,29 @@
             $(".js-shown").each(function(i) {
                 $("[data-item=" + (i + elsOnPage * currentPage) + "]").toggleClass("js-shown");
                 $(this).toggleClass("js-shown");
-        });
+            });
         
-        currentPage++;
-        //Checks
-        buttonsCheck();
-        $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
+            currentPage++;
+            //Checks
+            buttonsCheck();
+            $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
         });
 
         $(prevBtn).on("click", function(){
             $(".js-shown").each(function(i){
                 if (i === 0) {
-                var ind = $(this).attr("data-item");
+                    var ind = $(this).attr("data-item");
                 for (var ip = ind; ip >= (ind - elsOnPage); --ip) {
                     $("[data-item=" + ip + "]").toggleClass("js-shown");
                 }
-                $(this).toggleClass("js-shown");
+                  $(this).toggleClass("js-shown");
                 }
                 $(this).toggleClass("js-shown");
             });
-        currentPage--;
+            currentPage--;
         //Checks
-        buttonsCheck();
-        $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
+            buttonsCheck();
+            $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
 
         }); //End of pagination
 
@@ -865,11 +865,11 @@
                 });
                 currentPage = 1;
                 buttonsCheck();
-            } else if (filter === "all") {
-                // Show all elements
-                clearItems();
-                initList();
-            } else if (filter === "num") {
+                } else if (filter === "all") {
+                    // Show all elements
+                    clearItems();
+                    initList();
+                } else if (filter === "num") {
                 //Show all numeric elements
 
                 //1.Hide all the elements

@@ -118,9 +118,10 @@
     <!-- end of layout-west -->
     <div class="ui-layout-center__content">
         <div class="clr">
-            <!-- <div class="sidebar help__sidebar">
-                <h2>Boilerplate for sidebar. Uncomment to unlock</h2> 
-            </div> -->
+            <div class="sidebar help__sidebar">
+                <h2>Contact us</h2>
+                <span id="ooopen">Open form!</span> 
+            </div>
             <div class="s-content help">
                 <h1 class="ui-font-size--35">Help</h1>
                 <p>Here you can find answers to a popular questions</p>
@@ -338,6 +339,29 @@
             <div id="backToTheTop"> <span class="topIcon" /> </div>
         
             <!-- end of back to top button -->
+            <!-- Contact form popup -->
+            <div class="overlay"> 
+                <div class="modal-help-email">
+                    <p>Contact</p>
+                    <p>Fill fields as fast as you can so blah-blah blah</p>
+            
+                    <form action="" method="post">
+                        <!-- Enter the name -->
+            
+                        <label for="name">name</label> <br>
+                        <input type="text" id="helpName" name="name">
+                        
+                        <!-- Enter e-mail -->
+            
+                        <label for="name">Email</label> <br>
+                        <input type="email" id="helpEmail" name="name">
+            
+                        <!-- Tema -->
+            
+                        
+                    </form>
+                </div>
+            </div>
     <script>
         $(document).ready(function(){
             $(".help__topic").on("click", function(){
@@ -351,9 +375,14 @@
                 $(this).next(".help__subtopic-definition").slideToggle(200);
                 $(this).toggleClass("help__subtopic-question--expanded");
                 $(this).children(".help__sub-exp").toggleClass("help__sub-exp--open");
-            })
+            });
+
+            $("#ooopen").on("click", function(){
+                $(".overlay").toggle();
+            });
         });
     </script>
     <script src="js/main.js"></script>
 </body>
 </html>
+<!-- TODO: General scripts put into main.js -->
