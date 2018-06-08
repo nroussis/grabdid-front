@@ -13,7 +13,7 @@
 }
 
 .modal-email-prev {
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 10000;
     top: 100px;
@@ -27,4 +27,17 @@
     &--shown {
         display: block;
     }
+}
+
+.modal-help-email {
+    position: fixed;
+    z-index: 9999;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+}
+
+.modal-shown {
+    display: block;
 }

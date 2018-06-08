@@ -1,0 +1,65 @@
+.coupon {
+    @include clearfix;
+    
+    padding: 30px;
+    border-bottom: 1px solid $block_border_color;
+
+    &__type {
+        text-transform: uppercase;
+        color: white;
+        padding: 0 2px;
+        font-size: 13px;
+
+        &--promocode {
+            background: #ff2552;
+        }
+
+        &--sale {
+            background: #0394ea;
+        }
+
+        &--free {
+            background: #f39335;
+        }
+    }
+
+    &__times-used {
+        font-size: 13px;
+        color: $color_dark_gray;
+    }
+
+    &__logo-wrapper {
+        float: left;
+        width: 20%;
+    }
+
+    &__content {
+        float: left;
+        width: 60%;
+    }
+
+    &__description {
+        position: relative;
+    }
+
+    &__c-read-more {
+        position: relative;
+        right: -80%;
+        font-weight: bold;
+        background: url(../images/trans-white-grad-60x1.png) repeat-y 0 0;
+    }
+
+    &__shop-btn {
+        padding: 5px 10px;
+        color: white;
+    }
+
+    &__code-expires {
+        position: relative;
+    }
+
+
+    &--paginated {
+        display: none;
+    }
+}

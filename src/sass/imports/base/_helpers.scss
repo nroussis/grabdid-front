@@ -81,6 +81,7 @@
 @include width_base_class(margin-top,8);
 @include width_base_class(margin-top,10);
 @include width_base_class(margin-top,12);
+@include width_base_class(margin-top,15);
 @include width_base_class(margin-top,25);
 
 //set element margin right to 10 example .ui-margin-right--10
@@ -98,6 +99,7 @@
 @include width_base_class(margin-bottom,7);
 @include width_base_class(margin-bottom,10);
 @include width_base_class(margin-bottom,11);
+@include width_base_class(margin-bottom,15);
 
 //set element height to 5 exmple .ui-height--5
 @include width_base_class(height,5);
@@ -215,6 +217,10 @@
 //set color to gray, used mostly as standard output text
 .ui-color--gray {
   color: $panelgrid_output_color;
+}
+
+.ui-color--light-grey {
+  color: $small_grey;
 }
 
 //set color to green, used mostly on buttons
@@ -411,6 +417,10 @@
 
 .ui-margin-5-0 {
   margin: 5px 0;
+}
+
+.ui-margin-30-0 {
+  margin: 30px 0;
 }
 
 .u-word-wrap--brw {

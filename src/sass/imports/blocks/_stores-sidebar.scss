@@ -23,6 +23,7 @@
 			padding-bottom: 30px;
 		}
 		
+
 		//TODO: Replace this
 		a {
 			color: $cat_grey;
@@ -31,6 +32,32 @@
 				color: $cat_grey_hover;
 			}
 		}
+	}
+
+	&__subcategory {
+		display: none;
+		&--current {
+			display: block;
+		}
+
+		&--expanded {
+			display: block;
+		}
+	}
+
+	&__cat-open {
+		font-size: 21px;
+		transition: all .5s;
+		transform: rotate(0deg);
+
+		&--checked {
+			transform: rotate(90deg);
+		}
+
+		&:hover {
+			color: black;
+		}
+
 	}
 	
 	

@@ -1,0 +1,108 @@
+.user-block {
+    position: relative;
+
+    @include clearfix;
+
+    &:hover {
+        .user-block__menu {
+            display: block;
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        //background: $user_block_menu_bg;
+        top: 0;
+        width: 270px;
+        font-size: 13px;
+        padding: 10px 20px;
+        //border: 1px solid $block_border_color;
+        padding-top: 55px;
+
+        &::before {
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-width: 10px;
+			border-color: transparent transparent #fff transparent;
+			display: block;
+			width: 0;
+			z-index: 1;
+			top: 36px;
+			right: 37px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-width: 11px;
+			border-color: transparent transparent $block_border_color transparent;
+			display: block;
+			width: 0;
+			z-index: 0;
+			top: 34px;
+			right: 36px;
+		}
+    }
+
+    &__cbalance {
+        color: $color_green;
+        font-weight: bold;
+    }
+
+    &__item-wrapper {
+        display: block;
+        background: white;
+
+        border-left: 1px solid $block_border_color;
+        border-right: 1px solid $block_border_color;
+
+
+        &:first-child {
+            border-top: 1px solid $block_border_color;
+            padding-top: 10px;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $block_border_color;
+            padding-bottom: 10px;
+        }
+
+
+
+        &--socials {
+            border-top: 1px solid $block_border_color;
+            border-bottom: 1px solid $block_border_color;
+            padding: 10px 15px;
+        }
+    }
+
+    &__menu-link {
+        display: block;
+        padding: 5px 15px;
+
+
+        &:hover {
+            color: $color_green;
+        }
+    }
+
+    &__connect-link {
+        display: inline-block;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        width: 49%;
+
+        &--fb {
+            background: #4267b2;
+        }
+
+        &--gp {
+            background: #db4437;
+        }
+    }
+}

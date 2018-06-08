@@ -1,0 +1,13 @@
+.s-content {
+    display: block;
+    float: left;
+    width: calc((100% - (100% / 3.5)) - 10px);
+    margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+    .s-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}

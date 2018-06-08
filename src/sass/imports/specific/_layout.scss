@@ -153,3 +153,27 @@
 */
 
 @import '../blocks/modal';
+
+/**
+ *Login - sign up forms (login.html)***********************************************************************************
+*/
+
+@import '../blocks/login';
+
+/**
+ *Help block (help.html)***********************************************************************************
+*/
+
+@import '../blocks/help';
+
+/**
+ *Universal templating class (*.html)***********************************************************************************
+*/
+
+@import '../uni/container';
+@import '../uni/sidebar';
+@import '../uni/s-content';
+@import '../components/coupon';
+@import '../components/_pagination';
+
+@import '../blocks/_user-block';

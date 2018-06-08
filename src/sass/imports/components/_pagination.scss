@@ -1,0 +1,17 @@
+.pagination {
+    padding-top: 20px;
+    text-align: center;
+
+    &__button {
+        font-size: 32px;
+        display: inline-block;
+        cursor: pointer;
+        background: none;
+        border: none;
+
+
+        &:hover:not(:disabled) {
+            color: $color_green;
+        }
+    }
+}
