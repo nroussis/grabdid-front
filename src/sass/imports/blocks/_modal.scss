@@ -54,6 +54,7 @@
         color: white;
         font-weight: bold;
         margin: 15px 0;
+        font-size: 18px;
     }
 
 }
@@ -108,12 +109,17 @@
     position: fixed;
     z-index: 9999;
     background: white;
-    width: 60%;
+    width: 760px;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     margin-top: 50px;
     padding: 35px;
+
+    &__socials {
+        float: right;
+        margin-top: 30px;
+    }
 
     &__social {
         display: inline-block;   
@@ -139,6 +145,16 @@
         color: white;
         display: inline-block;
         width: 25px;
+        font-size: 18px;
+    }
+
+    &__or {
+        display: inline-block;
+        border: 3px solid #d1cec7;
+        padding: 10px 15px;
+        border-radius: 50%;
+        position: absolute;
+        top: 56%;
         font-size: 18px;
     }
 }
