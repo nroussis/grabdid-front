@@ -128,78 +128,35 @@
     } 
 }
 
-.modal-help-email {
-    display: none;
-    position: absolute;
-    z-index: 9999;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    padding: 35px;
-    width: 760px;
-}
 
 .modal-shown {
     display: block;
 }
 
-.modal-coupon-login {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    background: white;
-    width: 760px;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    margin-top: 50px;
-    padding: 35px;
+@media (max-width: 480px) {
+    .modal {
 
-    &__socials {
-        float: right;
-        margin-top: 30px;
-    }
-
-    &__social {
-        display: inline-block;   
-        color: white;
-        padding: 8px 10px;
-        min-width: 260px;
-        border-radius: 4px;
-        
-        &:not(:last-child) {
-            margin-bottom: 15px;
+        &__input-t {
+            width: 90%;
         }
 
-        &--fb {
-            background: #4270a5;
+        &__input-select {
+            width: 90%;
         }
 
-        &--gp {
-            background: #df5f53;
+        &__textarea {
+            width: 90%;
         }
-    }
 
-    &__socicon {
-        color: white;
-        display: inline-block;
-        width: 25px;
-        font-size: 18px;
-    }
-
-    &__or {
-        display: inline-block;
-        border: 3px solid #d1cec7;
-        padding: 10px 15px;
-        border-radius: 50%;
-        position: absolute;
-        top: 56%;
-        font-size: 18px;
-    }
-
-    &__without-cb {
-        font-size: 22px;
-        float: right;
+        &__close-btn {
+            right: 20px;
+        }
     }
 }
+
+
+//Modal log-in please pop-up
+@import 'modals/modal-coupon-login';
+
+//Modal pop-up with contact form (help.html)
+@import 'modals/modal-help-email';

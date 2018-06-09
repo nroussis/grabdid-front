@@ -803,7 +803,7 @@
             e.preventDefault();
             $(".overlay-coupon-login").toggle();
             $(".modal-coupon-login").toggle();
-            $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
+            $(".modal-coupon-login").css({ "top": $(window).scrollTop() + "px" });
         });
 
         //Close modal

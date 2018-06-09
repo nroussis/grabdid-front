@@ -12,6 +12,7 @@
     &__menu {
         display: none;
         position: absolute;
+        z-index: 9999;
         right: 0;
         //background: $user_block_menu_bg;
         top: 0;
