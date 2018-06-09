@@ -819,11 +819,42 @@
             $(this).hide();
         })
       
+        document.addEventListener("click", function(e){
+            if (e.target.parentNode.parentNode.id === 'shipping-filter'){
+            e.preventDefault();
+            var val = document.querySelector(".sorting-shipping__value");
+            var alpha = document.querySelector(".alpha");
+
+            if (e.target.textContent === 'Greece') {
+                val.classList.add('sorting-shipping__value--greece');
+                val.classList.remove('sorting-shipping__value--cyprus');
+                val.classList.remove('sorting-shipping__value--ww');
+                alpha.classList.add('alpha--greece');
+                alpha.classList.remove('alpha--cyprus');
+                alpha.classList.remove('alpha--ww');
+            } else if (e.target.textContent === 'Cyprus') {
+                val.classList.remove('sorting-shipping__value--greece');
+                val.classList.add('sorting-shipping__value--cyprus');
+                val.classList.remove('sorting-shipping__value--ww');
+                alpha.classList.remove('alpha--greece');
+                alpha.classList.add('alpha--cyprus');
+                alpha.classList.remove('alpha--ww');
+            } else {
+                val.classList.remove('sorting-shipping__value--greece');
+                val.classList.remove('sorting-shipping__value--cyprus');
+                val.classList.add('sorting-shipping__value--ww');
+                alpha.classList.remove('alpha--greece');
+                alpha.classList.remove('alpha--cyprus');
+                alpha.classList.add('alpha--ww');
+            }
+        }
+    });
+
     });
 </script>
 <script src="js/expand-text.js"></script>
 <script src="js/sticky_all_stores.js"></script>
-<!-- <script src="js/all-coupons-sort.js"></script> -->
+<script src="js/all-coupons-sort.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/carousel.js"></script>
 <!-- end of page footer -->

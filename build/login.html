@@ -127,7 +127,7 @@
          <div class="login__forms">
              <!-- Signup form -->
              <div class="login__form-wrapper login__form-wrapper--signup ui-float--left">
-                <h2 class="login__form-heading login__d">Sign Up for Free Now!</h2>
+                <h2 class="login__form-heading login__form-heading--signup login__d">Sign Up for Free Now!</h2>
                 <form action="#" id="signUpForm" class="login__form">
                     <div class="login__form-fields">
                         <p class="ui-font-size--15 ui-margin-bottom--15 ui-padding-top--15 login__d">Have a Facebook Account?</p>
@@ -156,6 +156,12 @@
                             placeholder="* Password"
                             required
                             class="login__input-t ui-margin-bottom--15">
+                        <br>
+                        * <select name="country" id="country" required class="ui-margin-bottom--15">
+                            <option value="" disabled selected hidden> -- select country --</option>
+                            <option value="greece">Greece</option>
+                            <option value="cyprus">Cyprus</option>
+                        </select>
                         <div class="g-recaptcha ui-width--300 ui-margin--center" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
                         <div class="login__check-agree">
                             <input type="checkbox" name="news" id="news" class="login__news-checkbox">
@@ -170,7 +176,7 @@
             </div>
             <!-- Login form -->
             <div class="login__form-wrapper login__form-wrapper--login login__form-wrapper--active ui-float--right">
-                <h2 class="login__form-heading login__d">Member login</h2>
+                <h2 class="login__form-heading login__form-heading--login login__d">Member login</h2>
                 <form action="#" id="signUpForm" class="login__form">
                     <div class="login__form-fields">
                         <p class="ui-font-size--15 ui-margin-bottom--15 ui-padding-top--15 login__d">Have a Facebook Account?</p>
