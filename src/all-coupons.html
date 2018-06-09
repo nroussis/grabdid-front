@@ -803,12 +803,20 @@
             e.preventDefault();
             $(".overlay-coupon-login").toggle();
             $(".modal-coupon-login").toggle();
+            $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
         });
 
         //Close modal
         $(".modal__close-btn").on("click", function(){
             $(this).parent().toggle();
             $(".overlay").toggle();
+        });
+
+        $(".overlay").on("click", function(){
+            $(".modal").each(function(){
+                $(this).hide();
+            });
+            $(this).hide();
         })
       
     });

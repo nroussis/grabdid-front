@@ -608,7 +608,7 @@
     </div>
 <div class="overlay overlay-coupon-login">
 </div>
-<div class="modal-coupon-login clr">
+<div class="modal modal-coupon-login clr">
         <p class="ui-font-size--40">Login or register</p>
     <div class="modal__caption">
         <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
@@ -1041,12 +1041,20 @@
             e.preventDefault();
             $(".overlay-coupon-login").toggle();
             $(".modal-coupon-login").toggle();
+            $("html, body").animate({ scrollTop: $('#' + scrollTo).offset().top }, 500);
         });
 
         //Close modal
         $(".modal__close-btn").on("click", function(){
             $(this).parent().toggle();
             $(".overlay").toggle();
+        });
+
+        $(".overlay").on("click", function(){
+            $(".modal").each(function(){
+                $(this).hide();
+            });
+            $(this).hide();
         })
       
     });

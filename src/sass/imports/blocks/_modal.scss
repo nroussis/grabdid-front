@@ -1,4 +1,11 @@
 .modal {
+    
+    display: none;
+
+
+    &--active {
+        display: block;
+    }
 
     &__caption {
         background: #f1f0ee;
@@ -21,13 +28,20 @@
 
     &__close-btn {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: -30px;
+        right: 0px;
         font-size: 22px;
         background: none;
         border: none;
         cursor: pointer;
+        color: white;
     }
+
+    &__label {
+        font-weight: bold;
+    }
+
+    //Modal windows inputs
 
     &__input-t {
         padding: 8px 10px;
@@ -36,10 +50,32 @@
         border: 1px solid $block_border_color;
         margin-bottom: 15px;
         margin-top: 10px;
+
+        &--help {
+            border-bottom-width: 2px;
+            width: 300px;
+        }
+    }
+
+    &__input-select {
+        padding: 8px 10px;
+        width: 300px;
+        border: 1px solid $block_border_color;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    &__textarea {
+        border: 1px solid $block_border_color;
+        resize: none;
+        padding: 10px;
+        margin-bottom: 15px;
+        margin-top: 10px;
     }
 
     &__link {
         color: $color_green;
+        cursor: pointer;
 
         &:hover {
             text-decoration: underline;
@@ -55,6 +91,7 @@
         font-weight: bold;
         margin: 15px 0;
         font-size: 18px;
+        padding: 0 35px;
     }
 
 }
@@ -92,12 +129,15 @@
 }
 
 .modal-help-email {
-    position: fixed;
+    display: none;
+    position: absolute;
     z-index: 9999;
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
     background: white;
+    padding: 35px;
+    width: 760px;
 }
 
 .modal-shown {
