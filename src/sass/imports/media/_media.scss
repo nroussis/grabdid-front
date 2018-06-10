@@ -35,7 +35,8 @@
     }
 
   .ui-panel__banner {
-    @include calc(width,"100% + 30px");
+    // @include calc(width,"100% + 30px");
+    width: 100%;
     margin-left: -15px;
     .ui-width--half {
       width: 100%;

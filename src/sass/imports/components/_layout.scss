@@ -14,6 +14,65 @@
   }
 }
 
+.header-logo {
+
+}
+
+.flag-dropdown {
+  position: relative;
+  vertical-align: super;
+
+  &:hover &__list {
+    display: block;
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    right: -50px;
+    z-index: 10000;
+    width: 50px;
+    font-size: 13px;
+  }
+
+  &__current {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+
+    &--gr {
+      background: url(../images/flags/gr.svg) no-repeat;
+      background-size: cover;
+    }
+
+    &--cy {
+      background: url(../images/flags/cy.svg) no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  &__list-item {
+
+  }
+
+  &__item {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+
+    &--gr {
+      background: url(../images/flags/gr.svg) no-repeat;
+      background-size: cover;
+    }
+
+    &--cy {
+      background: url(../images/flags/cy.svg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 /**
  * Center layout styles (used as a web-page main content). ******************************************************************************************************************
  */
