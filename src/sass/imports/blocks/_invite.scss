@@ -202,6 +202,15 @@
         text-align: center;
         padding-left: 50px;
     }
+
+    //Paginating options
+    &__row-inv {
+        display: none;
+    }
+
+    &__row-su {
+        display: none;
+    }
 }
 
 @media (max-width: 800px) {
@@ -258,5 +267,7 @@
             width: 100%;
             text-align: center;
         }
+
+        
     }
 }

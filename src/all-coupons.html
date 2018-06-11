@@ -660,11 +660,11 @@
             $(prevBtn).attr("disabled", false)
         }
 
-        if ($("[data-item=" + (inlists.length - 1) + "]").hasClass("js-shown")) {
-            $(nextBtn).attr("disabled", true);
-        } else {
-            $(nextBtn).attr("disabled", false);
-        }
+            if ($("[data-item=" + (inlists.length - 1) + "]").hasClass("js-shown")) {
+                $(nextBtn).attr("disabled", true);
+            } else {
+                $(nextBtn).attr("disabled", false);
+            }
         }
 
     //Initiate pagination
@@ -739,7 +739,8 @@
                     $(this).removeClass("js-inlist");
                 });
             }
-
+            
+            
             if (filter !== "all" && filter !== "num") {
                 //Hide all the elements
                 clearItems();
@@ -854,7 +855,6 @@
 </script>
 <script src="js/expand-text.js"></script>
 <script src="js/sticky_all_stores.js"></script>
-<script src="js/all-coupons-sort.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/carousel.js"></script>
 <!-- end of page footer -->
