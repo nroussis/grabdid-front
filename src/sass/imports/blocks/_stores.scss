@@ -27,6 +27,10 @@
 		padding: 30px 30px;
 		position: relative;
 		z-index: 0;
+
+		&--paginated {
+			display: none;
+		}
 	}
 		
 	&__item-name {

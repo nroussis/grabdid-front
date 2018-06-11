@@ -1,17 +1,17 @@
-//Settings for paginating elements
+ //Settings for paginating elements
 
         //1. Selector for items to be paginated 
-        var mainListSelector = (".stores__item--paginated");
+        var mainListSelector = (".coupon--paginated");
 
         //2. Next - prev buttons selector
         var nextBtn = ".pagination__next";
         var prevBtn = ".pagination__prev";
 
         //3. Set max elements per one "page" 
-        var elsOnPage = 3;
+        var elsOnPage = 2;
 
         //4. Set main container selector to which page will be scrolled when next-prev page called
-        var scrollTo = "allstores";  //ID here
+        var scrollTo = "allcoupons";  //ID here
 
 
         var list = document.querySelectorAll(mainListSelector);
@@ -97,8 +97,8 @@
         //Sorting
         $(".alpha__filter").on("click", function(){
             var filter = $(this).attr("data-l");
-            var target = ".liter_" + filter;
-            var basicElement = ".stores__item";
+            var target = ".coupon-" + filter;
+            var basicElement = ".coupon";
             
             $(".alpha__filter--checked").removeClass("alpha__filter--checked");
             $(this).addClass("alpha__filter--checked");
@@ -134,7 +134,7 @@
                     clearItems();
                     initList();
                 } else if (filter === "num") {
-                //Show all numeric elements:
+                //Show all numeric elements
 
                 //1.Hide all the elements
                 clearItems();
@@ -142,7 +142,7 @@
                 //2. Collect them into array and sort it
                 var els = [];
                 for (var i = 0; i < 9; i++) {
-                    $(".liter_" + i).each(function() {
+                    $(".coupon-" + i).each(function() {
                         $(this).attr("data-num", i);
                         els.push($(this));
                     });
