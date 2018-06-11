@@ -157,7 +157,7 @@
                 <div class="invite__tabcontent-wrapper">
                     <!-- Table for invited referrals -->
                     <div class="invite__tabcontent invite__tabcontent--invited invite__tabcontent--active ui-border ui-border-t-none">
-                        <table class="invite__tabcontent-table">
+                        <table class="invite__tabcontent-table" data-pag-prefix="inv">
                             <tbody>
                                 <tr class="invite__row-inv">
                                     <td class="ui-width--75"><span class="ui-font-size--18">username 1</span> <br>
@@ -194,7 +194,7 @@
                     </div>
                     <div class="invite__tabcontent invite__tabcontent--signedup ui-border ui-border-t-none">
                         <!-- Table for signed-up referrals -->
-                        <table class="invite__tabcontent-table">
+                        <table class="invite__tabcontent-table" data-pag-prefix="su">
                             <tbody>
                                 <tr class="invite__row-su">
                                     <td class="ui-width--75"><span class="ui-font-size--18">usergone</span> <br>
@@ -223,18 +223,34 @@
                         <!-- Table for qualified referrals -->
                         <table class="invite__tabcontent-table">
                             <tbody>
-                                <tr>
+                                <tr class="invite__row-ql">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">User Qualified 1</span> <br>
+                                                    <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                </tr>
+                                <tr class="invite__row-ql">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">User Qualified 2</span> <br>
+                                                    <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                </tr>
+                                <tr class="invite__row-ql">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">User Qualified 3</span> <br>
+                                                    <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                </tr>
+                                
+                                <!-- <tr>
                                     <td class="ui-width--full ui-text-align--center ui-font-size--14">
                                         You don't have any qualified referrals at the moment. If someone you invited already signed up, please tell them to make an order through Ebates. 
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
-                        <!-- <div class="pagination">
-                                <button class="fa fa-angle-left pagination__button pagination__prev"></button>
+                        <div class="pagination">
+                                <button class="fa fa-angle-left pagination__button pagination__prev" id="qualifiedPrev"></button>
                                 &nbsp;&nbsp;&nbsp;&nbsp; 
-                                <button class="fa fa-angle-right pagination__button pagination__next"></button> 
-                            </div> -->
+                                <button class="fa fa-angle-right pagination__button pagination__next" id="qualifiedNext"></button> 
+                            </div>
                     </div>
                 </div>
             </div>
@@ -448,6 +464,9 @@
     <!-- End of modal -->
     <script src="js/expand-text.js"></script>
     <script src="js/invite-pagination.js"></script>
+    <script src="js/signed-up-pagination.js"></script>
+    <script src="js/qualified-pagination.js"></script>
+
     <!-- <script src="js/main.js"></script> -->
     <script>
         new ClipboardJS('.copy__reflink');
