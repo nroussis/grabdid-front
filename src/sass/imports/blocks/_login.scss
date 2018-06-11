@@ -30,11 +30,21 @@
     &__form-wrapper {
         // width: 45%; //not hardcoded
         width: 400px; //hardcoded
-        min-height: 520px;
-        border: 2px solid $login_form_border_color;
+        min-height: 580px;
+        border-style: solid;
+        border-width: 2px;
+        // border-color: $login_form_border_color;
         border-top: none;
         border-radius: 10px;
         position: relative;
+
+        &--signup {
+            border-color: $signup_form_border_color;
+        }
+
+        &--login {
+            border-color: $login_form_border_color;
+        }
     }
 
     &__form {
@@ -48,6 +58,14 @@
         border-radius: 10px 10px 0 0;
         background: $login_form_border_color;
         color: white;
+
+        &--login {
+
+        }
+
+        &--signup {
+            background: $signup_form_border_color;
+        }
     }
 
     &__form-fields {

@@ -63,3 +63,21 @@
         display: none;
     }
 }
+
+@media (max-width: 1150px) {
+    .coupon {
+
+        &__logo-wrapper {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__content {
+            width: 100%;
+        }
+
+        &__shop-btn {
+            float: right;
+        }
+    }
+}

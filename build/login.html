@@ -25,8 +25,15 @@
                  <tbody>
                  <tr>
                      <!-- logo column -->
-                     <td class="ui-width--190">
+                     <td class="ui-width--215 header-logo">
                          <img src="images/logo-t.png" >
+                     <!-- flag column -->
+                         <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
+                             <ul class="flag-dropdown__list">
+                                 <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
+                                 <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
+                             </ul>
+                         </div>
                      </td>
                      <!-- search column -->
                      <td class="ui-search-column">
@@ -114,6 +121,7 @@
          <!-- end of layout-west__footer -->
      </div>
      <!-- end of layout-west -->
+     <script src="js/flag.js"></script>
      <!-- put main content here -->
      <div class="ui-layout-center__content">
          <h1 class="ui-font-size--24 ui-text-align--center ui-margin-30-0 login__d">Join Biggest Cash Back Shopping Site </h1>
@@ -127,7 +135,7 @@
          <div class="login__forms">
              <!-- Signup form -->
              <div class="login__form-wrapper login__form-wrapper--signup ui-float--left">
-                <h2 class="login__form-heading login__d">Sign Up for Free Now!</h2>
+                <h2 class="login__form-heading login__form-heading--signup login__d">Sign Up for Free Now!</h2>
                 <form action="#" id="signUpForm" class="login__form">
                     <div class="login__form-fields">
                         <p class="ui-font-size--15 ui-margin-bottom--15 ui-padding-top--15 login__d">Have a Facebook Account?</p>
@@ -156,6 +164,12 @@
                             placeholder="* Password"
                             required
                             class="login__input-t ui-margin-bottom--15">
+                        <br>
+                        * <select name="country" id="country" required class="ui-margin-bottom--15">
+                            <option value="" disabled selected hidden> -- select country --</option>
+                            <option value="greece">Greece</option>
+                            <option value="cyprus">Cyprus</option>
+                        </select>
                         <div class="g-recaptcha ui-width--300 ui-margin--center" data-sitekey="6Lf7rEUUAAAAADFrTtVT_fZvsX7HEJfxJN8b-UMW"></div>
                         <div class="login__check-agree">
                             <input type="checkbox" name="news" id="news" class="login__news-checkbox">
@@ -170,7 +184,7 @@
             </div>
             <!-- Login form -->
             <div class="login__form-wrapper login__form-wrapper--login login__form-wrapper--active ui-float--right">
-                <h2 class="login__form-heading login__d">Member login</h2>
+                <h2 class="login__form-heading login__form-heading--login login__d">Member login</h2>
                 <form action="#" id="signUpForm" class="login__form">
                     <div class="login__form-fields">
                         <p class="ui-font-size--15 ui-margin-bottom--15 ui-padding-top--15 login__d">Have a Facebook Account?</p>

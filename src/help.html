@@ -25,7 +25,7 @@
         <div class="clr">
             <div class="sidebar help__sidebar">
                 <h2>Contact us</h2>
-                <span id="ooopen">Open form!</span> 
+                <span id="ooopen" class="modal__link"><span class="fa fa-envelope-o"></span>  Open form!</span> 
             </div>
             <div class="s-content help">
                 <h1 class="ui-font-size--35">Help</h1>
@@ -263,7 +263,18 @@
 
             $("#ooopen").on("click", function(){
                 $(".overlay").toggle();
+                $(".modal-help-email").toggle();
             });
+
+            $(".overlay").on("click", function(){
+                $(".overlay").toggle();
+                $(".modal").toggle();
+            })
+
+            $(".modal__close-btn").on("click", function(){
+                $(".overlay").toggle();
+                $(".modal").toggle();
+            })
         });
     </script>
     <script src="js/main.js"></script>

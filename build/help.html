@@ -27,8 +27,15 @@
                 <tbody>
                 <tr>
                     <!-- logo column -->
-                    <td class="ui-width--190">
+                    <td class="ui-width--215 header-logo">
                         <img src="images/logo-t.png" >
+                    <!-- flag column -->
+                        <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
+                            <ul class="flag-dropdown__list">
+                                <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
+                                <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
+                            </ul>
+                        </div>
                     </td>
                     <!-- search column -->
                     <td class="ui-search-column">
@@ -116,11 +123,12 @@
         <!-- end of layout-west__footer -->
     </div>
     <!-- end of layout-west -->
+    <script src="js/flag.js"></script>
     <div class="ui-layout-center__content">
         <div class="clr">
             <div class="sidebar help__sidebar">
                 <h2>Contact us</h2>
-                <span id="ooopen">Open form!</span> 
+                <span id="ooopen" class="modal__link"><span class="fa fa-envelope-o"></span>  Open form!</span> 
             </div>
             <div class="s-content help">
                 <h1 class="ui-font-size--35">Help</h1>
@@ -341,26 +349,38 @@
             <!-- end of back to top button -->
             <!-- Contact form popup -->
             <div class="overlay"> 
-                <div class="modal-help-email">
-                    <p>Contact</p>
-                    <p>Fill fields as fast as you can so blah-blah blah</p>
+            </div>
+            <div class="modal modal-help-email">
+                <p class="ui-font-size--40">Contact</p>
+                <p>Fill fields as fast as you can so blah-blah blah</p>
             
-                    <form action="" method="post">
-                        <!-- Enter the name -->
+                <form action="" method="post" class="ui-margin-top--15">
+                    <!-- Enter the name -->
             
-                        <label for="name">name</label> <br>
-                        <input type="text" id="helpName" name="name">
-                        
-                        <!-- Enter e-mail -->
+                    <label for="name" class="modal__label">Name:</label> <br>
+                    <input class="modal__input-t modal__input-t--help" type="text" id="helpName" name="name"> 
+                    <br>
+                    
+                    <!-- Enter e-mail -->
             
-                        <label for="name">Email</label> <br>
-                        <input type="email" id="helpEmail" name="name">
-            
-                        <!-- Tema -->
-            
-                        
-                    </form>
-                </div>
+                    <label for="name" class="modal__label">Email:</label> <br>
+                    <input class="modal__input-t modal__input-t--help" type="email" id="helpEmail" name="name">
+                    <br>
+                    <!-- Tema -->
+                    <label for="theme" class="modal__label">Theme</label><br>
+                    <select name="theme" id="theme" class="modal__input-select">
+                        <option value="theme1">Choose a theme...</option>
+                        <option value="theme2">Theme 1</option>
+                        <option value="theme3">Theme 2</option>
+                        <option value="theme4">Theme 3</option>
+                    </select>
+                    <br>
+                    <label for="question" class="modal__label">Your Question</label> <br>
+                    <textarea name="question" id="quiestion" cols="50" rows="10" class="modal__textarea"></textarea> 
+                    <br>
+                    <button type="submit" class="ui-button ui-button--green modal__btn">Send</button>
+                </form>
+                <button class="modal__close-btn fa fa-close"></button>
             </div>
     <script>
         $(document).ready(function(){
@@ -379,7 +399,18 @@
 
             $("#ooopen").on("click", function(){
                 $(".overlay").toggle();
+                $(".modal-help-email").toggle();
             });
+
+            $(".overlay").on("click", function(){
+                $(".overlay").toggle();
+                $(".modal").toggle();
+            })
+
+            $(".modal__close-btn").on("click", function(){
+                $(".overlay").toggle();
+                $(".modal").toggle();
+            })
         });
     </script>
     <script src="js/main.js"></script>
