@@ -26,7 +26,7 @@
 
         &--reflink {
             width: 100%;
-            padding-right: 80px;
+            padding-right: 100px;
         }
 
         &--active {
@@ -192,6 +192,29 @@
             background: $ref_earning_color;
         }
     }
+
+    &__conditions {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    &__ref-but {
+        text-align: center;
+        padding-left: 50px;
+    }
+
+    //Paginating options
+    &__row-inv {
+        display: none;
+    }
+
+    &__row-su {
+        display: none;
+    }
+
+    &__row-ql {
+        display: none;
+    }
 }
 
 @media (max-width: 800px) {
@@ -243,5 +266,12 @@
             margin-top: 20px;
             margin-bottom: 10px;
         }
+
+        &__terms {
+            width: 100%;
+            text-align: center;
+        }
+
+        
     }
 }

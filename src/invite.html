@@ -75,21 +75,21 @@
                         <span class="fa fa-google-plus invite__soc-icon"></span>Share on Google Plus
                     </a>
                      <!-- Field with ref link *Desktop* -->
-                     <div class="grid-3-col__3-of-3 grid-3-col__3-of-3--inv-socials invite__d ui-margin-top--10">
+                        <div class="grid-3-col__3-of-3 grid-3-col__3-of-3--inv-socials invite__d ui-margin-top--10">
                             <div class="invite__copylink">
                                 <input type="text" 
-                                       value="ebates.com/r/UPLOAD17?eeid=28187" 
-                                       readonly 
-                                       class="invite__input-text invite__input-text--reflink invite__reflink copy__reflink"
-                                       id="referalLinkD"
-                                       data-clipboard-target="#referalLink"
-                                       data-clipboard-action="copy">
-                                
-                                       <input type="button" 
-                                       value="Copy Link" 
-                                       class="invite__greentext-btn ui-padding-top--10 copy__reflink"
-                                       data-clipboard-target="#referalLinkD"
-                                       data-clipboard-action="copy">
+                                    value="ebates.com/r/UPLOAD17?eeid=28187" 
+                                    readonly 
+                                    class="invite__input-text invite__input-text--reflink invite__reflink copy__reflink"
+                                    id="referalLinkD"
+                                    data-clipboard-target="#referalLink"
+                                    data-clipboard-action="copy">
+                            
+                                    <input type="button" 
+                                    value="Copy Link" 
+                                    class="invite__greentext-btn ui-padding-top--10 copy__reflink"
+                                    data-clipboard-target="#referalLinkD"
+                                    data-clipboard-action="copy">
                             </div>
                         </div>
                 </div>
@@ -148,83 +148,144 @@
                         </div>
                     </div>
                 <!-- Referral table tabs -->
-                <div class="invite__tabs ui-text-align--center clr">
+                <div class="invite__tabs ui-text-align--center clr" id="tabs">
                     <div class="grid-3-col__1-of-3 invite__tab invite__tab--active" id="invited">Invited (5)</div>
-                    <div class="grid-3-col__1-of-3 invite__tab" id="signedup">Signed Up (1)</div>
-                    <div class="grid-3-col__1-of-3 invite__tab" id="qualified">Qualified</div>
+                    <div class="grid-3-col__1-of-3 invite__tab" id="signedup">Signed Up (3)</div>
+                    <div class="grid-3-col__1-of-3 invite__tab" id="qualified">Qualified(3)</div>
                 </div>
                 <!-- Referral table content starts -->
                 <div class="invite__tabcontent-wrapper">
                     <!-- Table for invited referrals -->
                     <div class="invite__tabcontent invite__tabcontent--invited invite__tabcontent--active ui-border ui-border-t-none">
-                        <table class="invite__tabcontent-table">
+                        <table class="invite__tabcontent-table" data-pag-prefix="inv">
                             <tbody>
-                                <tr>
+                                <tr class="invite__row-inv">
                                     <td class="ui-width--75"><span class="ui-font-size--18">username 1</span> <br>
                                                  <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
                                     <td class="ui-width--quad ui-font-size--14 ui-color--gray">Invited</td>
                                 </tr>
-                                <tr>
+                                <tr class="invite__row-inv">
                                     <td class="ui-width--75"><span class="ui-font-size--18">username 2</span> <br>
                                                     <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
-                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Invited</td>
                                 </tr>
-                                <tr>
+                                <tr class="invite__row-inv">
                                     <td class="ui-width--75"><span class="ui-font-size--18">username 3</span> <br>
                                                     <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
-                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Invited</td>
                                 </tr>
-                                <tr>
+                                <tr class="invite__row-inv">
                                     <td class="ui-width--75"><span class="ui-font-size--18">username 4</span> <br>
                                                     <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
-                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Invited</td>
                                 </tr>
-                                <tr>
+                                <tr class="invite__row-inv">
                                     <td class="ui-width--75"><span class="ui-font-size--18">username 5</span> <br>
                                                     <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
-                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Invited</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="invite__tc-pagination ui-margin--center ui-text-align--center ui-padding--10">
-                            <span class="fa fa-2x fa-angle-left ui-cursor--pointer"></span>
+                        <div class="pagination">
+                            <button class="fa fa-angle-left pagination__button pagination__prev" id="invitedPrev"></button>
                             &nbsp;&nbsp;&nbsp;&nbsp; 
-                            <span class="fa fa-2x fa-angle-right ui-cursor--pointer"></span>
+                            <button class="fa fa-angle-right pagination__button pagination__next" id="invitedNext"></button> 
                         </div>
                     </div>
                     <div class="invite__tabcontent invite__tabcontent--signedup ui-border ui-border-t-none">
                         <!-- Table for signed-up referrals -->
-                        <table class="invite__tabcontent-table">
+                        <table class="invite__tabcontent-table" data-pag-prefix="su">
                             <tbody>
-                                <tr>
-                                    <td class="ui-width--75"><span class="ui-font-size--18">usergone</span> <br>
+                                <tr class="invite__row-su">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">Signed Up User 1</span> <br>
+                                                 <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                </tr>
+                                <tr class="invite__row-su">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">Signed Up User 2</span> <br>
+                                                 <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
+                                </tr>
+                                <tr class="invite__row-su">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">Signed Up User 3</span> <br>
                                                  <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
                                     <td class="ui-width--quad ui-font-size--14 ui-color--gray">Signed Up</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="invite__tc-pagination ui-margin--center ui-text-align--center ui-padding--10">
-                                <span class="fa fa-2x fa-angle-left ui-cursor--pointer"></span>
-                                &nbsp;&nbsp;&nbsp;&nbsp; 
-                                <span class="fa fa-2x fa-angle-right ui-cursor--pointer"></span>
-                            </div>
+                        <div class="pagination">
+                            <button class="fa fa-angle-left pagination__button pagination__prev" id="signedupPrev"></button>
+                            &nbsp;&nbsp;&nbsp;&nbsp; 
+                            <button class="fa fa-angle-right pagination__button pagination__next" id="signedupNext"></button> 
+                        </div>
                     </div>
                     <div class="invite__tabcontent invite__tabcontent--qualified ui-border ui-border-t-none">
                         <!-- Table for qualified referrals -->
                         <table class="invite__tabcontent-table">
                             <tbody>
-                                <tr>
+                                <tr class="invite__row-ql">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">User Qualified 1</span> <br>
+                                                    <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Qualified 1</td>
+                                </tr>
+                                <tr class="invite__row-ql">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">User Qualified 2</span> <br>
+                                                    <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Qualified 2</td>
+                                </tr>
+                                <tr class="invite__row-ql">
+                                    <td class="ui-width--75"><span class="ui-font-size--18">User Qualified 3</span> <br>
+                                                    <span class="ui-font-size--14 ui-color--gray">05/30/2018</span></td>
+                                    <td class="ui-width--quad ui-font-size--14 ui-color--gray">Qualified 3</td>
+                                </tr>
+                                
+                                <!-- <tr>
                                     <td class="ui-width--full ui-text-align--center ui-font-size--14">
                                         You don't have any qualified referrals at the moment. If someone you invited already signed up, please tell them to make an order through Ebates. 
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
-                        <!-- <div class="invite__tc-pagination ui-margin--center ui-text-align--center ui-padding--10">
-                                <span class="fa fa-2x fa-angle-left ui-cursor--pointer"></span>
+                        <div class="pagination">
+                                <button class="fa fa-angle-left pagination__button pagination__prev" id="qualifiedPrev"></button>
                                 &nbsp;&nbsp;&nbsp;&nbsp; 
-                                <span class="fa fa-2x fa-angle-right ui-cursor--pointer"></span>
-                            </div> -->
+                                <button class="fa fa-angle-right pagination__button pagination__next" id="qualifiedNext"></button> 
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-3-col invite__conditions">
+            <div class="grid-3-col__2-of-3 invite__terms">
+                <p class="ui-margin-bottom--15">How our referral program works</p>
+                <p class="ui-font-size--11 ui-color--gray">Ebates will pay you for every new member you refer to our site who then shops and makes a purchase at our partner merchants sites in accordance with the Referral Program Terms set forth below. While we love them, too, pets and children do not qualify, nor do referrals to friends or housemates who do not do their own shopping via their own account on Ebates.com.</p>
+                
+                <p class="ui-margin-top--15 ui-margin-bottom--15">Referral Program Terms </p>
+                <p class="ui-font-size--11 ui-color--gray">Subject to these Referral Program Terms, Ebates will pay you a $25 Referral Bonus through your Ebates account for every Qualified Referral (defined below) you refer during the period ending on June 30, 2018 ("Referral Period"). A "Qualified Referral" must (i) be a new member of Ebates, (ii) be referred by you via your custom referral link, the links via the invitation forms on this page, or other methods supplied by Ebates that allow for proper tracking of referrals, (iii) sign up at Ebates.com during the Referral Period, and (iv) make qualifying purchases totaling $25 or more that earn Cash Back within one year of signing up. The following is a non-exhaustive list of activities that are not permitted and that will disqualify you from earning Referral Bonuses: (i) self-referral, (ii) posting your referral link on any page that is not owned and controlled by you, including, but not limited to, any Ebates merchant's Facebook or forum page, (iii) bidding on any keywords containing Ebates, including, but not limited to, Ebates, Ebates.com, Ebates.ca, (iv) placement of the Ebates logo or mention of Ebates in any ad text, extensions or banner ads, (v) paid advertising for the purpose of generating traffic directly to your referral link, (vi) posing as a representative of Ebates in an official capacity, and (vii) any bulk email distribution, submission or distribution to strangers, or any other promotion that would constitute or appear to constitute unsolicited commercial email or "spam." Ebates reserves the right to review all referrals and to deny, withhold, or cancel any bonuses for any referrals that Ebates deems, in its sole discretion, as fraudulent, abusive, unethical, suspicious or otherwise inconsistent with these Referral Program Terms, the Ebates Cash Back Shopping Terms & Conditions, or any other applicable law or regulation. Ebates' decisions are final. Ebates reserves the right to suspend or terminate the Referral Program or to change these Referral Program Terms at any time and for any reason in its sole discretion.</p>
+            </div>
+            <div class="grid-3-col__1-of-3 invite__ref-but invite__d">
+                <p>Ebates Referral Button</p>
+                <br>
+                <p class="ui-font-size--14">Are you a blogger or power seller? Copy this source code to display our Referral Button on your site.</p>
+                <br>
+                <img src="images/ebates-referral-button.png" alt="Referral button image">
+                <br>
+                <!-- Field with ref link *Desktop* -->
+                <div class="grid-3-col__3-of-3 grid-3-col__3-of-3--inv-socials invite__d ui-margin-top--10">
+                    <div class="invite__copylink">
+                        <input type="text" 
+                            value="ebates.com/r/UPLOAD17?eeid=28187" 
+                            readonly 
+                            class="invite__input-text invite__input-text--reflink invite__reflink copy__reflink"
+                            id="referalLinkD"
+                            data-clipboard-target="#refButLink"
+                            data-clipboard-action="copy">
+                    
+                            <input type="button" 
+                            value="Copy Link" 
+                            class="invite__greentext-btn ui-padding-top--10 copy__reflink"
+                            data-clipboard-target="#refButLink"
+                            data-clipboard-action="copy">
                     </div>
                 </div>
             </div>
@@ -402,7 +463,11 @@
 
     <!-- End of modal -->
     <script src="js/expand-text.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/invite-pagination.js"></script>
+    <script src="js/signed-up-pagination.js"></script>
+    <script src="js/qualified-pagination.js"></script>
+
+    <!-- <script src="js/main.js"></script> -->
     <script>
         new ClipboardJS('.copy__reflink');
 
