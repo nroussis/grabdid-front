@@ -6,14 +6,23 @@
 
 .expandable-text {
     overflow: hidden;
+    text-overflow: none;
+    white-space: normal;
     // transition:  max-height 1.2s;
 
     &--collapsed {
-        max-height: 40px;
+        max-height: 20px;
     }
 
     &--expanded {
         // transition: max-height 10s;
         // max-height: 9999px;
+        // white-space: normal;
+
+    }
+
+    &--dots {
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
