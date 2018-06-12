@@ -147,7 +147,7 @@
                         els.push($(this));
                     });
                 }
-                console.log(els);
+                // console.log(els);
                 els.sort(function(x,y){
                     x = parseInt(x.attr("data-num"));
                     y = parseInt(y.attr("data-num"));
@@ -161,9 +161,10 @@
                 for (var i = 0; i < els.length; i++ ) {
                     els[i].attr("data-item", i);
                     els[i].addClass("js-inlist");
-                if (i < elsOnPage) {
-                    els[i].addClass("js-shown");
-                }
+                    
+                    if (i < elsOnPage) {
+                        els[i].addClass("js-shown");
+                    }
                 }
                 currentPage = 1;
                 buttonsCheck();
