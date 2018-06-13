@@ -1,5 +1,7 @@
 .user-block {
     position: relative;
+    display: inline-block;
+    float: right;
 
     @include clearfix;
 

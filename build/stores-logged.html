@@ -458,7 +458,27 @@
                 <span class="ui-font-size--22 ui-float--left"><span class="ui-color--green fa fa-comments-o"></span> Here you can leave some feedback</span>
                 <span id="leaveFeedback" class="ui-float--right stores-reviews__leave"><span class="fa fa-pencil-square-o"></span> Leave a feedback</span>
             </div>
-            <p class="ui-font--bold ui-padding--10 ui-display--none" id="unregFeedback">Please, <a href="#" class="modal__link" id="loginMessage">log in</a> to leave a feedback</p>
+            <form class="ui-font--bold ui-padding--10 ui-display--none" id="regFeedback">
+                <select name="feedbackRate" id="feedbackRate" class="ui-font--bold">
+                    <option value="0" disabled selected>- Your rate -</option>
+                    <option value="veryGood">&#9733;&#9733;&#9733;&#9733;&#9733; - Very good</option>
+                    <option value="good">&#9733;&#9733;&#9733;&#9733; - Good</option>
+                    <option value="average">&#9733;&#9733;&#9733; - Average</option>
+                    <option value="bad">&#9733;&#9733; - Bad</option>
+                    <option value="veryBad">&#9733; - Very bad</option>
+                </select> 
+                <br><br>
+                <label for="feedbackTitle">Feedback title here</label>
+                <br>
+                <input type="text" name="feedbackTitle" id="feedbackTitle" class="ui-font--bold">
+                <br><br>
+                <label for="feedbackText">Feedback text here</label>
+                <br>
+                <textarea name="feedbackText" id="feedbackText" cols="30" rows="10" class="ui-font--bold"></textarea>
+                <br>
+                <br>
+                <button class="ui-button ui-button--green stores-reviews__submit-btn ui-border-radius--4 ui-color--white" type="submit">Submit feedback</button>
+            </form>
             <!-- One review begins -->
             <div class="stores-reviews__review">
                 <div class="clr">
@@ -952,7 +972,7 @@
     ;
 
     $("#leaveFeedback").on("click", function(){
-        $("#unregFeedback").slideToggle(200);
+        $("#regFeedback").slideToggle(200);
     })
 </script>
 <!-- end of page footer -->
