@@ -3,6 +3,7 @@
     
     padding: 30px;
     border-bottom: 1px solid $block_border_color;
+    position: relative;
 
     &__type {
         text-transform: uppercase;
@@ -61,6 +62,17 @@
 
     &--paginated {
         display: none;
+    }
+
+    //Only some design for modal
+    &__modal {
+        // width: 100vw;
+        height: 640px;
+        background: rgba(black, 0.3);
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 0;
     }
 }
 

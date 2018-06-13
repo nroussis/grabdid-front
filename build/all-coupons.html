@@ -380,7 +380,7 @@
            <!-- List of coupons starts here -->
                 <div class="coupons__list">
                     <!-- One coupon start -->
-                    <div class="coupon coupon--paginated coupon-5">
+                    <div class="coupon coupon--paginated coupon-5" data-coupon-object="http://google.com">
                             <div class="coupon__logo-wrapper">
                                 <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
                                 <a href="#" class="ui-display--block ui-text-align--center ui-font-size--13">See All Coupons</a>
@@ -401,7 +401,13 @@
                                    <span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
                                 </li>
                             </ul>
-                            <a href="#" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon Code</a>
+                            <a href="file:///C:/Work/grabdid-work/build/all-coupons.html" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon Code</a>
+                            <!-- Coupon's modal  -->
+                            <div class="modal coupon__modal" id="1">
+                                    <div class="modal__overlay"></div>
+                                    
+                                    <button class="modal__close-btn fa fa-close"></button>
+                            </div>
                         </div>
                         <!-- One coupon end -->
                          <!-- One coupon start -->
@@ -500,7 +506,7 @@
 </div>
        </div>
         
-        
+     
 <!-- end of layout-center -->
 <!-- put footer  content here -->
 <div class="ui-footer">
@@ -614,7 +620,6 @@
             </div>
         </div>
     </div>
-<div class="overlay overlay-coupon-login">
 </div>
 <div class="modal modal-coupon-login clr">
         <p class="ui-font-size--40">Login or register</p>
@@ -877,26 +882,15 @@
           $(this).toggleClass("stores-sidebar__cat-open--checked");
       });
 
-        //Coupon modal
-        $(".coupon__shop-btn").on("click", function(e){
-            e.preventDefault();
-            $(".overlay-coupon-login").toggle();
-            $(".modal-coupon-login").toggle();
-            $(".modal-coupon-login").css({ "top": $(window).scrollTop() + "px" });
-        });
+        // //Coupon modal
+        // $(".coupon__shop-btn").on("click", function(e){
+        //     e.preventDefault();
+        //     $(".overlay-coupon-login").toggle();
+        //     $(".modal-coupon-login").toggle();
+        //     $(".modal-coupon-login").css({ "top": $(window).scrollTop() + "px" });
+        // });
 
-        //Close modal
-        $(".modal__close-btn").on("click", function(){
-            $(this).parent().toggle();
-            $(".overlay").toggle();
-        });
 
-        $(".overlay").on("click", function(){
-            $(".modal").each(function(){
-                $(this).hide();
-            });
-            $(this).hide();
-        })
       
         document.addEventListener("click", function(e){
             if (e.target.parentNode.parentNode.id === 'shipping-filter'){
@@ -927,11 +921,41 @@
                 alpha.classList.add('alpha--ww');
             }
         }
+
+        
+        
+        
     });
 
+    function openInNewTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
+    $(".coupon__shop-btn").click(function(e){
+        e.preventDefault();
+        $current_url = $(this).attr("href");
+        $coupon_modal_id = $(this).parent().find(".coupon__modal").attr("id");
+        console.log($coupon_modal_id);
+        console.log($current_url);
+        $url_to_open = $current_url + "#" + $coupon_modal_id;
+        $coupon_url = $(this).parent().attr("data-coupon-object");
+        window.location.href = $coupon_url;
+        openInNewTab($url_to_open);
     });
+
+    $hash = window.location.hash;
+    //console.log($hash);
+    setTimeout(function(){
+        $($hash).fadeToggle(500);
+    }, 200);
+
+    });
+
+    
 </script>
 <script src="js/expand-text.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/all-coupons-sort.js"></script>
 <script src="js/sticky_all_stores.js"></script>
 <script src="js/owl.carousel.min.js"></script>
