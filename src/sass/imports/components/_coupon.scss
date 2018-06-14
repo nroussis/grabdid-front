@@ -74,6 +74,17 @@
         top: 50%;
         left: 0;
     }
+
+    &__modal-window {
+        width: 640px;
+        height: 480px;
+        background: white;
+        position: absolute;
+        z-index: 12;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-5%);
+    }
 }
 
 @media (max-width: 1150px) {

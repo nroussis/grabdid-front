@@ -91,4 +91,31 @@
     &__description {
         margin: 10px 0;
     }
+
+    &__pag-link {
+        display: inline-block;
+        border: 1px solid $block_border_color;
+        padding: 2px 8px;
+
+        &:hover {
+            color: white;
+            background: $button_green_bg;
+        }
+
+        &--current {
+            color: white;
+            background: $button_green_bg;
+        }
+
+        &--disabled {
+            color: $small_grey;
+            background: $gray_svg_bg;
+
+            &:hover {
+                color: $small_grey;
+                background: $gray_svg_bg;
+                // cursor: default;
+            }
+        }
+    }
 }
