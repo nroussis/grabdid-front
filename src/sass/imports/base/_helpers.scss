@@ -305,6 +305,10 @@
   display: none;
 }
 
+.ui-display--never-none {
+  display: none !important;
+}
+
 //set element color to dark-gray
 .ui-color--dark-gray {
   color: $color_dark_gray;

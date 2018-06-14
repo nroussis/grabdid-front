@@ -1,0 +1,88 @@
+.balance {
+
+    &__wrapper {
+        margin-top: 20px;
+        position: relative;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    &__table-row {
+
+        border-bottom: 1px solid $block_border_color;
+
+        &:first-child {
+            border-top: 1px solid $block_border_color;
+        }
+
+        &--available {
+            background: $color_balance_available;
+        }
+
+        &--pending {
+            background: $color_balance_pending;
+        }
+
+        &--declined {
+            background: $color_balance_declined;
+        }
+
+        &--requested {
+            background: $color_balance_requested;
+        }
+
+        &--proceeded {
+            background: $color_balance_proceeded;
+        }
+
+        &--lifetime {
+            background: $color_balance_lifetime;
+            font-weight: bold;
+        }
+    }
+
+    &__cname {
+        padding: 10px 5px;
+        width: 90%;
+    }
+
+    &__cvalue {
+        padding: 5px;
+    }
+
+    &__withdraw {
+        font-size: 22px;
+        text-align: center;
+        position: relative;
+        top: 100px;
+    }
+
+    &__withdraw-btn {
+        height: 60px;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 4px;
+        color: white;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .balance {
+
+        padding: 10px;
+
+
+        &__table-wrapper {
+            width: 100%;
+        }
+
+        &__withdraw {
+            width: 100%;
+            top: 0;
+        }
+    }
+}
