@@ -1,0 +1,121 @@
+.stores-reviews {
+    margin: 15px 0;
+    padding: 10px;
+
+    &__heading {
+        border-bottom: 1px solid $block_border_color;
+        padding-bottom: 10px;
+    }
+
+    &__leave {
+        color: $small_grey;
+        font-size: 13px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__review {
+        border-bottom: 1px solid $block_border_color;
+        margin: 15px 0;
+    }
+
+    &__rate {
+        font-size: 12px;
+        color: grey;
+
+        &--1 {
+            .stores-reviews__star {
+                &--1 {
+                    color: gold;
+                }
+            }
+        }
+
+        &--2 {
+            .stores-reviews__star {
+                &--1,
+                &--2 {
+                    color: gold;
+                }
+            }
+        }
+
+        &--3 {
+            .stores-reviews__star {
+                &--1,
+                &--2,
+                &--3 {
+                    color: gold;
+                }
+            }
+        }
+
+        &--4 {
+            .stores-reviews__star {
+                &--1,
+                &--2,
+                &--3,
+                &--4 {
+                    color: gold;
+                }
+            }
+        }
+
+        &--5 {
+            .stores-reviews__star {
+                &--1,
+                &--2,
+                &--3,
+                &--4,
+                &--5 {
+                    color: gold;
+                }
+            }
+        }
+    }
+
+    &__username {
+        color: $small_grey;
+        font-weight: bold;
+    }
+
+    &__date {
+        font-weight: bold;
+        font-size: 14px;
+        color: $small_grey;
+    }
+
+    &__description {
+        margin: 10px 0;
+    }
+
+    &__pag-link {
+        display: inline-block;
+        border: 1px solid $block_border_color;
+        padding: 2px 8px;
+
+        &:hover {
+            color: white;
+            background: $button_green_bg;
+        }
+
+        &--current {
+            color: white;
+            background: $button_green_bg;
+        }
+
+        &--disabled {
+            color: $small_grey;
+            background: $gray_svg_bg;
+
+            &:hover {
+                color: $small_grey;
+                background: $gray_svg_bg;
+                // cursor: default;
+            }
+        }
+    }
+}

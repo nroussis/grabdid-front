@@ -1,6 +1,6 @@
 #Hello there.
 
-#This is a doc for all-stores.html file.
+#This is a doc for invite.html file.
 
 Pagination made trough different scripts for all pagination cases. 
 

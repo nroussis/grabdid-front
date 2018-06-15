@@ -1,0 +1,15 @@
+.item__readmore {
+    position: absolute;
+    bottom: 5px;
+    right: 25%;
+    font-size: 13px;
+    padding: 5px;
+    font-weight: bold;
+    z-index: 9;
+}
+
+@media (max-width: 1010px) {
+    .item__readmore {
+        left: 0;
+    }
+}

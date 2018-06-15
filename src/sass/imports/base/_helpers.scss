@@ -94,6 +94,7 @@
 
 //set element margin right to 10 example .ui-margin-left--10
 @include width_base_class(margin-left,40);
+@include width_base_class(margin-left,10);
 
 
 //set element margin bottom to 7 example .ui-margin-bottom--7
@@ -302,6 +303,10 @@
 //Do not show an item
 .ui-display--none {
   display: none;
+}
+
+.ui-display--never-none {
+  display: none !important;
 }
 
 //set element color to dark-gray

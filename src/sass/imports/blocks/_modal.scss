@@ -94,6 +94,21 @@
         padding: 0 35px;
     }
 
+    &__overlay {
+        // display: none;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        left: 0;
+        height: 100vh;
+        background: rgba(black, 0.3);
+        z-index: 11;
+
+        &--shown {
+            display: block;
+        }
+    }
+
 }
 
 

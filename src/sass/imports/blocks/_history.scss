@@ -1,0 +1,49 @@
+.history {
+    margin-top: 15px;
+
+    &__table {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    &__theading{
+        cursor: pointer;
+    }
+
+    &__tcell {
+        padding: 5px;
+        
+        &--active {
+
+        }
+
+        &--date{
+            
+        }
+
+        &--refid {
+
+        }
+
+        &--pay-type {
+
+        }
+
+        &--store {
+
+        }
+
+        &--amount {
+
+        }
+
+        &--cashback {
+
+        }
+
+        &--status {
+
+        }
+    }
+}
