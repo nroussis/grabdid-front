@@ -1,0 +1,33 @@
+.forgot {
+    padding: 20px;
+    text-align: center;
+
+    &__input-t {
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: 1px solid $block_border_color;
+        margin: 10px 0;
+        font-size: 18px;
+
+        &:focus {
+            border-color: $color_greek_blue;
+        }
+    }
+
+    &__label {
+        text-decoration: underline;
+    }
+
+    &__refresh-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__submit-btn {
+        border-radius: 4px;
+        color: $white;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}

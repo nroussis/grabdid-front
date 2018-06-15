@@ -40,6 +40,14 @@
                             <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
                         </ul>
                     </div>
+                    <span class="fa
+                                 fa-sign-in
+                                 ui-font-size--25
+                                 ui-float--right
+                                 ui-margin-top--10
+                                 ui-color--orange
+                                 ui-cursor--pointer
+                                 header__login" id="signButton"></span>
                 </td>
                 <!-- search column -->
                 <td class="ui-search-column">
@@ -52,7 +60,7 @@
                     </div>
                 </td>
                 <!-- sign in column -->
-                <td class="ui-width--230">
+                <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
                     <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
                     <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
                 </td>
@@ -224,7 +232,7 @@
                                 <a href="#" class="ui-font-size--14 ui-color--red ui-font--bold">Shop Old Navy with 6.0% Cash Back</a>
                             </div>
                         </div>
-                            <div class="ui-panel ui-width--200 ui-margin--center" >
+                            <div class="ui-panel ui-panel--favorite ui-margin--center" >
                                 <div class="ui-panel__header ui-margin-top--10 ui-margin-bottom--7">
                                     <span class="ui-font-size--20 ui-color--gray ui-font--medium">Featured Stores</span>
                                 </div>
@@ -460,6 +468,39 @@
                                 </div>
                             </div>
                         </div>
+                         <!-- You might also like block  -->
+                         <div class="ui-panel">
+                                <div class="ui-panel__header ui-margin-top--10 ui-margin-bottom--7">
+                                    <span class="ui-font-size--15 ui-color--gray ui-line-height--27 ui-font--medium">You might also like</span>
+                                </div>
+                                <div class="ui-panel__content ui-margin-top--25">
+                                    <div class="ui-width--quad ui-float--left ui-text-align--center">
+                                        <span class="ui-font-size--15 ui-color--gray ui-font--bold">Vitacost</span>
+                                        <p class="clear ui-height--5"></p>
+                                        <a href="vitacost"><img src="images/vitacost_280x60.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
+                                        <span class="ui-font-size--13 ui-color--orange">3%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
+                                    </div>
+                                    <div class="ui-width--quad ui-float--left ui-text-align--center">
+                                        <span class="ui-font-size--15 ui-color--gray ui-font--bold">Expedia</span>
+                                        <p class="clear ui-height--5"></p>
+                                        <a href="vitacost"> <img src="images/expedia_280x80.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
+                                        <span class="ui-font-size--13 ui-color--orange">5%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
+                                    </div>
+                                    <div class="ui-width--quad ui-float--left ui-text-align--center">
+                                        <span class="ui-font-size--15 ui-color--gray ui-font--bold">Getsz</span>
+                                        <p class="clear ui-height--5"></p>
+                                        <a href="vitacost"><img src="images/getzs_280x80.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
+                                        <span class="ui-font-size--13 ui-color--orange">5.5%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
+                                    </div>
+                                    <div class="ui-width--quad ui-float--left ui-text-align--center">
+                                        <span class="ui-font-size--15 ui-color--gray ui-font--bold">Sixt</span>
+                                        <p class="clear ui-height--5"></p>
+                                        <a href="vitacost"><img src="images/sixt_280x60.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
+                                        <span class="ui-font-size--13 ui-color--orange">3.5%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
+                                    </div>
+                                    <p class="clear"></p>
+                                </div>
+                            </div>
                          <!-- Reviews block -->
          <div class="stores-reviews">
                 <div class="clr stores-reviews__heading">
@@ -605,38 +646,7 @@
             <tbody>
                 <tr>
                     <td class="ui-panelgrid__cell--content">
-                        <div class="ui-panel">
-                            <div class="ui-panel__header ui-margin-top--10 ui-margin-bottom--7">
-                                <span class="ui-font-size--15 ui-color--gray ui-line-height--27 ui-font--medium">You might also like</span>
-                            </div>
-                            <div class="ui-panel__content ui-margin-top--25">
-                                <div class="ui-width--quad ui-float--left ui-text-align--center">
-                                    <span class="ui-font-size--15 ui-color--gray ui-font--bold">Vitacost</span>
-                                    <p class="clear ui-height--5"></p>
-                                    <a href="vitacost"><img src="images/vitacost_280x60.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
-                                    <span class="ui-font-size--13 ui-color--orange">3%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
-                                </div>
-                                <div class="ui-width--quad ui-float--left ui-text-align--center">
-                                    <span class="ui-font-size--15 ui-color--gray ui-font--bold">Expedia</span>
-                                    <p class="clear ui-height--5"></p>
-                                    <a href="vitacost"> <img src="images/expedia_280x80.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
-                                    <span class="ui-font-size--13 ui-color--orange">5%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
-                                </div>
-                                <div class="ui-width--quad ui-float--left ui-text-align--center">
-                                    <span class="ui-font-size--15 ui-color--gray ui-font--bold">Getsz</span>
-                                    <p class="clear ui-height--5"></p>
-                                    <a href="vitacost"><img src="images/getzs_280x80.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
-                                    <span class="ui-font-size--13 ui-color--orange">5.5%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
-                                </div>
-                                <div class="ui-width--quad ui-float--left ui-text-align--center">
-                                    <span class="ui-font-size--15 ui-color--gray ui-font--bold">Sixt</span>
-                                    <p class="clear ui-height--5"></p>
-                                    <a href="vitacost"><img src="images/sixt_280x60.gif" class="ui-max-width--full ui-border--none ui-height--45 ui-display--block ui-margin--center"  /></a>
-                                    <span class="ui-font-size--13 ui-color--orange">3.5%</span><span class="ui-font-size--11 ui-color--gray"> CASHBACK</span>
-                                </div>
-                                <p class="clear"></p>
-                            </div>
-                        </div>
+                       
                     </td>
                 </tr>
             </tbody>

@@ -14,8 +14,8 @@
   }
 }
 
-.header-logo {
-
+.header__login {
+  display: none;
 }
 
 .flag-dropdown {
@@ -38,31 +38,6 @@
     padding: 3px;
     border-radius: 5px;
 
-    // &::before {
-		// 	content: "";
-		// 	position: absolute;
-		// 	border-style: solid;
-		// 	border-width: 10px;
-		// 	border-color: transparent #fff transparent transparent;
-		// 	display: block;
-		// 	width: 0;
-		// 	z-index: 1;
-		// 	top: 1px;
-		// 	right: 15px;
-		// }
-
-		// &::after {
-		// 	content: "";
-		// 	position: absolute;
-		// 	border-style: solid;
-		// 	border-width: 11px;
-		// 	border-color: transparent $block_border_color transparent transparent;
-		// 	display: block;
-		// 	width: 0;
-		// 	z-index: 0;
-		// 	top: -1px;
-		// 	right: 14px;
-		// }
   }
 
   &__current {
@@ -133,3 +108,17 @@
   }
 }
 
+
+@media (max-width: 1000px) {
+  .header__login {
+    display: inline;
+  }
+
+  .header__log-reg {
+    display: none;
+  }
+
+  #loginBlock {
+    display: none;
+  }
+}
