@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="js/rating.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/footable.min.js"></script>
     <script src="js/jquery.tablesorter.min.js"></script> 
     <script src="js/ftellipsis.js"></script>
     <script src="js/easing.min.js"></script>
@@ -89,21 +90,21 @@
                                 </table>
                                          
                     </div>
-                    <div class="balance__withdraw">
+                    <div class="grid-2-col__1-of-2 balance__withdraw">
                         <p>Available balance:</p>
                         <span class="ui-color--green ui-font-size--30">&euro;35.00</span><br>
                         <button class="balance__withdraw-btn ui-button ui-button--green"><span class="fa fa-money"></span> Withdraw</button>
                     </div>
-                    <br><br><br><br><br><br>
-                    <div class="history ui-width--full">
+                    <div class="history grid-2-col__2-of-2">
                             <h1 class="ui-margin-top--10">History</h1>
-                           <table class="history__table tablesorter" id="myTable">
+                           <table class="history__table tablesorter" 
+                                  id="myTable">
                                <thead>
-                                    <tr>
+                                    <tr class="footable-header">
                                         <th class="history__theading">Date</th>
-                                        <th class="history__theading">Reference id</th>
-                                        <th class="history__theading">Payment type</th>
-                                        <th class="history__theading">Store</th>
+                                        <th class="history__theading" data-breakpoints="xs sm">Reference id</th>
+                                        <th class="history__theading" data-breakpoints="xs sm">Payment type</th>
+                                        <th class="history__theading" data-breakpoints="xs sm">Store</th>
                                         <th class="history__theading">Amount</th>
                                         <th class="history__theading">Cashback</th>
                                         <th class="history__theading">Status</th>
@@ -302,6 +303,10 @@
     <script>
         $(document).ready(function(){
             $("#myTable").tablesorter(); 
+        });
+
+        jQuery(function($){
+	        $('#myTable').footable();
         });
     </script>
 </body>

@@ -24,3 +24,38 @@ Colors for table columns and rows you can find and change at _settings.color.scs
     - $color_history_status: orangered;
 
 ------------------------------------------------------------------------------------------
+
+
+---------------------
+- RESPONSIVENESS FOR HISTORY TABLE 
+---------------------
+In this table I used footable js plugin.
+
+It can hide table columns on different screen size breakpoints.
+
+The default breakpoints are:
+
+    - x-small: 480
+    - small": 768
+	- medium: 992
+	- large: 1200
+	- x-large: 1400
+
+Changing is easy: 
+
+ - Put into a <table> tag following attribute:
+ data-breakpoints='{ "x-small": 480, "small": 768, "medium": 992, "large": 1200, "x-large": 1400 }'
+with your values.
+
+Hiding a column:
+
+- Into <th> tag of target column following attribute:
+data-breakpoints="" with the values:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+
+Please note that values can be combined. 
+For more info read the plugin docs at http://fooplugins.github.io/FooTable/docs/getting-started.html 

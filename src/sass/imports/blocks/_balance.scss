@@ -71,6 +71,16 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .balance {
+
+        &__wrapper {
+            width: calc(100% - 10px);
+        }
+    }
+}
+
+
 @media (max-width: 650px) {
     .balance {
 
