@@ -19,6 +19,7 @@
     <script src="js/dropdown.min.js"></script>
     <script src="js/search.min.js" ></script>
     <script src="js/validate.js"></script>
+    <script src="js/clipboard.min.js"></script>
 </head>
 <body>
 <!-- put header content here -->
@@ -277,7 +278,7 @@
            <!-- List of coupons starts here -->
                 <div class="coupons__list">
                     <!-- One coupon start -->
-                    <div class="coupon coupon--paginated coupon-5" data-coupon-object="http://google.com">
+                    <div class="coupon coupon--paginated coupon-5" data-coupon-object="https://ebay.com">
                             <div class="coupon__logo-wrapper">
                                 <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
                                 <a href="#" class="ui-display--block ui-text-align--center ui-font-size--13">See All Coupons</a>
@@ -304,10 +305,48 @@
                                     <div class="modal__overlay"></div>
                                     <div class="coupon__modal-window">
                                         <div class="coupon__modal-header">
-                                            <img src="images/icon-150x40-ebay.gif" alt="eBay logo">
+                                            <img src="images/icon-150x40-ebay.gif" alt="eBay logo" class="coupon__modal-logo">
                                             <span>Lorem ipsum dolor afom ifomc pidorasy</span>
                                         </div>
-                                        <button class="modal__close-btn fa fa-close"></button>
+                                        <div class="coupon__modal-body ui-text-align--center">
+                                            <div class="coupon__modal-code">
+                                                <span class="ui-font--bold coupon__modal-code-text" id="coupon">ABABABABA</span>
+                                                <button class="coupon__modal-copy-btn" data-clipboard-target="#coupon" data-clipboard-action="copy">Copy Code</button>
+                                            </div>
+                                            <!-- <a href="https://ebay.com" target="_blank" class="modal__link ui-font-size--19">Continue to www.ebay.com 
+                                                <span class="fa fa-angle-right ui-font--bold"></span>
+                                            </a> -->
+                                        </div>
+                                        <div class="coupon__modal-login ui-text-align--center">
+                                            <p class="ui-text-align--center ui-margin-30-0 ui-font-size--19">For cashback you need to Log In or <span class="modal__link">Register</span></p>
+                                            <div class="clr ui-margin-bottom--15">
+                                                <form action="" method="POST" class="grid-2-col__1-of-2">
+                                                    <label for="email" class="ui-font--bold">EMAIL:</label><br>
+                                                    <input class="modal__input-t" type="email" name="email" id="email"><br>
+                                                    <label for="password" class="ui-font--bold">PASSWORD:</label><br>
+                                                    <input class="modal__input-t" type="password" name="password" id="password"><br>
+                                                    <a href="#" class="modal__link">I forgot my password</a> <br>
+                                                    <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
+                                                    <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
+                                                </form>
+                                                <div class="grid-2-col__1-of-2">
+                                                    <div class="modal-coupon-login__socials ui-padding-right--20">
+                                                            <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
+                                                                <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
+                                                                Login with Facebook
+                                                            </a> <br>
+                                                            <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
+                                                                <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
+                                                                    Login with Google Plus
+                                                            </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="https://ebay.com" class="modal__link ui-font-size--22 ui-margin-bottom--15 ui-display--block" target="_blank">No thanks, continue without cahsback <span class="fa fa-angle-right ui-font--bold"></span></a>
+                                            <div class="coupon__modal-footer">
+                                                <a href="#" class="ui-color--sm-grey ui-font-size--12">Terms &amp; Conditions</a>
+                                            </div>
+                                        </div>
                                     </div>
                             </div>
                         </div>
@@ -582,6 +621,7 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
 <script>
+    new ClipboardJS('.coupon__modal-copy-btn');
     $(document).ready(function(){
       $("#loginForm").validate();
       $("#registerForm").validate();

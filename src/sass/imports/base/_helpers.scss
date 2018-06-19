@@ -54,6 +54,7 @@
 
 //set element padding right to 30 example .ui-padding-right--30
 @include width_base_class(padding-right,10);
+@include width_base_class(padding-right,20);
 @include width_base_class(padding-right,30);
 
 //set element padding top to 30 example .ui-padding-top--8
