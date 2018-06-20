@@ -849,10 +849,12 @@
 <!-- help button -->
 <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
 <!-- scripts -->
+//= template/popup-coupon-not-registered.html
 
 <script src="js/expand-text.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
+<script src="js/modal.js"></script>
 <script>
     $("#loginForm").validate();
     $("#registerForm").validate();
@@ -900,6 +902,11 @@
 
     $("#leaveFeedback").on("click", function(){
         $("#unregFeedback").slideToggle(200);
+    });
+
+    setTimeout(function(){
+        $(".modal-coupon-login").fadeIn();
+        $(".overlay").fadeIn();
     })
 </script>
 <!-- end of page footer -->
