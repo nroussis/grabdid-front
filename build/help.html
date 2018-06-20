@@ -36,6 +36,14 @@
                                 <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
                             </ul>
                         </div>
+                        <span class="fa
+                                     fa-sign-in
+                                     ui-font-size--25
+                                     ui-float--right
+                                     ui-margin-top--10
+                                     ui-color--orange
+                                     ui-cursor--pointer
+                                     header__login" id="signButton"></span>
                     </td>
                     <!-- search column -->
                     <td class="ui-search-column">
@@ -48,7 +56,7 @@
                         </div>
                     </td>
                     <!-- sign in column -->
-                    <td class="ui-width--230">
+                    <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
                         <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
                         <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
                     </td>
@@ -352,7 +360,7 @@
             <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
             
             <!-- Contact form popup -->
-            </div>
+            <div class="overlay"></div>
             <div class="modal modal-help-email">
                 <p class="ui-font-size--40">Contact</p>
                 <p>Fill fields as fast as you can so blah-blah blah</p>
@@ -406,8 +414,8 @@
             });
 
             $(".overlay").on("click", function(){
-                $(".overlay").toggle();
-                $(".modal").toggle();
+                $(".overlay").hide();
+                $(".modal").hide();
             })
 
             $(".modal__close-btn").on("click", function(){

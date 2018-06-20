@@ -14,8 +14,8 @@
   }
 }
 
-.header-logo {
-
+.header__login {
+  display: none;
 }
 
 .flag-dropdown {
@@ -29,10 +29,15 @@
   &__list {
     display: none;
     position: absolute;
-    right: -50px;
+    right: -38px;
     z-index: 10000;
-    width: 50px;
+    width: 38px;
     font-size: 13px;
+    border:1px solid #f7f7f7;
+    top: -12px;
+    padding: 3px;
+    border-radius: 5px;
+
   }
 
   &__current {
@@ -53,6 +58,8 @@
   }
 
   &__list-item {
+    height: 20px;
+    background: white;
 
   }
 
@@ -60,6 +67,9 @@
     display: inline-block;
     width: 20px;
     height: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
     &--gr {
       background: url(../images/flags/gr.svg) no-repeat;
@@ -98,3 +108,17 @@
   }
 }
 
+
+@media (max-width: 1000px) {
+  .header__login {
+    display: inline;
+  }
+
+  .header__log-reg {
+    display: none;
+  }
+
+  #loginBlock {
+    display: none;
+  }
+}

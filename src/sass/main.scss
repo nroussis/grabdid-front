@@ -70,6 +70,8 @@
  * #VENDORS
  */
 @import "imports/vendors/normalize";
+@import "imports/vendors/_footable.standalone.scss";
+
 
 /**
  * #TOOLS
@@ -102,6 +104,7 @@
 @import "imports/components/clicktocopy";
 @import "imports/components/traftext";
 @import "imports/components/helplink";
+@import "imports/components/breadcrumbs";
 
 /**
  * #PLACEHOLDERS

@@ -188,6 +188,24 @@ label.error {
   }
 }
 
+.ui-read-more-link {
+  position: absolute;
+  bottom: 3px;
+  color: $highlight_blue_bg;
+  right: 21px;
+  z-index: 0;
+  &:after {
+    content: '';
+    display: block;
+    left: -60px;
+    top: 0;
+    width: 60px;
+    height: 18px;
+    position: absolute;
+    background: $url_gradient_white repeat-y 0 0;
+  }
+}
+
 .ui-read-more {
   position: absolute;
   bottom: 3px;

@@ -3,7 +3,7 @@
     
     padding: 30px;
     border-bottom: 1px solid $block_border_color;
-    position: relative;
+    // position: relative;
 
     &__type {
         text-transform: uppercase;
@@ -67,23 +67,78 @@
     //Only some design for modal
     &__modal {
         // width: 100vw;
-        height: 640px;
+        // height: 640px;
         background: rgba(black, 0.3);
         position: absolute;
         z-index: 1;
         top: 50%;
         left: 0;
+        
     }
 
     &__modal-window {
         width: 640px;
-        height: 480px;
+        // height: 480px;
         background: white;
         position: absolute;
         z-index: 12;
-        top: 100px;
+        top: 140px;
         left: 50%;
-        transform: translateX(-5%);
+        transform: translateX(50%);
+        // padding-bottom: 20px;
+        // padding-right: 20px;
+    }
+
+    &__modal-header {
+        padding: 10px 0;
+    }
+
+    &__modal-logo {
+        width: 100px;
+        position: relative;
+        top: 5px;
+    }
+
+    &__modal-body {
+
+    }
+
+    &__modal-code {
+        text-align: center;
+        margin: 0 120px;
+        margin-top: 40px;
+        padding: 15px 10px;
+        border: 2px dotted orangered;
+        background: rgba(orangered, 0.1);
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    &__modal-code-text {
+        word-wrap: break-word;
+        font-size: 22px;
+    }
+
+    &__modal-copy-btn {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $button_green_bg;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 7px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    &__modal-footer {
+        text-align: right;
+        background: $gray_svg_bg;
+        padding: 5px 20px;
+        margin-top: 20px;
     }
 }
 
@@ -102,5 +157,26 @@
         &__shop-btn {
             float: right;
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .coupon {
+
+        &__modal {
+            width: 100%;
+        }
+
+        &__modal-window {
+            left: 0;
+            transform: none;
+            width: 100%;
+            padding-right: 0;
+        }
+
+        &__modal-code {
+            margin: 20px 10px;
+        }
+
     }
 }

@@ -8,6 +8,7 @@
     &__table {
         border-collapse: collapse;
         margin: 0 auto;
+        margin-top: 15px;
     }
 
     &__table-row {
@@ -70,11 +71,25 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .balance {
+
+        &__wrapper {
+            width: calc(100% - 10px);
+        }
+    }
+}
+
+
 @media (max-width: 650px) {
     .balance {
 
         padding: 10px;
 
+        &__wrapper {
+            width: 100%;
+            margin-left: 0;
+        }
 
         &__table-wrapper {
             width: 100%;

@@ -40,6 +40,14 @@
                             <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
                         </ul>
                     </div>
+                    <span class="fa
+                                 fa-sign-in
+                                 ui-font-size--25
+                                 ui-float--right
+                                 ui-margin-top--10
+                                 ui-color--orange
+                                 ui-cursor--pointer
+                                 header__login" id="signButton"></span>
                 </td>
                 <!-- search column -->
                 <td class="ui-search-column">
@@ -52,7 +60,7 @@
                     </div>
                 </td>
                 <!-- sign in column -->
-                <td class="ui-width--230">
+                <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
                     <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
                     <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
                 </td>
@@ -188,6 +196,42 @@
                             </div>
                         </div>
                         <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__content ui-text-align--center">
+                                <a href="#reviews" class="ui-font-size--18
+                                                          ui-color--gray 
+                                                          ui-font-size--22 
+                                                          ui-display--block 
+                                                          ui-margin-top--10">
+                                    <span class="ui-color--green fa fa-comments-o ui-font-size--30"></span> 
+                                    5 reviews
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__content ui-text-align--center">
+                                <a href="#reviews" class="ui-font-size--18
+                                                          ui-color--gray 
+                                                          ui-font-size--22 
+                                                          ui-display--block 
+                                                          ui-margin-top--10">
+                                    <span class="ui-color--green fa fa-exclamation-triangle ui-font-size--30"></span> 
+                                    Report a store
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
+                            <div class="ui-panel__content ui-text-align--center">
+                                <a href="#reviews" class="ui-font-size--18
+                                                          ui-color--gray 
+                                                          ui-font-size--22 
+                                                          ui-display--block 
+                                                          ui-margin-top--10">
+                                    <span class="ui-color--green fa fa-paper-plane ui-font-size--30"></span> 
+                                    Submit a coupon
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui-panel ui-panel--favorite">
                             <div class="ui-panel__header">
                                 <span class="ui-font-size--22 ui-font--medium ui-color--green">Cash Back Terms</span>
                             </div>
@@ -210,7 +254,7 @@
                                     <p class="clear ui-height--5"></p>
 
                                     <span class="ui-font-size--13">At Old Navy, there are endless ways to spruce up your style and do it affordably. On top of already low prices, you’ll score big savings when you use your Old Navy Credit Card for in-store or online purchases. Combine these card perks with Ebates Cash Back and unbeatable clothing coupon and promo codes to make every dollar count. Find the latest and greatest deals on discount school uniforms, sleepwear, activewear and swimwear while saving even more on everything with Cash Back at Ebates. Special clearance pricing paired with money-saving rewards makes Old Navy the perfect destination for every family looking for modern clothes for everyone at a price that everyone can afford and that everyone will love.</span>
-                                    <label class="ui-read-more ui-background--white ui-font-size--13 ui-color--blue  ui-cursor--pointer">Read More +</label>
+                                    <a href="#description" class="ui-read-more-link ui-background--white ui-font-size--13 ui-color--blue  ui-cursor--pointer">Read More +</a>
                                     <label class="ui-read-less ui-background--white ui-font-size--13 ui-color--blue ui-text-align--right ui-display--none ui-cursor--pointer">Read Less -</label>
                             </div>
                         </div>
@@ -224,6 +268,19 @@
                                 <a href="#" class="ui-font-size--14 ui-color--red ui-font--bold">Shop Old Navy with 6.0% Cash Back</a>
                             </div>
                         </div>
+
+                        <div class="ui-panel ui-panel--favorite ui-margin--center" >
+                                <div class="ui-panel__header ui-margin-top--10 ui-margin-bottom--7">
+                                    <span class="ui-font-size--20 ui-color--gray ui-font--medium">Featured Stores</span>
+                                </div>
+                                <div class="ui-panel__content ui-separator--top-gray">
+                                    <a class="ui-commandlink ui-line-height--30 ui-margin-top--8 ui-display--block ui-font-size--17 ui-color--blue" href="#">Target</a>
+                                    <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">America Eagle</a>
+                                    <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">Nordstrom</a>
+                                    <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">Macy's</a>
+                                    <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">Kohl's</a>
+                                </div>
+                            </div>
                     </td>
                     <td class="ui-panelgrid__cell--content">
                         <label class="ui-font-size--35 ui-color--dark-gray ui-margin-top--12 ui-display--block ui-text--wrap">Hotels.com Coupon Code Discounts & Coupons</label>
@@ -448,127 +505,132 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Description block  -->
+                        <div class="ui-padding--15 ui-border" id="description">
+                            <span class="ui-font-size--20 ui-font--medium ui-display--block ui-margin-bottom--15">About Old Navy Coupons, Deals and Cash Back</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem eius! Corporis est ut eius dolore. Eos animi ullam quas atque similique. Voluptas, possimus earum voluptatum natus maiores optio amet.</p>
+                        </div>
+                        <!-- Reviews block -->
+         <div class="stores-reviews"  id="reviews">
+                <div class="clr stores-reviews__heading">
+                   <span class="ui-font-size--22 ui-float--left"><span class="ui-color--green fa fa-comments-o"></span> Here you can leave some feedback</span>
+                   <span id="leaveFeedback" class="ui-float--right stores-reviews__leave"><span class="fa fa-pencil-square-o"></span> Leave a feedback</span>
+               </div>
+               <p class="ui-font--bold ui-padding--10 ui-display--none" id="unregFeedback">Please, <a href="#" class="modal__link" id="loginMessage">log in</a> to leave a feedback</p>
+               <!-- One review begins -->
+               <div class="stores-reviews__review">
+                   <div class="clr">
+                           <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
+                           <span class="stores-reviews__date ui-float--right">05/02/2018</span>
+                   </div>
+                   <br>
+                   <div class="stores-reviews__rate-title">
+                       <span class="stores-reviews__rate stores-reviews__rate--5">
+                           <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
+                           <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
+                           <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
+                           <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
+                           <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
+                       </span>
+                       <span class="ui-font--bold ui-margin-left--10">Review title</span>
+                   </div>
+                   <p class="stores-reviews__description">Very good!</p>
+               </div>
+               <!-- End of one review  -->
+               <!-- One review begins -->
+               <div class="stores-reviews__review">
+                       <div class="clr">
+                               <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
+                               <span class="stores-reviews__date ui-float--right">05/02/2018</span>
+                       </div>
+                       <br>
+                       <div class="stores-reviews__rate-title">
+                           <span class="stores-reviews__rate stores-reviews__rate--4">
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
+                           </span>
+                           <span class="ui-font--bold ui-margin-left--10">Review title</span>
+                       </div>
+                       <p class="stores-reviews__description">Good!</p>
+                   </div>
+                   <!-- End of one review  -->
+                   <!-- One review begins -->
+               <div class="stores-reviews__review">
+                       <div class="clr">
+                               <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
+                               <span class="stores-reviews__date ui-float--right">05/02/2018</span>
+                       </div>
+                       <br>
+                       <div class="stores-reviews__rate-title">
+                           <span class="stores-reviews__rate stores-reviews__rate--3">
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
+                           </span>
+                           <span class="ui-font--bold ui-margin-left--10">Review title</span>
+                       </div>
+                       <p class="stores-reviews__description">Average</p>
+                   </div>
+                   <!-- End of one review  -->
+                   <!-- One review begins -->
+               <div class="stores-reviews__review">
+                       <div class="clr">
+                               <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
+                               <span class="stores-reviews__date ui-float--right">05/02/2018</span>
+                       </div>
+                       <br>
+                       <div class="stores-reviews__rate-title">
+                           <span class="stores-reviews__rate stores-reviews__rate--2">
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
+                           </span>
+                           <span class="ui-font--bold ui-margin-left--10">Review title</span>
+                       </div>
+                       <p class="stores-reviews__description">Bad!</p>
+                   </div>
+                   <!-- End of one review  -->
+                   <!-- One review begins -->
+               <div class="stores-reviews__review">
+                       <div class="clr">
+                               <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
+                               <span class="stores-reviews__date ui-float--right">05/02/2018</span>
+                       </div>
+                       <br>
+                       <div class="stores-reviews__rate-title">
+                           <span class="stores-reviews__rate stores-reviews__rate--1">
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
+                               <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
+                           </span>
+                           <span class="ui-font--bold ui-margin-left--10">Review title</span>
+                       </div>
+                       <p class="stores-reviews__description">Very bad!</p>
+                   </div>
+                   <!-- End of one review  -->
+                   <!-- Reviews pagination -->
+                   <div class="stores-reviews__pagination">
+                       <a class="stores-reviews__pag-link stores-reviews__pag-link--disabled stores-reviews__pag-prev"><span class="fa fa-angle-left"></span> Previous</a>
+                       <a href="#" class="stores-reviews__pag-link stores-reviews__pag-link--current">1</a>
+                       <a href="#" class="stores-reviews__pag-link">2</a>
+                       <a href="#" class="stores-reviews__pag-link">3</a>
+                       <a href="#" class="stores-reviews__pag-link stores-reviews__pag-next">Next <span class="fa fa-angle-right"></span></a>
+                   </div>
+                   <!-- End of the reviews -->
+           </div>
                     </td>
                 </tr>
               </tbody>
          </table>
-         <!-- Reviews block -->
-         <div class="stores-reviews">
-             <div class="clr stores-reviews__heading">
-                <span class="ui-font-size--22 ui-float--left"><span class="ui-color--green fa fa-comments-o"></span> Here you can leave some feedback</span>
-                <span id="leaveFeedback" class="ui-float--right stores-reviews__leave"><span class="fa fa-pencil-square-o"></span> Leave a feedback</span>
-            </div>
-            <p class="ui-font--bold ui-padding--10 ui-display--none" id="unregFeedback">Please, <a href="#" class="modal__link" id="loginMessage">log in</a> to leave a feedback</p>
-            <!-- One review begins -->
-            <div class="stores-reviews__review">
-                <div class="clr">
-                        <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
-                        <span class="stores-reviews__date ui-float--right">05/02/2018</span>
-                </div>
-                <br>
-                <div class="stores-reviews__rate-title">
-                    <span class="stores-reviews__rate stores-reviews__rate--5">
-                        <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
-                        <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
-                        <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
-                        <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
-                        <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
-                    </span>
-                    <span class="ui-font--bold ui-margin-left--10">Review title</span>
-                </div>
-                <p class="stores-reviews__description">Very good!</p>
-            </div>
-            <!-- End of one review  -->
-            <!-- One review begins -->
-            <div class="stores-reviews__review">
-                    <div class="clr">
-                            <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
-                            <span class="stores-reviews__date ui-float--right">05/02/2018</span>
-                    </div>
-                    <br>
-                    <div class="stores-reviews__rate-title">
-                        <span class="stores-reviews__rate stores-reviews__rate--4">
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
-                        </span>
-                        <span class="ui-font--bold ui-margin-left--10">Review title</span>
-                    </div>
-                    <p class="stores-reviews__description">Good!</p>
-                </div>
-                <!-- End of one review  -->
-                <!-- One review begins -->
-            <div class="stores-reviews__review">
-                    <div class="clr">
-                            <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
-                            <span class="stores-reviews__date ui-float--right">05/02/2018</span>
-                    </div>
-                    <br>
-                    <div class="stores-reviews__rate-title">
-                        <span class="stores-reviews__rate stores-reviews__rate--3">
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
-                        </span>
-                        <span class="ui-font--bold ui-margin-left--10">Review title</span>
-                    </div>
-                    <p class="stores-reviews__description">Average</p>
-                </div>
-                <!-- End of one review  -->
-                <!-- One review begins -->
-            <div class="stores-reviews__review">
-                    <div class="clr">
-                            <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
-                            <span class="stores-reviews__date ui-float--right">05/02/2018</span>
-                    </div>
-                    <br>
-                    <div class="stores-reviews__rate-title">
-                        <span class="stores-reviews__rate stores-reviews__rate--2">
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
-                        </span>
-                        <span class="ui-font--bold ui-margin-left--10">Review title</span>
-                    </div>
-                    <p class="stores-reviews__description">Bad!</p>
-                </div>
-                <!-- End of one review  -->
-                <!-- One review begins -->
-            <div class="stores-reviews__review">
-                    <div class="clr">
-                            <span class="stores-reviews__username ui-float--left"><span class="fa fa-user-circle"></span> Parapapa</span>
-                            <span class="stores-reviews__date ui-float--right">05/02/2018</span>
-                    </div>
-                    <br>
-                    <div class="stores-reviews__rate-title">
-                        <span class="stores-reviews__rate stores-reviews__rate--1">
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--1"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--2"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--3"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--4"></span>
-                            <span class="fa fa-star stores-reviews__star stores-reviews__star--5"></span>
-                        </span>
-                        <span class="ui-font--bold ui-margin-left--10">Review title</span>
-                    </div>
-                    <p class="stores-reviews__description">Very bad!</p>
-                </div>
-                <!-- End of one review  -->
-                <!-- Reviews pagination -->
-                <div class="stores-reviews__pagination">
-                    <a class="stores-reviews__pag-link stores-reviews__pag-link--disabled stores-reviews__pag-prev"><span class="fa fa-angle-left"></span> Previous</a>
-                    <a href="#" class="stores-reviews__pag-link stores-reviews__pag-link--current">1</a>
-                    <a href="#" class="stores-reviews__pag-link">2</a>
-                    <a href="#" class="stores-reviews__pag-link">3</a>
-                    <a href="#" class="stores-reviews__pag-link stores-reviews__pag-next">Next <span class="fa fa-angle-right"></span></a>
-                </div>
-                <!-- End of the reviews -->
-        </div>
         <!--end of panelgrid (layout)-->
         <div class="ui-panel">
             <div class="ui-panel__content">
@@ -580,21 +642,8 @@
         <table class="ui-panelgrid ui-table-layout--fixed ui-panelgrid--layout ui-width--full">
             <tbody>
                 <tr>
-                    <td class="ui-panelgrid__cell--ad">
-                        <div class="ui-panel ui-width--200 ui-margin--center" >
-                            <div class="ui-panel__header ui-margin-top--10 ui-margin-bottom--7">
-                                <span class="ui-font-size--20 ui-color--gray ui-font--medium">Featured Stores</span>
-                            </div>
-                            <div class="ui-panel__content ui-separator--top-gray">
-                                <a class="ui-commandlink ui-line-height--30 ui-margin-top--8 ui-display--block ui-font-size--17 ui-color--blue" href="#">Target</a>
-                                <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">America Eagle</a>
-                                <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">Nordstrom</a>
-                                <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">Macy's</a>
-                                <a class="ui-commandlink ui-line-height--30 ui-display--block ui-font-size--17 ui-color--blue" href="#">Kohl's</a>
-                            </div>
-                        </div>
-                    </td>
                     <td class="ui-panelgrid__cell--content">
+                        <!-- You might also like block -->
                         <div class="ui-panel">
                             <div class="ui-panel__header ui-margin-top--10 ui-margin-bottom--7">
                                 <span class="ui-font-size--15 ui-color--gray ui-line-height--27 ui-font--medium">You might also like</span>
@@ -911,10 +960,44 @@
 <!-- help button -->
 <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
 <!-- scripts -->
+<div class="overlay"></div>
+<div class="modal modal-coupon-login clr">
+        <p class="ui-font-size--40">Login or register</p>
+    <div class="modal__caption">
+        <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
+        <p>To get a cashback please register below</p>
+        <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
+    </div>
+    <form action="" method="POST" class="grid-2-col__1-of-2">
+        <label for="email" class="ui-font--bold">EMAIL:</label><br>
+        <input class="modal__input-t" type="email" name="email" id="email"><br>
+        <label for="password" class="ui-font--bold">PASSWORD:</label><br>
+        <input class="modal__input-t" type="password" name="password" id="password"><br>
+        <a href="#" class="modal__link">I forgot my password</a> <br>
+        <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
+        <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
+    </form>
+    <div class="grid-2-col__1-of-2">
+        <div class="modal-coupon-login__or">or</div>
+        <div class="modal-coupon-login__socials">
+                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
+                    <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
+                    Login with Facebook
+                </a> <br>
+                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
+                    <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
+                        Login with Google Plus
+                </a>
+        </div>
+    </div>
+    <a href="#" class="modal__link modal-coupon-login__without-cb">No thanks, continue without cahsback</a>
+    <button class="modal__close-btn fa fa-close"></button>
+</div>
 
 <script src="js/expand-text.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
+<script src="js/modal.js"></script>
 <script>
     $("#loginForm").validate();
     $("#registerForm").validate();
@@ -962,6 +1045,11 @@
 
     $("#leaveFeedback").on("click", function(){
         $("#unregFeedback").slideToggle(200);
+    });
+
+    setTimeout(function(){
+        $(".modal-coupon-login").fadeIn();
+        $(".overlay").fadeIn();
     })
 </script>
 <!-- end of page footer -->
