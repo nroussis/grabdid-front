@@ -70,14 +70,17 @@
 @include width_base_class(padding-bottom,25);
 
 //Set element's full padding
-.ui-padding--20 {
-  padding: 20px;
-}
-
 .ui-padding--10 {
   padding: 10px;
 }
 
+.ui-padding--15 {
+  padding: 15px;
+}
+
+.ui-padding--20 {
+  padding: 20px;
+}
 //set element margin top to 10 example .ui-margin-top--10
 @include width_base_class(margin-top,5);
 @include width_base_class(margin-top,8);
