@@ -52,6 +52,7 @@
 @include width_base_class(padding-left,30);
 @include width_base_class(padding-left,60);
 
+
 //set element padding right to 30 example .ui-padding-right--30
 @include width_base_class(padding-right,10);
 @include width_base_class(padding-right,20);
@@ -442,6 +443,13 @@
   box-sizing: content-box;
 }
 
+.ui-margin-m1em-b {
+  margin-bottom: -1em;
+}
+
+.ui-padding-left--1em {
+  padding-left: 1em;
+}
 
 
 //Styles for sticky block in all-stores page
