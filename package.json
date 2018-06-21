@@ -28,6 +28,7 @@
     "footable": "^2.0.6",
     "jquery": "^3.2.1",
     "owl.carousel": "^2.3.4",
+    "stickyfilljs": "^2.0.5",
     "tablesorter": "^2.30.5"
   }
 }
