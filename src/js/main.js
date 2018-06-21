@@ -46,7 +46,7 @@ $(window).bind('scroll', function () {
         btnTop.fadeOut(500);
     }
 });
-var elements = document.querySelectorAll('.sticky');
+var elements = document.querySelectorAll('.sticky-header');
 Stickyfill.add(elements);
 
 
