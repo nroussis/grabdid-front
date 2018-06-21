@@ -32,11 +32,12 @@ btnTop.on('click', function(){
         }, 700
     );
 });
+
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > 94) {
-        $('body').addClass('ui-fixed');
+        $('.sticky-header').addClass('sticky-header-shadow');
     } else {
-        $('body').removeClass('ui-fixed');
+        $('.sticky-header').removeClass('sticky-header-shadow');
     }
     if($(window).scrollTop() > 300) {
         btnTop.fadeIn(500);
@@ -45,6 +46,10 @@ $(window).bind('scroll', function () {
         btnTop.fadeOut(500);
     }
 });
+var elements = document.querySelectorAll('.sticky');
+Stickyfill.add(elements);
+
+
 
 var forEachAccordion = Array.prototype.forEach;
 var accordionHeaders = document.getElementsByClassName("ui-accordion__header");
