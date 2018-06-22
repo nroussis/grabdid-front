@@ -1,0 +1,30 @@
+//Tooltip for favorite button
+.tt {
+    &__fav {
+        &::after {
+            content: "Add to favorites";
+            position: absolute;
+            width: 115px;
+            bottom: -40px;
+            left: -7px;
+            background: white;
+            border: 1px solid $block_border_color;
+            border-left: none;
+            padding: 5px;
+            color: black;
+            font-size: 14px;
+            display: none;
+        }
+
+        &:hover {
+            &::after {
+                display: block;
+            }
+        }
+    }
+    
+
+    &-r {
+        position: relative;
+    }
+}

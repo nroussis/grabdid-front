@@ -455,7 +455,7 @@
 //Styles for sticky block in all-stores page
 .sticky {
   position: fixed;
-  z-index: 0;
+  z-index: -1;
   margin-top: 110px;
 }
 .stop {
