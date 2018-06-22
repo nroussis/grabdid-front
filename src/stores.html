@@ -46,7 +46,7 @@
                                 <p class="clear"></p>
                                 <span class="ui-color--red ui-font-size--22 ui-font--bold">6.0% Cash Back</span>
                                 <p class="clear"></p>
-                                <button class="ui-border--none ui-button--red ui-button ui-font-size--17 ui-color--white ui-width--230 ui-margin-top--8">Shop Now</button>
+                                <button class="ui-border--none ui-button--red ui-button ui-font-size--17 ui-color--white ui-width--230 ui-margin-top--8 js-shop-now-login">Shop Now</button>
                             </div>
 
                         </div>
@@ -850,8 +850,11 @@
 
 <!-- help button -->
 <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
-<!-- scripts -->
+<!-- Login popup -->
 //= template/popup-coupon-not-registered.html
+
+<!-- scripts -->
+
 
 <script src="js/expand-text.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -906,10 +909,7 @@
         $("#unregFeedback").slideToggle(200);
     });
 
-    setTimeout(function(){
-        $(".modal-coupon-login").fadeIn();
-        $(".overlay").fadeIn();
-    })
+
 </script>
 <!-- end of page footer -->
 </body>

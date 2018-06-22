@@ -179,3 +179,8 @@ $(function () {
     });
 });
 
+$(".js-shop-now-login").click(function(e){
+    e.preventDefault();
+    $(".modal-coupon-login").fadeIn();
+    $(".overlay").fadeIn();
+});

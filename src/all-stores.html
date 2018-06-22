@@ -289,7 +289,7 @@
                         <p class="grid-3-col__1-of-3 stores__coupons">1 coupon</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">1.0% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
@@ -302,7 +302,7 @@
                         <p class="grid-3-col__1-of-3 stores__coupons">No coupons available</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">1.0% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
@@ -315,7 +315,7 @@
                         <p class="grid-3-col__1-of-3 stores__coupons">2 coupons</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">4.6% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
@@ -328,7 +328,7 @@
                         <p class="grid-3-col__1-of-3 stores__coupons">2 coupons</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">4.6% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
@@ -631,6 +631,8 @@
 
 <!-- help button -->
 <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
+<!-- Login popup -->
+//= template/popup-coupon-not-registered.html
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
@@ -695,12 +697,45 @@
           $(this).toggleClass("stores-sidebar__cat-open--checked");
       })
 
+       document.addEventListener("click", function(e){
+            if (e.target.parentNode.parentNode.id === 'shipping-filter'){
+            e.preventDefault();
+            var val = document.querySelector(".sorting-shipping__value");
+            var alpha = document.querySelector(".alpha");
+
+            if (e.target.textContent === 'Greece') {
+                val.classList.add('sorting-shipping__value--greece');
+                val.classList.remove('sorting-shipping__value--cyprus');
+                val.classList.remove('sorting-shipping__value--ww');
+                alpha.classList.add('alpha--greece');
+                alpha.classList.remove('alpha--cyprus');
+                alpha.classList.remove('alpha--ww');
+            } else if (e.target.textContent === 'Cyprus') {
+                val.classList.remove('sorting-shipping__value--greece');
+                val.classList.add('sorting-shipping__value--cyprus');
+                val.classList.remove('sorting-shipping__value--ww');
+                alpha.classList.remove('alpha--greece');
+                alpha.classList.add('alpha--cyprus');
+                alpha.classList.remove('alpha--ww');
+            } else {
+                val.classList.remove('sorting-shipping__value--greece');
+                val.classList.remove('sorting-shipping__value--cyprus');
+                val.classList.add('sorting-shipping__value--ww');
+                alpha.classList.remove('alpha--greece');
+                alpha.classList.remove('alpha--cyprus');
+                alpha.classList.add('alpha--ww');
+            }
+        }
+
+        });
+
     });
 </script>
 <script src="js/sticky_all_stores.js"></script>
 <script src="js/all-items-sort.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/carousel.js"></script>
+<script src="js/modal.js"></script>
 <!-- end of page footer -->
 </body>
 </html>
