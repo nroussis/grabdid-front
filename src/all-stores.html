@@ -30,6 +30,9 @@
             <div class="ui-panel__header">
 
             </div>
+            <div class="ui-margin-m1em-b ui-padding-left--1em ui-padding-bottom--10">
+                //= template/breadcrumbs.html
+            </div>
             <div class="ui-panel__content ui-position--relative ui-overflow--hidden ui-height--85 u-box-sizing--cb">
                 <span class="ui-font--medium ui-font-size--24">Stores with Cash Back, Coupons & Promo Codes</span>
                 <p class="clear ui-height--8"></p>
@@ -279,53 +282,53 @@
                 <ul id = "stores-list" class="stores__items">
                   <!-- One store item begin -->
                   <li class="stores__item stores__item--paginated liter_A" data-store-id="1">
-                    <span class="stores__fav-but"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="stores__fav-but tt__fav"><i class="fa fa-heart" aria-hidden="true"></i></span>
                     <div class="grid-4-col stores__item-block">
                       <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
                         <p class="grid-3-col__1-of-3 stores__item-name">A Pea in the Pod</p>
                         <p class="grid-3-col__1-of-3 stores__coupons">1 coupon</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">1.0% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
                   <!-- One store item begin -->
                   <li class="stores__item stores__item--paginated liter_B" data-store-id="1">
-                    <span class="stores__fav-but stores__fav-but--checked"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="stores__fav-but stores__fav-but--checked tt__fav"><i class="fa fa-heart" aria-hidden="true"></i></span>
                     <div class="grid-4-col stores__item-block">
                       <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
                         <p class="grid-3-col__1-of-3 stores__item-name">Big Bad Bong</p>
                         <p class="grid-3-col__1-of-3 stores__coupons">No coupons available</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">1.0% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
                   <!-- One store item begin -->
                   <li class="stores__item stores__item--paginated liter_C" data-store-id="1">
-                    <span class="stores__fav-but"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="stores__fav-but tt__fav"><i class="fa fa-heart" aria-hidden="true"></i></span>
                     <div class="grid-4-col stores__item-block">
                       <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
                         <p class="grid-3-col__1-of-3 stores__item-name">Clever city cat</p>
                         <p class="grid-3-col__1-of-3 stores__coupons">2 coupons</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">4.6% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
                   <!-- One store item begin -->
                   <li class="stores__item stores__item--paginated liter_1" data-store-id="1">
-                    <span class="stores__fav-but"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="stores__fav-but tt__fav"><i class="fa fa-heart" aria-hidden="true"></i></span>
                     <div class="grid-4-col stores__item-block">
                       <a href="#" class="grid-3-col grid-4-col__3-of-4 stores__link">
                         <p class="grid-3-col__1-of-3 stores__item-name">1337 Store</p>
                         <p class="grid-3-col__1-of-3 stores__coupons">2 coupons</p>
                         <p class="grid-3-col__1-of-3 stores__cashback">4.6% Cash Back</p>
                       </a>
-                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn">Shop Now</a>
+                      <a href="#" class="grid-4-col__1-of-4 ui-text-align--right stores__shop-btn js-shop-now-login">Shop Now</a>
                     </div>
                   </li>
                   <!-- One store item end -->
@@ -628,6 +631,8 @@
 
 <!-- help button -->
 <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
+<!-- Login popup -->
+//= template/popup-coupon-not-registered.html
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
@@ -692,12 +697,45 @@
           $(this).toggleClass("stores-sidebar__cat-open--checked");
       })
 
+       document.addEventListener("click", function(e){
+            if (e.target.parentNode.parentNode.id === 'shipping-filter'){
+            e.preventDefault();
+            var val = document.querySelector(".sorting-shipping__value");
+            var alpha = document.querySelector(".alpha");
+
+            if (e.target.textContent === 'Greece') {
+                val.classList.add('sorting-shipping__value--greece');
+                val.classList.remove('sorting-shipping__value--cyprus');
+                val.classList.remove('sorting-shipping__value--ww');
+                alpha.classList.add('alpha--greece');
+                alpha.classList.remove('alpha--cyprus');
+                alpha.classList.remove('alpha--ww');
+            } else if (e.target.textContent === 'Cyprus') {
+                val.classList.remove('sorting-shipping__value--greece');
+                val.classList.add('sorting-shipping__value--cyprus');
+                val.classList.remove('sorting-shipping__value--ww');
+                alpha.classList.remove('alpha--greece');
+                alpha.classList.add('alpha--cyprus');
+                alpha.classList.remove('alpha--ww');
+            } else {
+                val.classList.remove('sorting-shipping__value--greece');
+                val.classList.remove('sorting-shipping__value--cyprus');
+                val.classList.add('sorting-shipping__value--ww');
+                alpha.classList.remove('alpha--greece');
+                alpha.classList.remove('alpha--cyprus');
+                alpha.classList.add('alpha--ww');
+            }
+        }
+
+        });
+
     });
 </script>
 <script src="js/sticky_all_stores.js"></script>
 <script src="js/all-items-sort.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/carousel.js"></script>
+<script src="js/modal.js"></script>
 <!-- end of page footer -->
 </body>
 </html>

@@ -24,52 +24,55 @@
 
 
 <!-- put header content here -->
+<div class="ui-layout-west sticky-header">
+        <div class="ui-layout-west__content">
+
+                <table class="ui-panelgrid ui-width--full" >
+                    <tbody>
+                    <tr>
+                        <!-- logo column -->
+                        <td class="ui-width--215 header-logo">
+                            <img src="images/logo-t.png" >
+                        <!-- flag column -->
+                            <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
+                                <ul class="flag-dropdown__list">
+                                    <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
+                                    <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
+                                </ul>
+                            </div>
+                            <span class="fa
+                                         fa-sign-in
+                                         ui-font-size--25
+                                         ui-float--right
+                                         ui-margin-top--10
+                                         ui-color--orange
+                                         ui-cursor--pointer
+                                         header__login" id="signButton"></span>
+                        </td>
+                        <!-- search column -->
+                        <td class="ui-search-column">
+                            <div class="ui search ui-inputfield ui-inputfield--search">
+                                <input class="prompt" type="text" placeholder="Search"/>
+                                <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
+                                    <span class="ui-icon ui-icon--search"></span>
+                                </button>
+                                <div class="results"></div>
+                            </div>
+                        </td>
+                        <!-- sign in column -->
+                        <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
+                            <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
+                            <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
+                        </td>
+        
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- end of panelgrid -->
+            </div>
+</div>
 <div class="ui-layout-west">
-    <div class="ui-layout-west__content">
-
-        <table class="ui-panelgrid ui-width--full" >
-            <tbody>
-            <tr>
-                <!-- logo column -->
-                <td class="ui-width--215 header-logo">
-                    <img src="images/logo-t.png" >
-                <!-- flag column -->
-                    <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
-                        <ul class="flag-dropdown__list">
-                            <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
-                            <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
-                        </ul>
-                    </div>
-                    <span class="fa
-                                 fa-sign-in
-                                 ui-font-size--25
-                                 ui-float--right
-                                 ui-margin-top--10
-                                 ui-color--orange
-                                 ui-cursor--pointer
-                                 header__login" id="signButton"></span>
-                </td>
-                <!-- search column -->
-                <td class="ui-search-column">
-                    <div class="ui search ui-inputfield ui-inputfield--search">
-                        <input class="prompt" type="text" placeholder="Search"/>
-                        <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
-                            <span class="ui-icon ui-icon--search"></span>
-                        </button>
-                        <div class="results"></div>
-                    </div>
-                </td>
-                <!-- sign in column -->
-                <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
-                    <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
-                    <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
-                </td>
-
-            </tr>
-            </tbody>
-        </table>
-        <!-- end of panelgrid -->
-    </div>
+    
     <!-- footer inside of west layout -->
     <div class="ui-layout-west__footer menu">
         <div class="ui-footer__content">
@@ -136,6 +139,7 @@
 </div>
 <!-- end of layout-west -->
 <script src="js/flag.js"></script>
+<script src="js/stickyfill.min.js"></script>
 <!-- put main content here -->
 <div class="ui-layout-center">
     <div class="ui-layout-center__content">
@@ -282,7 +286,17 @@
                             </div>
                     </td>
                     <td class="ui-panelgrid__cell--content">
-                        <label class="ui-font-size--35 ui-color--dark-gray ui-margin-top--12 ui-display--block ui-text--wrap">Hotels.com Coupon Code Discounts & Coupons</label>
+                        <label class="ui-font-size--35 ui-color--dark-gray ui-margin-top--12 ui-display--block ui-text--wrap">
+                            <div class="breadcrumbs">
+                                <ul class="breadcrumbs__crumbs">
+                                    <li class="breadcrumbs__crumb"><a href="#" class="breadcrumbs__crumb-link">Bread</a></li>
+                                    <li class="breadcrumbs__crumb"><a href="#" class="breadcrumbs__crumb-link">Crumb</a></li>
+                                    <li class="breadcrumbs__crumb"><a href="#" class="breadcrumbs__crumb-link">Crumb 2</a></li>
+                                    <li class="breadcrumbs__crumb"><a class="breadcrumbs__crumb-link breadcrumbs__crumb-link--current">You are here</a></li>
+                                </ul>
+                            </div>
+                            Hotels.com Coupon Code Discounts & Coupons
+                        </label>
 
                         <div class="ui divided items">
                             <div class="item ui-item--promo">
@@ -965,6 +979,40 @@
 
 <!-- help button -->
 <a href="#" class="helpLink ui-button ui-button--green"><span class="fa fa-question-circle"></span> Help</a>
+<!-- Login popup -->
+<div class="overlay"></div>
+<div class="modal modal-coupon-login clr">
+        <p class="ui-font-size--40">Login or register</p>
+    <div class="modal__caption">
+        <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
+        <p>To get a cashback please register below</p>
+        <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
+    </div>
+    <form action="" method="POST" class="grid-2-col__1-of-2">
+        <label for="email" class="ui-font--bold">EMAIL:</label><br>
+        <input class="modal__input-t" type="email" name="email" id="email"><br>
+        <label for="password" class="ui-font--bold">PASSWORD:</label><br>
+        <input class="modal__input-t" type="password" name="password" id="password"><br>
+        <a href="#" class="modal__link">I forgot my password</a> <br>
+        <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
+        <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
+    </form>
+    <div class="grid-2-col__1-of-2">
+        <div class="modal-coupon-login__or">or</div>
+        <div class="modal-coupon-login__socials">
+                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
+                    <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
+                    Login with Facebook
+                </a> <br>
+                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
+                    <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
+                        Login with Google Plus
+                </a>
+        </div>
+    </div>
+    <a href="#" class="modal__link modal-coupon-login__without-cb">No thanks, continue without cahsback</a>
+    <button class="modal__close-btn fa fa-close"></button>
+</div>
 <!-- scripts -->
 
 <script src="js/expand-text.js"></script>

@@ -19,52 +19,55 @@
 </head>
 <body>
     <!-- put header content here -->
+    <div class="ui-layout-west sticky-header">
+            <div class="ui-layout-west__content">
+    
+                    <table class="ui-panelgrid ui-width--full" >
+                        <tbody>
+                        <tr>
+                            <!-- logo column -->
+                            <td class="ui-width--215 header-logo">
+                                <img src="images/logo-t.png" >
+                            <!-- flag column -->
+                                <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
+                                    <ul class="flag-dropdown__list">
+                                        <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
+                                        <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
+                                    </ul>
+                                </div>
+                                <span class="fa
+                                             fa-sign-in
+                                             ui-font-size--25
+                                             ui-float--right
+                                             ui-margin-top--10
+                                             ui-color--orange
+                                             ui-cursor--pointer
+                                             header__login" id="signButton"></span>
+                            </td>
+                            <!-- search column -->
+                            <td class="ui-search-column">
+                                <div class="ui search ui-inputfield ui-inputfield--search">
+                                    <input class="prompt" type="text" placeholder="Search"/>
+                                    <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
+                                        <span class="ui-icon ui-icon--search"></span>
+                                    </button>
+                                    <div class="results"></div>
+                                </div>
+                            </td>
+                            <!-- sign in column -->
+                            <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
+                                <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
+                                <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
+                            </td>
+            
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- end of panelgrid -->
+                </div>
+    </div>
     <div class="ui-layout-west">
-        <div class="ui-layout-west__content">
-    
-            <table class="ui-panelgrid ui-width--full" >
-                <tbody>
-                <tr>
-                    <!-- logo column -->
-                    <td class="ui-width--215 header-logo">
-                        <img src="images/logo-t.png" >
-                    <!-- flag column -->
-                        <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
-                            <ul class="flag-dropdown__list">
-                                <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
-                                <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
-                            </ul>
-                        </div>
-                        <span class="fa
-                                     fa-sign-in
-                                     ui-font-size--25
-                                     ui-float--right
-                                     ui-margin-top--10
-                                     ui-color--orange
-                                     ui-cursor--pointer
-                                     header__login" id="signButton"></span>
-                    </td>
-                    <!-- search column -->
-                    <td class="ui-search-column">
-                        <div class="ui search ui-inputfield ui-inputfield--search">
-                            <input class="prompt" type="text" placeholder="Search"/>
-                            <button class="ui-button ui-position--relative ui-border--none ui-button--green ui-button--search">
-                                <span class="ui-icon ui-icon--search"></span>
-                            </button>
-                            <div class="results"></div>
-                        </div>
-                    </td>
-                    <!-- sign in column -->
-                    <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
-                        <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
-                        <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
-                    </td>
-    
-                </tr>
-                </tbody>
-            </table>
-            <!-- end of panelgrid -->
-        </div>
+        
         <!-- footer inside of west layout -->
         <div class="ui-layout-west__footer menu">
             <div class="ui-footer__content">
@@ -131,6 +134,7 @@
     </div>
     <!-- end of layout-west -->
     <script src="js/flag.js"></script>
+    <script src="js/stickyfill.min.js"></script>
     <!-- put main content here -->
     <div class="ui-layout-center__content">
         <div class="invite">

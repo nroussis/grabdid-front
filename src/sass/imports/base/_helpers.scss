@@ -52,6 +52,7 @@
 @include width_base_class(padding-left,30);
 @include width_base_class(padding-left,60);
 
+
 //set element padding right to 30 example .ui-padding-right--30
 @include width_base_class(padding-right,10);
 @include width_base_class(padding-right,20);
@@ -442,15 +443,33 @@
   box-sizing: content-box;
 }
 
+.ui-margin-m1em-b {
+  margin-bottom: -1em;
+}
+
+.ui-padding-left--1em {
+  padding-left: 1em;
+}
 
 
 //Styles for sticky block in all-stores page
 .sticky {
   position: fixed;
-  z-index: 0;
+  z-index: -1;
   margin-top: 110px;
 }
 .stop {
   position: relative;
   z-index: 0;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 998;
+}
+
+.sticky-header-shadow {
+  box-shadow: 2px 2px 1px 0 rgba(0,0,0,.1);
 }

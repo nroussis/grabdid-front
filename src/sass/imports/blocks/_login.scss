@@ -12,13 +12,16 @@
         float: left;
         cursor: pointer;
         text-align: center;
-        color: white;
-        background: $button_green_bg;
+        background: $gray_svg_bg;
+        color: $black;
         padding: 10px 0;
 
         &--active {
-            background: $gray_svg_bg;
-            color: $black;
+        color: white;
+        background: $button_green_bg;
+        box-shadow: inset 0px -3px 0px darken($button_green_bg, 10%);
+        font-weight: bold;
+        font-size: 17px;
         }
     }
 
