@@ -8,7 +8,7 @@
         var prevBtn = ".pagination__prev";
 
         //3. Set max elements per one "page" 
-        var elsOnPage = 2;
+        var elsOnPage = 3;
 
         //4. Set main container selector to which page will be scrolled when next-prev page called
         var scrollTo = "allcoupons";  //ID here
