@@ -71,13 +71,13 @@ $(".flag-drop__selected").on("click", function(){
 
 $(".flag-drop__item--gr").on("click",function(e){
     e.preventDefault();
-    setCookie('currentFlag', 'gr');
+    setCookie('currentFlag', 'gr', {expires: 999999});
     location.reload(true);
 });
 
 $(".flag-drop__item--cy").on("click",function(e){
     e.preventDefault();
-    setCookie('currentFlag', 'cy');
+    setCookie('currentFlag', 'cy', {expires: 999999});
     location.reload(true);
 });
 
