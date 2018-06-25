@@ -717,7 +717,7 @@
         <p>To get a cashback please register below</p>
         <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
     </div>
-    <form action="" method="POST" class="grid-2-col__1-of-2">
+    <form action="" method="POST" class="grid-2-col__1-of-2 modal__login-form">
         <label for="email" class="ui-font--bold">EMAIL:</label><br>
         <input class="modal__input-t" type="email" name="email" id="email"><br>
         <label for="password" class="ui-font--bold">PASSWORD:</label><br>
@@ -726,9 +726,9 @@
         <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
         <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
     </form>
-    <div class="grid-2-col__1-of-2">
+    <div class="grid-2-col__1-of-2 modal-coupon-login__socials ui-padding-right--20 ui-text-align--center ui-margin-top--25 ui-margin-bottom--15">
         <div class="modal-coupon-login__or">or</div>
-        <div class="modal-coupon-login__socials">
+        <div class="modal-coupon-login__socials clr">
                 <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
                     <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
                     Login with Facebook
@@ -740,7 +740,7 @@
         </div>
     </div>
     <a href="#" class="modal__link modal-coupon-login__without-cb">No thanks, continue without cahsback</a>
-    <button class="modal__close-btn fa fa-close"></button>
+    <!-- <button class="modal__close-btn fa fa-close"></button> -->
 </div>
 <!--end of page footer-->
 
@@ -981,14 +981,21 @@
         // });
 
         $(".coupon__modal-print-btn").on("click", function(){
+          var isIE = /*@cc_on!@*/false || !!document.documentMode;
+          var ieHelp = "<p class='printhide'> Please, press CTRL + P to print the page </p>";
           var w = window.open();
           var printOne = ($(this).parent()).html();
-          var printingStyles = '<style> body { text-align: center }  .coupon__modal-print-btn {display: none} </style>';
+          var printingStyles = '<style> body { text-align: center }  .coupon__modal-print-btn {display: none} @media print {.printhide {display: none}} </style>';
           var printingTitle = $(this).parent().parent().find(".coupon__modal-show-this").text();
-          w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
-          w.window.print();
-          w.close();
-          return false;
+          
+          if (isIE) {
+            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />' + ieHelp ) + '</body></html>';
+          } else {
+            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
+            w.window.print();
+            w.close();
+            return false;
+        }
       });
 
     

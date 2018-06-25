@@ -23,8 +23,11 @@
 </head>
 <body>
 <!-- put header content here -->
+
 //= template/header.html
+
 <!-- put main content here -->
+
 <div class="ui-layout-center">
     <div class="ui-layout-center__content">
         <div class="ui-panel ui-panel--all-stores">
@@ -45,8 +48,10 @@
         <div class="ui-margin-top--12 ui-margin-bottom--11">
             <span class="ui-font-size--20 ui-font--light">Today’s Recommended Coupons</span>
         </div>
+
 <!--        Here is the recommended shops block -->
-       <div class="grid-6-col stores-recommended owl-carousel owl-theme" id="owlCarousel">
+
+        <div class="grid-6-col stores-recommended owl-carousel owl-theme" id="owlCarousel">
            <div class="grid-6-col__1-of-6">
             <a href="#" class="stores-recommended__rec">
                <img src="images/macys_100x27.gif" alt="store_logo" class="stores-recommended__logo">
@@ -188,14 +193,21 @@
            </div>
          </div>
        </div>
+       
        <!-- End of sidebar -->
-         <div class="grid-3-5-col__2x1-of-3-5 allstores">
-           <!-- Header, category name -->
-           <div class="allstores__heading">
+       
+       <div class="grid-3-5-col__2x1-of-3-5 allstores">
+       
+        <!-- Header, category name -->
+       
+        <div class="allstores__heading">
              <p class="allstores__heading-paragraph ui-font-size--20" id="allcoupons">All Coupons</p>
-              <!-- Sorting selects here  -->
-              <!-- Sorting by shipping -->
-              <div class="allstores__sorting sorting-shipping">
+       
+             <!-- Sorting selects here  -->
+       
+             <!-- Sorting by shipping -->
+       
+             <div class="allstores__sorting sorting-shipping">
                 <ul class="allstores__sorting-wrapper">
                   <li class="sorting-shipping__value sorting-shipping__value--ww">Shipping</li>
                   <span class="allstores__arrowdown"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
@@ -206,7 +218,9 @@
                   </ul>
                 </ul>
               </div>
+       
               <!-- Sorting by alphabet, popularity and cash-back -->
+       
               <div class="allstores__sorting sorting-general">
                 <ul class="allstores__sorting-wrapper">
                   <li>Sort by</li>
@@ -219,8 +233,11 @@
                 </ul>
               </div>
            </div>
+        
            <!-- End of allstores header -->
+        
            <!-- Literal sorting -->
+        
            <div class="allstores__alpha alpha alpha--ww" id="alpha">
              <span class="alpha__filter alpha__ALL ui-margin-right--25 alpha__filter--checked" data-l="all">ALL</span>
              <span class="alpha__break"><br></span>
@@ -278,10 +295,13 @@
              <span class="alpha__break"><br></span>
              <span class="alpha__filter alpha__0 ui-float--right" data-l="num">0-9</span>
            </div>
+
            <!-- List of coupons starts here -->
-                <div class="coupons__list">
+
+           <div class="coupons__list">
 
                     <!-- One coupon start -->
+
                     <div class="coupon coupon--paginated coupon-5" data-coupon-object="https://ebay.com">
                             <div class="coupon__logo-wrapper">
                                 <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
@@ -317,14 +337,15 @@
                                                 <span class="ui-font--bold coupon__modal-code-text" id="coupon">ABABABABA</span>
                                                 <button class="coupon__modal-copy-btn" data-clipboard-target="#coupon" data-clipboard-action="copy">Copy Code</button>
                                             </div>
-                                            <!-- <a href="https://ebay.com" target="_blank" class="modal__link ui-font-size--19">Continue to www.ebay.com 
-                                                <span class="fa fa-angle-right ui-font--bold"></span>
-                                            </a> -->
                                         </div>
                                         <div class="coupon__modal-login ui-text-align--center">
-                                            <p class="ui-text-align--center ui-margin-30-0 ui-font-size--19">For cashback you need to Log In or <span class="modal__link">Register</span></p>
+                                            <div class="modal__caption">
+                                                    <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
+                                                    <p>To get a cashback please login below</p>
+                                                    <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
+                                                </div>
                                             <div class="clr ui-margin-bottom--15">
-                                                <form action="" method="POST" class="grid-2-col__1-of-2">
+                                                <form action="" method="POST" class="grid-2-col__1-of-2 modal__login-form">
                                                     <label for="email" class="ui-font--bold">EMAIL:</label><br>
                                                     <input class="modal__input-t" type="email" name="email" id="email"><br>
                                                     <label for="password" class="ui-font--bold">PASSWORD:</label><br>
@@ -333,17 +354,15 @@
                                                     <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
                                                     <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
                                                 </form>
-                                                <div class="grid-2-col__1-of-2">
-                                                    <div class="modal-coupon-login__socials ui-padding-right--20">
-                                                            <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
-                                                                <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
-                                                                Login with Facebook
-                                                            </a> <br>
-                                                            <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
-                                                                <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
-                                                                    Login with Google Plus
-                                                            </a>
-                                                    </div>
+                                                <div class="grid-2-col__1-of-2 modal-coupon-login__socials ui-padding-right--20">
+                                                    <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
+                                                        <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
+                                                        Login with Facebook
+                                                    </a> <br>
+                                                    <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
+                                                        <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
+                                                            Login with Google Plus
+                                                    </a>
                                                 </div>
                                             </div>
                                             <a href="https://ebay.com" class="modal__link ui-font-size--22 ui-margin-bottom--15 ui-display--block" target="_blank">No thanks, continue without cahsback <span class="fa fa-angle-right ui-font--bold"></span></a>
@@ -354,9 +373,11 @@
                                     </div>
                             </div>
                     </div>
+
                     <!-- One coupon end -->
 
                     <!-- One coupon start -->
+
                     <div class="coupon coupon--paginated coupon-1" data-coupon-object="https://ebay.com">
                         <div class="coupon__logo-wrapper">
                             <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
@@ -389,14 +410,15 @@
                                     </div>
                                     <div class="coupon__modal-body ui-text-align--center">
                                         <p class="ui-color--green ui-font-size--30">No Code Required</p>
-                                        <!-- <a href="https://ebay.com" target="_blank" class="modal__link ui-font-size--19">Continue to www.ebay.com 
-                                            <span class="fa fa-angle-right ui-font--bold"></span>
-                                        </a> -->
                                     </div>
                                     <div class="coupon__modal-login ui-text-align--center">
-                                        <p class="ui-text-align--center ui-margin-30-0 ui-font-size--19">For cashback you need to Log In or <span class="modal__link">Register</span></p>
+                                        <div class="modal__caption">
+                                                <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
+                                                <p>To get a cashback please login below</p>
+                                                <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
+                                            </div>
                                         <div class="clr ui-margin-bottom--15">
-                                            <form action="" method="POST" class="grid-2-col__1-of-2">
+                                            <form action="" method="POST" class="grid-2-col__1-of-2 modal__login-form">
                                                 <label for="email" class="ui-font--bold">EMAIL:</label><br>
                                                 <input class="modal__input-t" type="email" name="email" id="email"><br>
                                                 <label for="password" class="ui-font--bold">PASSWORD:</label><br>
@@ -405,17 +427,15 @@
                                                 <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
                                                 <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
                                             </form>
-                                            <div class="grid-2-col__1-of-2">
-                                                <div class="modal-coupon-login__socials ui-padding-right--20">
-                                                        <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
-                                                            <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
-                                                            Login with Facebook
-                                                        </a> <br>
-                                                        <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
-                                                            <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
-                                                                Login with Google Plus
-                                                        </a>
-                                                </div>
+                                            <div class="grid-2-col__1-of-2 modal-coupon-login__socials ui-padding-right--20">
+                                                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
+                                                    <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
+                                                    Login with Facebook
+                                                </a> <br>
+                                                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
+                                                    <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
+                                                        Login with Google Plus
+                                                </a>
                                             </div>
                                         </div>
                                         <a href="https://ebay.com" class="modal__link ui-font-size--22 ui-margin-bottom--15 ui-display--block" target="_blank">No thanks, continue without cahsback <span class="fa fa-angle-right ui-font--bold"></span></a>
@@ -426,9 +446,11 @@
                                 </div>
                         </div>
                     </div>
+
                     <!-- One coupon end -->
                     
                     <!-- One coupon start -->
+
                     <div class="coupon coupon--paginated coupon-3" data-coupon-object="https://ebay.com">
                         <div class="coupon__logo-wrapper">
                             <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
@@ -451,7 +473,9 @@
                             </li>
                         </ul>
                         <a href="file:///C:/Work/grabdid-work/build/all-coupons.html" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon <span class="fa fa-angle-right"></span></a>
+
                         <!-- Coupon's modal  -->
+
                         <div class="modal coupon__modal" id="3">
                                 <div class="modal__overlay"></div>
                                 <div class="coupon__modal-window">
@@ -460,15 +484,15 @@
                                         <span>Lorem ipsum dolor afom ifomc pidorasy</span>
                                     </div>
                                     <div class="coupon__modal-body ui-text-align--center">
-                                        <!-- <p class="ui-color--green ui-font-size--30">No Code Required</p> -->
-                                        <!-- <a href="https://ebay.com" target="_blank" class="modal__link ui-font-size--19">Continue to www.ebay.com 
-                                            <span class="fa fa-angle-right ui-font--bold"></span>
-                                        </a> -->
                                     </div>
                                     <div class="coupon__modal-login ui-text-align--center">
-                                        <p class="ui-text-align--center ui-margin-30-0 ui-font-size--19">For printable coupon and cashback you need to Log In or <span class="modal__link">Register</span></p>
+                                        <div class="modal__caption">
+                                                <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
+                                                <p>To get a printable coupon and cashback please login below</p>
+                                                <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
+                                            </div>
                                         <div class="clr ui-margin-bottom--15">
-                                            <form action="" method="POST" class="grid-2-col__1-of-2">
+                                            <form action="" method="POST" class="grid-2-col__1-of-2 modal__login-form">
                                                 <label for="email" class="ui-font--bold">EMAIL:</label><br>
                                                 <input class="modal__input-t" type="email" name="email" id="email"><br>
                                                 <label for="password" class="ui-font--bold">PASSWORD:</label><br>
@@ -477,8 +501,7 @@
                                                 <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
                                                 <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
                                             </form>
-                                            <div class="grid-2-col__1-of-2">
-                                                <div class="modal-coupon-login__socials ui-padding-right--20">
+                                            <div class="grid-2-col__1-of-2 modal-coupon-login__socials ui-padding-right--20">
                                                         <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
                                                             <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
                                                             Login with Facebook
@@ -487,7 +510,6 @@
                                                             <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
                                                                 Login with Google Plus
                                                         </a>
-                                                </div>
                                             </div>
                                         </div>
                                         <a href="https://ebay.com" class="modal__link ui-font-size--22 ui-margin-bottom--15 ui-display--block" target="_blank">No thanks, continue without cahsback <span class="fa fa-angle-right ui-font--bold"></span></a>
@@ -498,6 +520,7 @@
                                 </div>
                         </div>
                     </div>
+
                     <!-- One coupon end -->
 
                 </div>
@@ -511,8 +534,10 @@
                 </div>
 
             <!-- End of Pagination  -->
-              </div>
-            <!-- End of list of stores -->
+
+        </div>
+
+        <!-- End of list of stores -->
 
             
           </div>
@@ -523,12 +548,16 @@
         
      
 <!-- end of layout-center -->
+
 <!-- put footer  content here -->
+
 //= template/footer.html
 //= template/popup-coupon-not-registered.html
+
 <!--end of page footer-->
 
 <!--modal sidebar navigation (used on mobile devices)-->
+
 <div   class="ui-modal ui-sidebar--navigation">
 
     <div class="ui-sidebar__content">
@@ -574,6 +603,7 @@
 </div>
 
 <!--modal login-->
+
 <div class="ui-modal ui-dialog ui-dialog--login">
     <table class="ui-width--full ui-height--full ">
         <tbody>
@@ -617,6 +647,7 @@
 
 </div>
 <!--end of login dialog-->
+
 <div class="ui-modal ui-dialog ui-dialog--register">
     <table class="ui-width--full ui-height--full ">
         <tbody>

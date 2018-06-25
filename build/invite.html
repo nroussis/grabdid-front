@@ -16,44 +16,29 @@
     <script src="js/dropdown.min.js"></script>
     <script src="js/search.min.js" ></script>
     <script src="js/clipboard.min.js"></script>
+    <script src="js/classList.min.js"></script>
 </head>
 <body>
     <!-- put header content here -->
     <div class="ui-layout-west sticky-header">
             <div class="ui-layout-west__content">
-    
+        
                     <table class="ui-panelgrid ui-width--full" >
                         <tbody>
                         <tr>
-    
                             <!-- logo column -->
-                            
-                            <td class="ui-width--215 header-logo ui-position--relative">
+                            <td class="ui-width--215 ui-position--relative">
                                 <img src="images/logo-t.png" >
-                            
-                            <!-- flag column -->
+                                <!-- flag column -->
                                 <div class="flag-drop">
-                                    <div class="flag-drop__selected"><span class="flag-drop__lang">GR</span> <span class="flag-drop__arrow"></span></div>
-                                    <ul class="flag-drop__list">
-                                        <li class="flag-drop__item flag-drop__item--cy">CY</li>
-                                        <li class="flag-drop__item flag-drop__item--gr">GR</li>
-                                    </ul>
-                                </div>
-    
-                            <!-- Mobile button for showing login/signup buttons -->
-                            
-                                <span class="fa
-                                             fa-sign-in
-                                             ui-font-size--25
-                                             ui-float--right
-                                             ui-margin-top--10
-                                             ui-color--orange
-                                             ui-cursor--pointer
-                                             header__login" id="signButton"></span>
+                                        <div class="flag-drop__selected"><span class="flag-drop__lang">GR</span> <span class="flag-drop__arrow"></span></div>
+                                        <ul class="flag-drop__list">
+                                            <li class="flag-drop__item flag-drop__item--cy">CY</li>
+                                            <li class="flag-drop__item flag-drop__item--gr">GR</li>
+                                        </ul>
+                                    </div>
                             </td>
-                            
                             <!-- search column -->
-                            
                             <td class="ui-search-column">
                                 <div class="ui search ui-inputfield ui-inputfield--search">
                                     <input class="prompt" type="text" placeholder="Search"/>
@@ -63,96 +48,104 @@
                                     <div class="results"></div>
                                 </div>
                             </td>
-                            
                             <!-- sign in column -->
-                            
-                            <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
-                                <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
-                                <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
+                            <td class="ui-width--230">
+                                <div class="user-block">
+                                    <a href="#" class="ui-color--green ui-float--right">Nicolas $50.00 &nbsp;<span class="fa fa-angle-down"></span></a>
+                                        <ul class="user-block__menu">
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">My Account</a></li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Favorite stores</a></li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Shopping Trips</a></li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Cash Back Balance: <span class="user-block__cbalance">$30.00</span></a></li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Favorite stores</a></li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Favorite stores</a></li>
+                                            <li class="user-block__item-wrapper user-block__item-wrapper--socials">
+                                                <a href="#" class="user-block__connect-link user-block__connect-link--fb"><span class="fa fa-facebook"></span> Connect</a>
+                                                <a href="#" class="user-block__connect-link user-block__connect-link--gp"><span class="fa fa-google"></span> Connect</a>
+                                            </li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Sign Out</a></li>
+                                            <li class="user-block__item-wrapper"><a href="#" class="user-block__menu-link">Help</a></li>
+                                        </ul>
+                                </div>
                             </td>
-            
+                            <td class="ui-width--230 ui-display--never-none">
+                            <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
+                            <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
+                        </td>
                         </tr>
                         </tbody>
                     </table>
-                    
                     <!-- end of panelgrid -->
-                
                 </div>
     </div>
     <div class="ui-layout-west">
-        
-        <!-- footer inside of west layout -->
-        
-        <div class="ui-layout-west__footer menu">
-            <div class="ui-footer__content">
-                <table class="ui-panelgrid ui-width--full">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <div class="ui-dropdown">
-                            <a>All stores</a>
-                                <div class="ui-dropdown__content">
-                                    <a href="/melinamay">Melinamay</a>
-                                    <a href="/ebay">Ebay</a>
-                                    <a href="/aliexpress">AliExpress</a>
-                                    <a href="/aegean">Aegean</a>
-                                    <a href="/shop-gr">E-shop GR</a>
-                                    <a href="/deliveras-gr">Deliveras GR</a>
-                                    <a href="/zackret">Zackret Sports</a>
-                                </div>
-                            </div>
-    
-                        </td>
-                        <td>
-                            <a href="/coupons">Coupons</a>
-                        </td>
-                        <td>
-                            <a href="/categories">Categories</a>
-                        </td>
-                        <td>
-                            <a href="/hot-deal">Hot Deals</a>
-                        </td>
-                        <td>
-                            <div class="ui-dropdown">
+           
+            <!-- footer inside of west layout -->
+            <div class="ui-layout-west__footer menu">
+                <div class="ui-footer__content">
+                    <table class="ui-panelgrid ui-width--full">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="ui-dropdown">
                                 <a>All stores</a>
-                                <div class="ui-dropdown__content">
-                                    <a href="/melinamay">Melinamay</a>
-                                    <a href="/ebay">Ebay</a>
-                                    <a href="/aliexpress">AliExpress</a>
-                                    <a href="/aegean">Aegean</a>
-                                    <a href="/shop-gr">E-shop GR</a>
-                                    <a href="/deliveras-gr">Deliveras GR</a>
-                                    <a href="/zackret">Zackret Sports</a>
+                                    <div class="ui-dropdown__content">
+                                        <a href="/melinamay">Melinamay</a>
+                                        <a href="/ebay">Ebay</a>
+                                        <a href="/aliexpress">AliExpress</a>
+                                        <a href="/aegean">Aegean</a>
+                                        <a href="/shop-gr">E-shop GR</a>
+                                        <a href="/deliveras-gr">Deliveras GR</a>
+                                        <a href="/zackret">Zackret Sports</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="/how-it-works">How it works</a>
-                        </td>
-                        <td>
-                            <a href="/help">Help</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <button class="ui-button ui-background--none ui-button--navigation ui-float--right ui-border--none" >
-                    <span class="ui-icon ui-icon--bars"></span>
-                </button>
-                <p class="clear"></p>
         
-                <!-- end of panelgrid -->
+                            </td>
+                            <td>
+                                <a href="/coupons">Coupons</a>
+                            </td>
+                            <td>
+                                <a href="/categories">Categories</a>
+                            </td>
+                            <td>
+                                <a href="/hot-deal">Hot Deals</a>
+                            </td>
+                            <td>
+                                <div class="ui-dropdown">
+                                    <a>All stores</a>
+                                    <div class="ui-dropdown__content">
+                                        <a href="/melinamay">Melinamay</a>
+                                        <a href="/ebay">Ebay</a>
+                                        <a href="/aliexpress">AliExpress</a>
+                                        <a href="/aegean">Aegean</a>
+                                        <a href="/shop-gr">E-shop GR</a>
+                                        <a href="/deliveras-gr">Deliveras GR</a>
+                                        <a href="/zackret">Zackret Sports</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="/how-it-works">How it works</a>
+                            </td>
+                            <td>
+                                <a href="/help">Help</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button class="ui-button ui-background--none ui-button--navigation ui-float--right ui-border--none" >
+                        <span class="ui-icon ui-icon--bars">
         
+                        </span>
+                    </button>
+                    <p class="clear"></p>
+                    <!-- end of panelgrid -->
+                </div>
             </div>
+            <!-- end of layout-west__footer -->
         </div>
-        
-        <!-- end of layout-west__footer -->
-    
-    </div>
-    
-    <!-- end of layout-west -->
-    
-    <script src="js/flag.js"></script>
-    <script src="js/stickyfill.min.js"></script>
+        <!-- end of layout-west -->
+        <script src="js/flag.js"></script>
     <!-- put main content here -->
     <div class="ui-layout-center__content">
         <div class="invite">

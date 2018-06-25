@@ -699,14 +699,21 @@
         // });
 
         $(".coupon__modal-print-btn").on("click", function(){
+          var isIE = /*@cc_on!@*/false || !!document.documentMode;
+          var ieHelp = "<p class='printhide'> Please, press CTRL + P to print the page </p>";
           var w = window.open();
           var printOne = ($(this).parent()).html();
-          var printingStyles = '<style> body { text-align: center }  .coupon__modal-print-btn {display: none} </style>';
+          var printingStyles = '<style> body { text-align: center }  .coupon__modal-print-btn {display: none} @media print {.printhide {display: none}} </style>';
           var printingTitle = $(this).parent().parent().find(".coupon__modal-show-this").text();
-          w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
-          w.window.print();
-          w.close();
-          return false;
+          
+          if (isIE) {
+            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />' + ieHelp ) + '</body></html>';
+          } else {
+            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
+            w.window.print();
+            w.close();
+            return false;
+        }
       });
 
     
