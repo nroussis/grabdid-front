@@ -1,0 +1,55 @@
+.flag-drop {
+    cursor: pointer;
+    text-align: right;
+    width: 70px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    background: white;
+    z-index: 1;
+
+    &__list {
+        border: 1px solid darken($block_border_color,10%);
+        display: none;
+        padding: 5px;
+    }
+
+    &__item {
+
+        padding-right: 19px;
+        
+        &--gr {
+            background: url(../images/flags/gr.png) no-repeat;
+        }
+
+        &--cy {
+            background: url(../images/flags/cy.png) no-repeat;
+        }
+    }
+
+    &__selected {
+        padding: 5px;
+        background-position: 5px center;
+        background-repeat: no-repeat;
+
+        &--gr {
+            background-image: url(../images/flags/gr.png);
+        }
+
+        &--cy {
+            background-image: url(../images/flags/cy.png);
+        }
+    }
+
+    &__arrow {
+        background: url(../images/flags/arrow.png) no-repeat;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__hidden {
+        display: none !important;
+    }
+}
