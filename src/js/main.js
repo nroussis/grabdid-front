@@ -158,29 +158,9 @@ $(".ui-panel .ui-overflow--hidden.ui-height--85 .ui-read-less").click(function()
 });
 
 
-$(function () {
-    var _alphabets = $('.alphabet > a');
-    var _contentRows = $('#countries-table tbody tr');
-
-    _alphabets.click(function () {
-        var _letter = $(this), _text = $(this).text(), _count = 0;
-
-        _alphabets.removeClass("active");
-        _letter.addClass("active");
-
-        _contentRows.hide();
-        _contentRows.each(function (i) {
-            var _cellText = $(this).children('td').eq(0).text();
-            if (RegExp('^' + _text).test(_cellText)) {
-                _count += 1;
-                $(this).fadeIn(400);
-            }
-        });
-    });
-});
-
 $(".js-shop-now-login").click(function(e){
     e.preventDefault();
     $(".modal-coupon-login").fadeIn();
     $(".overlay").fadeIn();
+    $(".modal-coupon-login").css({ "top": $(window).scrollTop() + "px"});
 });

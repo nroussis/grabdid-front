@@ -317,7 +317,7 @@
                             Hotels.com Coupon Code Discounts & Coupons</label>
 
                         <div class="ui divided items">
-                            <div class="item ui-item--promo">
+                            <div class="item ui-item--promo" data-coupon-object="https://ebay.com">
                                 <div class="image ui-text-align--center">
                                     <table class="ui-width--full ui-height--full">
                                         <tbody>
@@ -347,7 +347,55 @@
 
                                     </div>
                                     </div>
-                                    <button class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</button>
+                                    <a href="file:///C:/Work/grabdid-work/build/stores.html" class="ui-button ui-button--green ui-color--white ui-font-size--15 ui-border--none ui-button--item">Get Coupon Code</a>
+                                    <!-- Coupon's modal  -->
+                            <div class="modal coupon__modal" id="1">
+                                <div class="modal__overlay"></div>
+                                <div class="coupon__modal-window">
+                                    <div class="coupon__modal-header">
+                                        <img src="images/icon-150x40-ebay.gif" alt="eBay logo" class="coupon__modal-logo">
+                                        <span>Lorem ipsum dolor afom ifomc pidorasy</span>
+                                    </div>
+                                    <div class="coupon__modal-body ui-text-align--center">
+                                        <div class="coupon__modal-code">
+                                            <span class="ui-font--bold coupon__modal-code-text" id="coupon">ABABABABA</span>
+                                            <button class="coupon__modal-copy-btn" data-clipboard-target="#coupon" data-clipboard-action="copy">Copy Code</button>
+                                        </div>
+                                    </div>
+                                    <div class="coupon__modal-login ui-text-align--center">
+                                        <div class="modal__caption">
+                                                <p class="modal__cap-error"><span class="fa fa-info-circle modal__capicon"></span> You are not a member of the service</p>
+                                                <p>To get a cashback please login below</p>
+                                                <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
+                                            </div>
+                                        <div class="clr ui-margin-bottom--15">
+                                            <form action="" method="POST" class="grid-2-col__1-of-2 modal__login-form">
+                                                <label for="email" class="ui-font--bold">EMAIL:</label><br>
+                                                <input class="modal__input-t" type="email" name="email" id="email"><br>
+                                                <label for="password" class="ui-font--bold">PASSWORD:</label><br>
+                                                <input class="modal__input-t" type="password" name="password" id="password"><br>
+                                                <a href="#" class="modal__link">I forgot my password</a> <br>
+                                                <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
+                                                <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
+                                            </form>
+                                            <div class="grid-2-col__1-of-2 modal-coupon-login__socials ui-padding-right--20">
+                                                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
+                                                    <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
+                                                    Login with Facebook
+                                                </a> <br>
+                                                <a href="#" class="modal-coupon-login__social modal-coupon-login__social--gp">
+                                                    <span class="modal-coupon-login__socicon fa fa-google-plus"></span>
+                                                        Login with Google Plus
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="https://ebay.com" class="modal__link ui-font-size--22 ui-margin-bottom--15 ui-display--block" target="_blank">No thanks, continue without cahsback <span class="fa fa-angle-right ui-font--bold"></span></a>
+                                        <div class="coupon__modal-footer">
+                                            <a href="#" class="ui-color--sm-grey ui-font-size--12">Terms &amp; Conditions</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
                                 </div>
                             </div>
                             <div class="item ui-item--sale">
