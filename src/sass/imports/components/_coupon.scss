@@ -22,6 +22,10 @@
         &--free {
             background: #f39335;
         }
+
+        &--printable {
+            background: #8f13fd;
+        }
     }
 
     &__times-used {
@@ -112,6 +116,11 @@
         background: rgba(orangered, 0.1);
         position: relative;
         margin-bottom: 15px;
+
+        &--qr {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &__modal-code-text {
@@ -178,5 +187,12 @@
             margin: 20px 10px;
         }
 
+    }
+}
+
+@media (max-width: 650px) {
+    .coupon {
+
+        
     }
 }

@@ -107,6 +107,7 @@
 @include width_base_class(margin-bottom,10);
 @include width_base_class(margin-bottom,11);
 @include width_base_class(margin-bottom,15);
+@include width_base_class(margin-bottom,30);
 
 //set element height to 5 exmple .ui-height--5
 @include width_base_class(height,5);
@@ -303,6 +304,11 @@
 //set element display to block
 .ui-display--block {
   display: block;
+}
+
+//set element display to inline-block
+.ui-display--inblock {
+  display: inline-block;
 }
 
 //Do not show an item

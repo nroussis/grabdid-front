@@ -29,16 +29,23 @@
                 <table class="ui-panelgrid ui-width--full" >
                     <tbody>
                     <tr>
+
                         <!-- logo column -->
-                        <td class="ui-width--215 header-logo">
+                        
+                        <td class="ui-width--215 header-logo ui-position--relative">
                             <img src="images/logo-t.png" >
+                        
                         <!-- flag column -->
-                            <div class="flag-dropdown flag-dropdown__current flag-dropdown__current--gr">
-                                <ul class="flag-dropdown__list">
-                                    <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--gr"></div> </a></li>
-                                    <li class="flag-dropdown__list-item"><a href="#"><div class="flag-dropdown__item flag-dropdown__item--cy"></div> </a></li>
+                            <div class="flag-drop">
+                                <div class="flag-drop__selected"><span class="flag-drop__lang">GR</span> <span class="flag-drop__arrow"></span></div>
+                                <ul class="flag-drop__list">
+                                    <li class="flag-drop__item flag-drop__item--cy">CY</li>
+                                    <li class="flag-drop__item flag-drop__item--gr">GR</li>
                                 </ul>
                             </div>
+
+                        <!-- Mobile button for showing login/signup buttons -->
+                        
                             <span class="fa
                                          fa-sign-in
                                          ui-font-size--25
@@ -48,7 +55,9 @@
                                          ui-cursor--pointer
                                          header__login" id="signButton"></span>
                         </td>
+                        
                         <!-- search column -->
+                        
                         <td class="ui-search-column">
                             <div class="ui search ui-inputfield ui-inputfield--search">
                                 <input class="prompt" type="text" placeholder="Search"/>
@@ -58,7 +67,9 @@
                                 <div class="results"></div>
                             </div>
                         </td>
+                        
                         <!-- sign in column -->
+                        
                         <td class="ui-width--230 ui-text-align--center header__log-reg" id="loginBlock">
                             <button id="login-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--left ui-button--header" >Login</button>
                             <button id="register-btn" class="ui-button ui-border-radius--5 ui-font-size--15 ui-border--none ui-button--orange ui-button--right ui-button--header" >Register</button>
@@ -67,12 +78,15 @@
                     </tr>
                     </tbody>
                 </table>
+                
                 <!-- end of panelgrid -->
+            
             </div>
 </div>
 <div class="ui-layout-west">
     
     <!-- footer inside of west layout -->
+    
     <div class="ui-layout-west__footer menu">
         <div class="ui-footer__content">
             <table class="ui-panelgrid ui-width--full">
@@ -126,17 +140,21 @@
                 </tbody>
             </table>
             <button class="ui-button ui-background--none ui-button--navigation ui-float--right ui-border--none" >
-                <span class="ui-icon ui-icon--bars">
-
-                </span>
+                <span class="ui-icon ui-icon--bars"></span>
             </button>
             <p class="clear"></p>
+    
             <!-- end of panelgrid -->
+    
         </div>
     </div>
+    
     <!-- end of layout-west__footer -->
+
 </div>
+
 <!-- end of layout-west -->
+
 <script src="js/flag.js"></script>
 <script src="js/stickyfill.min.js"></script>
 <!-- put main content here -->
@@ -402,6 +420,7 @@
            </div>
            <!-- List of coupons starts here -->
                 <div class="coupons__list">
+
                     <!-- One coupon start -->
                     <div class="coupon coupon--paginated coupon-5" data-coupon-object="https://ebay.com">
                             <div class="coupon__logo-wrapper">
@@ -424,7 +443,7 @@
                                    <span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
                                 </li>
                             </ul>
-                            <a href="file:///C:/Work/grabdid-work/build/all-coupons-logged.html" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon Code</a>
+                            <a href="file:///C:/Work/grabdid-work/build/all-coupons-logged.html" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon <span class="fa fa-angle-right"></span></a>
                             <!-- Coupon's modal  -->
                             <div class="modal coupon__modal" id="1">
                                     <div class="modal__overlay"></div>
@@ -448,9 +467,10 @@
                                     </div>
                             </div>
                         </div>
-                        <!-- One coupon end -->
-                         <!-- One coupon start -->
-                    <div class="coupon coupon--paginated coupon-1">
+                    <!-- One coupon end -->
+
+                    <!-- One coupon start -->
+                    <div class="coupon coupon--paginated coupon-1" data-coupon-object="https://ebay.com">
                         <div class="coupon__logo-wrapper">
                             <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
                             <a href="#" class="ui-display--block ui-text-align--center ui-font-size--13">See All Coupons</a>
@@ -471,18 +491,38 @@
                                <span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
                             </li>
                         </ul>
-                        <a href="#" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon Code</a>
-                    </div>
+                        <a href="file:///C:/Work/grabdid-work/build/all-coupons-logged.html" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Sale <span class="fa fa-angle-right"></span></a>
+                        <!-- Coupon's modal  -->
+                        <div class="modal coupon__modal" id="2">
+                                <div class="modal__overlay"></div>
+                                <div class="coupon__modal-window">
+                                    <div class="coupon__modal-header">
+                                        <img src="images/icon-150x40-ebay.gif" alt="eBay logo" class="coupon__modal-logo">
+                                        <span>Lorem ipsum dolor afom ifomc pidorasy</span>
+                                    </div>
+                                    <div class="coupon__modal-body ui-text-align--center">
+                                        <p class="ui-color--green ui-font-size--30 ui-margin-bottom--30">No Code Required</p>
+                                        <a href="https://ebay.com" target="_blank" class="modal__link ui-font-size--19">Continue to www.ebay.com 
+                                            <span class="fa fa-angle-right ui-font--bold"></span>
+                                        </a>
+                                    </div>
+                                    <div class="coupon__modal-footer">
+                                        <a href="#" class="ui-color--sm-grey ui-font-size--12">Terms &amp; Conditions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <!-- One coupon end -->
+
                      <!-- One coupon start -->
-                     <div class="coupon coupon--paginated coupon-3">
+                    <div class="coupon coupon--paginated coupon-3" data-coupon-object="https://ebay.com">
                         <div class="coupon__logo-wrapper">
                             <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
                             <a href="#" class="ui-display--block ui-text-align--center ui-font-size--13">See All Coupons</a>
                         </div>
                         <ul class="coupon__content">
                             <li>
-                                <span class="coupon__type coupon__type--free">Free</span> <span class="coupon__times-used">858 used today</span>
+                                <span class="coupon__type coupon__type--printable">Printable</span> <span class="coupon__times-used">858 used today</span>
                             </li>
                             <li class="coupon__cdiscount">
                                 <span class="ui-font-size--20 coupon__ctitle">15% off select purchases of $1000000 or more.</span><br>
@@ -493,37 +533,47 @@
                                 <span class="more dashboard__c-read-more">Read More +</span>
                             </li>
                             <li class="coupon__code-expires">
-                               <span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
+                                <span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
                             </li>
                         </ul>
-                        <a href="#" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon Code</a>
-                    </div>
-                    <!-- One coupon end -->
-                     <!-- One coupon start -->
-                     <div class="coupon coupon--paginated coupon-A">
-                        <div class="coupon__logo-wrapper">
-                            <a href="#"> <img src="images/icon-150x40-ebay.gif" alt="eBay logo"></a>
-                            <a href="#" class="ui-display--block ui-text-align--center ui-font-size--13">See All Coupons</a>
+                        <a href="file:///C:/Work/grabdid-work/build/all-coupons-logged.html" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon <span class="fa fa-angle-right"></span></a>
+                        <!-- Coupon's modal  -->
+                        <div class="modal coupon__modal" id="3">
+                                <div class="modal__overlay"></div>
+                                <div class="coupon__modal-window">
+                                    <div class="coupon__modal-header">
+                                        <img src="images/icon-150x40-ebay.gif" alt="eBay logo" class="coupon__modal-logo">
+                                        <span>Lorem ipsum dolor afom ifomc pidorasy</span>
+                                    </div>
+                                    <div class="coupon__modal-body ui-text-align--center">
+                                        <p class="ui-color--gray ui-margin-top--10 ui-margin-bottom--10 coupon__modal-show-this">Show this code in-store at Ebay</p>
+                                        <p class="ui-font-size--14 ui-color--gray ui-margin-bottom--10">We have also sent this to e@mail.com</p>
+                                        <div class="ui-display--inblock">
+                                            <div class="coupon__modal-code coupon__modal-code--qr">
+                                                <img src="images/qr-sample.jpg" alt="Code to show in a shop">
+                                                <p class="ui-font--bold coupon__modal-code-text ui-margin-top--10 ui-font-size--14">ABABABABA</p>
+                                            </div>
+                                            <div class="coupon__modal-code coupon__modal-code--qr">
+                                                <p class="ui-font--bold coupon__modal-code-text">12345678</p>
+                                            </div>
+                                            <button class="coupon__modal-print-btn 
+                                                           ui-button ui-button--green 
+                                                           ui-color--white 
+                                                           ui-border-radius--4 
+                                                           ui-font--bold 
+                                                           ui-font-size--17 
+                                                           ui-width--full">Print</button>
+                                        </div>
+                                    </div>
+                                    <div class="coupon__modal-footer">
+                                        <a href="#" class="ui-color--sm-grey ui-font-size--12">Terms &amp; Conditions</a>
+                                    </div>
+
+                                </div>
                         </div>
-                        <ul class="coupon__content">
-                            <li>
-                                <span class="coupon__type coupon__type--free">Free</span> <span class="coupon__times-used">858 used today</span>
-                            </li>
-                            <li class="coupon__cdiscount">
-                                <span class="ui-font-size--20 coupon__ctitle">15% off select purchases of $1000000 or more.</span><br>
-                                <span class="coupon__ctitle-discount ui-color--red ui-font--bold">+ Up to 45.0% Cash Back</span>
-                            </li>
-                            <li class="coupon__description ui-font-size--14">
-                                <p class="coupon__description-text expandable-text expandable-text--collapsed">Coupon can be used up to two times per eBay account.  Limit one use per transaction (or cart) while supplies last. Valid only for purchases from ebay.com, cafr.ebay.ca and ebay.ca. Coupon is subject to U.S laws, void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, or when paying with PayPal Credit Easy Payments or Gift Cards. eBay may cancel, amend, or revoke the Coupon at any time. The discount will be applied to eligible item(s) only and will be capped at a value of $50.</p>
-                                <span class="more dashboard__c-read-more">Read More +</span>
-                            </li>
-                            <li class="coupon__code-expires">
-                               <span class="ui-color--gray ui-font-size--14"><span class="fa fa-clock-o ui-margin-right--10"></span>Expires 5/25/2018</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="ui-button ui-button--green coupon__shop-btn ui-border-radius--4">Get Coupon Code</a>
                     </div>
                     <!-- One coupon end -->
+
                 </div>
 
                 <!-- Pagination block  -->
@@ -667,7 +717,7 @@
         <p>To get a cashback please register below</p>
         <p>Not a member? <a href="#" class="modal__link">Register Now</a></p>
     </div>
-    <form action="" method="POST" class="grid-2-col__1-of-2">
+    <form action="" method="POST" class="grid-2-col__1-of-2 modal__login-form">
         <label for="email" class="ui-font--bold">EMAIL:</label><br>
         <input class="modal__input-t" type="email" name="email" id="email"><br>
         <label for="password" class="ui-font--bold">PASSWORD:</label><br>
@@ -676,9 +726,9 @@
         <button type="submit" class="modal__btn ui-button ui-button--green">Login</button> <br>
         <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
     </form>
-    <div class="grid-2-col__1-of-2">
+    <div class="grid-2-col__1-of-2 modal-coupon-login__socials ui-padding-right--20 ui-text-align--center ui-margin-top--25 ui-margin-bottom--15">
         <div class="modal-coupon-login__or">or</div>
-        <div class="modal-coupon-login__socials">
+        <div class="modal-coupon-login__socials clr">
                 <a href="#" class="modal-coupon-login__social modal-coupon-login__social--fb">
                     <span class="modal-coupon-login__socicon fa fa-facebook"></span> 
                     Login with Facebook
@@ -690,7 +740,7 @@
         </div>
     </div>
     <a href="#" class="modal__link modal-coupon-login__without-cb">No thanks, continue without cahsback</a>
-    <button class="modal__close-btn fa fa-close"></button>
+    <!-- <button class="modal__close-btn fa fa-close"></button> -->
 </div>
 <!--end of page footer-->
 
@@ -930,8 +980,25 @@
         //     $(".modal-coupon-login").css({ "top": $(window).scrollTop() + "px" });
         // });
 
+        $(".coupon__modal-print-btn").on("click", function(){
+          var isIE = /*@cc_on!@*/false || !!document.documentMode;
+          var ieHelp = "<p class='printhide'> Please, press CTRL + P to print the page </p>";
+          var w = window.open();
+          var printOne = ($(this).parent()).html();
+          var printingStyles = '<style> body { text-align: center }  .coupon__modal-print-btn {display: none} @media print {.printhide {display: none}} </style>';
+          var printingTitle = $(this).parent().parent().find(".coupon__modal-show-this").text();
+          
+          if (isIE) {
+            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />' + ieHelp ) + '</body></html>';
+          } else {
+            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
+            w.window.print();
+            w.close();
+            return false;
+        }
+      });
 
-      
+    
         document.addEventListener("click", function(e){
             if (e.target.parentNode.parentNode.id === 'shipping-filter'){
             e.preventDefault();
