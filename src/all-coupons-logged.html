@@ -707,14 +707,14 @@
           var printingTitle = $(this).parent().parent().find(".coupon__modal-show-this").text();
           
           if (isIE) {
-            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />' + ieHelp ) + '</body></html>';
+                w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />' + ieHelp ) + '</body></html>';
           } else {
-            w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
-            w.window.print();
-            w.close();
-            return false;
-        }
-      });
+                w.document.write('<html><head><title>'+ printingTitle +'</title>' + printingStyles + '</head><body><h1>'+ printingTitle +'</h1><hr />' + printOne + '<hr />') + '</body></html>';
+                w.window.print();
+                w.close();
+                return false;
+            }
+        });
 
     
         document.addEventListener("click", function(e){
