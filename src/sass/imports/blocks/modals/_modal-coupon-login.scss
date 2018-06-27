@@ -61,6 +61,7 @@
 @media (max-width: 1000px) {
     .modal-coupon-login {
         width: 100%;
+        position: absolute;
 
         &__or {
             display: none;
