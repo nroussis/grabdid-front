@@ -173,16 +173,36 @@
 @import '../uni/container';
 @import '../uni/sidebar';
 @import '../uni/s-content';
+
+//Coupon styles
+
 @import '../components/coupon';
+
+//Styles for simple JS pagination
+
 @import '../components/_pagination';
 
+// User block from account.html
+
 @import '../blocks/_user-block';
+
+// Styles for actually for one all-stores.html store item
+
 @import '../blocks/_stores-item';
+
+// Styles for stores.html and stores-logged.html reviews block
+
 @import '../blocks/_stores-reviews';
+
+// Styles for my-balance.html page
+
 @import '../blocks/balance';
 @import '../blocks/history';
+
+// Styles for forgot-password.html
+
 @import '../blocks/forgot';
+
+// Styles for header flag dropdown
+
 @import '../blocks/flag-drop';
-
-
-

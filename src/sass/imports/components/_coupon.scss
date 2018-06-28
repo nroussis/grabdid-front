@@ -21,19 +21,15 @@
         font-size: 13px;
 
         &--promocode {
-            background: #ff2552;
+            background: $highlight_pink_bg;
         }
 
         &--sale {
-            background: #0394ea;
-        }
-
-        &--free {
-            background: #f39335;
+            background: $highlight_blue_bg;
         }
 
         &--printable {
-            background: #8f13fd;
+            background: $highlight_purple_bg;
         }
     }
 
@@ -212,9 +208,3 @@
     }
 }
 
-@media (max-width: 650px) {
-    .coupon {
-
-        
-    }
-}

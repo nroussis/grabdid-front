@@ -1,4 +1,4 @@
-// 6 column grid
+// 6 column grid for owl carousel so not be surprised for width value :)
 .grid-6-col {
   @include clearfix;
 
@@ -12,6 +12,9 @@
     }
   }
 }
+
+
+//Grid with the sidebar
 
 .grid-3-5-col {
   @include clearfix;
@@ -29,6 +32,8 @@
     margin-left: 10px;
   }
 }
+
+//Simple 3 column grid
 
 .grid-3-col {
   @include clearfix;
@@ -68,6 +73,8 @@
   }
 }
 
+//Simple 4 column grid
+
 .grid-4-col {
   @include clearfix;
 
@@ -83,6 +90,8 @@
     width: calc(100% - (100% / 4));
   }
 }
+
+//Seimple 2 column grid
 
 .grid-2-col {
   @include clearfix;

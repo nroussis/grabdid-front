@@ -86,12 +86,12 @@
         color: white;
 
         &--fb {
-            background: #4267b2;
+            background: $color_facebook_bg;
             
         }
 
         &--tw {
-            background: #1da1f2;
+            background: $color_twitter_bg;
         }
 
         &--email {
@@ -103,7 +103,7 @@
         }
 
         &--gp {
-            background: #db4437;
+            background: $color_gp_bg;
         }
     }
 
